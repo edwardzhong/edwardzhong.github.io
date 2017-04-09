@@ -1,155 +1,28 @@
-<!doctype html>
-<html lang="zh-CN">
-
-
-
-
-
-
-
-
-
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-  <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <!-- 为移动设备添加 viewport -->
-  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <!-- 添加到主屏后的标题（iOS 6 新增） -->
-  <meta name="apple-mobile-web-app-title" content="寻找最美的秋天，丝绸之路北疆行 - Jeff's world">
-  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
-  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
-  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
-  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content = "telphone=no, email=no" />
-  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Cache-Control" content="no-cache">
-  <meta http-equiv="Expires" content="0">
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Jeff&#39;s world</title>
+  <subtitle>write the thing where interesting</subtitle>
+  <link href="/atom.xml" rel="self"/>
   
-  <link rel="dns-prefetch" href="<%= config.url %>">
-  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
-  <meta name="author" content="Jeff Zhong">
-  <meta name="description" content="it's a blog by hexo">
-  <meta name="keywords" content="hexo theme">
-  <title >寻找最美的秋天，丝绸之路北疆行 - Jeff's world</title>
-    <!-- The Open Graph protocol -->
-  <meta property="og:url" content="">
-  <meta property="og:type" content="blog">
-  <meta property="og:title" content="寻找最美的秋天，丝绸之路北疆行 - Jeff's world">
-  <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
+  <link href="/"/>
+  <updated>2017-04-01T07:02:49.000Z</updated>
+  <id>/</id>
   
+  <author>
+    <name>Jeff Zhong</name>
     
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>寻找最美的秋天，丝绸之路北疆行</title>
+    <link href="/2017/01/04/xinjiang/"/>
+    <id>/2017/01/04/xinjiang/</id>
+    <published>2017-01-04T08:29:39.000Z</published>
+    <updated>2017-04-01T07:02:49.000Z</updated>
     
-      <link rel="stylesheet" href="/lib/icons/icon.css">
-    
-      <link rel="stylesheet" href="/lib/reboto/roboto.css">
-    
-      <link rel="stylesheet" href="/dist/css/index.css">
-    
-  
-  <script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-
-</head>
-<body>
-<header class="header">
-  <div class="top"></div>
-  <h2>Jeff's World</h2>
-  <h3>write the thing where interesting</h3>
-  <div class="menu">
-  
-  
-  
-      <a 
-        href="/">
-        <i class="icon icon-home"></i>
-        主页
-      </a>
-  
-      <a  data-tag="search" 
-        href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
-      </a>
-  
-  </div>
-  <div class="state">
-  
-    <a href="/archives">1<br>文章</a><a href="/categories">1<br>分类</a><a href="/tags">8<br>标签</a>
-  </div>
-  <div class="social">
-  
-  
-  
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
-  
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
-  
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
-  
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
-  
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
-  
-  </div>
-  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
-</header>
-  <div class="container">
-    <div class="main">
-    
-        
-<div class="post-list">
-	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
-    
-    
-        
-    
-	
-	<a href="javascript:;">
-        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/xinjiangbanner.jpg)  center top / 100% no-repeat">
-    		<h3 class="post-title">寻找最美的秋天，丝绸之路北疆行</h3>
-    	</div>
-	</a>
-	<div class="post-inner">
-	
-    	<div class="post-info">
-    		<time class="icon icon-calendar"> 2017/01/04 16:29:00</time>
-    		<span class="category">
-    		
-    			
-    			<i class="icon icon-book"></i>
-    			
-                    
-                        <a href="/categories/旅游/">旅游</a>
-                    
-        			
-    			
-    		
-    		</span>
-    	</div>
-    	<!-- <p>蚂蜂窝链接-寻找最美的秋天，丝绸之路北疆行
-从千年古都西安出发，经过甘肃的河西走廊，最后到达新疆，也就是丝绸之路。这是一条我梦寐以求的路线，在酝酿了两年之久后，2016年9月24日，背着大包，独...</p> -->
-    	
-    	<div class="post-content"><p><em><a href="http://www.mafengwo.cn/i/6543248.html" target="_blank" rel="external">蚂蜂窝链接-寻找最美的秋天，丝绸之路北疆行</a></em></p>
+    <content type="html"><![CDATA[<p><em><a href="http://www.mafengwo.cn/i/6543248.html" target="_blank" rel="external">蚂蜂窝链接-寻找最美的秋天，丝绸之路北疆行</a></em></p>
 <p>从千年古都西安出发，经过甘肃的河西走廊，最后到达新疆，也就是丝绸之路。这是一条我梦寐以求的路线，在酝酿了两年之久后，2016年9月24日，背着大包，独自一人，踏上了征程。</p>
 <p>丝绸之路，苍茫西北，你会联想到什么？我首先想到的是，大漠孤烟，落日孤城，遥远的边疆，辽阔的国土；东西往来的商旅，追求功名的冒险家，出征塞外的将士。丝绸之路就是结合了悠久的历史，丰富的人文和壮阔的风景的一条路线。在古都西安体验当年的秦汉雄风，隋唐盛世和西北美食；进入河西走廊欣赏雄伟的祁连山，广袤的大戈壁；去张掖看那令人难忘的七彩丹霞和马蹄寺；然后登上长城的最西端，天下第一雄关-嘉峪关，观看晚霞；在敦煌欣赏沙漠奇观-鸣沙山月牙泉；当然还有艺术瑰宝莫高窟，一定要了解它让人心碎的历史。</p>
 <p>到达西域，然后一路向北经过北疆一个个现代化的城镇，石河子，奎屯，克拉玛依，布尔津，来到神的后花园-喀纳斯，这里有着最美的秋色；最后到吐鲁番欣赏夕阳西下的交河故城。<br><a id="more"></a></p>
@@ -345,128 +218,36 @@ var _hmt = _hmt || [];
 <h2 id="10-10-深圳"><a href="#10-10-深圳" class="headerlink" title="10/10 深圳"></a>10/10 深圳</h2><p>今天要回深圳了，滴滴预定了7点的车去机场。因为9点55的飞机，这边安检又特别严，所以还是要早点去。和我们同机的有一群维族的大叔大妈，看他们很兴奋的拍照，来深圳旅游的估计。飞机中间要到贵阳停半小时左右，飞过青藏高原的时候，真的好美。在贵阳上了趟卫生间，很快又要飞了，到深圳已经4点多，那几个维族的，见到深圳的大海，海港，轮船，也是够兴奋，凑在机窗边一阵乱拍的。旅游真的是从自己呆腻了了的地方到别人呆腻了的地方。到机场的时候，等行李等了好久才取出来，估计是新疆的航班，所以安检很严。从新疆回到深圳感觉就是从冬季穿越到了夏季，马上脱了冲锋衣，直接穿T恤得了。回到自己的窝已经6点多了，明天开始苦逼的上班了。<br><strong>飞过青藏高原</strong><br><img src="http://oncse3u6r.bkt.clouddn.com/huishenzeng.jpg" alt=""><br><img src="http://oncse3u6r.bkt.clouddn.com/huishenzeng1.jpg" alt=""><br><img src="http://oncse3u6r.bkt.clouddn.com/huishenzeng2.jpg" alt=""><br><img src="http://oncse3u6r.bkt.clouddn.com/huishenzeng3.jpg" alt=""><br><img src="http://oncse3u6r.bkt.clouddn.com/huishenzeng4.jpg" alt=""></p>
 <h2 id="关于新疆"><a href="#关于新疆" class="headerlink" title="关于新疆"></a>关于新疆</h2><p>新疆有各种最壮丽的自然景观，广袤的戈壁和沙漠，壮观的雪山和冰川，辽阔的大草原，迷人的湖泊，神奇的寒温带森林；新疆还有丰富的历史人文景观，中亚特色的人文风情，古代东西交汇的文化奇观，历朝历代留下的边疆要塞，古城遗址；当然了这也是吃货的天堂，鲜美的牛羊肉，干果，香甜的水果比内地的好吃多了。</p>
 <p>新疆集北国风光之雄浑和南国风光之秀丽，景观多样，历史人文，还有美食，可以说是我最喜欢的一个省区。</p>
-</div>
-    	
-		<div class="post-footer">
-			<div class="share" data-url="/2017/01/04/xinjiang/" data-desc="蚂蜂窝链接-寻找最美的秋天，丝绸之路北疆行
-从千年古都西安出发，经过甘肃的河西走廊，最后到达新..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
-			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
-				
-				
-                    
-                        <a href="/tags/旅游/">旅游</a>
-                    
-				
-                    
-                        <a href="/tags/新疆/">新疆</a>
-                    
-				
-                    
-                        <a href="/tags/西安/">西安</a>
-                    
-				
-                    
-                        <a href="/tags/河西走廊/">河西走廊</a>
-                    
-				
-                    
-                        <a href="/tags/张掖/">张掖</a>
-                    
-				
-                    
-                        <a href="/tags/嘉峪关/">嘉峪关</a>
-                    
-				
-                    
-                        <a href="/tags/敦煌/">敦煌</a>
-                    
-				
-                    
-                        <a href="/tags/喀纳斯/">喀纳斯</a>
-                    
-				
-			
-			</div>
-		</div>
-	</div>
-</article>
-</div>
-
-<nav class="pagination clearfix">
-  
-</nav>
-
-<div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div id="qrcode" class="wx-qrcode"></div>
-</div>
-<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: document.location.href, 
-    sourceId: "",
-    productKey: "5687dd3b4f394e2db99c1d87e9d49f67",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-
+]]></content>
     
-    <footer class="footer">
-<p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
-</p>
-<p class="copy">Copyright &copy; 2017 Jeff Zhong</p>
-</footer>
-    <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
-    </div>
-    </div>
-
-  </div>
-<input type="hidden" name="isPost" id="isPost" value="true">
-<i id="barBtn" class="icon icon-menu"></i>
-<div id="payMe" class="payme">
-    <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
-    <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
-    </div>
-    <div class="pay-selects">
-        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
-        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
-    </div>
-</div>
-
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://www.mafengwo.cn/i/6543248.html&quot;&gt;蚂蜂窝链接-寻找最美的秋天，丝绸之路北疆行&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;从千年古都西安出发，经过甘肃的河西走廊，最后到达新疆，也就是丝绸之路。这是一条我梦寐以求的路线，在酝酿了两年之久后，2016年9月24日，背着大包，独自一人，踏上了征程。&lt;/p&gt;
+&lt;p&gt;丝绸之路，苍茫西北，你会联想到什么？我首先想到的是，大漠孤烟，落日孤城，遥远的边疆，辽阔的国土；东西往来的商旅，追求功名的冒险家，出征塞外的将士。丝绸之路就是结合了悠久的历史，丰富的人文和壮阔的风景的一条路线。在古都西安体验当年的秦汉雄风，隋唐盛世和西北美食；进入河西走廊欣赏雄伟的祁连山，广袤的大戈壁；去张掖看那令人难忘的七彩丹霞和马蹄寺；然后登上长城的最西端，天下第一雄关-嘉峪关，观看晚霞；在敦煌欣赏沙漠奇观-鸣沙山月牙泉；当然还有艺术瑰宝莫高窟，一定要了解它让人心碎的历史。&lt;/p&gt;
+&lt;p&gt;到达西域，然后一路向北经过北疆一个个现代化的城镇，石河子，奎屯，克拉玛依，布尔津，来到神的后花园-喀纳斯，这里有着最美的秋色；最后到吐鲁番欣赏夕阳西下的交河故城。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="旅游" scheme="/categories/%E6%97%85%E6%B8%B8/"/>
+    
+    
+      <category term="旅游" scheme="/tags/%E6%97%85%E6%B8%B8/"/>
+    
+      <category term="新疆" scheme="/tags/%E6%96%B0%E7%96%86/"/>
+    
+      <category term="西安" scheme="/tags/%E8%A5%BF%E5%AE%89/"/>
+    
+      <category term="河西走廊" scheme="/tags/%E6%B2%B3%E8%A5%BF%E8%B5%B0%E5%BB%8A/"/>
+    
+      <category term="张掖" scheme="/tags/%E5%BC%A0%E6%8E%96/"/>
+    
+      <category term="嘉峪关" scheme="/tags/%E5%98%89%E5%B3%AA%E5%85%B3/"/>
+    
+      <category term="敦煌" scheme="/tags/%E6%95%A6%E7%85%8C/"/>
+    
+      <category term="喀纳斯" scheme="/tags/%E5%96%80%E7%BA%B3%E6%96%AF/"/>
+    
+  </entry>
   
-  
-    <script src="/lib/jquery-2.2.3.min.js"></script>
-  
-    <script src="/lib/qrcode.min.js"></script>
-  
-    <script src="/dist/js/index.js"></script>
-  
-
-<script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-</script>
-
-
-</body>
-</html>
+</feed>
