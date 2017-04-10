@@ -1,18 +1,16 @@
 
-function init() {
+function shareInit() {
     var env=getEnv(),
         isPost=$('#isPost').val(),
         sUrl = location.protocol+'//'+location.host+location.pathname,
         sTitle = $('.post-title').html(),
         sDesc = sTitle,
         sPic = '';
-
-
-    //微信手Q环境，右上角分享
     
     $('.share').on('click',function(e){
         e.stopPropagation();
         e.preventDefault();
+        //微信手Q环境，右上角分享
         if(isPost=='true'&&(env=='weixin'||env=='qq')){
             showShareOverlay();
             return;
@@ -56,6 +54,9 @@ function init() {
             tpl.css({
                 top:offset.top+h+5,
                 left:offset.left-150
+            }).on('click',function(e){
+                e.stopPropagation();
+                e.preventDefault();
             });
         }
 
@@ -180,4 +181,4 @@ function browser(){
         };
 }
 
-init();
+shareInit();
