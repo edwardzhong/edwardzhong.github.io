@@ -1,4 +1,4 @@
-
+// 分享功能
 function shareInit() {
     var env=getEnv(),
         isPost=$('#isPost').val(),

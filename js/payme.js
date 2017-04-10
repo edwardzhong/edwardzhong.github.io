@@ -1,3 +1,4 @@
+// 给我打赏
 var $pay=$('#payMe');
 $('#payBtn').on('click',function(){
 	var $overlay=$('<div class="popup-overlay"></div>');

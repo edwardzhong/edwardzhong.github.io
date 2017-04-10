@@ -1,4 +1,4 @@
-$(window).on('scroll',setScrollTop);
+// 滚动到顶部或底部
 $('.to-top').on('click',function(){
 	window.scrollTo(0,0);
 });
@@ -33,6 +33,7 @@ function setScrollTop(){
 			toBottom.removeClass('show').addClass('hide');
 		}
 	}
+	return false;
 }
 
-setScrollTop();
+scrollEventCtr(setScrollTop);

@@ -1,3 +1,4 @@
+// 搜索功能
 var Content=null;
 var changeEvent= 'oninput' in window?'input':'onpropertychange' in window?'propertychange':'keyup';
 $('[data-tag=search]').on('click',popupSearch);

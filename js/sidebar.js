@@ -1,4 +1,4 @@
-
+// 移动端侧边栏效果
 $(window).on('resize',windowResize);
 $('.container').on('click',function(){
 	$('.share-popup').css('display','none');

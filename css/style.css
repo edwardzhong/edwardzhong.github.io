@@ -817,6 +817,11 @@ table tbody tr:nth-child(2n) {
   height: 60px;
   line-height: 60px;
 }
+.img-placeholder {
+  width: 99.5%;
+  height: 250px;
+  border: 1px solid #f2f2f2;
+}
 html body > #ygt-fix-wrap-1415 > #ygt-input-bar-1415 {
   z-index: 997;
 }
