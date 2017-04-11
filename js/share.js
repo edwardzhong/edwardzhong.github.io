@@ -54,7 +54,7 @@ function shareInit() {
             tpl.css({
                 top:offset.top+h+5,
                 left:offset.left-150
-            }).on('click',function(e){
+            }).find('.share-input').on('click',function(e){
                 e.stopPropagation();
                 e.preventDefault();
             });
@@ -72,6 +72,8 @@ function shareInit() {
     });
 
     $('.container').on('click','.share-sns',function(e){
+        e.stopPropagation();
+        e.preventDefault();
         var type = $(this).attr('data-type');
         handleClick(type, {
             url:location.protocol+'//'+location.host,
