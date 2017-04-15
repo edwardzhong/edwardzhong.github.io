@@ -5,7 +5,8 @@ function shareInit() {
         sUrl = location.protocol+'//'+location.host+location.pathname,
         sTitle = $('.post-title').html(),
         sDesc = sTitle,
-        sPic = '';
+        sPic = '',
+        sImg =[];
     
     $('.share').on('click',function(e){
         e.stopPropagation();
@@ -27,7 +28,7 @@ function shareInit() {
         sUrl = location.protocol+'//'+location.host+url;
         sTitle = article.find('.post-title').html();
         sDesc = self.attr('data-desc');
-        // var sImg= article.find('.img-entry img');
+        sImg= article.find('img');
 
         if(sImg.length){
             sPic=sImg.attr('src');
