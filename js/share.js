@@ -19,7 +19,7 @@ function shareInit() {
             url=self.attr('data-url'),
             id=url.replace(/\//g,'')
             sharePop=$('#'+id),
-            article=self.parent().parent().parent(),
+            article=self.parents('article'),
             offset=self.offset(),
             w=self.width(),
             h=self.height();
@@ -27,7 +27,7 @@ function shareInit() {
         sUrl = location.protocol+'//'+location.host+url;
         sTitle = article.find('.post-title').html();
         sDesc = self.attr('data-desc');
-        var sImg= article.find('.img-entry img');
+        // var sImg= article.find('.img-entry img');
 
         if(sImg.length){
             sPic=sImg.attr('src');
