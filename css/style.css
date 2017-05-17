@@ -301,6 +301,9 @@ table tbody tr:nth-child(2n) {
   padding: 30px;
   background-size: 100%;
 }
+.post-list .post-banner:hover {
+  opacity: .5;
+}
 .post-list .post-banner .post-title {
   padding: 0;
   color: #ffffff;
