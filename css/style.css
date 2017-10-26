@@ -825,6 +825,95 @@ table tbody tr:nth-child(2n) {
   height: 250px;
   border: 1px solid #f2f2f2;
 }
+.highlight {
+  margin: 0;
+  padding: 0;
+}
+.highlight table {
+  width: 100%;
+}
+.code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  white-space: pre;
+  padding: 15px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f2f2f2;
+  border-radius: 3px;
+  border: none;
+}
+.code .comment,
+.code .quote {
+  color: #998;
+  font-style: italic;
+}
+.code .keyword,
+.code .function,
+.code .selector-tag,
+.code .subst {
+  color: #6f42c1;
+  font-weight: bold;
+}
+.code .number,
+.code .literal,
+.code .variable,
+.code .template-variable,
+.code .tag .attr {
+  color: #008080;
+}
+.code .string,
+.code .doctag {
+  color: #d14;
+}
+.code .title,
+.code .section,
+.code .selector-id {
+  color: #900;
+  font-weight: bold;
+}
+.code .subst {
+  font-weight: normal;
+}
+.code .type,
+.code .class .title {
+  color: #458;
+  font-weight: bold;
+}
+.code .tag,
+.code .name,
+.code .attribute {
+  color: #000080;
+  font-weight: normal;
+}
+.code .regexp,
+.code .link {
+  color: #009926;
+}
+.code .symbol,
+.code .bullet {
+  color: #990073;
+}
+.code .built_in,
+.code .builtin-name {
+  color: #0086b3;
+}
+.code .meta {
+  color: #999;
+  font-weight: bold;
+}
+.code .deletion {
+  background: #fdd;
+}
+.code .addition {
+  background: #dfd;
+}
+.code .emphasis {
+  font-style: italic;
+}
+.code .strong {
+  font-weight: bold;
+}
 html body > #ygt-fix-wrap-1415 > #ygt-input-bar-1415 {
   z-index: 997;
 }

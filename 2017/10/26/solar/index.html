@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="canvas绘制太阳系 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >canvas绘制太阳系 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="canvas绘制太阳系 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/icons/icon.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/dist/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>write the thing where interesting</h3>
+  <div class="menu">
+  
+  
+  
+      <a 
+        href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a  data-tag="search" 
+        href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">5<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">23<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/solar_banner.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">canvas绘制太阳系</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2017/10/26 19:27:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>学习canvas有一段时间了，顺便写个小项目练手，该项目用到的知识点包括： </p>
+<p>ES6面向对象<br>基本的三角函数<br>canvas部分有：坐标变换，渐变，混合模式，线条和图形的绘制。</p>
+<p>实际效果: s…</p>
+</p> -->
+    	
+    	<div class="post-content"><p>学习canvas有一段时间了，顺便写个小项目练手，该项目用到的知识点包括： </p>
+<ol>
+<li>ES6面向对象</li>
+<li>基本的三角函数</li>
+<li>canvas部分有：坐标变换，渐变，混合模式，线条和图形的绘制。</li>
+</ol>
+<p>实际效果: <a href="https://edwardzhong.github.io/sites/demo/dist/solar.html" target="_blank" rel="external">solar system(推荐在chrome或safari下运行)</a><br><a id="more"></a></p>
+<h2 id="场景"><a href="#场景" class="headerlink" title="场景"></a>场景</h2><p>首先建立场景类，主要用来组织管理对象，统一更新和绘制对象。这里用到了ES6的类语法，构造函数建立对象列表属性planets，绘制背景方法drawBG，使用requestAnimationFrame反复执行的动画方法animate</p>
+<p>绘制背景使用到了径向渐变：createRadialGradient(x1,y1,r1,x2,y2,r2); 该渐变主要用于创建两个圆相交过渡效果，如果前后两个圆心相同(x1==x2 &amp;&amp; y1==y2)，则会构造同心圆样式的渐变。 这样我们就以太阳为中心的黄色调渐变到黑色，最后用fillRect填充整个背景。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">//场景</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Stage</span> </span>&#123;</div><div class="line">	<span class="keyword">constructor</span>()&#123;</div><div class="line">		<span class="keyword">this</span>.planets=[];</div><div class="line">	&#125;</div><div class="line">	init(ctx)&#123;</div><div class="line">		ctx.translate(W/<span class="number">2</span>,H/<span class="number">2</span>);<span class="comment">//坐标重置为中间</span></div><div class="line">		<span class="keyword">this</span>.animate(ctx);</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//绘制背景</span></div><div class="line">	drawBG(ctx)&#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.globalCompositeOperation = <span class="string">"source-over"</span>;</div><div class="line">		<span class="keyword">var</span> gradient=ctx.createRadialGradient(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">600</span>);</div><div class="line">		gradient.addColorStop(<span class="number">0</span>,<span class="string">'rgba(3,12,13,0.1)'</span>);</div><div class="line">		gradient.addColorStop(<span class="number">1</span>,<span class="string">'rgba(0,0,0,1'</span>);</div><div class="line">		ctx.fillStyle=gradient;</div><div class="line">		<span class="comment">// ctx.fillStyle='rgba(0,0,0,0.9)';</span></div><div class="line">		ctx.fillRect(-W/<span class="number">2</span>,-H/<span class="number">2</span>,W,H);</div><div class="line">		ctx.restore();</div><div class="line">	&#125;</div><div class="line">	<span class="comment">//执行动画</span></div><div class="line">	animate(ctx)&#123;</div><div class="line">		<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">			startTime=<span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">		(<span class="function"><span class="keyword">function</span> <span class="title">run</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			that.drawBG(ctx);</div><div class="line">			that.planets.forEach(<span class="function"><span class="params">item</span>=&gt;</span>&#123;</div><div class="line">				item.update(startTime);</div><div class="line">				item.draw(ctx);</div><div class="line">			&#125;);</div><div class="line">			requestAnimationFrame(run);</div><div class="line">		&#125;());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="星球"><a href="#星球" class="headerlink" title="星球"></a>星球</h2><p>然后建立星球基类，除构造函数，还有更新位置角度的方法Update，对象绘制方法draw。之后所有的星球，都会初始化该类或者继承该类建立对应星球。</p>
+<p>行星绕太阳做圆周运动，这个可以用三角函数根据角度和半径求出x,y，但还有更加方便的方法，那就是使用canvas提供的坐标旋转方法rotate，以360度为一个周期。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 星球基类</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Planet</span></span>&#123;</div><div class="line">	<span class="comment">/**</span></div><div class="line"><span class="comment">	 * @param  &#123;Number&#125; x         x坐标</span></div><div class="line"><span class="comment">	 * @param  &#123;Number&#125; y         y坐标</span></div><div class="line"><span class="comment">	 * @param  &#123;Number&#125; r         半径</span></div><div class="line"><span class="comment">	 * @param  &#123;Number&#125; duration  周期(秒)</span></div><div class="line"><span class="comment">	 * @param  &#123;Object&#125; fillStyle </span></div><div class="line"><span class="comment">	 * @param  &#123;Object&#125; blurStyle </span></div><div class="line"><span class="comment">	 */</span></div><div class="line">	<span class="keyword">constructor</span>(x,y,r,duration,fillStyle,blurStyle)&#123;</div><div class="line">		<span class="keyword">this</span>.x=x;</div><div class="line">		<span class="keyword">this</span>.y=y;</div><div class="line">		<span class="keyword">this</span>.r=r;</div><div class="line">		<span class="keyword">this</span>.duration=duration;</div><div class="line">		<span class="keyword">this</span>.angle=<span class="number">0</span>;</div><div class="line">		<span class="keyword">this</span>.fillStyle=fillStyle;</div><div class="line">		<span class="keyword">this</span>.blurStyle=blurStyle;</div><div class="line">	&#125;</div><div class="line">	update(startTime)&#123;</div><div class="line">		<span class="keyword">this</span>.angle=Tween.linear(<span class="keyword">new</span> <span class="built_in">Date</span>()-startTime,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="keyword">this</span>.duration*<span class="number">1000</span>);</div><div class="line">	&#125;</div><div class="line">	draw(ctx)&#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.rotate(<span class="keyword">this</span>.angle);</div><div class="line">		<span class="comment">// ctx.translate(this.x,this.y);</span></div><div class="line">		drawCircle(<span class="keyword">this</span>.x,<span class="keyword">this</span>.blurStyle.color);</div><div class="line">		ctx.beginPath();</div><div class="line">		<span class="comment">// ctx.globalCompositeOperation = "lighter";</span></div><div class="line">		ctx.fillStyle=<span class="keyword">this</span>.fillStyle;</div><div class="line">		ctx.shadowColor=<span class="keyword">this</span>.blurStyle.color;</div><div class="line">		ctx.shadowBlur=<span class="keyword">this</span>.blurStyle.blur;				</div><div class="line">		<span class="comment">// ctx.arc(0,0,this.r,Math.PI*2,false);</span></div><div class="line">		ctx.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">		ctx.fill();</div><div class="line">		ctx.restore();</div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h2 id="太阳"><a href="#太阳" class="headerlink" title="太阳"></a>太阳</h2><p>开始建立第一个对象-太阳，继承上面的星球基类Planet，重写draw方法<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 太阳</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Sun</span> <span class="keyword">extends</span> <span class="title">Planet</span></span>&#123;</div><div class="line">	draw(ctx)&#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.beginPath();</div><div class="line">		ctx.globalCompositeOperation = <span class="string">"source-over"</span>;</div><div class="line">		ctx.fillStyle=<span class="keyword">this</span>.fillStyle;</div><div class="line">		ctx.shadowColor=<span class="keyword">this</span>.blurStyle.color;</div><div class="line">		ctx.shadowBlur=<span class="keyword">this</span>.blurStyle.blur;				</div><div class="line">		ctx.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">		ctx.fill();</div><div class="line">		ctx.restore();	</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="土星"><a href="#土星" class="headerlink" title="土星"></a>土星</h2><p>土星有美丽的土星环，所以也继承出一个单独的类，重写draw方法，其中土星环比较麻烦，建立了很多颜色节点的径向渐变。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 土星</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Saturn</span> <span class="keyword">extends</span> <span class="title">Planet</span></span>&#123;</div><div class="line">	draw(ctx)&#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.rotate(<span class="keyword">this</span>.angle);</div><div class="line">		drawCircle(<span class="keyword">this</span>.x,<span class="keyword">this</span>.blurStyle.color);</div><div class="line"></div><div class="line">		ctx.beginPath();</div><div class="line">		ctx.fillStyle=<span class="keyword">this</span>.fillStyle;			</div><div class="line">		ctx.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">		ctx.fill();</div><div class="line"></div><div class="line">		<span class="comment">//土星光环</span></div><div class="line">		ctx.globalCompositeOperation = <span class="string">"source-over"</span>;</div><div class="line">		<span class="keyword">var</span> gradient=ctx.createRadialGradient(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="number">0</span>,<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r+<span class="number">25</span>);</div><div class="line">		<span class="keyword">var</span> startStop=(<span class="keyword">this</span>.r+<span class="number">3</span>)/(<span class="keyword">this</span>.r+<span class="number">24</span>);</div><div class="line">		gradient.addColorStop(startStop,<span class="string">'#282421'</span>);</div><div class="line">		gradient.addColorStop(startStop+<span class="number">0.06</span>,<span class="string">'#282421'</span>);</div><div class="line">		gradient.addColorStop(startStop+<span class="number">0.1</span>,<span class="string">'#7e7966'</span>);</div><div class="line">		gradient.addColorStop(startStop+<span class="number">0.18</span>,<span class="string">'#706756'</span>);</div><div class="line">		gradient.addColorStop(startStop+<span class="number">0.24</span>,<span class="string">'#7e7966'</span>);</div><div class="line">		gradient.addColorStop(startStop+<span class="number">0.25</span>,<span class="string">'#282421'</span>);</div><div class="line">		gradient.addColorStop(startStop+<span class="number">0.26</span>,<span class="string">'#282421'</span>);</div><div class="line">		gradient.addColorStop(startStop+<span class="number">0.27</span>,<span class="string">'#807766'</span>);</div><div class="line">		gradient.addColorStop(<span class="number">1</span>,<span class="string">'#595345'</span>);</div><div class="line">		ctx.fillStyle=gradient;</div><div class="line">		ctx.beginPath();</div><div class="line">		ctx.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r+<span class="number">24</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">true</span>);</div><div class="line">		ctx.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r+<span class="number">3</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">		ctx.fill();</div><div class="line">		ctx.restore();	</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="建立星球"><a href="#建立星球" class="headerlink" title="建立星球"></a>建立星球</h2><p>接着开始初始化星球对象，包括太阳和八大行星，然后所有的星球颜色都使用了径向渐变，这样更加的美观。这里给出太阳，水星，土星的例子，其他的行星如此类推。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">// 初始化场景类</span></div><div class="line"><span class="keyword">var</span> stage=<span class="keyword">new</span> Stage();</div><div class="line"></div><div class="line"><span class="comment">// sun</span></div><div class="line"><span class="keyword">var</span> sunStyle=ctx.createRadialGradient(<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">60</span>);</div><div class="line">sunStyle.addColorStop(<span class="number">0</span>,<span class="string">'white'</span>);</div><div class="line">sunStyle.addColorStop(<span class="number">0.5</span>,<span class="string">'white'</span>);</div><div class="line">sunStyle.addColorStop(<span class="number">0.8</span>,<span class="string">'#ffca1e'</span>);</div><div class="line">sunStyle.addColorStop(<span class="number">1</span>,<span class="string">'#b4421d'</span>);</div><div class="line"><span class="keyword">var</span> sun=<span class="keyword">new</span> Sun(<span class="number">0</span>,<span class="number">0</span>,<span class="number">60</span>,<span class="number">0</span>,sunStyle,&#123;<span class="attr">color</span>:<span class="string">'#b4421d'</span>,<span class="attr">blur</span>:<span class="number">300</span>&#125;);</div><div class="line">stage.planets.push(sun);</div><div class="line"></div><div class="line"><span class="comment">// mercury</span></div><div class="line"><span class="keyword">var</span> mercuryStyle=ctx.createRadialGradient(<span class="number">100</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">0</span>,<span class="number">9</span>);</div><div class="line">mercuryStyle.addColorStop(<span class="number">0</span>,<span class="string">'#75705a'</span>);</div><div class="line">mercuryStyle.addColorStop(<span class="number">1</span>,<span class="string">'#464646'</span>);</div><div class="line"><span class="keyword">var</span> mercury=<span class="keyword">new</span> Planet(<span class="number">100</span>,<span class="number">0</span>,<span class="number">9</span>,<span class="number">8.77</span>,mercuryStyle,&#123;<span class="attr">color</span>:<span class="string">'#464646'</span>&#125;);</div><div class="line">stage.planets.push(mercury);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//saturn </span></div><div class="line"><span class="keyword">var</span> saturnStyle=ctx.createRadialGradient(<span class="number">500</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">500</span>,<span class="number">0</span>,<span class="number">26</span>);</div><div class="line">saturnStyle.addColorStop(<span class="number">0</span>,<span class="string">'#f2e558'</span>);</div><div class="line">saturnStyle.addColorStop(<span class="number">1</span>,<span class="string">'#4c4a3b'</span>);</div><div class="line"><span class="keyword">var</span> saturn =<span class="keyword">new</span> Saturn(<span class="number">500</span>,<span class="number">0</span>,<span class="number">26</span>,<span class="number">1075.995</span>,saturnStyle,&#123;<span class="attr">color</span>:<span class="string">'#4c4a3b'</span>&#125;);</div><div class="line">stage.planets.push(saturn);</div></pre></td></tr></table></figure></p>
+<h2 id="小行星带"><a href="#小行星带" class="headerlink" title="小行星带"></a>小行星带</h2><p>当然还有火星和木星之间的小行星带，同理继承星球基类，这里用到了图像混合模式globalCompositeOperation，使用xor可以和背景对比度没那么突兀。当然还有其他属性值，比如source-over, lighter等。这里我们随机生成了300个对象，一样填充进场景类的planets属性统一更新绘制。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 小行星</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Asteroid</span> <span class="keyword">extends</span> <span class="title">Planet</span></span>&#123;</div><div class="line">	draw(ctx)&#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.rotate(<span class="keyword">this</span>.angle);</div><div class="line">		ctx.beginPath();</div><div class="line">		ctx.globalCompositeOperation = <span class="string">"xor"</span>;</div><div class="line">		ctx.fillStyle=<span class="keyword">this</span>.fillStyle;			</div><div class="line">		ctx.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">		ctx.fill();</div><div class="line">		ctx.restore();	</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createAsteroids</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> asteroid=<span class="literal">null</span>,</div><div class="line">		x=<span class="number">300</span>,y=<span class="number">0</span>, r=<span class="number">2</span>,rd=<span class="number">300</span>,</div><div class="line">		angle=<span class="number">0</span>, d=<span class="number">283</span>, </div><div class="line">		color=<span class="string">'#fff'</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">400</span>;i++)&#123;</div><div class="line">		rd=Random(<span class="number">300</span>,<span class="number">320</span>);</div><div class="line">		angle=Random(<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>*<span class="number">1000</span>)/<span class="number">1000</span>;</div><div class="line">		x=<span class="built_in">Math</span>.round(<span class="built_in">Math</span>.cos(angle)*rd);</div><div class="line">		y=<span class="built_in">Math</span>.round(<span class="built_in">Math</span>.sin(angle)*rd);</div><div class="line">		r=Random(<span class="number">1</span>,<span class="number">3</span>);</div><div class="line">		d=Random(<span class="number">28.3</span>,<span class="number">511</span>);</div><div class="line">		color=getAsteroidColor();</div><div class="line">		<span class="comment">// console.log(angle,color);</span></div><div class="line">		asteroid = <span class="keyword">new</span> Asteroid(x,y,r,d,color,&#123;<span class="attr">color</span>:color,<span class="attr">blur</span>:<span class="number">1</span>&#125;);</div><div class="line">		stage.planets.push(asteroid);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="彗星"><a href="#彗星" class="headerlink" title="彗星"></a>彗星</h2><p>基本快完成了，但我们除此之外，可以再添加做椭圆运动的彗星，这样更加酷。一样随机生成20个彗星填充进场景类统一更新绘制。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 彗星</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Comet</span> </span>&#123;</div><div class="line">	<span class="keyword">constructor</span>(cx,cy,a,b,r,angle,color,duration)&#123;</div><div class="line">		<span class="keyword">this</span>.a=a;</div><div class="line">		<span class="keyword">this</span>.b=b;</div><div class="line">		<span class="keyword">this</span>.r=r;</div><div class="line">		<span class="keyword">this</span>.cx=cx;</div><div class="line">		<span class="keyword">this</span>.cy=cy;</div><div class="line">		<span class="keyword">this</span>.x=<span class="number">0</span>;</div><div class="line">		<span class="keyword">this</span>.y=<span class="number">0</span>;</div><div class="line">		<span class="keyword">this</span>.color=color;</div><div class="line">		<span class="keyword">this</span>.angle=angle;</div><div class="line">		<span class="keyword">this</span>.duration=duration;</div><div class="line">	&#125;</div><div class="line">	update(startTime)&#123;</div><div class="line">		<span class="keyword">var</span> t=Tween.linear(<span class="keyword">new</span> <span class="built_in">Date</span>()-startTime,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="keyword">this</span>.duration*<span class="number">1000</span>);</div><div class="line">		<span class="keyword">this</span>.x=<span class="keyword">this</span>.cx+<span class="keyword">this</span>.a*<span class="built_in">Math</span>.cos(<span class="keyword">this</span>.angle+t);</div><div class="line">		<span class="keyword">this</span>.y=<span class="keyword">this</span>.cy+<span class="keyword">this</span>.b*<span class="built_in">Math</span>.sin(<span class="keyword">this</span>.angle+t);</div><div class="line">	&#125;</div><div class="line">	draw()&#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.rotate(<span class="keyword">this</span>.angle);</div><div class="line">		<span class="comment">//画运动轨迹</span></div><div class="line">		ctx.lineWidth=<span class="number">0.5</span>;</div><div class="line">		ctx.strokeStyle=<span class="string">'rgba(15,69,116,0.2)'</span>;</div><div class="line">		Shape.ellipse(ctx,<span class="keyword">this</span>.cx,<span class="keyword">this</span>.cy,<span class="keyword">this</span>.a,<span class="keyword">this</span>.b);</div><div class="line"></div><div class="line">		<span class="comment">//画球</span></div><div class="line">		ctx.beginPath();</div><div class="line">		<span class="comment">// ctx.globalCompositeOperation = "lighter";</span></div><div class="line">		ctx.globalCompositeOperation = <span class="string">"source-atop"</span>;</div><div class="line">		ctx.shadowColor=<span class="keyword">this</span>.color;</div><div class="line">		ctx.shadowBlur=<span class="number">1</span>;</div><div class="line">		ctx.fillStyle=<span class="keyword">this</span>.color;</div><div class="line">		ctx.arc(<span class="keyword">this</span>.x,<span class="keyword">this</span>.y,<span class="keyword">this</span>.r,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">		ctx.fill();</div><div class="line">		<span class="comment">//画尾迹</span></div><div class="line">		ctx.restore();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createComets</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> l=<span class="number">180</span>,</div><div class="line">		a=<span class="number">800</span>,b=<span class="number">300</span>,</div><div class="line">		cx=a-l,cy=<span class="number">0</span>,</div><div class="line">		r=<span class="number">3</span>,duration=<span class="number">30</span>,angle=<span class="number">0</span>,color=<span class="string">'#fff'</span>,</div><div class="line">		comet = <span class="literal">null</span>;</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">20</span>;i++)&#123;</div><div class="line">		l=Random(<span class="number">120</span>,<span class="number">350</span>)</div><div class="line">		a=Random(<span class="number">600</span>,<span class="number">1000</span>);</div><div class="line">		b=a/Random(<span class="number">1</span>,<span class="number">3</span>);</div><div class="line">		cx=a-l;</div><div class="line">		r=Random(<span class="number">2</span>,<span class="number">4</span>);</div><div class="line">		angle=Random(<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>*<span class="number">1000</span>)/<span class="number">1000</span>;</div><div class="line">		color=getCometColor();</div><div class="line">		duration=Random(<span class="number">20</span>,<span class="number">100</span>);</div><div class="line">		stage.planets.push(<span class="keyword">new</span> Comet(cx,cy,a,b,r,angle,color,duration));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="运动轨迹"><a href="#运动轨迹" class="headerlink" title="运动轨迹"></a>运动轨迹</h2><p>最后的细节，就是标识出行星圆周运动的轨道，当然最简单的是按运动半径画个圆。但我们用线性渐变添加好看的尾迹，这样效果更好<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawCircle</span>(<span class="params">r,color</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> hsl=Color.hexToHsl(color);</div><div class="line">	ctx.lineWidth=<span class="number">1</span>;</div><div class="line">	<span class="comment">// ctx.strokeStyle='rgba(176,184,203,0.3)';</span></div><div class="line">	<span class="comment">// ctx.arc(0,0,this.x,Math.PI*2,false);</span></div><div class="line">	<span class="comment">// ctx.stroke();</span></div><div class="line">	<span class="keyword">var</span> gradient=ctx.createLinearGradient(-r,<span class="number">0</span>,r,<span class="number">0</span>);</div><div class="line">	gradient.addColorStop(<span class="number">0</span>,<span class="string">'hsla('</span>+hsl[<span class="number">0</span>]+<span class="string">','</span>+hsl[<span class="number">1</span>]+<span class="string">'%,0%,.3)'</span>);</div><div class="line">	gradient.addColorStop(<span class="number">0.6</span>,<span class="string">'hsla('</span>+hsl[<span class="number">0</span>]+<span class="string">','</span>+hsl[<span class="number">1</span>]+<span class="string">'%,50%,.9)'</span>);</div><div class="line">	gradient.addColorStop(<span class="number">1</span>,<span class="string">'hsla('</span>+hsl[<span class="number">0</span>]+<span class="string">','</span>+hsl[<span class="number">1</span>]+<span class="string">'%,80%,1)'</span>);</div><div class="line">	ctx.strokeStyle=gradient;</div><div class="line">		<span class="comment">// ctx.shadowColor=color;</span></div><div class="line">		<span class="comment">// ctx.shadowBlur=4;	</span></div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.arc(<span class="number">0</span>,<span class="number">0</span>,r,<span class="number">0</span>,<span class="built_in">Math</span>.PI,<span class="literal">true</span>);</div><div class="line">	ctx.stroke();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>所有的部分都已经完成，我们只需要启动场景类即可<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">createAsteroids();</div><div class="line">createComets();</div><div class="line">stage.init(ctx);</div></pre></td></tr></table></figure></p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2017/10/26/solar/" data-desc="学习canvas有一段时间了，顺便写个小项目练手，该项目用到的知识点包括： 
+
+ES6面向对象..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/canvas/">canvas</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2017/04/15/ebc/" class="next post-next">喜马拉雅之旅（尼泊尔EBC篇） &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2017 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>
