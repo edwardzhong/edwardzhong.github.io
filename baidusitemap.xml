@@ -4,18 +4,18 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
-    <lastmod>2017-11-08T16:41:40.000Z</lastmod>
+    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
+    <lastmod>2017-11-08T16:55:16.000Z</lastmod>
     <data>
         <display>
-        <title>WebGL学习(1) - 三角形</title>
-        <pubTime>2017-11-08T08:35:21.000Z</pubTime>
+        <title>前端特效列表</title>
+        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
         
         <tag>前端</tag>
          
         <tag>js</tag>
          
-        <tag>webGL</tag>
+        <tag>canvas</tag>
          
          
            
@@ -28,18 +28,18 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
-    <lastmod>2017-11-07T05:53:52.000Z</lastmod>
+    <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
+    <lastmod>2017-11-08T16:52:53.000Z</lastmod>
     <data>
         <display>
-        <title>前端特效列表</title>
-        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
+        <title>WebGL学习(1) - 三角形</title>
+        <pubTime>2017-11-08T08:35:21.000Z</pubTime>
         
         <tag>前端</tag>
          
         <tag>js</tag>
          
-        <tag>canvas</tag>
+        <tag>webGL</tag>
          
          
            
