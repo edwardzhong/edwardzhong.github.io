@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
+    
+    <lastmod>2017-11-08T16:30:58.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
     
-    <lastmod>2017-11-07T05:46:27.000Z</lastmod>
+    <lastmod>2017-11-07T05:53:52.000Z</lastmod>
     
   </url>
   
