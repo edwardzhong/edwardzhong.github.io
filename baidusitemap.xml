@@ -4,32 +4,8 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
-    <lastmod>2017-11-08T16:55:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>前端特效列表</title>
-        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
-    <lastmod>2017-11-08T16:52:53.000Z</lastmod>
+    <lastmod>2017-11-08T16:59:55.000Z</lastmod>
     <data>
         <display>
         <title>WebGL学习(1) - 三角形</title>
@@ -53,11 +29,35 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
-    <lastmod>2017-11-06T12:53:37.000Z</lastmod>
+    <lastmod>2017-11-08T16:59:14.000Z</lastmod>
     <data>
         <display>
         <title>canvas图形编辑器</title>
         <pubTime>2017-11-02T05:27:38.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
+    <lastmod>2017-11-08T16:55:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>前端特效列表</title>
+        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
         
         <tag>前端</tag>
          

@@ -832,6 +832,9 @@ table tbody tr:nth-child(2n) {
 .highlight table {
   width: 100%;
 }
+img[alt=it] {
+  width: 50%;
+}
 .code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   white-space: pre;
