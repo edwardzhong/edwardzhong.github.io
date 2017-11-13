@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="canvas图表(1) - 柱状图 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >canvas图表(1) - 柱状图 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="canvas图表(1) - 柱状图 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/icons/icon.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/dist/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>write the thing where interesting</h3>
+  <div class="menu">
+  
+  
+  
+      <a 
+        href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a  data-tag="search" 
+        href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">9<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">24<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/banner8.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">canvas图表(1) - 柱状图</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2017/11/12 18:45:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>前几天用到了图表库，其中百度的ECharts，感觉做得最好，看它默认用的是canva，canvas图表在处理大数据方面比svg要好。那我也用canvas来实现一个图表库吧，感觉不会太难，先实现…</p>
+</p> -->
+    	
+    	<div class="post-content"><!-- 原文地址：[canvas图表(1) - 柱状图](http://jeffzhong.space/2017/11/12/chartbar/) -->
+<p>前几天用到了图表库，其中百度的ECharts，感觉做得最好，看它默认用的是canva，canvas图表在处理大数据方面比svg要好。那我也用canvas来实现一个图表库吧，感觉不会太难，先实现格简单的柱状图。</p>
+<p>效果请看：<em><a href="http://jeffzhong.space/sites/demo/dist/bar.html">柱状图https://edwardzhong.github.io/sites/demo/dist/bar.html</a></em><br><img src="http://oncse3u6r.bkt.clouddn.com/bar.jpg" alt="it"><br><a id="more"></a></p>
+<p>主要功能点包括：</p>
+<ol>
+<li>文本的绘制</li>
+<li>XY轴的绘制；</li>
+<li>数据分组绘制；</li>
+<li>数据动画的实现；</li>
+<li>鼠标事件的处理。</li>
+</ol>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>首先我们看一下使用方式，参考了部分ECharts的使用方式，先传入要显示图表的html标签，接着调用init，初始化的同时传入数据。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> con=<span class="built_in">document</span>.getElementById(<span class="string">'container'</span>);</div><div class="line"><span class="keyword">var</span> chart=<span class="keyword">new</span> Bar(con);</div><div class="line">chart.init(&#123;</div><div class="line">	title:<span class="string">'全年降雨量柱状图'</span>,</div><div class="line">	xAxis:&#123;<span class="comment">// x轴</span></div><div class="line">		data:[<span class="string">'1月'</span>,<span class="string">'2月'</span>,<span class="string">'3月'</span>,<span class="string">'4月'</span>,<span class="string">'5月'</span>,<span class="string">'6月'</span>,<span class="string">'7月'</span>,<span class="string">'8月'</span>,<span class="string">'9月'</span>,<span class="string">'10月'</span>,<span class="string">'11月'</span>,<span class="string">'12月'</span>]</div><div class="line">	&#125;,</div><div class="line">	yAxis:&#123;<span class="comment">//y轴</span></div><div class="line">		name:<span class="string">'水量'</span>,</div><div class="line">		formatter:<span class="string">'&#123;value&#125; ml'</span></div><div class="line">	&#125;,</div><div class="line">	series:[<span class="comment">//分组数据</span></div><div class="line">		&#123;</div><div class="line">			name:<span class="string">'东部降水量'</span>,</div><div class="line">			data:[<span class="number">62</span>,<span class="number">20</span>,<span class="number">17</span>,<span class="number">45</span>,<span class="number">100</span>,<span class="number">56</span>,<span class="number">19</span>,<span class="number">38</span>,<span class="number">50</span>,<span class="number">120</span>,<span class="number">56</span>,<span class="number">130</span>]</div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			name:<span class="string">'西部降水量'</span>,</div><div class="line">			data:[<span class="number">52</span>,<span class="number">10</span>,<span class="number">17</span>,<span class="number">25</span>,<span class="number">60</span>,<span class="number">39</span>,<span class="number">19</span>,<span class="number">48</span>,<span class="number">70</span>,<span class="number">30</span>,<span class="number">56</span>,<span class="number">8</span>]</div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			name:<span class="string">'南部降水量'</span>,</div><div class="line">			data:[<span class="number">12</span>,<span class="number">10</span>,<span class="number">17</span>,<span class="number">25</span>,<span class="number">27</span>,<span class="number">39</span>,<span class="number">50</span>,<span class="number">38</span>,<span class="number">100</span>,<span class="number">30</span>,<span class="number">56</span>,<span class="number">90</span>]</div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">		 	color:<span class="string">'hsla(270,80%,60%,1)'</span>,</div><div class="line">			name:<span class="string">'北部降水量'</span>,</div><div class="line">			data:[<span class="number">12</span>,<span class="number">30</span>,<span class="number">17</span>,<span class="number">25</span>,<span class="number">7</span>,<span class="number">39</span>,<span class="number">49</span>,<span class="number">38</span>,<span class="number">60</span>,<span class="number">30</span>,<span class="number">56</span>,<span class="number">10</span>]</div><div class="line">		&#125;</div><div class="line">	]</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>图表基类，我们后面还要写饼图，折线图，所以把公共的部分抽出来。注意canvas.style.width与canvas.width是不一样的，前者会拉伸图形，后者才是我们正常用的，不会拉伸图形。在这里这样写先扩大再缩小是为了解决canvas绘制文字时模糊的问题。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chart</span></span>&#123;</div><div class="line">	<span class="keyword">constructor</span>(container)&#123;</div><div class="line">		<span class="keyword">this</span>.container=container;</div><div class="line">		<span class="keyword">this</span>.canvas=<span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</div><div class="line">		<span class="keyword">this</span>.ctx=<span class="keyword">this</span>.canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">		<span class="keyword">this</span>.W=<span class="number">1000</span>*<span class="number">2</span>;</div><div class="line">		<span class="keyword">this</span>.H=<span class="number">600</span>*<span class="number">2</span>;</div><div class="line">		<span class="keyword">this</span>.padding=<span class="number">120</span>;</div><div class="line">		<span class="keyword">this</span>.paddingTop=<span class="number">50</span>;</div><div class="line">		<span class="keyword">this</span>.title=<span class="string">''</span>;</div><div class="line">		<span class="keyword">this</span>.legend=[];</div><div class="line">		<span class="keyword">this</span>.series=[];</div><div class="line">		<span class="comment">//通过缩小一倍，解决字体模糊问题</span></div><div class="line">		<span class="keyword">this</span>.canvas.width=<span class="keyword">this</span>.W;</div><div class="line">		<span class="keyword">this</span>.canvas.height=<span class="keyword">this</span>.H;</div><div class="line">		<span class="keyword">this</span>.canvas.style.width = <span class="keyword">this</span>.W/<span class="number">2</span> + <span class="string">'px'</span>;</div><div class="line">		<span class="keyword">this</span>.canvas.style.height = <span class="keyword">this</span>.H/<span class="number">2</span> + <span class="string">'px'</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>柱状图初始化，调用es6中的Object.assign(this,opt)，这个相当于JQ中的extend方法，把属性复制到当前实例。同时还建了个tip属性，这是个html标签，后面显示数据信息用。接着绘制图形，然后绑定鼠标事件。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Bar</span> <span class="keyword">extends</span> <span class="title">Chart</span></span>&#123;</div><div class="line">	<span class="keyword">constructor</span>(container)&#123;</div><div class="line">		<span class="keyword">super</span>(container);</div><div class="line">		<span class="keyword">this</span>.xAxis=&#123;&#125;;</div><div class="line">		<span class="keyword">this</span>.yAxis=[];</div><div class="line">		<span class="keyword">this</span>.animateArr=[];</div><div class="line">	&#125;</div><div class="line">	init(opt)&#123;</div><div class="line">		<span class="built_in">Object</span>.assign(<span class="keyword">this</span>,opt);</div><div class="line">		<span class="keyword">if</span>(!<span class="keyword">this</span>.container)<span class="keyword">return</span>;</div><div class="line">		<span class="keyword">this</span>.container.style.position=<span class="string">'relative'</span>;</div><div class="line">		<span class="keyword">this</span>.tip=<span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</div><div class="line">		<span class="keyword">this</span>.tip.style.cssText=<span class="string">'display: none; position: absolute; opacity: 0.5; background: #000; color: #fff; border-radius: 5px; padding: 5px; font-size: 8px; z-index: 99;'</span>;</div><div class="line">		<span class="keyword">this</span>.container.appendChild(<span class="keyword">this</span>.canvas);</div><div class="line">		<span class="keyword">this</span>.container.appendChild(<span class="keyword">this</span>.tip);</div><div class="line">		<span class="keyword">this</span>.draw();</div><div class="line">		<span class="keyword">this</span>.bindEvent();</div><div class="line">	&#125;</div><div class="line">	draw()&#123;<span class="comment">//绘制</span></div><div class="line"></div><div class="line">	&#125;</div><div class="line">	showInfo()&#123;<span class="comment">//显示信息</span></div><div class="line"></div><div class="line">	&#125;</div><div class="line">	animate()&#123;<span class="comment">//执行动画</span></div><div class="line"></div><div class="line">	&#125;</div><div class="line">	showData()&#123;<span class="comment">//显示数据</span></div><div class="line"></div><div class="line">	&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="绘制XY轴"><a href="#绘制XY轴" class="headerlink" title="绘制XY轴"></a>绘制XY轴</h2><p>首先绘制标题，接着XY轴，然后遍历分组数据series，里面有复杂的计算，然后绘制XY轴的刻度，绘制分组标签，最后是绘制数据。数据项series中是分组数据，它跟X轴的xAxis.data一一对应。每个项可以自定义名称和颜色，没有指定的话，名称赋予nunamed和自动生成颜色。这里还用legend属性记录下了标签列表信息，因为后续鼠标点击判断是否点中用的上。<br>canvas主要知识点：</p>
+<ol>
+<li>分组标签使用了arcTo方法，这样就能绘制出圆角的效果。</li>
+<li>绘制文本使用了measureText方法，可以用来测量文字所占宽度，这样就可以调整下一次绘制的位置，避免位置冲突。</li>
+<li>translate位移方法，可以放在绘制上下文(save和restore的中间)中，这样可以避免复杂的位置运算。<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">draw()&#123;</div><div class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">		ctx=<span class="keyword">this</span>.ctx,</div><div class="line">		canvas=<span class="keyword">this</span>.canvas,</div><div class="line">		W=<span class="keyword">this</span>.W,</div><div class="line">		H=<span class="keyword">this</span>.H,</div><div class="line">		padding=<span class="keyword">this</span>.padding,</div><div class="line">		paddingTop=<span class="keyword">this</span>.paddingTop,</div><div class="line">		xl=<span class="number">0</span>,xs=<span class="number">0</span>,xdis=W-padding*<span class="number">2</span>,<span class="comment">//x轴单位数，每个单位长度，x轴总长度</span></div><div class="line">		yl=<span class="number">0</span>,ys=<span class="number">0</span>,ydis=H-padding*<span class="number">2</span>-paddingTop;<span class="comment">//y轴单位数，每个单位长度，y轴总长度</span></div><div class="line"></div><div class="line">	ctx.fillStyle=<span class="string">'hsla(0,0%,20%,1)'</span>;</div><div class="line">	ctx.strokeStyle=<span class="string">'hsla(0,0%,10%,1)'</span>;</div><div class="line">	ctx.lineWidth=<span class="number">1</span>;</div><div class="line">	ctx.textAlign=<span class="string">'center'</span>;</div><div class="line">	ctx.textBaseLine=<span class="string">'middle'</span>;</div><div class="line">	ctx.font=<span class="string">'24px arial'</span>;</div><div class="line"></div><div class="line">	ctx.clearRect(<span class="number">0</span>,<span class="number">0</span>,W,H);</div><div class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.title)&#123;</div><div class="line">		ctx.save();</div><div class="line">		ctx.textAlign=<span class="string">'left'</span>;</div><div class="line">		ctx.font=<span class="string">'bold 40px arial'</span>;</div><div class="line">		ctx.fillText(<span class="keyword">this</span>.title,padding<span class="number">-50</span>,<span class="number">70</span>);</div><div class="line">		ctx.restore();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.yAxis&amp;&amp;<span class="keyword">this</span>.yAxis.name)&#123;</div><div class="line">		ctx.fillText(<span class="keyword">this</span>.yAxis.name,padding,padding+paddingTop<span class="number">-30</span>);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// x轴</span></div><div class="line">	ctx.save();</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.translate(padding,H-padding);</div><div class="line">	ctx.moveTo(<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">	ctx.lineTo(W<span class="number">-2</span>*padding,<span class="number">0</span>);</div><div class="line">	ctx.stroke();</div><div class="line">	<span class="comment">// x轴刻度</span></div><div class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.xAxis&amp;&amp;(xl=<span class="keyword">this</span>.xAxis.data.length))&#123;</div><div class="line">		xs=(W<span class="number">-2</span>*padding)/xl;</div><div class="line">		<span class="keyword">this</span>.xAxis.data.forEach(<span class="function">(<span class="params">obj,i</span>)=&gt;</span>&#123;</div><div class="line">			<span class="keyword">var</span> x=xs*(i+<span class="number">1</span>);</div><div class="line">			ctx.moveTo(x,<span class="number">0</span>);</div><div class="line">			ctx.lineTo(x,<span class="number">10</span>);</div><div class="line">			ctx.stroke();</div><div class="line">			ctx.fillText(obj,x-xs/<span class="number">2</span>,<span class="number">40</span>);</div><div class="line">		&#125;);</div><div class="line">	&#125;</div><div class="line">	ctx.restore();</div><div class="line"></div><div class="line">	<span class="comment">// y轴</span></div><div class="line">	ctx.save();</div><div class="line">	ctx.beginPath();</div><div class="line">	ctx.strokeStyle=<span class="string">'hsl(220,100%,50%)'</span>;</div><div class="line">	ctx.translate(padding,H-padding);</div><div class="line">	ctx.moveTo(<span class="number">0</span>,<span class="number">0</span>);</div><div class="line">	ctx.lineTo(<span class="number">0</span>,<span class="number">2</span>*padding+paddingTop-H);</div><div class="line">	ctx.stroke();</div><div class="line">	ctx.restore();</div><div class="line"></div><div class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.series.length)&#123;			</div><div class="line">		<span class="keyword">var</span> curr,txt,dim,info,item,tw=<span class="number">0</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.series.length;i++)&#123;</div><div class="line">			item=<span class="keyword">this</span>.series[i];</div><div class="line">			<span class="keyword">if</span>(!item.data||!item.data.length)&#123;</div><div class="line">				<span class="keyword">this</span>.series.splice(i--,<span class="number">1</span>);<span class="keyword">continue</span>;</div><div class="line">			&#125;</div><div class="line">			<span class="comment">// 赋予没有颜色的项</span></div><div class="line">			<span class="keyword">if</span>(!item.color)&#123;</div><div class="line">				<span class="keyword">var</span> hsl=i%<span class="number">2</span>?<span class="number">180</span>+<span class="number">20</span>*i/<span class="number">2</span>:<span class="number">20</span>*(i<span class="number">-1</span>);</div><div class="line">				item.color=<span class="string">'hsla('</span>+hsl+<span class="string">',70%,60%,1)'</span>;</div><div class="line">			&#125;</div><div class="line">			item.name=item.name||<span class="string">'unnamed'</span>;</div><div class="line"></div><div class="line">			<span class="comment">// 画分组标签</span></div><div class="line">			ctx.save();</div><div class="line">			ctx.translate(padding+W/<span class="number">4</span>,paddingTop+<span class="number">40</span>);</div><div class="line">			that.legend.push(&#123;</div><div class="line">				hide:item.hide||<span class="literal">false</span>,</div><div class="line">				name:item.name,</div><div class="line">				color:item.color,</div><div class="line">				x:padding+that.W/<span class="number">4</span>+i*<span class="number">90</span>+tw,</div><div class="line">				y:paddingTop+<span class="number">40</span>,</div><div class="line">				w:<span class="number">60</span>,</div><div class="line">				h:<span class="number">30</span>,</div><div class="line">				r:<span class="number">5</span></div><div class="line">			&#125;);</div><div class="line">			ctx.textAlign=<span class="string">'left'</span>;</div><div class="line">			ctx.fillStyle=item.color;</div><div class="line">			ctx.strokeStyle=item.color;</div><div class="line">			roundRect(ctx,i*<span class="number">90</span>+tw,<span class="number">0</span>,<span class="number">60</span>,<span class="number">30</span>,<span class="number">5</span>);</div><div class="line">			ctx.globalAlpha=item.hide?<span class="number">0.3</span>:<span class="number">1</span>;</div><div class="line">			ctx.fill();</div><div class="line">			ctx.fillText(item.name,i*<span class="number">90</span>+tw+<span class="number">70</span>,<span class="number">26</span>);</div><div class="line">			tw+=ctx.measureText(item.name).width;<span class="comment">//计算字符长度</span></div><div class="line">			ctx.restore();</div><div class="line"></div><div class="line">			<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</div><div class="line">			<span class="comment">//计算数据在Y轴刻度</span></div><div class="line">			<span class="keyword">if</span>(!info)&#123;</div><div class="line">				info=calculateY(item.data.slice(<span class="number">0</span>,xl));</div><div class="line">			&#125;</div><div class="line">			curr=calculateY(item.data.slice(<span class="number">0</span>,xl));</div><div class="line">			<span class="keyword">if</span>(curr.max&gt;info.max)&#123;</div><div class="line">				info=curr;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">if</span>(!info) <span class="keyword">return</span>;</div><div class="line">		yl=info.num;</div><div class="line">		ys=ydis/yl;</div><div class="line"></div><div class="line">		<span class="comment">//画Y轴刻度</span></div><div class="line">		ctx.save();</div><div class="line">		ctx.fillStyle=<span class="string">'hsl(200,100%,60%)'</span>;</div><div class="line">		ctx.translate(padding,H-padding);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;=yl;i++)&#123;</div><div class="line">			ctx.beginPath();</div><div class="line">			ctx.strokeStyle=<span class="string">'hsl(220,100%,50%)'</span>;</div><div class="line">			ctx.moveTo(<span class="number">-10</span>,-<span class="built_in">Math</span>.floor(ys*i));</div><div class="line">			ctx.lineTo(<span class="number">0</span>,-<span class="built_in">Math</span>.floor(ys*i));</div><div class="line">			ctx.stroke();</div><div class="line"></div><div class="line">			ctx.beginPath();</div><div class="line">			ctx.strokeStyle=<span class="string">'hsla(0,0%,80%,1)'</span>;</div><div class="line">			ctx.moveTo(<span class="number">0</span>,-<span class="built_in">Math</span>.floor(ys*i));</div><div class="line">			ctx.lineTo(xdis,-<span class="built_in">Math</span>.floor(ys*i));</div><div class="line">			ctx.stroke();</div><div class="line"></div><div class="line">			ctx.textAlign=<span class="string">'right'</span>;</div><div class="line">			dim=<span class="built_in">Math</span>.min(<span class="built_in">Math</span>.floor(info.step*i),info.max);</div><div class="line">			txt=<span class="keyword">this</span>.yAxis.formatter?<span class="keyword">this</span>.yAxis.formatter.replace(<span class="string">'&#123;value&#125;'</span>,dim):dim;</div><div class="line">			ctx.fillText(txt,<span class="number">-20</span>,-ys*i+<span class="number">10</span>);</div><div class="line">		&#125;</div><div class="line">		ctx.restore();</div><div class="line">		<span class="comment">//画数据</span></div><div class="line">		<span class="keyword">this</span>.showData(xl,xs,info.max);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="绘制数据"><a href="#绘制数据" class="headerlink" title="绘制数据"></a>绘制数据</h2><p>因为数据项需要后续执行动画和鼠标滑过的时候显示内容，所以把它放进动画队列中。这里要把分组数据展开，把之前的两次嵌套的数组转为一层，并计算好每个数据项的属性，比如名称，x，y轴坐标，宽度，速度，颜色。数据组织完毕后，接着执行动画。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">showData(xl,xs,max)&#123;</div><div class="line">	<span class="comment">//画数据</span></div><div class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">		ctx=<span class="keyword">this</span>.ctx,</div><div class="line">		ydis=<span class="keyword">this</span>.H-<span class="keyword">this</span>.padding*<span class="number">2</span>-<span class="keyword">this</span>.paddingTop,</div><div class="line">		sl=<span class="keyword">this</span>.series.filter(<span class="function"><span class="params">s</span>=&gt;</span>!s.hide).length,</div><div class="line">		sp=<span class="built_in">Math</span>.max(<span class="built_in">Math</span>.pow(<span class="number">10</span>-sl,<span class="number">2</span>)/<span class="number">3</span><span class="number">-4</span>,<span class="number">5</span>),</div><div class="line">		w=(xs-sp*(sl+<span class="number">1</span>))/sl,</div><div class="line">		h,x,index=<span class="number">0</span>;</div><div class="line">	that.animateArr.length=<span class="number">0</span>;</div><div class="line">	<span class="comment">// 展开数据项，填入动画队列</span></div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=<span class="keyword">this</span>.series.length;i&lt;len;i++)&#123;</div><div class="line">		item=<span class="keyword">this</span>.series[i];</div><div class="line">		<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</div><div class="line">		item.data.slice(<span class="number">0</span>,xl).forEach(<span class="function">(<span class="params">d,j</span>)=&gt;</span>&#123;</div><div class="line">			h=d/max*ydis;</div><div class="line">			x=xs*j+w*index+sp*(index+<span class="number">1</span>);</div><div class="line">			that.animateArr.push(&#123;</div><div class="line">				index:i,</div><div class="line">				name:item.name,</div><div class="line">				num:d,</div><div class="line">				x:<span class="built_in">Math</span>.round(x),</div><div class="line">				y:<span class="number">1</span>,</div><div class="line">				w:<span class="built_in">Math</span>.round(w),</div><div class="line">				h:<span class="built_in">Math</span>.floor(h+<span class="number">2</span>),</div><div class="line">				vy:<span class="built_in">Math</span>.max(<span class="number">300</span>,<span class="built_in">Math</span>.floor(h*<span class="number">2</span>))/<span class="number">100</span>,</div><div class="line">				color:item.color</div><div class="line">			&#125;);</div><div class="line">		&#125;);</div><div class="line">		index++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">this</span>.animate();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="执行动画"><a href="#执行动画" class="headerlink" title="执行动画"></a>执行动画</h2><p>执行动画也没啥好说的，里面就是个自执行闭包函数。动画原理就是给y轴依次累加速度值vy。但记得当队列执行完动画后，要停止它，所以有个isStop的标志，每次执行完队列的时候就判断。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">animate()&#123;</div><div class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">		ctx=<span class="keyword">this</span>.ctx,</div><div class="line">		isStop=<span class="literal">true</span>;</div><div class="line">	(<span class="function"><span class="keyword">function</span> <span class="title">run</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		isStop=<span class="literal">true</span>;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item;i&lt;that.animateArr.length;i++)&#123;</div><div class="line">			item=that.animateArr[i];</div><div class="line">			<span class="keyword">if</span>(item.y-item.h&gt;=<span class="number">0.1</span>)&#123;</div><div class="line">				item.y=item.h;</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				item.y+=item.vy;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(item.y&lt;item.h)&#123;</div><div class="line">				ctx.save();</div><div class="line">				<span class="comment">// ctx.translate(that.padding+item.x,that.H-that.padding);</span></div><div class="line">				ctx.fillStyle=item.color;</div><div class="line">				ctx.fillRect(that.padding+item.x,that.H-that.padding-item.y,item.w,item.y);</div><div class="line">				ctx.restore();</div><div class="line">				isStop=<span class="literal">false</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(isStop)<span class="keyword">return</span>;</div><div class="line">		requestAnimationFrame(run);</div><div class="line">	&#125;())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h2><p>事件一：mousemove的时候，看看鼠标位置是不是处于分组标签还是数据项上，绘制路径后调用isPointInPath(x,y)，true则canvas.style.cursor=’pointer’；如果是数据项的话，还需要把内容显示出来，这里是一个相对父容器container为绝对定位的div，初始化的时候已经建立为tip属性了。我们把显示部分封装成showInfo方法。</p>
+<p>事件二：mousedown的时候，判断鼠标点击哪个分组标签，然后设置对应分组数据series中的hide属性，如果是true，表示不显示该项，然后调用draw方法，重写渲染绘制，执行动画。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">bindEvent()&#123;</div><div class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">		canvas=<span class="keyword">this</span>.canvas,</div><div class="line">		ctx=<span class="keyword">this</span>.ctx;</div><div class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousemove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> isLegend=<span class="literal">false</span>;</div><div class="line">			<span class="comment">// pos=WindowToCanvas(canvas,e.clientX,e.clientY);</span></div><div class="line">		<span class="keyword">var</span> box=canvas.getBoundingClientRect();</div><div class="line">		<span class="keyword">var</span> pos = &#123;</div><div class="line">			x:e.clientX-box.left,</div><div class="line">			y:e.clientY-box.top</div><div class="line">		&#125;;</div><div class="line">		<span class="comment">// 分组标签</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=that.legend.length;i&lt;len;i++)&#123;</div><div class="line">			item=that.legend[i];</div><div class="line">			ctx.save();</div><div class="line">			roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</div><div class="line">			<span class="comment">// 因为缩小了一倍，所以坐标要*2</span></div><div class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</div><div class="line">				canvas.style.cursor=<span class="string">'pointer'</span>;</div><div class="line">				ctx.restore();</div><div class="line">				isLegend=<span class="literal">true</span>;</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">			canvas.style.cursor=<span class="string">'default'</span>;</div><div class="line">			ctx.restore();</div><div class="line">		&#125;</div><div class="line"></div><div class="line">		<span class="keyword">if</span>(isLegend) <span class="keyword">return</span>;</div><div class="line">		<span class="comment">//选择数据项</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=that.animateArr.length;i&lt;len;i++)&#123;</div><div class="line">			item=that.animateArr[i];</div><div class="line">			ctx.save();</div><div class="line">			ctx.fillStyle=item.color;</div><div class="line">			ctx.beginPath();<span class="comment">//重要</span></div><div class="line">			ctx.rect(that.padding+item.x,that.H-that.padding-item.h,item.w,item.h);</div><div class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</div><div class="line">				ctx.clearRect(that.padding+item.x,that.H-that.padding-item.h,item.w,item.h);</div><div class="line">				ctx.globalAlpha=<span class="number">0.5</span>;</div><div class="line">				ctx.fill();</div><div class="line">				canvas.style.cursor=<span class="string">'pointer'</span>;</div><div class="line">				that.showInfo(pos,item);</div><div class="line">				ctx.restore();</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">			canvas.style.cursor=<span class="string">'default'</span>;</div><div class="line">			that.tip.style.display=<span class="string">'none'</span>;</div><div class="line">			ctx.globalAlpha=<span class="number">1</span>;</div><div class="line">			ctx.fill();</div><div class="line">			ctx.restore();</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">	&#125;,<span class="literal">false</span>);</div><div class="line"></div><div class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousedown'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">		e.preventDefault();</div><div class="line">		<span class="keyword">var</span> box=canvas.getBoundingClientRect();</div><div class="line">		<span class="keyword">var</span> pos = &#123;</div><div class="line">			x:e.clientX-box.left,</div><div class="line">			y:e.clientY-box.top</div><div class="line">		&#125;;</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=that.legend.length;i&lt;len;i++)&#123;</div><div class="line">			item=that.legend[i];</div><div class="line">			roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</div><div class="line">			<span class="comment">// 因为缩小了一倍，所以坐标要*2</span></div><div class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</div><div class="line">				that.series[i].hide=!that.series[i].hide;</div><div class="line">				that.animateArr.length=<span class="number">0</span>;</div><div class="line">				that.draw();</div><div class="line">				<span class="keyword">break</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;,<span class="literal">false</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">//显示数据</span></div><div class="line">showInfo(pos,obj)&#123;</div><div class="line">	<span class="keyword">var</span> txt=<span class="keyword">this</span>.yAxis.formatter?<span class="keyword">this</span>.yAxis.formatter.replace(<span class="string">'&#123;value&#125;'</span>,obj.num):obj.num;</div><div class="line">	<span class="keyword">var</span> box=<span class="keyword">this</span>.canvas.getBoundingClientRect();</div><div class="line">	<span class="keyword">var</span> con=<span class="keyword">this</span>.container.getBoundingClientRect();</div><div class="line">	<span class="keyword">this</span>.tip.innerHTML = <span class="string">'&lt;p&gt;'</span>+obj.name+<span class="string">':'</span>+txt+<span class="string">'&lt;/p&gt;'</span>;</div><div class="line">	<span class="keyword">this</span>.tip.style.left=(pos.x+(box.left-con.left)+<span class="number">10</span>)+<span class="string">'px'</span>;</div><div class="line">	<span class="keyword">this</span>.tip.style.top=(pos.y+(box.top-con.top)+<span class="number">10</span>)+<span class="string">'px'</span>;</div><div class="line">	<span class="keyword">this</span>.tip.style.display=<span class="string">'block'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这里完成的只是个基本的效果，其实还有很多地方要进一步优化，比如响应式的支持，移动端的支持，动画的效果，多y轴的支持，显示内容的效果，同时支持折线功能等。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2017/11/12/chartbar/" data-desc="
+前几天用到了图表库，其中百度的ECharts，感觉做得最好，看它默认用的是canva，can..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/canvas/">canvas</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2017/11/08/webgl/" class="next post-next">WebGL学习(1) - 三角形 &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2017 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>
