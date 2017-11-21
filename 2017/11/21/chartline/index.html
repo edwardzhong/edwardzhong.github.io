@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="canvas图表(2) - 折线图 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >canvas图表(2) - 折线图 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="canvas图表(2) - 折线图 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/icons/icon.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/dist/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>write the thing where interesting</h3>
+  <div class="menu">
+  
+  
+  
+      <a 
+        href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a  data-tag="search" 
+        href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">11<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">24<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/banner8.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">canvas图表(2) - 折线图</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2017/11/21 12:42:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>话说这天气一冷啊, 就患懒癌, 就不想码代码, 就想着在床上舒舒服服看视频. 那顺便就看blender视频, 学习下3D建模, 如果学会了建3D模型, 那我的webGL技术就大有用处啊,可以独…</p>
+</p> -->
+    	
+    	<div class="post-content"><!-- 原文地址：[canvas图表(2) - 折线图](http://jeffzhong.space/2017/11/21/chartline/) -->
+<p>话说这天气一冷啊, 就患懒癌, 就不想码代码, 就想着在床上舒舒服服看视频. 那顺便就看blender视频, 学习下3D建模, 如果学会了建3D模型, 那我的webGL技术就大有用处啊,可以独立开发小游戏了😂, 当然是玩笑了。但首先还是把canvas图表系列先弄完吧, 今天就弄折线图。</p>
+<p>效果请看：<em><a href="http://jeffzhong.space/sites/demo/dist/chartline.html">柱状图https://edwardzhong.github.io/sites/demo/dist/chartline.html</a></em><br><img src="http://oncse3u6r.bkt.clouddn.com/chartline.jpg" alt="it"><br><a id="more"></a></p>
+<p>主要功能点包括：</p>
+<ol>
+<li>文本的绘制</li>
+<li>XY轴的绘制；<br><strong>3. 数据动画的实现；</strong></li>
+<li>鼠标事件的处理。</li>
+</ol>
+<p>大部分的技术在上一节的<em><a href="http://jeffzhong.space/2017/11/12/chartbar/">canvas图表(1) - 柱状图</a></em>实现了, 所以这节内容其实是比较简单的。比较麻烦一点的就是折线图的动画了，所以重点就看一下这部分的代码。</p>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>使用方式，和柱状图基本是一样的，我们这里表示的是气温变化图。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> con=<span class="built_in">document</span>.getElementById(<span class="string">'container'</span>);</div><div class="line"><span class="keyword">var</span> line = <span class="keyword">new</span> Line(con);</div><div class="line">line.init(&#123;</div><div class="line">	title:<span class="string">'未来一周气温变化'</span>,</div><div class="line">	xAxis:&#123;</div><div class="line">		data:[<span class="string">'周一'</span>,<span class="string">'周二'</span>,<span class="string">'周三'</span>,<span class="string">'周四'</span>,<span class="string">'周五'</span>,<span class="string">'周六'</span>,<span class="string">'周日'</span>]</div><div class="line">	&#125;,</div><div class="line">	yAxis:&#123;</div><div class="line">		name:<span class="string">'温度'</span>,</div><div class="line">		formatter:<span class="string">'&#123;value&#125; °C'</span></div><div class="line">	&#125;,</div><div class="line">	series:[</div><div class="line">		&#123;</div><div class="line">			name:<span class="string">'最高气温'</span>,</div><div class="line">			data:[<span class="number">11</span>, <span class="number">11</span>, <span class="number">15</span>, <span class="number">13</span>, <span class="number">12</span>, <span class="number">13</span>, <span class="number">10</span>]</div><div class="line">		&#125;,</div><div class="line">		&#123;</div><div class="line">			name:<span class="string">'最低气温'</span>,</div><div class="line">			data:[<span class="number">1</span>, <span class="number">-2</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">0</span>]</div><div class="line">		&#125;	</div><div class="line">	]</div><div class="line">&#125;)</div></pre></td></tr></table></figure></p>
+<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p>折线图对象大体和柱状图一致，只是部分方法经过重构。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Line</span> <span class="keyword">extends</span> <span class="title">Chart</span></span>&#123;</div><div class="line">	<span class="keyword">constructor</span>(container)&#123;</div><div class="line">		<span class="keyword">super</span>(container);</div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 初始化</span></div><div class="line">	init(opt)&#123;</div><div class="line">		<span class="built_in">Object</span>.assign(<span class="keyword">this</span>,opt);</div><div class="line">		<span class="keyword">if</span>(!<span class="keyword">this</span>.container)<span class="keyword">return</span>;</div><div class="line">		<span class="keyword">this</span>.container.style.position=<span class="string">'relative'</span>;</div><div class="line">		<span class="keyword">this</span>.tip=<span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</div><div class="line">		<span class="keyword">this</span>.tip.style.cssText=<span class="string">'display: none; position: absolute; opacity: 0.5; background: #000; color: #fff; border-radius: 5px; padding: 5px; font-size: 8px; z-index: 99;'</span>;</div><div class="line">		<span class="keyword">this</span>.container.appendChild(<span class="keyword">this</span>.canvas);</div><div class="line">		<span class="keyword">this</span>.container.appendChild(<span class="keyword">this</span>.tip);</div><div class="line">		<span class="keyword">this</span>.draw();</div><div class="line">		<span class="keyword">this</span>.bindEvent();</div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 绑定数据</span></div><div class="line">	bindEvent()&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 显示信息</span></div><div class="line">	showInfo(pos,arr)&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 清除内容再绘制</span></div><div class="line">	clearGrid(index)&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 执行数据动画</span></div><div class="line">	animate()&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 显示数据</span></div><div class="line">	showData()&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 绘制y轴刻度</span></div><div class="line">	drawY()&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	<span class="comment">// 绘制</span></div><div class="line">	draw()&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="数据动画"><a href="#数据动画" class="headerlink" title="数据动画"></a>数据动画</h2><p>折线图动画实现的是路径绘制特效，懂canvas的基本都知道原理，就是用lineTo绘制路径，最后stroke出来。但这个折线图是分段的，所以要分情况处理，主要难点就是获取两个点之间的坐标。</p>
+<p>仔细思考下，因为我们知道x轴总长度，所以可以让x依次递增，再求出x对应的y坐标即可。既然知道了两个点的坐标，还知道了x坐标，根据同角度等比例三角形原理，很容易求出y坐标。然后用requestAnimationFrame递归调用即可实现动画了，具体看如下代码。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">animate()&#123;</div><div class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">		ctx=<span class="keyword">this</span>.ctx,</div><div class="line">		xdis=that.W-that.padding*<span class="number">2</span>,</div><div class="line">		prev,</div><div class="line">		x=<span class="number">0</span>,y=<span class="number">0</span>;</div><div class="line">	(<span class="function"><span class="keyword">function</span> <span class="title">run</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">if</span>(x&gt;xdis)&#123;<span class="comment">//画完了</span></div><div class="line">			that.clearGrid();</div><div class="line">			<span class="keyword">return</span>;</div><div class="line">		&#125;</div><div class="line">		ctx.save();</div><div class="line">		ctx.translate(that.padding,that.H-that.padding);</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,il=that.animateArr.length;i&lt;il;i++)&#123;</div><div class="line">			item=that.animateArr[i];</div><div class="line">			<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</div><div class="line">			ctx.lineWidth=<span class="number">3</span>;</div><div class="line">			ctx.strokeStyle=item.color;</div><div class="line">			ctx.fillStyle=<span class="string">'#fff'</span>;</div><div class="line">			ctx.beginPath();</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>,obj,jl=item.data.length;j&lt;jl;j++)&#123;</div><div class="line">				obj=item.data[j];</div><div class="line">				prev=item.data[j<span class="number">-1</span>];</div><div class="line">				<span class="keyword">if</span>(j==<span class="number">0</span>)&#123;</div><div class="line">					ctx.moveTo(obj.x,-obj.h);</div><div class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span>(x&gt;=obj.x)&#123;</div><div class="line">					ctx.lineTo(obj.x,-obj.h);</div><div class="line">				&#125; <span class="keyword">else</span> <span class="keyword">if</span>(x&lt;obj.x)&#123;</div><div class="line">					<span class="comment">//获取在两个区间之间的y坐标</span></div><div class="line">					y=prev.h+(x-prev.x)/(obj.x-prev.x)*(obj.h-prev.h)</div><div class="line">					ctx.lineTo(x,-y);</div><div class="line">					<span class="keyword">break</span>;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			ctx.stroke();</div><div class="line">			<span class="comment">//画完曲线后再画圆球</span></div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>,obj,jl=item.data.length;j&lt;jl;j++)&#123;</div><div class="line">				obj=item.data[j];</div><div class="line">				<span class="keyword">if</span>(x&gt;=obj.x)&#123;</div><div class="line">					ctx.beginPath();</div><div class="line">					ctx.arc(obj.x,-obj.h,<span class="number">4</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">					ctx.stroke();</div><div class="line">					ctx.fill();</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		ctx.restore();</div><div class="line">		x+=<span class="number">20</span>;</div><div class="line">		requestAnimationFrame(run);</div><div class="line">	&#125;())</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>还有就是鼠标事件处理方面，鼠标滑过画面，判断要将该阶段的信息显示，同时实心填充点和画一条指示线，这里必须不断擦除画面，然后重绘，这样就实现了交互动画。具体看以下代码。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">bindEvent()&#123;</div><div class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">		ctx=that.ctx,</div><div class="line">		canvas=that.canvas,</div><div class="line">		xl=<span class="keyword">this</span>.xAxis.data.length,</div><div class="line">		xs=(that.W<span class="number">-2</span>*that.padding)/(xl<span class="number">-1</span>),</div><div class="line">		index=<span class="number">0</span>;</div><div class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousemove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">		<span class="keyword">var</span> isLegend=<span class="literal">false</span>;</div><div class="line">		<span class="comment">// todo ...</span></div><div class="line"></div><div class="line">		<span class="keyword">if</span>(isLegend) <span class="keyword">return</span>;</div><div class="line">		<span class="comment">// 鼠标位置在图表中时</span></div><div class="line">		<span class="keyword">if</span>(pos.y*<span class="number">2</span>&gt;that.padding+that.paddingTop &amp;&amp; pos.y*<span class="number">2</span>&lt;that.H-that.padding &amp;&amp; pos.x*<span class="number">2</span>&gt;that.padding &amp;&amp; pos.x*<span class="number">2</span>&lt;that.W-that.padding)&#123;</div><div class="line">			canvas.style.cursor=<span class="string">'pointer'</span>;</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;xl;i++)&#123;</div><div class="line">				<span class="keyword">if</span>(pos.x*<span class="number">2</span>&gt;i*xs)&#123;</div><div class="line">					index=i;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="comment">// 重绘并标志选中信息</span></div><div class="line">			that.clearGrid(index);</div><div class="line">			<span class="comment">// // 画十字坐标</span></div><div class="line">			<span class="comment">// ctx.save();</span></div><div class="line">			<span class="comment">// ctx.lineWidth=0.5;</span></div><div class="line">			<span class="comment">// ctx.strokeStyle='hsla(0,0%,60%,1)';</span></div><div class="line">			<span class="comment">// ctx.moveTo(that.padding,pos.y*2);</span></div><div class="line">			<span class="comment">// ctx.lineTo(that.W-that.padding,pos.y*2);</span></div><div class="line"></div><div class="line">			<span class="comment">// ctx.moveTo(pos.x*2,that.padding+that.paddingTop);</span></div><div class="line">			<span class="comment">// ctx.lineTo(pos.x*2,that.H-that.padding);</span></div><div class="line">			<span class="comment">// ctx.stroke();</span></div><div class="line">			<span class="comment">// 获取处于当前位置的信息</span></div><div class="line">			<span class="keyword">var</span> arr=[];</div><div class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>,item,l=that.animateArr.length;j&lt;l;j++)&#123;</div><div class="line">				item=that.animateArr[j];</div><div class="line">				<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</div><div class="line">				arr.push(&#123;<span class="attr">name</span>:item.name, <span class="attr">num</span>:item.data[index].num&#125;)</div><div class="line">			&#125;</div><div class="line">			that.showInfo(pos,arr);</div><div class="line">			ctx.restore();</div><div class="line">		&#125; <span class="keyword">else</span> &#123;</div><div class="line">			that.tip.style.display=<span class="string">'none'</span>;</div><div class="line">			that.clearGrid();</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;,<span class="literal">false</span>);</div><div class="line"></div><div class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousedown'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">		e.preventDefault();</div><div class="line">		<span class="comment">// todo ...</span></div><div class="line">	&#125;,<span class="literal">false</span>);</div><div class="line">&#125;</div><div class="line">showInfo(pos,arr)&#123;</div><div class="line">	<span class="keyword">var</span> box=<span class="keyword">this</span>.canvas.getBoundingClientRect(),</div><div class="line">		con=<span class="keyword">this</span>.container.getBoundingClientRect(),</div><div class="line">		html=<span class="string">''</span>,txt=<span class="string">''</span>;</div><div class="line">	arr.forEach(<span class="function"><span class="params">obj</span>=&gt;</span>&#123;</div><div class="line">		txt=<span class="keyword">this</span>.yAxis.formatter?<span class="keyword">this</span>.yAxis.formatter.replace(<span class="string">'&#123;value&#125;'</span>,obj.num):obj.num;</div><div class="line">		html+=<span class="string">'&lt;p&gt;'</span>+obj.name+<span class="string">': '</span>+txt+<span class="string">'&lt;/p&gt;'</span>;</div><div class="line">	&#125;)</div><div class="line">	<span class="keyword">this</span>.tip.innerHTML = html; </div><div class="line">	<span class="keyword">this</span>.tip.style.left=(pos.x+(box.left-con.left)+<span class="number">10</span>)+<span class="string">'px'</span>;</div><div class="line">	<span class="keyword">this</span>.tip.style.top=(pos.y+(box.top-con.top)+<span class="number">10</span>)+<span class="string">'px'</span>;</div><div class="line">	<span class="keyword">this</span>.tip.style.display=<span class="string">'block'</span>;</div><div class="line">&#125;</div><div class="line">clearGrid(index)&#123;</div><div class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</div><div class="line">		ctx=<span class="keyword">this</span>.ctx;</div><div class="line">	ctx.clearRect(that.padding+<span class="number">1</span>,that.padding+that.paddingTop,that.W<span class="number">-2</span>*that.padding,that.H<span class="number">-2</span>*that.padding-that.paddingTop);</div><div class="line">	that.drawY();</div><div class="line">	ctx.save();</div><div class="line">	ctx.translate(that.padding,that.H-that.padding);</div><div class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,il=that.animateArr.length;i&lt;il;i++)&#123;</div><div class="line">		item=that.animateArr[i];</div><div class="line">		<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</div><div class="line">		ctx.lineWidth=<span class="number">3</span>;</div><div class="line">		ctx.strokeStyle=item.color;</div><div class="line">		ctx.fillStyle=<span class="string">'#fff'</span>;</div><div class="line">		ctx.beginPath();</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>,obj,jl=item.data.length;j&lt;jl;j++)&#123;</div><div class="line">			obj=item.data[j];</div><div class="line">			<span class="keyword">if</span>(j==<span class="number">0</span>)&#123;</div><div class="line">				ctx.moveTo(obj.x,-obj.h);</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				ctx.lineTo(obj.x,-obj.h);</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		ctx.stroke();</div><div class="line">		<span class="comment">//画完曲线后再画圆球</span></div><div class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>,obj,jl=item.data.length;j&lt;jl;j++)&#123;</div><div class="line">			obj=item.data[j];</div><div class="line">			<span class="keyword">if</span>(index===j)&#123;	</div><div class="line">				ctx.lineWidth=<span class="number">1</span>;</div><div class="line">				ctx.strokeStyle=<span class="string">'hsla(0,0%,70%,1)'</span>;</div><div class="line">				ctx.moveTo(j==<span class="number">0</span>?obj.x+<span class="number">1.5</span>:obj.x,-that.H+that.paddingTop+<span class="number">2</span>*that.padding);</div><div class="line">				ctx.lineTo(j==<span class="number">0</span>?obj.x+<span class="number">1.5</span>:obj.x,<span class="number">0</span>);</div><div class="line">				ctx.stroke();</div><div class="line">				ctx.fillStyle=item.color;</div><div class="line">			&#125; <span class="keyword">else</span> &#123;</div><div class="line">				ctx.lineWidth=<span class="number">3</span>;</div><div class="line">				ctx.fillStyle=<span class="string">'#fff'</span>;</div><div class="line">				ctx.strokeStyle=item.color;</div><div class="line">			&#125;</div><div class="line">			ctx.beginPath();</div><div class="line">			ctx.arc(obj.x,-obj.h,<span class="number">5</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</div><div class="line">			ctx.stroke();</div><div class="line">			ctx.fill();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	ctx.restore();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>图表代码请看<em><a href="https://github.com/edwardzhong/html5Canvas/blob/master/chart/chart.js" target="_blank" rel="external">chart.js</a></em></p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2017/11/21/chartline/" data-desc="
+话说这天气一冷啊, 就患懒癌, 就不想码代码, 就想着在床上舒舒服服看视频. 那顺便就看bl..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/canvas/">canvas</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2017/11/14/webgl2/" class="next post-next">WebGL学习(2) - 3D场景 &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2017 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>
