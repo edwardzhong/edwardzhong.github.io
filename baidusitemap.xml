@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
+    <lastmod>2017-11-23T04:18:43.224Z</lastmod>
+    <data>
+        <display>
+        <title>前端特效列表</title>
+        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
     <lastmod>2017-11-23T04:12:58.405Z</lastmod>
     <data>
@@ -58,30 +82,6 @@
         <display>
         <title>canvas图表(3) - 饼图</title>
         <pubTime>2017-11-23T02:23:10.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
-    <lastmod>2017-11-21T06:09:08.814Z</lastmod>
-    <data>
-        <display>
-        <title>前端特效列表</title>
-        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
         
         <tag>前端</tag>
          

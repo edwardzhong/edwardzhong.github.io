@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
+    
+    <lastmod>2017-11-23T04:18:43.224Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
     
     <lastmod>2017-11-23T04:12:58.405Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
     
     <lastmod>2017-11-23T04:08:13.144Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
-    
-    <lastmod>2017-11-21T06:09:08.814Z</lastmod>
     
   </url>
   
