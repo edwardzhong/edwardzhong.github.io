@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
-    <lastmod>2017-11-23T04:04:33.234Z</lastmod>
+    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
+    <lastmod>2017-11-23T04:08:33.367Z</lastmod>
     <data>
         <display>
-        <title>canvas图表(1) - 柱状图</title>
-        <pubTime>2017-11-12T10:45:09.000Z</pubTime>
+        <title>canvas图表(2) - 折线图</title>
+        <pubTime>2017-11-21T04:42:34.000Z</pubTime>
         
         <tag>前端</tag>
          
@@ -29,7 +29,7 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
-    <lastmod>2017-11-23T04:03:53.271Z</lastmod>
+    <lastmod>2017-11-23T04:08:13.144Z</lastmod>
     <data>
         <display>
         <title>canvas图表(3) - 饼图</title>
@@ -52,12 +52,12 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
-    <lastmod>2017-11-23T03:56:37.213Z</lastmod>
+    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
+    <lastmod>2017-11-23T04:08:02.464Z</lastmod>
     <data>
         <display>
-        <title>canvas图表(2) - 折线图</title>
-        <pubTime>2017-11-21T04:42:34.000Z</pubTime>
+        <title>canvas图表(1) - 柱状图</title>
+        <pubTime>2017-11-12T10:45:09.000Z</pubTime>
         
         <tag>前端</tag>
          
