@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
+    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
     
-    <lastmod>2017-11-23T03:56:37.213Z</lastmod>
+    <lastmod>2017-11-23T04:04:33.234Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
     
-    <lastmod>2017-11-23T03:37:10.157Z</lastmod>
+    <lastmod>2017-11-23T04:03:53.271Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
+    
+    <lastmod>2017-11-23T03:56:37.213Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
     
     <lastmod>2017-11-14T06:48:24.229Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
-    
-    <lastmod>2017-11-13T08:33:32.044Z</lastmod>
     
   </url>
   

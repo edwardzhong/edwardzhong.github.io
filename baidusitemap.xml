@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
-    <lastmod>2017-11-23T03:56:37.213Z</lastmod>
+    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
+    <lastmod>2017-11-23T04:04:33.234Z</lastmod>
     <data>
         <display>
-        <title>canvas图表(2) - 折线图</title>
-        <pubTime>2017-11-21T04:42:34.000Z</pubTime>
+        <title>canvas图表(1) - 柱状图</title>
+        <pubTime>2017-11-12T10:45:09.000Z</pubTime>
         
         <tag>前端</tag>
          
@@ -29,11 +29,35 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
-    <lastmod>2017-11-23T03:37:10.157Z</lastmod>
+    <lastmod>2017-11-23T04:03:53.271Z</lastmod>
     <data>
         <display>
         <title>canvas图表(3) - 饼图</title>
         <pubTime>2017-11-23T02:23:10.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
+    <lastmod>2017-11-23T03:56:37.213Z</lastmod>
+    <data>
+        <display>
+        <title>canvas图表(2) - 折线图</title>
+        <pubTime>2017-11-21T04:42:34.000Z</pubTime>
         
         <tag>前端</tag>
          
@@ -112,30 +136,6 @@
         <tag>js</tag>
          
         <tag>webGL</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
-    <lastmod>2017-11-13T08:33:32.044Z</lastmod>
-    <data>
-        <display>
-        <title>canvas图表(1) - 柱状图</title>
-        <pubTime>2017-11-12T10:45:09.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
          
          
            
