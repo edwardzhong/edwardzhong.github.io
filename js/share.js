@@ -25,17 +25,22 @@ function shareInit() {
             w=self.width(),
             h=self.height();
 
+        sPic='';
         sUrl = location.protocol+'//'+location.host+url;
         sTitle = article.find('.post-title').html();
         sDesc = self.attr('data-desc');
         sImg= article.find('img');
-
         if(sImg.length){
-            sPic=sImg[0].src;
-            if(!/^https?\/\//.test(sPic)){
-                sPic = location.origin + sPic;
+            sPic=sImg[0].src;    
+        } else {
+            var banner=article.find('.post-banner'), bg,matchs;
+            if(banner.length){
+               bg=article.find('.post-banner').css('background');
+               matchs=bg.match(/url\(\"([^()"]+)\"\)/);
+               if(matchs.length){sPic=matchs[1]; }
             }
         }
+        
 
         if(sharePop.length){
             if(sharePop.css('display')=='block'){
