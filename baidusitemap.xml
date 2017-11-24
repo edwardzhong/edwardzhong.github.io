@@ -4,6 +4,78 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/24/chartpoint/</loc>
+    <lastmod>2017-11-24T04:13:25.559Z</lastmod>
+    <data>
+        <display>
+        <title>canvas图表(4) - 散点图</title>
+        <pubTime>2017-11-23T19:53:56.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
+    <lastmod>2017-11-24T03:52:56.316Z</lastmod>
+    <data>
+        <display>
+        <title>canvas图表(3) - 饼图</title>
+        <pubTime>2017-11-23T02:23:10.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
+    <lastmod>2017-11-24T03:08:09.886Z</lastmod>
+    <data>
+        <display>
+        <title>canvas图表(2) - 折线图</title>
+        <pubTime>2017-11-21T04:42:34.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
     <lastmod>2017-11-23T04:18:43.224Z</lastmod>
     <data>
@@ -34,54 +106,6 @@
         <display>
         <title>canvas图表(1) - 柱状图</title>
         <pubTime>2017-11-12T10:45:09.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
-    <lastmod>2017-11-23T04:08:33.367Z</lastmod>
-    <data>
-        <display>
-        <title>canvas图表(2) - 折线图</title>
-        <pubTime>2017-11-21T04:42:34.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
-    <lastmod>2017-11-23T04:08:13.144Z</lastmod>
-    <data>
-        <display>
-        <title>canvas图表(3) - 饼图</title>
-        <pubTime>2017-11-23T02:23:10.000Z</pubTime>
         
         <tag>前端</tag>
          
