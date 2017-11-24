@@ -844,8 +844,9 @@ img[alt=it] {
   padding: 15px;
   overflow: auto;
   font-size: 80%;
-  line-height: 1.45;
-  background-color: #f2f2f2;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #454545;
   border-radius: 3px;
   border: none;
 }
@@ -863,6 +864,7 @@ img[alt=it] {
 .code .selector-tag,
 .code .subst {
   color: #6423da;
+  font-weight: bold;
 }
 .code .number,
 .code .literal,
@@ -905,7 +907,7 @@ img[alt=it] {
 }
 .code .built_in,
 .code .builtin-name {
-  color: #005cc5;
+  color: #0db3ac;
 }
 .code .meta {
   color: #999;
