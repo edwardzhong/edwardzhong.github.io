@@ -31,7 +31,7 @@ function shareInit() {
         sImg= article.find('img');
 
         if(sImg.length){
-            sPic=sImg.attr('src');
+            sPic=sImg[0].src;
             if(!/^https?\/\//.test(sPic)){
                 sPic = location.origin + sPic;
             }
