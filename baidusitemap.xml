@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/27/projecttemplate/</loc>
+    <lastmod>2017-11-27T14:18:26.419Z</lastmod>
+    <data>
+        <display>
+        <title>前端快速开发模版</title>
+        <pubTime>2017-11-27T11:50:57.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>gulp</tag>
+         
+        <tag>browserify</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
     <lastmod>2017-11-24T04:25:27.899Z</lastmod>
     <data>
