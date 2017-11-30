@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
+    <lastmod>2017-11-30T16:04:39.822Z</lastmod>
+    <data>
+        <display>
+        <title>canvas图形编辑器</title>
+        <pubTime>2017-11-02T05:27:38.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
+    <lastmod>2017-11-30T16:03:59.067Z</lastmod>
+    <data>
+        <display>
+        <title>WebGL学习(1) - 三角形</title>
+        <pubTime>2017-11-08T08:35:21.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>webGL</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
     <lastmod>2017-11-30T15:45:20.884Z</lastmod>
     <data>
@@ -18,30 +66,6 @@
         <tag>gulp</tag>
          
         <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
-    <lastmod>2017-11-30T09:30:09.081Z</lastmod>
-    <data>
-        <display>
-        <title>canvas图形编辑器</title>
-        <pubTime>2017-11-02T05:27:38.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
          
          
            
@@ -206,30 +230,6 @@
         <display>
         <title>WebGL学习(2) - 3D场景</title>
         <pubTime>2017-11-14T06:30:21.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>webGL</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
-    <lastmod>2017-11-14T06:48:24.229Z</lastmod>
-    <data>
-        <display>
-        <title>WebGL学习(1) - 三角形</title>
-        <pubTime>2017-11-08T08:35:21.000Z</pubTime>
         
         <tag>前端</tag>
          
