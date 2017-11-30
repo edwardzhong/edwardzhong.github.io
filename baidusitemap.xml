@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
-    <lastmod>2017-11-30T15:40:13.145Z</lastmod>
+    <lastmod>2017-11-30T15:45:20.884Z</lastmod>
     <data>
         <display>
         <title>简洁后台管理模版</title>
@@ -16,6 +16,32 @@
         <tag>js</tag>
          
         <tag>gulp</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
+    <lastmod>2017-11-30T09:30:09.081Z</lastmod>
+    <data>
+        <display>
+        <title>canvas图形编辑器</title>
+        <pubTime>2017-11-02T05:27:38.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
          
          
            
@@ -124,6 +150,30 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
+    <lastmod>2017-11-30T09:27:14.815Z</lastmod>
+    <data>
+        <display>
+        <title>前端特效列表</title>
+        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/27/projecttemplate/</loc>
     <lastmod>2017-11-28T03:48:17.927Z</lastmod>
     <data>
@@ -138,30 +188,6 @@
         <tag>gulp</tag>
          
         <tag>browserify</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
-    <lastmod>2017-11-24T04:25:27.899Z</lastmod>
-    <data>
-        <display>
-        <title>前端特效列表</title>
-        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
          
          
            
@@ -210,30 +236,6 @@
         <tag>js</tag>
          
         <tag>webGL</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
-    <lastmod>2017-11-08T17:45:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>canvas图形编辑器</title>
-        <pubTime>2017-11-02T05:27:38.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
          
          
            
