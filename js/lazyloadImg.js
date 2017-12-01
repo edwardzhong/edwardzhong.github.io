@@ -10,7 +10,7 @@ function lazyLoadImg(){
 			var src=item.attr('src');
 			
 			if(st+wh>ot&&st<ot){
-				item.replaceWith('<img src="'+src+'">');
+				item.replaceWith('<img src="'+src+'" width="100%" height="100%">');
 				Imgs.splice(i--,1);
 			}
 		}

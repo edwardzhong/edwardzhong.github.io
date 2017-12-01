@@ -4,34 +4,8 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
-    <lastmod>2017-11-30T16:30:04.414Z</lastmod>
-    <data>
-        <display>
-        <title>简洁后台管理模版</title>
-        <pubTime>2017-11-30T08:45:48.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>gulp</tag>
-         
-        <tag>vue</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
-    <lastmod>2017-11-30T16:04:39.822Z</lastmod>
+    <lastmod>2017-12-01T06:54:10.867Z</lastmod>
     <data>
         <display>
         <title>canvas图形编辑器</title>
@@ -54,56 +28,8 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
-    <lastmod>2017-11-30T16:03:59.067Z</lastmod>
-    <data>
-        <display>
-        <title>WebGL学习(1) - 三角形</title>
-        <pubTime>2017-11-08T08:35:21.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>webGL</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/24/chartpoint/</loc>
-    <lastmod>2017-11-30T09:29:35.001Z</lastmod>
-    <data>
-        <display>
-        <title>canvas图表(4) - 散点图</title>
-        <pubTime>2017-11-23T19:53:56.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
-    <lastmod>2017-11-30T09:29:09.322Z</lastmod>
+    <lastmod>2017-12-01T06:54:01.899Z</lastmod>
     <data>
         <display>
         <title>canvas图表(3) - 饼图</title>
@@ -127,7 +53,7 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
-    <lastmod>2017-11-30T09:28:41.909Z</lastmod>
+    <lastmod>2017-12-01T06:53:49.651Z</lastmod>
     <data>
         <display>
         <title>canvas图表(2) - 折线图</title>
@@ -151,7 +77,7 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
-    <lastmod>2017-11-30T09:27:58.399Z</lastmod>
+    <lastmod>2017-12-01T06:53:40.188Z</lastmod>
     <data>
         <display>
         <title>canvas图表(1) - 柱状图</title>
@@ -174,12 +100,12 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
-    <lastmod>2017-11-30T09:27:14.815Z</lastmod>
+    <loc>http://jeffzhong.space/2017/11/24/chartpoint/</loc>
+    <lastmod>2017-12-01T06:53:26.900Z</lastmod>
     <data>
         <display>
-        <title>前端特效列表</title>
-        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
+        <title>canvas图表(4) - 散点图</title>
+        <pubTime>2017-11-23T19:53:56.000Z</pubTime>
         
         <tag>前端</tag>
          
@@ -199,7 +125,7 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/11/27/projecttemplate/</loc>
-    <lastmod>2017-11-28T03:48:17.927Z</lastmod>
+    <lastmod>2017-12-01T06:51:42.447Z</lastmod>
     <data>
         <display>
         <title>前端快速开发模版</title>
@@ -224,8 +150,32 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
+    <lastmod>2017-12-01T06:49:22.277Z</lastmod>
+    <data>
+        <display>
+        <title>WebGL学习(1) - 三角形</title>
+        <pubTime>2017-11-08T08:35:21.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>webGL</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/14/webgl2/</loc>
-    <lastmod>2017-11-14T09:59:27.866Z</lastmod>
+    <lastmod>2017-12-01T06:40:15.599Z</lastmod>
     <data>
         <display>
         <title>WebGL学习(2) - 3D场景</title>
@@ -249,7 +199,7 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/10/26/solar/</loc>
-    <lastmod>2017-11-08T17:14:28.000Z</lastmod>
+    <lastmod>2017-12-01T06:19:27.198Z</lastmod>
     <data>
         <display>
         <title>canvas绘制太阳系</title>
@@ -272,8 +222,60 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
+    <lastmod>2017-12-01T06:14:03.740Z</lastmod>
+    <data>
+        <display>
+        <title>简洁后台管理模版</title>
+        <pubTime>2017-11-30T08:45:48.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>gulp</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/01/12/tibet/</loc>
+    <lastmod>2017-12-01T05:00:42.646Z</lastmod>
+    <data>
+        <display>
+        <title>喜马拉雅之旅（西藏篇）</title>
+        <pubTime>2017-01-12T10:01:00.000Z</pubTime>
+        
+        <tag>旅游</tag>
+         
+        <tag>西藏</tag>
+         
+        <tag>拉萨</tag>
+         
+        <tag>纳木错</tag>
+         
+         
+           
+             
+              <breadCrumb title="旅游" url="http://jeffzhong.space/categories/%E6%97%85%E6%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/04/15/ebc/</loc>
-    <lastmod>2017-09-14T12:56:37.000Z</lastmod>
+    <lastmod>2017-12-01T04:56:29.874Z</lastmod>
     <data>
         <display>
         <title>喜马拉雅之旅（尼泊尔EBC篇）</title>
@@ -301,7 +303,7 @@
     
   <url>
     <loc>http://jeffzhong.space/2017/01/20/abc/</loc>
-    <lastmod>2017-04-18T16:41:26.000Z</lastmod>
+    <lastmod>2017-12-01T04:46:12.558Z</lastmod>
     <data>
         <display>
         <title>喜马拉雅之旅（尼泊尔ABC篇）</title>
@@ -328,34 +330,8 @@
 
     
   <url>
-    <loc>http://jeffzhong.space/2017/01/12/tibet/</loc>
-    <lastmod>2017-04-15T13:37:11.000Z</lastmod>
-    <data>
-        <display>
-        <title>喜马拉雅之旅（西藏篇）</title>
-        <pubTime>2017-01-12T10:01:00.000Z</pubTime>
-        
-        <tag>旅游</tag>
-         
-        <tag>西藏</tag>
-         
-        <tag>拉萨</tag>
-         
-        <tag>纳木错</tag>
-         
-         
-           
-             
-              <breadCrumb title="旅游" url="http://jeffzhong.space/categories/%E6%97%85%E6%B8%B8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://jeffzhong.space/2017/01/04/xinjiang/</loc>
-    <lastmod>2017-04-15T13:29:57.000Z</lastmod>
+    <lastmod>2017-12-01T04:30:44.093Z</lastmod>
     <data>
         <display>
         <title>寻找最美的秋天，丝绸之路北疆行</title>
@@ -387,6 +363,30 @@
            
              
               <breadCrumb title="旅游" url="http://jeffzhong.space/categories/%E6%97%85%E6%B8%B8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
+    <lastmod>2017-11-30T09:27:14.815Z</lastmod>
+    <data>
+        <display>
+        <title>前端特效列表</title>
+        <pubTime>2017-11-07T05:29:28.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
           
         </display>
     </data>
