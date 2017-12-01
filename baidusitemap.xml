@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
+    <lastmod>2017-12-01T08:36:17.216Z</lastmod>
+    <data>
+        <display>
+        <title>简洁后台管理模版</title>
+        <pubTime>2017-11-30T08:45:48.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>gulp</tag>
+         
+        <tag>vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
     <lastmod>2017-12-01T06:54:10.867Z</lastmod>
     <data>
@@ -210,32 +236,6 @@
         <tag>js</tag>
          
         <tag>canvas</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
-    <lastmod>2017-12-01T06:14:03.740Z</lastmod>
-    <data>
-        <display>
-        <title>简洁后台管理模版</title>
-        <pubTime>2017-11-30T08:45:48.000Z</pubTime>
-        
-        <tag>前端</tag>
-         
-        <tag>js</tag>
-         
-        <tag>gulp</tag>
-         
-        <tag>vue</tag>
          
          
            
