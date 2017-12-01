@@ -6,8 +6,6 @@
 
 
 
-  
-
 
 
 
@@ -19,7 +17,7 @@
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
-  <meta name="apple-mobile-web-app-title" content="Tag: webGL - Jeff's world">
+  <meta name="apple-mobile-web-app-title" content="NodeJS网络爬虫 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
@@ -38,11 +36,11 @@
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title >Tag: webGL - Jeff's world</title>
+  <title >NodeJS网络爬虫 - Jeff's world</title>
     <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://jeffzhong.space">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="Tag: webGL - Jeff's world">
+  <meta property="og:title" content="NodeJS网络爬虫 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
   <!-- UC Browser Compatible -->
 <!--   <script>
@@ -126,23 +124,21 @@ var _hmt = _hmt || [];
     
         
 <div class="post-list">
-
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
     
-    	
-	    
-	    <article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
     
+        
     
 	
-	<a href="/2017/11/14/webgl2/">
-        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/banner4.jpg)  center top / 100% no-repeat">
-    		<h3 class="post-title">WebGL学习(2) - 3D场景</h3>
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/banner9.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">NodeJS网络爬虫</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2017/11/14 14:30:00</time>
+    		<time class="icon icon-calendar"> 2017/12/01 17:10:00</time>
     		<span class="category">
     		
     			
@@ -156,16 +152,28 @@ var _hmt = _hmt || [];
     		
     		</span>
     	</div>
-    	<!-- <p><p>&emsp;&emsp;经过前面WebGL学习(1) - 三角形的学习，我们已经掌握了webGL的基础知识，也已经能够画出最基本的图形，比如点，线，三角形，矩形等。有了2D绘图的基础，现在终于…</p>
+    	<!-- <p><p>&emsp;&emsp;网上有很多其他语言平台版本的网络爬虫，比如Python，Java。那怎么能少得了我们无所不能的javascript呢😂？这个和之前给产品狗开发的批量图片下载配置工具，原…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- &emsp;&emsp;原文地址：[WebGL学习(2) - 3D场景](http://jeffzhong.space/2017/11/14/webgl2/) -->
-<p>&emsp;&emsp;经过前面<em><a href="http://jeffzhong.space/2017/11/08/webgl/">WebGL学习(1) - 三角形</a></em>的学习，我们已经掌握了webGL的基础知识，也已经能够画出最基本的图形，比如点，线，三角形，矩形等。有了2D绘图的基础，现在终于可以进入精彩的3D世界了，来看一下这一节要实现的3D的效果吧。<br>实际效果：<em><a href="https://edwardzhong.github.io/sites/demo/dist/webgl2.html" target="_blank" rel="external">webGL3D场景</a></em><br><!-- ![it](http://oncse3u6r.bkt.clouddn.com/webgl3d1.gif) --><br><img src="http://oncse3u6r.bkt.clouddn.com/webgl3d1.gif" width="300"><br></div>
-    	<a href="/2017/11/14/webgl2/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
+    	<div class="post-content"><p>&emsp;&emsp;网上有很多其他语言平台版本的网络爬虫，比如Python，Java。那怎么能少得了我们无所不能的javascript呢😂？这个和之前给产品狗开发的批量图片下载配置工具，原理很相似，核心就是调用Node的http模块。</p>
+<p>网络爬虫基本就由如下部分组成：</p>
+<ol>
+<li>程序入口</li>
+<li>请求模块</li>
+<li>数据解释<a id="more"></a>
+</li>
+</ol>
+<p>&emsp;&emsp;程序入口可以用web页面实现，还可以在网页上显示抓取的数据和分析结果；但是这个我只想把精力花在核心模块，页面和样式不想花太多精力去弄。所以呢，我就开发个node的命令行工具，这个比较成熟的那就是commander了。</p>
+<p>&emsp;&emsp;请求模块方面，我只想抓取百度的页面，还有知乎的页面，它们的请求都是https协议的，好在Node的https和http模块功能几乎是一样的，这里需要做的就是熟悉它的api就好了，也是easy。</p>
+<p>&emsp;&emsp;数据解释模块，因为抓取出来的页面内容是字符串，所以可以用正则表达式去匹配，但是这样太麻烦了。有没有更好的方式？抓取回来可都是html内容，用jQuery以操作dom的方式去解析数据不是很方便嘛，恰好有个服务端的jquery库cheerio。</p>
+<p>&emsp;&emsp;页面抓取完，数据也分析出来了，那就非常简单了，你可以选择存入数据库或者写入文件保存。接下来就开始实现上面的功能模块。</p>
+<h2 id="程序入口"><a href="#程序入口" class="headerlink" title="程序入口"></a>程序入口</h2><p>&emsp;&emsp;开始配置和初始花commander，具体的使用方式参考官方的文档：<em><a href="https://www.npmjs.com/package/commander" target="_blank" rel="external">https://www.npmjs.com/package/commander</a></em>，这里不再详细解释用法了,下面开始配置commander。<br>&emsp;&emsp;首先要在package.json添加如下节点，表示注册了一个命令行 “grab”。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line"><span class="string">"bin"</span>: &#123;</div><div class="line">  <span class="string">"grab"</span>: <span class="string">"bin/grab.js"</span></div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;接着在grab.js开始定义commander，最后我们就可以这样执行命令行：”grab baidu &lt;内容&gt;”，当然可以用bd简写代替baidu，知乎的定义和百度是一样，这里不再重复介绍了。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><div class="line">program</div><div class="line">    <span class="comment">// .allowUnknownOption()//不报错误</span></div><div class="line">    .version(<span class="string">'0.0.1'</span>)</div><div class="line">    .usage(<span class="string">'这是我的网络爬虫程序😎'</span></div><div class="line">      +<span class="string">'\n  grap [option]'</span></div><div class="line">      +<span class="string">'\n    bd baidu: baidu search'</span></div><div class="line">      +<span class="string">'\n    zh zhihu: zhihu search'</span>);</div><div class="line"></div><div class="line">program</div><div class="line">    .command(<span class="string">'baidu &lt;cmd&gt;'</span>)</div><div class="line">    .alias(<span class="string">'bd'</span>)</div><div class="line">    .description(<span class="string">'baidu search baidu'</span>)</div><div class="line">    .option(<span class="string">"-t, --tieba"</span>, <span class="string">"baidu tieba"</span>)</div><div class="line">    .action(<span class="function"><span class="keyword">function</span>(<span class="params">cmd, options</span>)</span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'baidu search "%s":'</span>, cmd);</div><div class="line">      request.baiduSearch(cmd);</div><div class="line">    &#125;).on(<span class="string">'--help'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'  Examples:'</span>);</div><div class="line">      <span class="built_in">console</span>.log();</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'    grab bd    &lt;cmd&gt;'</span>);</div><div class="line">      <span class="built_in">console</span>.log(<span class="string">'    grab baidu &lt;cmd&gt;'</span>);</div><div class="line">      <span class="built_in">console</span>.log();</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">program.parse(process.argv);</div></pre></td></tr></table></figure></p>
+<h2 id="请求模块"><a href="#请求模块" class="headerlink" title="请求模块"></a>请求模块</h2><h2 id="数据解释"><a href="#数据解释" class="headerlink" title="数据解释"></a>数据解释</h2></div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2017/11/14/webgl2/" data-desc="
-&emsp;&emsp;经过前面WebGL学习(1) - 三角形的学习，我们已经掌握了web..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="share" data-url="/2017/12/01/netgrab/" data-desc="&emsp;&emsp;网上有很多其他语言平台版本的网络爬虫，比如Python，Java。那怎..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
 			<i class="icon icon-tag"></i> 
 			
@@ -180,7 +188,11 @@ var _hmt = _hmt || [];
                     
 				
                     
-                        <a class="active" href="javascript:;">webGL</a>
+                        <a href="/tags/node/">node</a>
+                    
+				
+                    
+                        <a href="/tags/cheerio，commander/">cheerio，commander</a>
                     
 				
 			
@@ -188,74 +200,17 @@ var _hmt = _hmt || [];
 		</div>
 	</div>
 </article>
-	    
-	    <article class="post" style="animation:listshow 0.6s ease-out both 0.4s">
-    
-    
-	
-	<a href="/2017/11/08/webgl/">
-        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/banner1.jpg)  center top / 100% no-repeat">
-    		<h3 class="post-title">WebGL学习(1) - 三角形</h3>
-    	</div>
-	</a>
-	<div class="post-inner">
-	
-    	<div class="post-info">
-    		<time class="icon icon-calendar"> 2017/11/08 16:35:00</time>
-    		<span class="category">
-    		
-    			
-    			<i class="icon icon-book"></i>
-    			
-                    
-                        <a href="/categories/技术/">技术</a>
-                    
-        			
-    			
-    		
-    		</span>
-    	</div>
-    	<!-- <p><p>&emsp;&emsp;还记得第一次看到canvas的粒子特效的时候，真的把我给惊艳到了，原来在浏览器也能做出这么棒的效果。结合《HTML5 Canvas核心技术》和网上的教程，经过半年断断续…</p>
-</p> -->
-    	
-    	<div class="post-content"><!-- &emsp;&emsp;原文地址：[WebGL学习(1) - 三角形](http://jeffzhong.space/2017/11/08/webgl/) -->
-<p>&emsp;&emsp;还记得第一次看到canvas的粒子特效的时候，真的把我给惊艳到了，原来在浏览器也能做出这么棒的效果。结合《HTML5 Canvas核心技术》和网上的教程，经过半年断断续续的学习，对canvas的学习终于完结，对常用的canvas特效基本能做到信手拈来的。canvas特效请看：<em><a href="http://jeffzhong.space/sites/demo/">样例列表</a></em></p>
-<p>&emsp;&emsp;众所周知，canvas是2D绘图技术，虽然可以通过坐标变换，位置计算也能做到3D的效果。但3D场景数据量毕竟比2D要高一个数量级的，纯粹用canvas的话，不管是性能和开发的复杂度会成为一个瓶颈。<br>&emsp;&emsp;这也是webGL出现的原因，解决web端3D渲染的场景。webGL会调用到GPU，处理大量重复的3D场景数据时，性能非常有优势。同时webGL是基于openGL ES 2.0， 因此它处理3D场景是非常成熟的。但为什么不直接学习three.js呢？因为本人对图形学感兴趣，只是希望做一些自己喜欢的效果的同时深入了解计算机图形学，没指望通过它做商业项目。</p>
-<p>&emsp;&emsp;为了让学习更有动力和目的性，我们以实例为导向学习webGL，再从中展开到需要学习哪些知识点。这次我们来实现如下的动画，该教程参考了《WebGL编程指南》</p>
-<p>实际效果请看：<em><a href="https://edwardzhong.github.io/sites/demo/dist/webgl.html" target="_blank" rel="external">旋转的三角形</a></em><br><!-- ![it](http://oncse3u6r.bkt.clouddn.com/triangle.gif?t=1) --><br><img src="http://oncse3u6r.bkt.clouddn.com/triangle.gif?t=1" width="200"></p></div>
-    	<a href="/2017/11/08/webgl/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
-    	
-		<div class="post-footer">
-			<div class="share" data-url="/2017/11/08/webgl/" data-desc="
-&emsp;&emsp;还记得第一次看到canvas的粒子特效的时候，真的把我给惊艳到了，原..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
-			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
-				
-				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a class="active" href="javascript:;">webGL</a>
-                    
-				
-			
-			</div>
-		</div>
-	</div>
-</article>
-	    
-    
-
 </div>
 
 <nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2017/11/30/managedemo/" class="next post-next">简洁后台管理模版 &rarr;</a>
+      
+    
   
 </nav>
 
@@ -279,7 +234,7 @@ var _hmt = _hmt || [];
     </div>
 
   </div>
-<input type="hidden" name="isPost" id="isPost" value="false">
+<input type="hidden" name="isPost" id="isPost" value="true">
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
