@@ -4,8 +4,32 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2018/01/12/webglpolygons/</loc>
+    <lastmod>2018-01-12T12:55:48.736Z</lastmod>
+    <data>
+        <display>
+        <title>WebGL模型光照综合实例</title>
+        <pubTime>2018-01-12T08:08:51.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>webGL</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/12/26/webglspitfire/</loc>
-    <lastmod>2017-12-27T04:03:32.939Z</lastmod>
+    <lastmod>2017-12-27T13:10:17.608Z</lastmod>
     <data>
         <display>
         <title>WebGL学习(3) - 3D模型</title>
