@@ -167,10 +167,6 @@ function getEnv(){
         return "weixin";
     } else if (/qq\/(\/[\d\.]+)*/.test(ua) || /qzone\//.test(ua)) {
         return "qq";
-    } else if(ua.indexOf("Firefox") > -1){
-        return "ff";
-    } else if(ua.indexOf("Safari") > -1){
-        return "safari"
     } else {
         return 'h5';
     }

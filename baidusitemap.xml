@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2018/08/07/haskella/</loc>
+    <lastmod>2018-08-07T19:46:35.333Z</lastmod>
+    <data>
+        <display>
+        <title>Haskell学习-函数式编程初探</title>
+        <pubTime>2018-08-07T13:49:46.000Z</pubTime>
+        
+        <tag>haskell</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2018/05/31/room3d/</loc>
-    <lastmod>2018-05-31T02:52:21.359Z</lastmod>
+    <lastmod>2018-05-31T02:57:30.682Z</lastmod>
     <data>
         <display>
         <title>WebGL展示3D房屋内景</title>
