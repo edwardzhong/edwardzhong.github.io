@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2018/08/08/haskellb/</loc>
+    <lastmod>2018-08-08T17:09:37.060Z</lastmod>
+    <data>
+        <display>
+        <title>Haskell学习-高阶函数</title>
+        <pubTime>2018-08-08T15:55:13.000Z</pubTime>
+        
+        <tag>haskell</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2018/08/07/haskella/</loc>
-    <lastmod>2018-08-08T07:47:29.820Z</lastmod>
+    <lastmod>2018-08-08T14:58:37.690Z</lastmod>
     <data>
         <display>
         <title>Haskell学习-函数式编程初探</title>
