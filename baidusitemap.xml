@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2018/08/16/haskelld/</loc>
+    <lastmod>2018-08-16T06:20:58.947Z</lastmod>
+    <data>
+        <display>
+        <title>Haskell学习-monad</title>
+        <pubTime>2018-08-16T01:29:31.000Z</pubTime>
+        
+        <tag>haskell</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
     <lastmod>2018-08-16T01:05:06.163Z</lastmod>
     <data>
@@ -151,11 +171,11 @@
          
         <tag>博卡拉</tag>
          
-        <tag>abc</tag>
-         
         <tag>act</tag>
          
         <tag>poonhill</tag>
+         
+        <tag>abc</tag>
          
          
            
