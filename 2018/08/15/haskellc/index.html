@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="Haskell学习-functor - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >Haskell学习-functor - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Haskell学习-functor - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+    
+      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a 
+        href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a 
+        href="http://jeffzhong.space/sites/demo/">
+        <i class="icon icon-tag"></i>
+        Demo
+      </a>
+  
+      <a  data-tag="search" 
+        href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">25<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">46<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(http://oncse3u6r.bkt.clouddn.com/banner2.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">Haskell学习-functor</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2018/08/15 21:27:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>什么是Functorfunctor 就是可以执行map操作的对象，functor就像是附加了语义的表达式，可以用盒子进行比喻。functor 的定义可以这样理解：给出a映射到b的函数和装了a的…</p>
+</p> -->
+    	
+    	<div class="post-content"><!-- 原文地址：[Haskell学习-functor](http://jeffzhong.space/2018/08/15/haskellc/) -->
+<h2 id="什么是Functor"><a href="#什么是Functor" class="headerlink" title="什么是Functor"></a>什么是Functor</h2><p><strong>functor</strong> 就是可以执行map操作的对象，functor就像是附加了语义的表达式，可以用盒子进行比喻。<strong>functor</strong> 的定义可以这样理解：给出a映射到b的函数和装了a的盒子，结果会返回装了b的盒子。<strong>fmap</strong> 可以看作是一个接受一个function 和一个 <strong>functor</strong> 的函数，它把function 应用到 <strong>functor</strong> 的每一个元素（映射）。</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Functor的定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Functor</span> f <span class="keyword">where</span></span></span><br><span class="line">    fmap :: (a -&gt; b) -&gt; f a -&gt; f b</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>某个类型要能进行映射操作(map over)，就必须继承Functor基类，并实现其中的fmap函数。我们来看一下几种默认的Functor形态：</p>
+<ol>
+<li><p><strong>列表list</strong>，非常好理解，操作列表我们一般使用map函数，它其实就是fmap针对列表的一个具体实例，在list中它们是等价的。</p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 作为functor 的定义：</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Functor</span> [] <span class="keyword">where</span></span></span><br><span class="line">    fmap = map</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line"><span class="title">fmap</span> (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>Maybe</strong>，它是haskell中使用很广泛的数据类型，它有 <strong>Just 值</strong> 和 <strong>Nothing</strong> 两种情况，分别用于表示成功和失败的情况。</p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Maybe 的 functor 定义：</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Functor</span> <span class="type">Maybe</span> <span class="keyword">where</span></span></span><br><span class="line">    fmap f (<span class="type">Just</span> x) = <span class="type">Just</span> (f x)</span><br><span class="line">    fmap f <span class="type">Nothing</span> = <span class="type">Nothing</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line"><span class="title">fmap</span> (*<span class="number">2</span>) (<span class="type">Just</span> <span class="number">1</span>)</span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="title">fmap</span> (*<span class="number">2</span>) (<span class="type">Nothing</span>)</span><br><span class="line">&gt; <span class="type">Nothing</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>IO</strong>，输入与输出，比如读取键盘输入，打印字符串等</p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- IO 的 Functor 定义</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Functor</span> <span class="type">IO</span> <span class="keyword">where</span></span></span><br><span class="line">    fmap f action = <span class="keyword">do</span></span><br><span class="line">          result &lt;- action</span><br><span class="line">          return (f result)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line"><span class="title">fmap</span> (<span class="string">"hello! "</span>++) getLine</span><br><span class="line"><span class="title">jeff</span> <span class="comment">-- 输入名字，打印时添加“hello”</span></span><br><span class="line">&gt; <span class="string">"hello! jeff"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Functor的-gt-r-形态"><a href="#Functor的-gt-r-形态" class="headerlink" title="Functor的 (-&gt;) r  形态"></a>Functor的 (-&gt;) r  形态</h2><p>(-&gt;) r 其实表示的是函数结合，也就是等价于 <strong>(.)</strong><br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 下面两个定义是等价的，也就是 (-&gt;) r 形式下的 Functor 其实等价于 结合律</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Functor</span> ((-&gt;) r) <span class="keyword">where</span></span></span><br><span class="line">    fmap f g = (\x -&gt; f (g x))</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Functor</span> ((-&gt;) r) <span class="keyword">where</span></span></span><br><span class="line">    fmap = (.)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line"><span class="title">fmap</span> (*<span class="number">3</span>) (+<span class="number">100</span>) <span class="number">1</span></span><br><span class="line">&gt; <span class="number">303</span></span><br><span class="line"></span><br><span class="line">(*<span class="number">3</span>) . (+<span class="number">100</span>)  $ <span class="number">1</span></span><br><span class="line">&gt; <span class="number">303</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="functor-law"><a href="#functor-law" class="headerlink" title="functor law"></a>functor law</h2><p>如果某个类型遵守这两个定律，那么它与其他Functor对于映射方面就具有相同的性质。</p>
+<ol>
+<li><p><strong>fmap id = id</strong><br>如果我们对 functor 做 map id，那得到的新的 functor 应该要跟原来的一样</p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">fmap</span> id (<span class="type">Just</span> <span class="number">3</span>) </span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">3</span></span><br><span class="line"><span class="title">id</span> (<span class="type">Just</span> <span class="number">3</span>) </span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>fmap (f . g) = fmap f . fmap g</strong> 也就是 <strong>functor</strong> 是能应用于函数结合的。</p>
+</li>
+</ol>
+<h2 id="Applicative-Functor"><a href="#Applicative-Functor" class="headerlink" title="Applicative Functor"></a>Applicative Functor</h2><p>&emsp;&emsp;为什么需要 <strong>Applicative Functor</strong>，什么情况下使用它。从Functor定义我们知道，fmap函数只能映射单个盒子，但假设需要映射两个三个，甚至是更多的盒子呢？或者是要处理返回值是函数的盒子呢？而这就是 <strong>Applicative Functor</strong> 要处理的情况。<br>&emsp;&emsp;<strong>Applicative Functor</strong> 可以看作是Functor的增加版，从定义可知，它主要包括pure 和 &lt;*&gt;两个函数。<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Applicative Functor 定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> (<span class="type">Functor</span> <span class="title">f</span>) =&gt; <span class="type">Applicative</span> f <span class="keyword">where</span></span></span><br><span class="line">    pure :: a -&gt; f a</span><br><span class="line">    (&lt;*&gt;) :: f (a -&gt; b) -&gt; f a -&gt; f b</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><strong>pure :: a -&gt; f a</strong> 意思就是把普通值放到默认的context(语义)下。比如如果是list，那么它代表的就是<strong>[ ]</strong> ，如果是Maybe，那么它就是 <strong>Just 值 / Nothing</strong>。</li>
+<li><p>(<strong>&lt;*&gt;</strong>) 接受一个装有函数的 functor 跟另一个 functor,  非常类似于fmap，它就像加强版的 fmap。以applicative style 的方式来使用 applicative functors。像是 pure f &lt;*&gt; x &lt;*&gt; y &lt;*&gt; … 这个函数可以吃任意多的参数。</p>
+  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 与fmap类型的对比，可以看出函数 a -&gt; b 被装进了盒子 f 中</span></span><br><span class="line">(&lt;*&gt;) :: f (a -&gt; b) -&gt; f a -&gt; f b</span><br><span class="line"><span class="title">fmap</span> :: (a -&gt; b) -&gt; f a -&gt; f b</span><br><span class="line"></span><br><span class="line"><span class="comment">-- &lt;*&gt; 是左结合的，因此以下两个表达式是相等的</span></span><br><span class="line"><span class="title">pure</span> (+) &lt;*&gt; <span class="type">Just</span> <span class="number">3</span> &lt;*&gt; <span class="type">Just</span> <span class="number">5</span> </span><br><span class="line">(pure (+) &lt;*&gt; <span class="type">Just</span> <span class="number">3</span>) &lt;*&gt; <span class="type">Just</span> <span class="number">5</span>。</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>(<strong>&lt;$&gt;</strong>) 是<strong>applicative functor</strong> 中另一个很常用的符号，它其实就是中缀版的fmap。因为结合fmap写<strong>applicative functor</strong>更加方便。</p>
+  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">(&lt;$&gt;) :: (<span class="type">Functor</span> f) =&gt; (a -&gt; b) -&gt; f a -&gt; f b</span><br><span class="line"><span class="title">f</span> &lt;$&gt; x = fmap f x</span><br><span class="line"><span class="comment">-- 用&lt;*&gt;实现相同的功能</span></span><br><span class="line"><span class="title">pure</span> f &lt;*&gt; x = fmap f x</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>接着看一下几个默认的 <strong>applicative functor</strong>，继承Applicative，必须实现 <strong>pure</strong> 和 (<strong>&lt;*&gt;</strong>) 函数</p>
+<ol>
+<li><p><strong>Maybe 类型</strong></p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Maybe 的 Applicative 定义：</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Applicative</span> <span class="type">Maybe</span> <span class="keyword">where</span></span></span><br><span class="line">    pure = <span class="type">Just</span></span><br><span class="line">    <span class="type">Nothing</span> &lt;*&gt; _ = <span class="type">Nothing</span></span><br><span class="line">    (<span class="type">Just</span> f) &lt;*&gt; something = fmap f something</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line"><span class="title">pure</span> (+<span class="number">3</span>) &lt;*&gt; <span class="type">Just</span> <span class="number">9</span></span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">12</span></span><br><span class="line"></span><br><span class="line"><span class="title">pure</span> (+) &lt;*&gt; <span class="type">Just</span> <span class="number">3</span> &lt;*&gt; <span class="type">Just</span> <span class="number">5</span></span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">8</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>列表list</strong> 也是 applicative functor，从定义可以看出使用list的Applicative style完全可以实现 <strong>list comprehension</strong> 的功能。所以 <strong>Applicative style</strong> 对于 list 而言是取代某些类型的 list comprehension 的好方式。</p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- list 的定义</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Applicative</span> [] <span class="keyword">where</span></span></span><br><span class="line">    pure x = [x]</span><br><span class="line">    fs &lt;*&gt; xs = [f x | f &lt;- fs, x &lt;- xs]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line">[(+<span class="number">3</span>),(*<span class="number">2</span>)] &lt;*&gt; [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">&gt; [<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">--下面表达式具有相同的功能</span></span><br><span class="line">(*) &lt;$&gt; [<span class="number">2</span>,<span class="number">5</span>,<span class="number">10</span>] &lt;*&gt; [<span class="number">8</span>,<span class="number">10</span>,<span class="number">11</span>] <span class="comment">-- Applicative style</span></span><br><span class="line">[ x * y | x &lt;- [<span class="number">2</span>,<span class="number">5</span>,<span class="number">10</span>], y &lt;- [<span class="number">8</span>,<span class="number">10</span>,<span class="number">11</span>]] <span class="comment">-- list comprehension</span></span><br><span class="line">&gt; [<span class="number">16</span>,<span class="number">20</span>,<span class="number">22</span>,<span class="number">40</span>,<span class="number">50</span>,<span class="number">55</span>,<span class="number">80</span>,<span class="number">100</span>,<span class="number">110</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>IO</strong> ，下面的IO的实例，可以把 getLine 看做是一个去真实世界中拿取字串的盒子, 而 applicative functor 表达式会创造一个比较大的盒子，这个大盒子会派两个盒子去终端拿取字串，并把结果串接起来放进自己的盒子中。</p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">--IO 的 Applicative instance</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Applicative</span> <span class="type">IO</span> <span class="keyword">where</span></span></span><br><span class="line">	pure = return</span><br><span class="line">	a &lt;*&gt; b = <span class="keyword">do</span></span><br><span class="line">	    f &lt;- a</span><br><span class="line">	    x &lt;- b</span><br><span class="line">	    return (f x)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例 将输入的两个字符串合并</span></span><br><span class="line">(++) &lt;$&gt; getLine &lt;*&gt; getLine</span><br><span class="line"><span class="title">aa</span></span><br><span class="line"><span class="title">bb</span></span><br><span class="line">&gt; <span class="string">"aabb"</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Applicative-Functor-的-gt-r-形态"><a href="#Applicative-Functor-的-gt-r-形态" class="headerlink" title="Applicative Functor 的 (-&gt;) r 形态"></a>Applicative Functor 的 (-&gt;) r 形态</h2><p> (-&gt;) r 形态定义</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Applicative</span> ((-&gt;) r) <span class="keyword">where</span></span></span><br><span class="line">    pure x = (\_ -&gt; x)</span><br><span class="line">    f &lt;*&gt; g = \x -&gt; f x (g x)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>用 pure 将一个值包成 applicative functor 的时候，他产生的结果永远都会是那个值</li>
+<li>将两个 applicative functor 喂给 &lt;*&gt; 可以产生一个新的 applicative functor</li>
+</ul>
+<p>接着综合使用上面的知识，来看一下实际应用applicative的几种方式。相比起functor，applicative functor要更强大和灵活。</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 左结合形式, 第一项必须为含有函数的functor,右边全部为functor</span></span><br><span class="line"><span class="title">pure</span> (\x y z -&gt; x+ y +z) &lt;*&gt; <span class="type">Just</span> <span class="number">3</span> &lt;*&gt; <span class="type">Just</span> <span class="number">4</span> &lt;*&gt; <span class="type">Just</span> <span class="number">5</span></span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">12</span></span><br><span class="line">[(+<span class="number">3</span>),(*<span class="number">2</span>)] &lt;*&gt; [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">&gt; [<span class="number">4</span>,<span class="number">5</span>,<span class="number">2</span>,<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- fmap(&lt;$&gt;) 形式,第一项为普通函数,右边都为functor</span></span><br><span class="line">(+) &lt;$&gt; <span class="type">Just</span> <span class="number">1</span> &lt;*&gt; <span class="type">Just</span> <span class="number">2</span></span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">3</span></span><br><span class="line">(\x y z -&gt; x + y +z) &lt;$&gt; [<span class="number">1</span>,<span class="number">2</span>] &lt;*&gt; [<span class="number">2</span>,<span class="number">3</span>] &lt;*&gt; [<span class="number">4</span>,<span class="number">5</span>]</span><br><span class="line">&gt; [<span class="number">7</span>,<span class="number">8</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">9</span>,<span class="number">10</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- (&lt;$&gt;) (-&gt;) r 形式,全部为普通函数,用单个参数调用执行</span></span><br><span class="line">(\x y z -&gt; [x,y,z]) &lt;$&gt; (<span class="number">3</span>+) &lt;*&gt; (*<span class="number">100</span>) &lt;*&gt; (`div`<span class="number">2</span>) $ <span class="number">2</span></span><br><span class="line">&gt; [<span class="number">5</span>,<span class="number">200</span>,<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<h2 id="Applicative-Functor-辅助函数"><a href="#Applicative-Functor-辅助函数" class="headerlink" title="Applicative Functor 辅助函数"></a>Applicative Functor 辅助函数</h2><ol>
+<li><p><strong>liftA2</strong><br>只是applicative的套用函数而已，当然还有3个参数的版本 <strong>liftA3</strong>，而 <strong>liftA</strong> 则等价于 <strong>fmap</strong></p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 与applicative 的等价形式</span></span><br><span class="line"><span class="title">liftA2</span> f a b = f &lt;$&gt; a &lt;*&gt; b</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 以下表达式功能一致</span></span><br><span class="line"><span class="title">liftA2</span> (:) (<span class="type">Just</span> <span class="number">3</span>) (<span class="type">Just</span> [<span class="number">4</span>])</span><br><span class="line">(:) &lt;$&gt; <span class="type">Just</span> <span class="number">3</span> &lt;*&gt; <span class="type">Just</span> [<span class="number">4</span>]</span><br><span class="line"><span class="title">pure</span> (:) &lt;*&gt; <span class="type">Just</span> <span class="number">3</span> &lt;*&gt; <span class="type">Just</span> [<span class="number">4</span>]</span><br><span class="line"></span><br><span class="line">&gt; <span class="type">Just</span> [<span class="number">3</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>sequenceA</strong><br>&emsp;&emsp;当套用在函数上时，<strong>sequenceA</strong> 接受装有一堆函数的list，并回传一个回传list的函数。当我们有一串函数，想要将相同输入都喂给它们并查看结果的时候，sequenceA非常好用。<br>&emsp;&emsp;当使用在 I/O action 上的时候，<strong>sequenceA</strong> 跟 <strong>sequence</strong> 是等价的。他接受一串 I/O action 并回传一个 I/O action，这个 I/O action 会计算 list 中的每一个 I/O action，并把结果放在一个 list 中</p>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 以下是两种实现sequenceA功能一致的函数</span></span><br><span class="line"><span class="title">sequenceA</span> (x:xs) = (:) &lt;$&gt; x &lt;*&gt; sequenceA xs</span><br><span class="line"><span class="title">sequenceA</span> = foldr (liftA2 (:)) (pure [])</span><br><span class="line"></span><br><span class="line"><span class="title">sequenceA</span> [<span class="type">Just</span> <span class="number">3</span>, <span class="type">Just</span> <span class="number">2</span>, <span class="type">Just</span> <span class="number">1</span>]</span><br><span class="line">&gt; <span class="type">Just</span> [<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 将list组合成所有可能的组合</span></span><br><span class="line"><span class="title">sequenceA</span> [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]]</span><br><span class="line">&gt; [[<span class="number">1</span>,<span class="number">4</span>],[<span class="number">1</span>,<span class="number">5</span>],[<span class="number">1</span>,<span class="number">6</span>],[<span class="number">2</span>,<span class="number">4</span>],[<span class="number">2</span>,<span class="number">5</span>],[<span class="number">2</span>,<span class="number">6</span>],[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">3</span>,<span class="number">5</span>],[<span class="number">3</span>,<span class="number">6</span>]]</span><br><span class="line"></span><br><span class="line"><span class="title">sequenceA</span> [(&gt;<span class="number">4</span>),(&lt;<span class="number">10</span>),odd] <span class="number">7</span></span><br><span class="line"><span class="title">map</span> (\f -&gt; f <span class="number">7</span>) [(&gt;<span class="number">4</span>),(&lt;<span class="number">10</span>),odd]</span><br><span class="line">&gt; [<span class="type">True</span>,<span class="type">True</span>,<span class="type">True</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">-- and接受一串Bool，并在所有值都为True时才返回True</span></span><br><span class="line"><span class="title">and</span> $ sequenceA [(&gt;<span class="number">4</span>),(&lt;<span class="number">10</span>),odd] <span class="number">7</span></span><br><span class="line"><span class="title">and</span> $ map (\f -&gt; f <span class="number">7</span>) [(&gt;<span class="number">4</span>),(&lt;<span class="number">10</span>),odd]</span><br><span class="line">&gt; <span class="type">True</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2018/08/15/haskellc/" data-desc="
+什么是Functorfunctor 就是可以执行map操作的对象，functor就像是附加了..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/haskell/">haskell</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2018/08/08/haskellb/" class="next post-next">Haskell学习-高阶函数 &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2018 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>

@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
+    
+    <lastmod>2018-08-16T01:05:06.163Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://jeffzhong.space/2018/08/08/haskellb/</loc>
     
-    <lastmod>2018-08-08T17:29:20.695Z</lastmod>
+    <lastmod>2018-08-10T06:34:17.708Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jeffzhong.space/2018/08/07/haskella/</loc>
     
-    <lastmod>2018-08-08T14:58:37.690Z</lastmod>
+    <lastmod>2018-08-10T06:34:08.496Z</lastmod>
     
   </url>
   
