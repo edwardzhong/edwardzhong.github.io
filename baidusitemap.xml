@@ -4,6 +4,54 @@
 
     
   <url>
+    <loc>http://jeffzhong.space/2018/12/12/tetris/</loc>
+    <lastmod>2019-02-03T16:58:49.898Z</lastmod>
+    <data>
+        <display>
+        <title>canvas实现俄罗斯方块</title>
+        <pubTime>2018-12-12T13:35:33.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://jeffzhong.space/2019/01/03/animationfun/</loc>
+    <lastmod>2019-02-03T16:57:58.418Z</lastmod>
+    <data>
+        <display>
+        <title>动画函数的绘制及自定义动画函数</title>
+        <pubTime>2019-01-02T18:01:23.000Z</pubTime>
+        
+        <tag>前端</tag>
+         
+        <tag>js</tag>
+         
+        <tag>canvas</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术" url="http://jeffzhong.space/categories/%E6%8A%80%E6%9C%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
     <lastmod>2018-12-21T15:14:25.323Z</lastmod>
     <data>
