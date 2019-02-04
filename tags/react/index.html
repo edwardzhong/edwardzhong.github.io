@@ -6,6 +6,8 @@
 
 
 
+  
+
 
 
 
@@ -17,7 +19,7 @@
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
-  <meta name="apple-mobile-web-app-title" content="前端特效列表 - Jeff's world">
+  <meta name="apple-mobile-web-app-title" content="Tag: react - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
@@ -36,11 +38,11 @@
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title >前端特效列表 - Jeff's world</title>
+  <title >Tag: react - Jeff's world</title>
     <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://jeffzhong.space">
   <meta property="og:type" content="blog">
-  <meta property="og:title" content="前端特效列表 - Jeff's world">
+  <meta property="og:title" content="Tag: react - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
   <!-- UC Browser Compatible -->
 <!--   <script>
@@ -124,21 +126,23 @@ var _hmt = _hmt || [];
     
         
 <div class="post-list">
-	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+
     
+    	
+	    
+	    <article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
     
-        
     
 	
-	<a href="javascript:;">
+	<a href="/2019/02/04/reacthooks/">
         <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-8dcbc33329b489d8.jpg)  center top / 100% no-repeat">
-    		<h3 class="post-title">前端特效列表</h3>
+    		<h3 class="post-title">基于Webpack 4 和 React hooks 搭建项目</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2017/11/07 13:29:00</time>
+    		<time class="icon icon-calendar"> 2019/02/04 13:58:00</time>
     		<span class="category">
     		
     			
@@ -152,55 +156,16 @@ var _hmt = _hmt || [];
     		
     		</span>
     	</div>
-    	<!-- <p><p>css3,canvas 和 webGL 学习过程中做的demo和特效，一部分是对网上的特效进行重写，以加深对知识点的理解，具体内容请看：Jeff Zhong’s Demo</p>
+    	<!-- <p><p>面对日新月异的前端，我表示快学不动了😂。 Webpack 老早就已经更新到了 V4.x，前段时间 React 又推出了  hooks API。刚好春节在家里休假，时间比较空闲，还是赶紧把 Re…</p>
 </p> -->
     	
-    	<div class="post-content"><p>css3,canvas 和 webGL 学习过程中做的demo和特效，一部分是对网上的特效进行重写，以加深对知识点的理解，具体内容请看：<em><a href="http://jeffzhong.space/sites/demo/index.html">Jeff Zhong’s Demo</a></em></p>
-<a id="more"></a>
-<!-- ## Canvas 特效
-
-*[canvas图表(3)-饼图 chartbar](https://edwardzhong.github.io/sites/demo/dist/chartpie.html)*
-*[canvas图表(2)-折线图 chartbar](https://edwardzhong.github.io/sites/demo/dist/chartline.html)*
-*[canvas图表(1)-柱状图 chartbar](https://edwardzhong.github.io/sites/demo/dist/bar.html)*
-*[导弹 missile](https://edwardzhong.github.io/sites/demo/dist/missile.html)*
-*[太阳系 Solar System](https://edwardzhong.github.io/sites/demo/dist/solar.html)*
-*[canvas图形编辑器 Drawboard](https://edwardzhong.github.io/sites/demo/dist/drawboard.html)*
-*[火焰 Fire Burn](https://edwardzhong.github.io/sites/demo/dist/fireBurn.html)*
-*[火球 Fire Ball](https://edwardzhong.github.io/sites/demo/dist/fireBall.html)*
-*[粒子特效 Point Effect](https://edwardzhong.github.io/sites/demo/dist/pointEffect.html)*
-*[粒子特效2 Point Effect 2](https://edwardzhong.github.io/sites/demo/dist/pointEffect2.html)*
-*[图片粒子特效 Image Effect 3](https://edwardzhong.github.io/sites/demo/dist/pointEffect3.html)*
-*[烟花 firework](https://edwardzhong.github.io/sites/demo/dist/firework.html)*
-*[重力影响烟花 firework 2](https://edwardzhong.github.io/sites/demo/dist/firework2.html)*
-*[3D烟花 firework 3D](https://edwardzhong.github.io/sites/demo/dist/firework3D.html)*
-*[黑客帝国 Matrix](https://edwardzhong.github.io/sites/demo/dist/matrix.html)*
-*[背景 Background](https://edwardzhong.github.io/sites/demo/dist/background.html)*
-*[海葵 Aqu](https://edwardzhong.github.io/sites/demo/dist/aqu.html)*
-*[海浪 wave](https://edwardzhong.github.io/sites/demo/dist/wave.html)*
-*[下雨效果 Rain Drop](https://edwardzhong.github.io/sites/demo/dist/rainDrop.html)*
-*[小球碰撞物理效果 ball collision](https://edwardzhong.github.io/sites/demo/dist/ballcollision.html)*
-*[圆形加载 Circle Load](https://edwardzhong.github.io/sites/demo/dist/circleLoad.html)*
-*[立方体 Cube](https://edwardzhong.github.io/sites/demo/dist/cube.html)*
-*[3D连线 point 3D](https://edwardzhong.github.io/sites/demo/dist/point3D.html)*
-*[3D圆形 round 3D](https://edwardzhong.github.io/sites/demo/dist/round3D.html)*
-*[3D旋转 round 3D 2](https://edwardzhong.github.io/sites/demo/dist/round3D2.html)*
-*[3D小球洒落 star 3D](https://edwardzhong.github.io/sites/demo/dist/star.html)*
-*[3D星海 star 3D](https://edwardzhong.github.io/sites/demo/dist/star3d.html)*
-
-## CSS3 特效
-
-*[CSS3 3D](https://edwardzhong.github.io/sites/demo/dist/css33D.html)*
-*[CSS3时钟 Clock](https://edwardzhong.github.io/sites/demo/dist/cssClock.html)*
-*[豆瓣分页 Douban Pagination](https://edwardzhong.github.io/sites/demo/dist/doubanPage.html)*
-*[轮播图 Slide Picture](https://edwardzhong.github.io/sites/demo/dist/slidePics.html)*
-*[轮播图 Slide Picture 2](https://edwardzhong.github.io/sites/demo/dist/slidePics2.html)*
-*[3D云标签 Tag Cloud 3D](https://edwardzhong.github.io/sites/demo/dist/tagCloud.html)*
-*[跑马灯 Marquee](https://edwardzhong.github.io/sites/demo/dist/marquee.html)*
-*[移动端轮播图 Mobile slide Picture](https://edwardzhong.github.io/sites/demo/dist/mobileSlide.html)* -->
-</div>
+    	<div class="post-content"><p>面对日新月异的前端，我表示快学不动了😂。 <strong>Webpack</strong> 老早就已经更新到了 V4.x，前段时间 <strong>React</strong> 又推出了  <strong>hooks</strong> API。刚好春节在家里休假，时间比较空闲，还是赶紧把 <strong>React</strong>技术栈这块补上。</p>
+<p>网上有很多介绍 <strong>hooks</strong> 知识点的文章，但都比较零碎，基本只能写一些小 <strong>Demo</strong>。还没有比较系统的，全新的基于 <strong>hooks</strong> 进行搭建实际项目的讲解。所以这里就从开发实际项目的角度，搭建起单页面 <strong>Web App</strong>项目的基本脚手架，并基于 <strong>hooks</strong> API 实现一个 <strong>react</strong> 项目模版。</p>
+<p> <strong>Hooks</strong> 最吸引人的地方就是用 <strong>函数式组件</strong> 代替面向对象的 <strong>类组件</strong>。此前的 <strong>react</strong> 如果涉及到状态，解决方案通常只能使用 <strong>类组件</strong>，业务逻辑一复杂就容易导致组件臃肿，模块的解藕也是个问题。而使用基于 <strong>hooks</strong> 的 <strong>函数组件</strong> 后，代码不仅更加简洁，写起来更爽，而且模块复用也方便得多，非常看好它的未来。<br></div>
+    	<a href="/2019/02/04/reacthooks/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2017/11/07/canvaslist/" data-desc="css3,canvas 和 webGL 学习过程中做的demo和特效，一部分是对网上的特效进行..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="share" data-url="/2019/02/04/reacthooks/" data-desc="面对日新月异的前端，我表示快学不动了😂。 Webpack 老早就已经更新到了 V4.x，前段..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
 			<i class="icon icon-tag"></i> 
 			
@@ -215,7 +180,7 @@ var _hmt = _hmt || [];
                     
 				
                     
-                        <a href="/tags/canvas/">canvas</a>
+                        <a class="active" href="javascript:;">react</a>
                     
 				
 			
@@ -223,19 +188,12 @@ var _hmt = _hmt || [];
 		</div>
 	</div>
 </article>
+	    
+    
+
 </div>
 
 <nav class="pagination clearfix">
-  
-    
-      
-      <a href="/2017/11/08/webgl/" class="prev post-prev">&larr; WebGL学习(1) - 三角形</a>
-      
-
-      
-      <a href="/2017/11/02/drawboard/" class="next post-next">canvas图形编辑器 &rarr;</a>
-      
-    
   
 </nav>
 
@@ -259,7 +217,7 @@ var _hmt = _hmt || [];
     </div>
 
   </div>
-<input type="hidden" name="isPost" id="isPost" value="true">
+<input type="hidden" name="isPost" id="isPost" value="false">
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
