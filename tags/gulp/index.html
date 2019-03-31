@@ -12,22 +12,22 @@
 
 
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="Tag: gulp - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content = "telphone=no, email=no" />
+  <meta name="format-detection" content="telphone=no, email=no">
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
@@ -38,7 +38,7 @@
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title >Tag: gulp - Jeff's world</title>
+  <title>Tag: gulp - Jeff's world</title>
     <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://jeffzhong.space">
   <meta property="og:type" content="blog">
@@ -81,20 +81,17 @@ var _hmt = _hmt || [];
   
   
   
-      <a 
-        href="/">
+      <a href="/">
         <i class="icon icon-home"></i>
         主页
       </a>
   
-      <a 
-        href="http://jeffzhong.space/sites/demo/">
+      <a href="http://jeffzhong.space/sites/demo/">
         <i class="icon icon-tag"></i>
         Demo
       </a>
   
-      <a  data-tag="search" 
-        href="javascript:;">
+      <a data-tag="search" href="javascript:;">
         <i class="icon icon-search"></i>
         搜索
       </a>
@@ -102,7 +99,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">29<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">47<br>标签</a>
+    <a href="/archives">30<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">49<br>标签</a>
   </div>
   <div class="social">
   
@@ -161,7 +158,7 @@ var _hmt = _hmt || [];
     	
     	<div class="post-content"><!-- &emsp;&emsp;原文地址：[简洁后台管理模版](http://jeffzhong.space/2017/11/30/managedemo/) -->
 <p>&emsp;&emsp;之前给客户开发一个简单的后台管理系统，本来准备套用AdminLTE的，但客户嫌弃太臃肿，而且又需要有多tab页面切换，于是从我代码库中找到好久前就写过的管理后台，根据需求重写。这是基于jQuery，加上自己编写基础样式，从零搭建起来的框架，在这个轻量级模版的基础上进行开发vue项目。现在顺便将这个模版搭建成我的前端demo的管理系统，而这篇文章就讲述下如何实现简单的后台管理系统。</p>
-<p>效果请看：<em><a href="https://edwardzhong.github.io/sites/manage-demo/" target="_blank" rel="noopener">manage-demo:http://jeffzhong.space/sites/manage-demo/</a></em><br><!-- ![it](http://oncse3u6r.bkt.clouddn.com/manage.gif) --><br><img src="http://oncse3u6r.bkt.clouddn.com/manage.gif" width="600"><br></div>
+<p>效果请看：<em><a href="https://edwardzhong.github.io/sites/manage-demo/" target="_blank" rel="noopener">manage-demo:http://jeffzhong.space/sites/manage-demo/</a></em><br><!-- ![it](http://oncse3u6r.bkt.clouddn.com/manage.gif) --><br><img src="http://oncse3u6r.bkt.clouddn.com/manage.gif" width="600"><br></p></div>
     	<a href="/2017/11/30/managedemo/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
     	
 		<div class="post-footer">
@@ -226,7 +223,7 @@ var _hmt = _hmt || [];
     	<div class="post-content"><!-- &emsp;&emsp;原文地址：[前端快速开发模版](http://jeffzhong.space/2017/11/27/projecttemplate/) -->
 <p>&emsp;&emsp;之前一直在开发移动端的单页面应用，而移动web对性能和效果要求是比较苛刻的，所以用的都是轻量级的框架体系。基本上是Zepto加自己开发的单页面框架，再加上若干简单的库。这样前端要加载的文件很小，修改起来也非常方便，同时这样的轻量级的体系使用gulp进行自动化管理也是非常合适的。</p>
 <p>&emsp;&emsp;自从开发react项目后，对它的工程化和开发模式也是开了眼界，标准的框架体系就是重量级的react+redux+webpack。开发大型项目和后台管理系统用react，vue确实是不错的。但是开发一些小项目，比如前端h5之类的又有杀鸡用牛刀的感觉。</p>
-<p>&emsp;&emsp;于是借鉴webpack工程化思想动手写了个前端快速开发模版，用于开发快速简洁的项目，比如之前的单页面应用。而这个项目模版就是类似前端开发的脚手架了，基本的思路就是自动化和前端编译</div>
+<p>&emsp;&emsp;于是借鉴webpack工程化思想动手写了个前端快速开发模版，用于开发快速简洁的项目，比如之前的单页面应用。而这个项目模版就是类似前端开发的脚手架了，基本的思路就是自动化和前端编译</p></div>
     	<a href="/2017/11/27/projecttemplate/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
     	
 		<div class="post-footer">

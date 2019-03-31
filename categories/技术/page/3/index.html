@@ -12,22 +12,22 @@
 
 
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="Category: 技术 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content = "telphone=no, email=no" />
+  <meta name="format-detection" content="telphone=no, email=no">
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
@@ -38,7 +38,7 @@
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title >Category: 技术 - Jeff's world</title>
+  <title>Category: 技术 - Jeff's world</title>
     <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://jeffzhong.space">
   <meta property="og:type" content="blog">
@@ -81,20 +81,17 @@ var _hmt = _hmt || [];
   
   
   
-      <a 
-        href="/">
+      <a href="/">
         <i class="icon icon-home"></i>
         主页
       </a>
   
-      <a 
-        href="http://jeffzhong.space/sites/demo/">
+      <a href="http://jeffzhong.space/sites/demo/">
         <i class="icon icon-tag"></i>
         Demo
       </a>
   
-      <a  data-tag="search" 
-        href="javascript:;">
+      <a data-tag="search" href="javascript:;">
         <i class="icon icon-search"></i>
         搜索
       </a>
@@ -102,7 +99,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">29<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">47<br>标签</a>
+    <a href="/archives">30<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">49<br>标签</a>
   </div>
   <div class="social">
   
@@ -131,6 +128,68 @@ var _hmt = _hmt || [];
     	
 	    
 	    <article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+	
+	<a href="/2017/11/08/webgl/">
+        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-1bcbb19d24c33d03.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">WebGL学习(1) - 三角形</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2017/11/08 16:35:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a class="active" href="javascript:;">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>&emsp;&emsp;还记得第一次看到canvas的粒子特效的时候，真的把我给惊艳到了，原来在浏览器也能做出这么棒的效果。结合《HTML5 Canvas核心技术》和网上的教程，经过半年断断续…</p>
+</p> -->
+    	
+    	<div class="post-content"><!-- &emsp;&emsp;原文地址：[WebGL学习(1) - 三角形](http://jeffzhong.space/2017/11/08/webgl/) -->
+<p>&emsp;&emsp;还记得第一次看到canvas的粒子特效的时候，真的把我给惊艳到了，原来在浏览器也能做出这么棒的效果。结合《HTML5 Canvas核心技术》和网上的教程，经过半年断断续续的学习，对canvas的学习终于完结，对常用的canvas特效基本能做到信手拈来的。canvas特效请看：<em><a href="http://jeffzhong.space/sites/demo/">样例列表</a></em></p>
+<p>&emsp;&emsp;众所周知，canvas是2D绘图技术，虽然可以通过坐标变换，位置计算也能做到3D的效果。但3D场景数据量毕竟比2D要高一个数量级的，纯粹用canvas的话，不管是性能和开发的复杂度会成为一个瓶颈。<br>&emsp;&emsp;这也是webGL出现的原因，解决web端3D渲染的场景。webGL会调用到GPU，处理大量重复的3D场景数据时，性能非常有优势。同时webGL是基于openGL ES 2.0， 因此它处理3D场景是非常成熟的。但为什么不直接学习three.js呢？因为本人对图形学感兴趣，只是希望做一些自己喜欢的效果的同时深入了解计算机图形学，没指望通过它做商业项目。</p>
+<p>&emsp;&emsp;为了让学习更有动力和目的性，我们以实例为导向学习webGL，再从中展开到需要学习哪些知识点。这次我们来实现如下的动画，该教程参考了《WebGL编程指南》</p>
+<p>实际效果请看：<em><a href="https://edwardzhong.github.io/sites/demo/dist/webgl.html" target="_blank" rel="noopener">旋转的三角形</a></em><br><!-- ![it](http://oncse3u6r.bkt.clouddn.com/triangle.gif?t=1) --><br><img src="http://oncse3u6r.bkt.clouddn.com/triangle.gif?t=1" width="200"></p></div>
+    	<a href="/2017/11/08/webgl/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2017/11/08/webgl/" data-desc="
+&emsp;&emsp;还记得第一次看到canvas的粒子特效的时候，真的把我给惊艳到了，原..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/webGL/">webGL</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+	    
+	    <article class="post" style="animation:listshow 0.6s ease-out both 0.4s">
     
     
 	
@@ -187,7 +246,7 @@ var _hmt = _hmt || [];
 	</div>
 </article>
 	    
-	    <article class="post" style="animation:listshow 0.6s ease-out both 0.4s">
+	    <article class="post" style="animation:listshow 0.6s ease-out both 0.5s">
     
     
 	
@@ -224,7 +283,7 @@ var _hmt = _hmt || [];
 <li>贝塞尔曲线(2次，3次)</li>
 <li>多边形(三角形、矩形、任意边形)</li>
 <li>多角星(3角星、4角星、5角星…)</li>
-<li>圆形、椭圆</div>
+<li>圆形、椭圆</li></ol></div>
     	<a href="/2017/11/02/drawboard/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
     	
 		<div class="post-footer">
@@ -253,7 +312,7 @@ var _hmt = _hmt || [];
 	</div>
 </article>
 	    
-	    <article class="post" style="animation:listshow 0.6s ease-out both 0.5s">
+	    <article class="post" style="animation:listshow 0.6s ease-out both 0.6000000000000001s">
     
     
 	
@@ -290,7 +349,7 @@ var _hmt = _hmt || [];
 <li>基本的三角函数</li>
 <li>canvas部分有：坐标变换，渐变，混合模式，线条和图形的绘制。</li>
 </ol>
-<p>实际效果: <em><a href="https://edwardzhong.github.io/sites/demo/dist/solar.html" target="_blank" rel="noopener">solar system(推荐在chrome或safari下运行)</a></em><br><!-- <img src="http://oncse3u6r.bkt.clouddn.com/solar_sys.jpg" width="50%"> --><br></div>
+<p>实际效果: <em><a href="https://edwardzhong.github.io/sites/demo/dist/solar.html" target="_blank" rel="noopener">solar system(推荐在chrome或safari下运行)</a></em><br><!-- <img src="http://oncse3u6r.bkt.clouddn.com/solar_sys.jpg" width="50%"> --><br></p></div>
     	<a href="/2017/10/26/solar/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
     	
 		<div class="post-footer">

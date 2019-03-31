@@ -12,22 +12,22 @@
 
 
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="Tag: haskell - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content = "telphone=no, email=no" />
+  <meta name="format-detection" content="telphone=no, email=no">
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
@@ -38,7 +38,7 @@
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title >Tag: haskell - Jeff's world</title>
+  <title>Tag: haskell - Jeff's world</title>
     <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://jeffzhong.space">
   <meta property="og:type" content="blog">
@@ -81,20 +81,17 @@ var _hmt = _hmt || [];
   
   
   
-      <a 
-        href="/">
+      <a href="/">
         <i class="icon icon-home"></i>
         主页
       </a>
   
-      <a 
-        href="http://jeffzhong.space/sites/demo/">
+      <a href="http://jeffzhong.space/sites/demo/">
         <i class="icon icon-tag"></i>
         Demo
       </a>
   
-      <a  data-tag="search" 
-        href="javascript:;">
+      <a data-tag="search" href="javascript:;">
         <i class="icon icon-search"></i>
         搜索
       </a>
@@ -102,7 +99,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">29<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">47<br>标签</a>
+    <a href="/archives">30<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">49<br>标签</a>
   </div>
   <div class="social">
   
@@ -160,7 +157,7 @@ var _hmt = _hmt || [];
 </p> -->
     	
     	<div class="post-content"><!-- 原文地址：[Haskell学习-monad](http://jeffzhong.space/2018/08/16/haskelld/) -->
-<h2 id="什么是Monad"><a href="#什么是Monad" class="headerlink" title="什么是Monad"></a>什么是Monad</h2><p>Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 <strong>Monad</strong> 就是 Haskell 给出的解决方案。但<strong>Monad</strong> 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 <strong>Maybe</strong> 和 <strong>[]</strong> 都是 <strong>Monad</strong>。Haskell 中漂亮的错误处理方式， <strong>do</strong> 表示法和灵活的列表推导式 (<strong>list comprehension</strong>) 都算是 <strong>Monad</strong> 的贡献。<br></div>
+<h2 id="什么是Monad"><a href="#什么是Monad" class="headerlink" title="什么是Monad"></a>什么是Monad</h2><p>Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 <strong>Monad</strong> 就是 Haskell 给出的解决方案。但<strong>Monad</strong> 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 <strong>Maybe</strong> 和 <strong>[]</strong> 都是 <strong>Monad</strong>。Haskell 中漂亮的错误处理方式， <strong>do</strong> 表示法和灵活的列表推导式 (<strong>list comprehension</strong>) 都算是 <strong>Monad</strong> 的贡献。<br></p></div>
     	<a href="/2018/08/16/haskelld/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
     	
 		<div class="post-footer">
@@ -316,7 +313,7 @@ var _hmt = _hmt || [];
 </p> -->
     	
     	<div class="post-content"><!-- 原文地址：[Haskell学习-函数式编程初探](http://jeffzhong.space/2018/08/07/haskella/) -->
-<p>&emsp;&emsp;为什么要学习函数式编程？为什么要学习Haskell？<br>&emsp;&emsp;.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾护航,开山劈石,伴随着我不断成长。同时C#和JavaScript它们本身也在不断地进化，不断出现越来越多方便的语法糖，但追根到底很多都是从函数式语言汲取的精华。比如高阶函数，lambada表达式，柯里化等。<br>&emsp;&emsp;于是从探险的角度，以好奇的心态开始学习函数式语言，探索这个宝库，拾取可供临摹的珍宝。最起码它能让你多一个不同的角度看待编程语言,影响你的思考方式。 学习的对象当然选择函数式语言的集大成者-Haskell。<br></div>
+<p>&emsp;&emsp;为什么要学习函数式编程？为什么要学习Haskell？<br>&emsp;&emsp;.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾护航,开山劈石,伴随着我不断成长。同时C#和JavaScript它们本身也在不断地进化，不断出现越来越多方便的语法糖，但追根到底很多都是从函数式语言汲取的精华。比如高阶函数，lambada表达式，柯里化等。<br>&emsp;&emsp;于是从探险的角度，以好奇的心态开始学习函数式语言，探索这个宝库，拾取可供临摹的珍宝。最起码它能让你多一个不同的角度看待编程语言,影响你的思考方式。 学习的对象当然选择函数式语言的集大成者-Haskell。<br></p></div>
     	<a href="/2018/08/07/haskella/" class="post-more">more <i class="icon icon-angle-double-right"></i></a>
     	
 		<div class="post-footer">

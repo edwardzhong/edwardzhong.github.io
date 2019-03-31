@@ -10,22 +10,22 @@
 
 
 
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="NodeJS网络爬虫 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content = "telphone=no, email=no" />
+  <meta name="format-detection" content="telphone=no, email=no">
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
@@ -36,7 +36,7 @@
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title >NodeJS网络爬虫 - Jeff's world</title>
+  <title>NodeJS网络爬虫 - Jeff's world</title>
     <!-- The Open Graph protocol -->
   <meta property="og:url" content="http://jeffzhong.space">
   <meta property="og:type" content="blog">
@@ -79,20 +79,17 @@ var _hmt = _hmt || [];
   
   
   
-      <a 
-        href="/">
+      <a href="/">
         <i class="icon icon-home"></i>
         主页
       </a>
   
-      <a 
-        href="http://jeffzhong.space/sites/demo/">
+      <a href="http://jeffzhong.space/sites/demo/">
         <i class="icon icon-tag"></i>
         Demo
       </a>
   
-      <a  data-tag="search" 
-        href="javascript:;">
+      <a data-tag="search" href="javascript:;">
         <i class="icon icon-search"></i>
         搜索
       </a>
@@ -100,7 +97,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">29<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">47<br>标签</a>
+    <a href="/archives">30<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">49<br>标签</a>
   </div>
   <div class="social">
   
@@ -181,7 +178,7 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 <h2 id="数据解释"><a href="#数据解释" class="headerlink" title="数据解释"></a>数据解释</h2><p>&emsp;&emsp;抓取数据之后，我们需要做的就是调用cheerio，以jquery获取dom内容的方式获取结果，并显示出来，当然也可以保存文件或数据库。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 显示结果</span></span><br><span class="line"><span class="comment"> * @param  &#123;[type]&#125; pageNo [description]</span></span><br><span class="line"><span class="comment"> * @param  &#123;[type]&#125; body   [description]</span></span><br><span class="line"><span class="comment"> * @return &#123;[type]&#125;        [description]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showBaiduResult</span>(<span class="params">pageNo,body</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title,summary,link,</span><br><span class="line">      reg=<span class="regexp">/&lt;[^&lt;&gt;]+&gt;/g</span>,</span><br><span class="line">      $ = cheerio.load(body,&#123;<span class="attr">decodeEntities</span>: <span class="literal">false</span>&#125;);</span><br><span class="line"></span><br><span class="line">  $(<span class="string">'#content_left .result'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i,item</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $a = $(item).find(<span class="string">'h3 a'</span>);</span><br><span class="line">    title = $a.html();</span><br><span class="line">    link = $a.attr(<span class="string">'href'</span>);</span><br><span class="line">    summary=$(item).find(<span class="string">'.c-abstract'</span>).html();</span><br><span class="line">    <span class="keyword">if</span>(title)&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`第<span class="subst">$&#123;pageNo+<span class="number">1</span>&#125;</span>页 第<span class="subst">$&#123;i+<span class="number">1</span>&#125;</span>条`</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`link: <span class="subst">$&#123;link&#125;</span>`</span>.green);</span><br><span class="line">      <span class="comment">// console.log(`title: $&#123;title&#125;`);</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'title: '</span>);</span><br><span class="line">      ouputColor(title);</span><br><span class="line">      <span class="keyword">if</span>(summary)&#123;</span><br><span class="line">        <span class="comment">// console.log(`summary: $&#123;summary&#125;`);</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'summary: '</span>);</span><br><span class="line">        ouputColor(summary);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">''</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 知乎</span></span><br><span class="line">exports.zhihuSearch=<span class="function"><span class="keyword">function</span>(<span class="params">keyword,cb</span>)</span>&#123;</span><br><span class="line">  get(<span class="string">'https://www.zhihu.com/search?type=content&amp;q='</span>+keyword,<span class="function"><span class="keyword">function</span>(<span class="params">content</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> title,summary;</span><br><span class="line">    <span class="keyword">var</span> $ = cheerio.load(content,&#123;<span class="attr">decodeEntities</span>: <span class="literal">false</span>&#125;);</span><br><span class="line">    saveFile(<span class="number">0</span>,keyword,content);</span><br><span class="line">    $(<span class="string">'.list .item'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i,item</span>)</span>&#123;</span><br><span class="line">      title=$(item).find(<span class="string">'.js-title-link'</span>).html();</span><br><span class="line">      summary=$(item).find(<span class="string">'.summary'</span>).html();</span><br><span class="line">      <span class="keyword">if</span>(title)&#123;</span><br><span class="line">        <span class="comment">// title=(''+title).replace(/&lt;[^&lt;&gt;]+&gt;/g,'');</span></span><br><span class="line">        <span class="comment">// summary=(''+summary).replace(/&lt;.+&gt;/g,'');</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'title: '</span>);</span><br><span class="line">        ouputColor(title);</span><br><span class="line">        <span class="keyword">if</span>(summary)&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'summary: '</span>);</span><br><span class="line">          ouputColor(summary);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">''</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 显示结果</span></span><br><span class="line"><span class="comment"> * @param  &#123;[type]&#125; pageNo [description]</span></span><br><span class="line"><span class="comment"> * @param  &#123;[type]&#125; body   [description]</span></span><br><span class="line"><span class="comment"> * @return &#123;[type]&#125;        [description]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">showBaiduResult</span>(<span class="params">pageNo,body</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> title,summary,link,</span><br><span class="line">      reg=<span class="regexp">/&lt;[^&lt;&gt;]+&gt;/g</span>,</span><br><span class="line">      $ = cheerio.load(body,&#123;<span class="attr">decodeEntities</span>: <span class="literal">false</span>&#125;);</span><br><span class="line"></span><br><span class="line">  $(<span class="string">'#content_left .result'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i,item</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $a = $(item).find(<span class="string">'h3 a'</span>);</span><br><span class="line">    title = $a.html();</span><br><span class="line">    link = $a.attr(<span class="string">'href'</span>);</span><br><span class="line">    summary=$(item).find(<span class="string">'.c-abstract'</span>).html();</span><br><span class="line">    <span class="keyword">if</span>(title)&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`第<span class="subst">$&#123;pageNo+<span class="number">1</span>&#125;</span>页 第<span class="subst">$&#123;i+<span class="number">1</span>&#125;</span>条`</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">`link: <span class="subst">$&#123;link&#125;</span>`</span>.green);</span><br><span class="line">      <span class="comment">// console.log(`title: $&#123;title&#125;`);</span></span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'title: '</span>);</span><br><span class="line">      ouputColor(title);</span><br><span class="line">      <span class="keyword">if</span>(summary)&#123;</span><br><span class="line">        <span class="comment">// console.log(`summary: $&#123;summary&#125;`);</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'summary: '</span>);</span><br><span class="line">        ouputColor(summary);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">''</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 知乎</span></span><br><span class="line">exports.zhihuSearch=<span class="function"><span class="keyword">function</span>(<span class="params">keyword,cb</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">get</span>('https://www.zhihu.com/search?type=content&amp;q='+keyword,function(content)&#123;</span><br><span class="line">    <span class="keyword">var</span> title,summary;</span><br><span class="line">    <span class="keyword">var</span> $ = cheerio.load(content,&#123;<span class="attr">decodeEntities</span>: <span class="literal">false</span>&#125;);</span><br><span class="line">    saveFile(<span class="number">0</span>,keyword,content);</span><br><span class="line">    $(<span class="string">'.list .item'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params">i,item</span>)</span>&#123;</span><br><span class="line">      title=$(item).find(<span class="string">'.js-title-link'</span>).html();</span><br><span class="line">      summary=$(item).find(<span class="string">'.summary'</span>).html();</span><br><span class="line">      <span class="keyword">if</span>(title)&#123;</span><br><span class="line">        <span class="comment">// title=(''+title).replace(/&lt;[^&lt;&gt;]+&gt;/g,'');</span></span><br><span class="line">        <span class="comment">// summary=(''+summary).replace(/&lt;.+&gt;/g,'');</span></span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'title: '</span>);</span><br><span class="line">        ouputColor(title);</span><br><span class="line">        <span class="keyword">if</span>(summary)&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(<span class="string">'summary: '</span>);</span><br><span class="line">          ouputColor(summary);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'------------------------------'</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">''</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <h2 id="执行爬虫"><a href="#执行爬虫" class="headerlink" title="执行爬虫"></a>执行爬虫</h2><p>功能完成后，先试验一下抓取知乎的内容<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grab zh webgl</span><br></pre></td></tr></table></figure></p>
 <p>抓取到的html文件保存在download文件夹，同时在命令行显示抓取结果。<br><img src="http://oncse3u6r.bkt.clouddn.com/grab.jpg" width="800"><br><!-- ![grab result](http://oncse3u6r.bkt.clouddn.com/grab.jpg) --></p>
 <p>如果要执行百度的爬虫，运行如下命令行即可<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">grab bd webgl</span><br></pre></td></tr></table></figure></p>
