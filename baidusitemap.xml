@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
+    <lastmod>2019-04-08</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2019/04/08/fullstack/</loc>
+    <lastmod>2019-04-08</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2018/08/07/haskella/</loc>
+    <lastmod>2019-04-08</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
+    <lastmod>2019-04-08</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2019/01/03/animationfun/</loc>
+    <lastmod>2019-04-08</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2018/01/19/webglshadow/</loc>
+    <lastmod>2019-04-06</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2017/11/14/webgl2/</loc>
+    <lastmod>2019-04-06</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2017/12/01/netgrab/</loc>
+    <lastmod>2019-04-03</lastmod>
+  </url>  <url>
     <loc>http://jeffzhong.space/2017/01/04/xinjiang/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2017/12/26/webglspitfire/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2018/01/19/webglshadow/</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
     <loc>http://jeffzhong.space/2018/01/12/webglpolygons/</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2017/11/14/webgl2/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2017/11/08/webgl/</loc>
@@ -28,6 +46,9 @@
     <loc>http://jeffzhong.space/2017/10/26/solar/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
+    <loc>http://jeffzhong.space/2019/03/29/socketio/</loc>
+    <lastmod>2019-04-03</lastmod>
+  </url>  <url>
     <loc>http://jeffzhong.space/2018/05/31/room3d/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
@@ -37,31 +58,22 @@
     <loc>http://jeffzhong.space/2017/11/27/projecttemplate/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2017/12/01/netgrab/</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
     <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2018/08/07/haskella/</loc>
+    <loc>http://jeffzhong.space/2018/08/08/haskellb/</loc>
+    <lastmod>2019-04-03</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2018/08/16/haskelld/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2017/11/07/canvaslist/</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2017/01/20/abc/</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2018/02/27/act/</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2017/04/15/ebc/</loc>
-    <lastmod>2019-04-03</lastmod>
-  </url>  <url>
     <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
+    <lastmod>2019-04-03</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2017/11/24/chartpoint/</loc>
@@ -70,25 +82,16 @@
     <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
+    <loc>http://jeffzhong.space/2017/04/15/ebc/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2019/01/03/animationfun/</loc>
+    <loc>http://jeffzhong.space/2018/02/27/act/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2018/08/08/haskellb/</loc>
+    <loc>http://jeffzhong.space/2017/01/20/abc/</loc>
     <lastmod>2019-04-03</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2019/03/29/socketio/</loc>
-    <lastmod>2019-03-31</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2018/05/09/train/</loc>
-    <lastmod>2018-12-21</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2018/08/16/haskelld/</loc>
-    <lastmod>2018-12-21</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
     <lastmod>2018-12-21</lastmod>
   </url>
 </urlset>

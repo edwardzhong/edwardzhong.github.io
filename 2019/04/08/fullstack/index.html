@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="koa+mysql+vue+socket.io全栈开发之web api篇 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content="telphone=no, email=no">
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title>koa+mysql+vue+socket.io全栈开发之web api篇 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="koa+mysql+vue+socket.io全栈开发之web api篇 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+    
+      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a href="http://jeffzhong.space/sites/demo/">
+        <i class="icon icon-tag"></i>
+        Demo
+      </a>
+  
+      <a data-tag="search" href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">31<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">51<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-9d5a381abe556316.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">koa+mysql+vue+socket.io全栈开发之web api篇</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2019/04/08 15:50:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>目标是建立一个 web QQ的项目，使用的技术栈如下：</p>
+<p>后端是基于koa2 的 web api 服务层，提供curd操作的http接口，登录验证使用的是 json web token，跨域方案…</p>
+</p> -->
+    	
+    	<div class="post-content"><p>目标是建立一个 <strong>web QQ</strong>的项目，使用的技术栈如下：</p>
+<ol>
+<li><p>后端是基于<strong>koa2</strong> 的 web api 服务层，提供curd操作的http接口，登录验证使用的是 <strong>json web token</strong>，跨域方案使用的是 <strong>cors</strong>；</p>
+</li>
+<li><p>数据库使用的是 <strong>mysql</strong>；</p>
+</li>
+<li><p>为了实时通信，使用的是基于websocket协议的 <strong>socket.io</strong> 框架；</p>
+</li>
+<li><p>前端则使用的是 <strong>vue + vuex</strong>。</p>
+</li>
+</ol>
+<a id="more"></a>
+<p>本篇则讲叙服务端的搭建，之所以使用 <strong>koa</strong>，而不使用其他封装过的框架，比如 <strong>Egg.js</strong>， <strong>Thinkjs</strong>。因为在我看来，<strong>koa2</strong> 已经够方便，插件也足够多，完全可以根据自己的需求，像搭积木一样构建出最适合业务需求的框架。这样不但摒弃了很多用不到的插件，使整个框架更加精简，也能对整个框架知根知底，减少了很多不可预知因素的影响。</p>
+<p>当然我觉得最主要的是我比较懒😄，不想再去学其他框架特有的api，特有的配置。因为前端有太多框架太多api需要掌握了，对于非互联网公认的技术标准，我觉得学习的优先级还是要靠后一点的。因为这些个框架，三天两头就冒出个热门的，简直多不胜数，学不过来啊，而koa基本都是这些框架的底层，明显靠谱多了。</p>
+<h2 id="基本框架搭建"><a href="#基本框架搭建" class="headerlink" title="基本框架搭建"></a>基本框架搭建</h2><p>这几个koa插件大部分项目八九不离十要用到：</p>
+<ul>
+<li>koa-body           解析http数据</li>
+<li>koa-compress  gzip压缩</li>
+<li>koa-router        路由</li>
+<li>koa-static          设置静态目录</li>
+<li>koa2-cors          跨域cors</li>
+<li>log4js                 老牌的日志组件</li>
+<li>jsonwebtoken   jwt 组件</li>
+</ul>
+<h2 id="基本的目录结构"><a href="#基本的目录结构" class="headerlink" title="基本的目录结构"></a>基本的目录结构</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">public <span class="comment">#公共目录</span></span><br><span class="line">src    <span class="comment">#前端目录</span></span><br><span class="line">server <span class="comment">#后端目录</span></span><br><span class="line">├── common <span class="comment">#工具</span></span><br><span class="line">├── config <span class="comment">#配置文件</span></span><br><span class="line">├── controller <span class="comment">#控制器</span></span><br><span class="line">├── daos   <span class="comment">#数据库访问层</span></span><br><span class="line">├── logs   <span class="comment">#日志目录</span></span><br><span class="line">├── middleware  <span class="comment">#中间件目录</span></span><br><span class="line">├── socket <span class="comment">#socketio目录</span></span><br><span class="line">├── app.js <span class="comment">#入口文件</span></span><br><span class="line">└── router.js <span class="comment">#路由</span></span><br></pre></td></tr></table></figure>
+<h2 id="入口文件app-js"><a href="#入口文件app-js" class="headerlink" title="入口文件app.js"></a>入口文件app.js</h2><p> 主要就是几个中间件配置需要注意一下，这里同时还加载了 socket.io 服务。socket.io 相关的基本知识点可以看我之前写的文章<a href="https://www.cnblogs.com/edwardloveyou/p/10625152.html" target="_blank" rel="noopener">关于socket.io的使用</a>。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//app.js</span></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">"path"</span>);</span><br><span class="line"><span class="keyword">const</span> baseDir = path.normalize(__dirname + <span class="string">"/.."</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// gzip</span></span><br><span class="line">app.use(</span><br><span class="line">  compress(&#123;</span><br><span class="line">    filter: <span class="function"><span class="keyword">function</span>(<span class="params">content_type</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="regexp">/text|javascript/i</span>.test(content_type);</span><br><span class="line">    &#125;,</span><br><span class="line">    threshold: <span class="number">2048</span>,</span><br><span class="line">    flush: <span class="built_in">require</span>(<span class="string">"zlib"</span>).Z_SYNC_FLUSH</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析请求</span></span><br><span class="line">app.use(</span><br><span class="line">  koaBody(&#123;</span><br><span class="line">    jsonLimit: <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">5</span>,</span><br><span class="line">    formLimit: <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">5</span>,</span><br><span class="line">    textLimit: <span class="number">1024</span> * <span class="number">1024</span> * <span class="number">5</span>,</span><br><span class="line">    multipart: <span class="literal">true</span>, <span class="comment">// 解析FormData数据</span></span><br><span class="line">    formidable: &#123; <span class="attr">uploadDir</span>: path.join(baseDir, <span class="string">"public/upload"</span>) &#125;<span class="comment">//上传文件目录</span></span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置静态目录</span></span><br><span class="line">app.use(<span class="keyword">static</span>(path.join(baseDir, <span class="string">"public"</span>), &#123; <span class="attr">index</span>: <span class="literal">false</span> &#125;));</span><br><span class="line">app.use(favicon(path.join(baseDir, <span class="string">"public/favicon.ico"</span>)));</span><br><span class="line"></span><br><span class="line"><span class="comment">//cors</span></span><br><span class="line">app.use(</span><br><span class="line">  cors(&#123;</span><br><span class="line">    origin: <span class="string">"http://localhost:"</span> + config.clientPort,</span><br><span class="line">    credentials: <span class="literal">true</span>,</span><br><span class="line">    allowMethods: [<span class="string">"GET"</span>, <span class="string">"POST"</span>, <span class="string">"DELETE"</span>],</span><br><span class="line">    exposeHeaders: [<span class="string">"Authorization"</span>],</span><br><span class="line">    allowHeaders: [<span class="string">"Content-Type"</span>, <span class="string">"Authorization"</span>, <span class="string">"Accept"</span>]</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">//json-web-token中间件</span></span><br><span class="line">app.use(</span><br><span class="line">  jwt(&#123;</span><br><span class="line">    secret: config.secret,</span><br><span class="line">    exp: config.exp</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 登录验证中间件，exclude 表示不验证的页面，include 表示要验证的页面</span></span><br><span class="line">app.use(</span><br><span class="line">  verify(&#123;</span><br><span class="line">    exclude: [<span class="string">"/login"</span>, <span class="string">"/register"</span>, <span class="string">"/search"</span>]</span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 错误处理中间件</span></span><br><span class="line">app.use(errorHandler()); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 路由</span></span><br><span class="line">addRouters(router);</span><br><span class="line">app.use(router.routes()).use(router.allowedMethods());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 处理404</span></span><br><span class="line">app.use(<span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">  log.error(<span class="string">`404 <span class="subst">$&#123;ctx.message&#125;</span> : <span class="subst">$&#123;ctx.href&#125;</span>`</span>);</span><br><span class="line">  ctx.status = <span class="number">404</span>;</span><br><span class="line">  ctx.body = &#123; <span class="attr">code</span>: <span class="number">404</span>, <span class="attr">message</span>: <span class="string">"404! not found !"</span> &#125;;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 处理中间件和系统错误</span></span><br><span class="line">app.on(<span class="string">"error"</span>, (err, ctx) =&gt; &#123;</span><br><span class="line">  log.error(err); <span class="comment">//log all errors</span></span><br><span class="line">  ctx.status = <span class="number">500</span>;</span><br><span class="line">  ctx.statusText = <span class="string">"Internal Server Error"</span>;</span><br><span class="line">  <span class="keyword">if</span> (ctx.app.env === <span class="string">"development"</span>) &#123;</span><br><span class="line">    <span class="comment">//throw the error to frontEnd when in the develop mode</span></span><br><span class="line">    ctx.res.end(err.stack); <span class="comment">//finish the response</span></span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ctx.body = &#123; <span class="attr">code</span>: <span class="number">-1</span>, <span class="attr">message</span>: <span class="string">"Server Error"</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">module</span>.parent) &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123; port, socketPort &#125; = config;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * koa app</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  app.listen(port);</span><br><span class="line">  log.info(<span class="string">`=== app server running on port <span class="subst">$&#123;port&#125;</span>===`</span>);</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"app server running at: http://localhost:%d"</span>, port);</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * socket.io</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  addSocket(io);</span><br><span class="line">  server.listen(socketPort);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="跨域cors-和-json-web-token"><a href="#跨域cors-和-json-web-token" class="headerlink" title="跨域cors 和 json web token"></a>跨域cors 和 json web token</h2><p>这里解释一下 koa-cors 参数的设置，我项目使用的是 json web token，需要把认证字段Authorization添加到header，前端获取该header字段，之后给后台发送http请求的时候，再带上该Authorization。</p>
+<ul>
+<li>origin：如果要访问header里面的字段或者设置cookie，要写具体的域名地址，用 星号 * 是不行的；</li>
+<li>credentials：主要是给前端获取cookie；</li>
+<li>allowMethods：允许访问的方法；</li>
+<li>exposeHeaders：前端如果要获取该header字段，必须写明（json web token用）；</li>
+<li>allowHeaders：添加到header的字段；</li>
+</ul>
+<p>至于 json web token的原理，网上资料齐全，这里不再介绍了。 </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">app.use(</span><br><span class="line">  cors(&#123;</span><br><span class="line">    origin: <span class="string">"http://localhost:"</span> + config.clientPort, <span class="comment">// 访问header,要写明具体域名才行</span></span><br><span class="line">    credentials: <span class="literal">true</span>, <span class="comment">//将凭证暴露出来, 前端才能获取cookie</span></span><br><span class="line">    allowMethods: [<span class="string">"GET"</span>, <span class="string">"POST"</span>, <span class="string">"DELETE"</span>],</span><br><span class="line">    exposeHeaders: [<span class="string">"Authorization"</span>], <span class="comment">// 将header字段expose出去</span></span><br><span class="line">    allowHeaders: [<span class="string">"Content-Type"</span>, <span class="string">"Authorization"</span>, <span class="string">"Accept"</span>] <span class="comment">// 允许添加到header的字段</span></span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="中间件middleware"><a href="#中间件middleware" class="headerlink" title="中间件middleware"></a>中间件middleware</h2><p>koa 的中间件就是 web开发的利器，通过它可以非常方便的实现 强类型语言中的 <strong>aop</strong> 切面编程，而koa2 中间件 的编写也足够简单 <a href="http://koajs.cn/" target="_blank" rel="noopener">koajs</a>。</p>
+<p>项目在以下几个地方都用中间件进行了封装，很多重复的样板代码因此得以简化。</p>
+<ul>
+<li>json web token（jwt）</li>
+<li>登录验证（verify）</li>
+<li>错误处理（errorHandler）</li>
+</ul>
+<p>就以最简单的错误处理中间件为例子，如果不使用错误处理中间件，我们需要每个控制器方法进行 <strong>try{…} catch{…}</strong> ，其他中间件编写方式类似，就不再介绍。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * error handler 中间件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">async</span> (ctx, next) =&gt; &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="keyword">await</span> next();<span class="comment">//没有错误则进入下一个中间件</span></span><br><span class="line">        &#125; <span class="keyword">catch</span> (err) &#123;</span><br><span class="line">            log.error(err);</span><br><span class="line">            <span class="keyword">let</span> obj = &#123;</span><br><span class="line">                code: <span class="number">-1</span>,</span><br><span class="line">                message: <span class="string">'服务器错误'</span></span><br><span class="line">            &#125;;</span><br><span class="line">            <span class="keyword">if</span> (ctx.app.env === <span class="string">'development'</span>) &#123;</span><br><span class="line">                obj.err = err;</span><br><span class="line">            &#125;</span><br><span class="line">            ctx.body = obj</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 控制器代码使用error handler中间件后，每个方法都不需要 try catch处理错误，记录错误日志，处理逻辑都集中在中间件里面了。</span></span><br><span class="line">exports.getInfo = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span>(<span class="params">ctx</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// try &#123;</span></span><br><span class="line">        <span class="keyword">const</span> token = <span class="keyword">await</span> ctx.verify();</span><br><span class="line">        <span class="keyword">const</span> [users, friends] = <span class="keyword">await</span> <span class="built_in">Promise</span>.all([</span><br><span class="line">            userDao.getUser(&#123; <span class="attr">id</span>: token.uid &#125;),</span><br><span class="line">            getFriends([token.uid])</span><br><span class="line">        ]);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> msgs = applys.map(formatTime);</span><br><span class="line">        ctx.body = &#123;</span><br><span class="line">            code: <span class="number">0</span>,</span><br><span class="line">            message: <span class="string">"好友列表"</span>,</span><br><span class="line">            data: &#123;</span><br><span class="line">                user: users[<span class="number">0</span>],</span><br><span class="line">                friends: mergeReads(friends, reads),</span><br><span class="line">                groups,</span><br><span class="line">                msgs</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">    <span class="comment">// &#125; catch (err) &#123;</span></span><br><span class="line">    <span class="comment">//     log.error(err);</span></span><br><span class="line">    <span class="comment">//     let obj = &#123;</span></span><br><span class="line">    <span class="comment">//         code: -1,</span></span><br><span class="line">    <span class="comment">//         message: "服务器错误"</span></span><br><span class="line">    <span class="comment">//     &#125;;</span></span><br><span class="line">    <span class="comment">//     if (ctx.app.env === "development") &#123;</span></span><br><span class="line">    <span class="comment">//         obj.err = err;</span></span><br><span class="line">    <span class="comment">//     &#125;</span></span><br><span class="line">    <span class="comment">//     ctx.body = obj;</span></span><br><span class="line">    <span class="comment">// &#125;</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="路由配置"><a href="#路由配置" class="headerlink" title="路由配置"></a>路由配置</h2><p>路由配置只使用了get，post 方法，当然要使用 put，delete也只是改一下名字就行。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// router.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; uploadFile &#125; = <span class="built_in">require</span>(<span class="string">'./controller/file'</span>)</span><br><span class="line"><span class="keyword">const</span> &#123; login, register &#125; = <span class="built_in">require</span>(<span class="string">'./controller/sign'</span>)</span><br><span class="line"><span class="keyword">const</span> &#123; addGroup, delGroup, updateGroup &#125; = <span class="built_in">require</span>(<span class="string">'./controller/group'</span>)</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params">router</span>) </span>&#123;</span><br><span class="line">    router</span><br><span class="line">        .post(<span class="string">'/login'</span>, login)</span><br><span class="line">        .post(<span class="string">'/register'</span>, register)</span><br><span class="line">        .post(<span class="string">'/upload'</span>, uploadFile)</span><br><span class="line">        .post(<span class="string">'/addgroup'</span>, addGroup)</span><br><span class="line">        .post(<span class="string">'/delgroup'</span>, delGroup)</span><br><span class="line">        .post(<span class="string">'/updategroup'</span>, updateGroup)</span><br><span class="line">  			<span class="comment">//...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="控制器"><a href="#控制器" class="headerlink" title="控制器"></a>控制器</h2><p>以updateInfo方法为例，koa2 已经全面支持 <strong>async await</strong>，编写方式和同步代码没多大区别。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">exports.updateInfo = <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params">ctx</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> form = ctx.request.body;</span><br><span class="line">    <span class="keyword">const</span> token = <span class="keyword">await</span> ctx.verify();</span><br><span class="line">    <span class="keyword">const</span> ret = <span class="keyword">await</span> userDao.update([form, token.uid]);</span><br><span class="line">    <span class="keyword">if</span> (!ret.affectedRows) &#123;</span><br><span class="line">        <span class="keyword">return</span> ctx.body = &#123;</span><br><span class="line">            code: <span class="number">2</span>,</span><br><span class="line">            message: <span class="string">'更新失败'</span></span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    ctx.body = &#123;</span><br><span class="line">        code: <span class="number">0</span>,</span><br><span class="line">        message: <span class="string">'更新成功'</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p>接着下一编就是基于 mysql 构建 数据库访问层。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2019/04/08/fullstack/" data-desc="目标是建立一个 web QQ的项目，使用的技术栈如下：
+
+后端是基于koa2 的 web ap..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/node/">node</a>
+                    
+				
+                    
+                        <a href="/tags/koa/">koa</a>
+                    
+				
+                    
+                        <a href="/tags/mysql/">mysql</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2019/03/29/socketio/" class="next post-next">关于socket.io的使用 &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2019 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>

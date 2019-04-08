@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">30<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">49<br>标签</a>
+    <a href="/archives">31<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">51<br>标签</a>
   </div>
   <div class="social">
   
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>什么是MonadHaskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- 原文地址：[Haskell学习-monad](http://jeffzhong.space/2018/08/16/haskelld/) -->
+    	<div class="post-content"><!-- 原文地址：[Haskell学习-monad](https://edwardzhong.github.io/2018/08/16/haskelld/) -->
 <h2 id="什么是Monad"><a href="#什么是Monad" class="headerlink" title="什么是Monad"></a>什么是Monad</h2><p>Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 <strong>Monad</strong> 就是 Haskell 给出的解决方案。但<strong>Monad</strong> 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 <strong>Maybe</strong> 和 <strong>[]</strong> 都是 <strong>Monad</strong>。Haskell 中漂亮的错误处理方式， <strong>do</strong> 表示法和灵活的列表推导式 (<strong>list comprehension</strong>) 都算是 <strong>Monad</strong> 的贡献。<br><a id="more"></a><br><strong>Monad</strong> 基本上是一种加强版的 <strong>Applicative Functor</strong>，正如 <strong>Applicative Functor</strong> 是 <strong>Functor</strong> 的加强版一样。所以在充分理解 <strong>Applicative Functor</strong> 的基础上，过渡到 <strong>Monad</strong> 其实是非常平滑的。<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Monad的定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Monad</span> m <span class="keyword">where</span></span></span><br><span class="line">	return :: a -&gt; m a</span><br><span class="line">	(&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b</span><br><span class="line">	(&gt;&gt;) :: m a -&gt; m b -&gt; m b</span><br><span class="line">	x &gt;&gt; y = x &gt;&gt;= \_ -&gt; y</span><br><span class="line">	fail :: <span class="type">String</span> -&gt; m a</span><br><span class="line">	fail msg = error msg</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li><strong>return</strong> 跟其他语言中的 <strong>return</strong> 是完全不一样的，它是一个把普通值包进一个 context 里面的函数，并不是结束函数执行的关键字。其实等价于Applicative中的 <strong>pure</strong>。</li>

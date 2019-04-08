@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">30<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">49<br>标签</a>
+    <a href="/archives">31<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">51<br>标签</a>
   </div>
   <div class="social">
   
@@ -152,7 +152,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>高阶函数(higher-order function)就是指可以操作函数的函数，即函数可以作为参数，也可以作为返回结果。有了这两个特性，haskell可以实现许多神奇的效果。<br>柯里化（Curr…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- 原文地址：[Haskell学习-高阶函数](http://jeffzhong.space/2018/08/08/haskellb/) -->
+    	<div class="post-content"><!-- 原文地址：[Haskell学习-高阶函数](https://edwardzhong.github.io/2018/08/08/haskellb/) -->
 <p>高阶函数(higher-order function)就是指可以操作函数的函数，即函数可以作为参数，也可以作为返回结果。有了这两个特性，haskell可以实现许多神奇的效果。</p>
 <h2 id="柯里化（Currying）"><a href="#柯里化（Currying）" class="headerlink" title="柯里化（Currying）"></a>柯里化（Currying）</h2><p>在haskell中所有的算术运算符都是函数(包括大小于等于关系符等)，而它们的快捷方式都可以省略操作数（参数）。</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">(+) <span class="number">1</span> <span class="number">2</span> <span class="comment">-- (+) 是需要两个操作数的函数</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line"></span><br><span class="line">(+<span class="number">1</span>) <span class="number">2</span> <span class="comment">-- (+1) 是需要左操作数的函数</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line"></span><br><span class="line">(<span class="number">3</span>*) <span class="number">3</span> <span class="comment">-- (3*) 是需要右操作数的函数</span></span><br><span class="line">&gt; <span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="title">map</span> (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">-- map所有元素 *2 的操作</span></span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">filter</span> (&gt;<span class="number">3</span>) [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] <span class="comment">-- 过滤 &gt;3的元素</span></span><br><span class="line">&gt; [<span class="number">4</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure>
@@ -176,7 +176,7 @@ var _hmt = _hmt || [];
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">(f . g) x =&gt; f(g x) </span><br><span class="line"></span><br><span class="line"><span class="comment">-- 验证字符串是否为数字</span></span><br><span class="line"><span class="title">not</span> ( and ( map isDigit $ <span class="string">"12as"</span>))</span><br><span class="line"><span class="title">not</span> . and . map isDigit $ <span class="string">"12as"</span> <span class="comment">-- 使用组合消除括号</span></span><br><span class="line">&gt; <span class="type">True</span></span><br></pre></td></tr></table></figure>
 <p>这两个运算符是消除括号的神器，有了它们，代码的可读性大大提高。<br>我们再利用haskell强大的模式匹配能力，改变函数运行方向，改造后的效果类似于unix/linux的管道，把上面两个表达式重写。现在连 <strong>($) (.)</strong> 都不需要了，吊炸天了，有木有😊</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 让参数和结果首尾相连，就是这么简单</span></span><br><span class="line"><span class="title">x</span> |&gt; f = f x</span><br><span class="line"></span><br><span class="line"><span class="comment">-- unix/linux 中的管道？</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] |&gt; filter (&gt;<span class="number">2</span>) |&gt;length</span><br><span class="line">&gt; <span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="string">"12as"</span> |&gt; map isDigit |&gt; and |&gt; not</span><br><span class="line">&gt; <span class="type">True</span></span><br></pre></td></tr></table></figure>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a href="http://wiki.jikexueyuan.com/project/haskell-guide/" target="_blank" rel="noopener">《HASKELL 趣学指南》</a><br><a href="http://cnhaskell.com/index.html" target="_blank" rel="noopener">《Real World Haskell》</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><em><a href="http://wiki.jikexueyuan.com/project/haskell-guide/" target="_blank" rel="noopener">《HASKELL 趣学指南》</a></em><br><em><a href="http://cnhaskell.com/index.html" target="_blank" rel="noopener">《Real World Haskell》</a></em></p>
 </div>
     	
 		<div class="post-footer">

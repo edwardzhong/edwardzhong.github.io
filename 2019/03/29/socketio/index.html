@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">30<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">49<br>标签</a>
+    <a href="/archives">31<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">51<br>标签</a>
   </div>
   <div class="social">
   
@@ -184,7 +184,7 @@ var _hmt = _hmt || [];
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 自定义room</span></span><br><span class="line">io.on(<span class="string">'connection'</span>, socket =&gt;&#123;    </span><br><span class="line">  socket.join(<span class="string">'some room'</span>)); <span class="comment">// 加入房间</span></span><br><span class="line">  socket.leave(<span class="string">'some room'</span>); <span class="comment">// 离开房间</span></span><br><span class="line">&#125;); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 向房间里的所有客户端发送消息</span></span><br><span class="line">io.to(<span class="string">'some room'</span>).emit(<span class="string">'some event'</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认房间（每一个id一个room）</span></span><br><span class="line">socket.on(<span class="string">'say to someone'</span>, (id, msg) =&gt; &#123;    </span><br><span class="line">	socket.broadcast.to(id).emit(<span class="string">'my message'</span>, msg); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>相信有了以上介绍的基础知识，再加上官网对应的文档，要开发聊天室或者其他 实时通信 的项目，是一件易如反掌的事情</p>
-<p><a href="https://socket.io/" target="_blank" rel="noopener">socket.io官网</a> 里面有对 api 非常详细的讲解和用例。</p>
+<p><em><a href="https://socket.io/" target="_blank" rel="noopener">socket.io官网</a></em> 里面有对 api 非常详细的讲解和用例。</p>
 </div>
     	
 		<div class="post-footer">
@@ -216,6 +216,8 @@ var _hmt = _hmt || [];
 <nav class="pagination clearfix">
   
     
+      
+      <a href="/2019/04/08/fullstack/" class="prev post-prev">&larr; koa+mysql+vue+soc...</a>
       
 
       
