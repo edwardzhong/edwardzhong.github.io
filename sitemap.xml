@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jeffzhong.space/2019/04/12/fullstack2/</loc>
+    <loc>http://jeffzhong.space/2019/04/13/fullstack3/</loc>
     
-    <lastmod>2019-04-11T19:55:08.834Z</lastmod>
+    <lastmod>2019-04-13T11:13:48.962Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jeffzhong.space/2019/04/08/fullstack/</loc>
     
-    <lastmod>2019-04-11T14:58:47.002Z</lastmod>
+    <lastmod>2019-04-13T05:47:08.053Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeffzhong.space/2019/04/12/fullstack2/</loc>
+    
+    <lastmod>2019-04-13T05:45:55.139Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
+    
+    <lastmod>2019-04-12T18:05:12.399Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jeffzhong.space/2017/11/30/managedemo/</loc>
     
-    <lastmod>2019-04-11T12:58:29.401Z</lastmod>
+    <lastmod>2019-04-12T04:23:50.199Z</lastmod>
     
   </url>
   
@@ -170,13 +184,6 @@
   </url>
   
   <url>
-    <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
-    
-    <lastmod>2019-04-03T11:41:31.828Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
     
     <lastmod>2019-04-03T11:41:31.828Z</lastmod>
@@ -184,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
+    <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
     
     <lastmod>2019-04-03T11:41:31.828Z</lastmod>
     
