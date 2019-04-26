@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jeffzhong.space/2019/04/27/mdtowxml/</loc>
+    <lastmod>2019-04-26</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2019/04/26/weappcloud/</loc>
+    <lastmod>2019-04-26</lastmod>
+  </url>  <url>
     <loc>http://jeffzhong.space/2018/05/31/room3d/</loc>
     <lastmod>2019-04-21</lastmod>
   </url>  <url>
@@ -79,10 +85,10 @@
     <loc>http://jeffzhong.space/2018/08/16/haskelld/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
+    <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
+    <loc>http://jeffzhong.space/2017/11/23/chartpie/</loc>
     <lastmod>2019-04-03</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
