@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="WebGL学习之纹理贴图 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content="telphone=no, email=no">
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title>WebGL学习之纹理贴图 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="WebGL学习之纹理贴图 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+    
+      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a href="http://jeffzhong.space/sites/demo/">
+        <i class="icon icon-tag"></i>
+        Demo
+      </a>
+  
+      <a data-tag="search" href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">38<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-7441b28d0ba8f1f2.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">WebGL学习之纹理贴图</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2019/04/29 11:24:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>为了使图形能获得接近于真实物体的材质效果，一般会使用贴图，贴图类型主要包括两种：漫反射贴图和镜面高光贴图。其中漫反射贴图可以同时实现漫反射光和环境光的效果。实际效果请看demo：纹理贴图</p>
+<p>2…</p>
+</p> -->
+    	
+    	<div class="post-content"><p>为了使图形能获得接近于真实物体的材质效果，一般会使用贴图，贴图类型主要包括两种：漫反射贴图和镜面高光贴图。其中漫反射贴图可以同时实现漫反射光和环境光的效果。<br>实际效果请看demo：<strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglTexture.html" target="_blank" rel="noopener">纹理贴图</a></strong></p>
+<a id="more"></a>
+<p><img src="https://upload-images.jianshu.io/upload_images/127924-7b3a2d10a5ca7d74.png" width="400" alt="纹理贴图"></p>
+<h2 id="2D纹理"><a href="#2D纹理" class="headerlink" title="2D纹理"></a>2D纹理</h2><p>实现贴图就需要用到纹理，常用的纹理格式有：2D纹理，立方体纹理，3D纹理。我们使用最基本的2D纹理就能实现本节需要的效果，我们来看一下使用纹理需要的api。</p>
+<p>因为纹理的坐标原点位于左下角，和我们通常的左上角坐标原点刚好相反，下面就是将它按Y轴进行反转，方便我们设置坐标。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+<p>激活和绑定纹理，<strong>gl.TEXTURE0</strong> 表示0号纹理，可以从0一直往上递增。<strong>TEXTURE_2D</strong> 则是表示2D纹理。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">gl.activeTexture(gl.TEXTURE0);<span class="comment">//激活纹理</span></span><br><span class="line">gl.bindTexture(gl.TEXTURE_2D, texture);<span class="comment">//绑定纹理</span></span><br></pre></td></tr></table></figure>
+<p>接着就是设置纹理参数，这个api非常重要，也是纹理最复杂的部分。</p>
+<p><strong>gl.texParameteri(target, pname, param)</strong> ，将param的值赋给绑定到目标的纹理对象的pname参数上。参数：</p>
+<ul>
+<li><p>target: <strong>gl.TEXTURE_2D</strong> 或 <strong>gl.TEXTURE_CUBE_MAP</strong></p>
+</li>
+<li><p>pname: 可指定4个纹理参数</p>
+<ol>
+<li>放大（<strong>gl.TEXTURE_MAP_FILTER</strong>）:当纹理的绘制范围比纹理本身更大时，如何获取纹理颜色。比如，将16*16的纹理图像映射到32*32像素的空间时，纹理的尺寸变为原始的两倍。默认值为gl.LINEAR。</li>
+<li>缩小（<strong>gl.TEXTURE_MIN_FILTER</strong>）: 当纹理的绘制返回比纹理本身更小时，如何获取纹素颜色。比如，将32*32的纹理图像映射到16*16像素空间里，纹理的尺寸就只有原始的一般。默认值为gl.NEAREST_MIPMAP_LINEAR。</li>
+<li>水平填充（<strong>gl.TEXTURE_WRAP_S</strong>）: 表示如何对纹理图像左侧或右侧区域进行填充。默认值为gl.REPEAT。</li>
+<li>垂直填充（<strong>gl.TEXTURE_WRAP_T</strong>）: 表示如何对纹理图像上方和下方的区域进行填充。默认值为gl.REPEAT。</li>
+</ol>
+</li>
+<li><p>param: 纹理参数的值</p>
+<ol>
+<li><p>可赋给 <strong>gl.TEXTURE_MAP_FILTER</strong> 和 <strong>gl.TEXTURE_MIN_FILTER</strong> 参数的值</p>
+<p><strong>gl.NEAREST</strong>: 使用原纹理上距离映射后像素中心最近的那个像素的颜色值，作为新像素的值。</p>
+<p><strong>gl.LINEAR</strong>: 使用距离新像素中心最近的四个像素的颜色值的加权平均，作为新像素的值（和gl.NEAREST相比，该方法图像质量更好，但也会有较大的开销。）</p>
+</li>
+<li><p>可赋给 <strong>gl.TEXTURE_WRAP_S</strong> 和 <strong>gl.TEXTURE_WRAP_T</strong> 的常量：</p>
+<p><strong>gl.REPEAT</strong>: 平铺式的重复纹理</p>
+<p><strong>gl.MIRRORED_REPEAT</strong>: 镜像对称的重复纹理</p>
+<p><strong>gl.CLAMP_TO_EDGE</strong>: 使用纹理图像边缘值</p>
+</li>
+</ol>
+</li>
+</ul>
+<p>设置样例如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);</span><br><span class="line">gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);</span><br><span class="line">gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);</span><br><span class="line">gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);</span><br></pre></td></tr></table></figure>
+<p><strong>gl.texImage2D</strong>，将 pixels 指定给绑定的纹理对象，这个api在 <strong>WebGL1</strong> 和 <strong>WebGL2</strong>  中的重载函数多达十几个，格式类型非常多样。pixels参数既可以是图像，canvas，也可以是视频，我们只看 <strong>WebGL1</strong>中的调用形式。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// WebGL1:</span></span><br><span class="line"><span class="keyword">void</span> gl.texImage2D(target, level, internalformat, width, height, border, format, type, ArrayBufferView? pixels);</span><br><span class="line"><span class="keyword">void</span> gl.texImage2D(target, level, internalformat, format, type, ImageData? pixels);</span><br><span class="line"><span class="keyword">void</span> gl.texImage2D(target, level, internalformat, format, type, HTMLImageElement? pixels);</span><br><span class="line"><span class="keyword">void</span> gl.texImage2D(target, level, internalformat, format, type, HTMLCanvasElement? pixels);</span><br><span class="line"><span class="keyword">void</span> gl.texImage2D(target, level, internalformat, format, type, HTMLVideoElement? pixels);</span><br><span class="line"><span class="keyword">void</span> gl.texImage2D(target, level, internalformat, format, type, ImageBitmap? pixels);</span><br><span class="line"></span><br><span class="line"><span class="comment">// WebGL2:</span></span><br><span class="line"><span class="comment">//...</span></span><br></pre></td></tr></table></figure>
+<p>我封装出了一个纹理加载函数，每个api的调用格式可以查看资料，还是先实现我们想要的效果。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadTexture</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> texture = gl.createTexture();</span><br><span class="line">    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, <span class="number">1</span>);</span><br><span class="line">    gl.activeTexture(gl.TEXTURE0);</span><br><span class="line">    gl.bindTexture(gl.TEXTURE_2D, texture);</span><br><span class="line">    </span><br><span class="line">    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);</span><br><span class="line">    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);</span><br><span class="line">    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> textureInfo = &#123;</span><br><span class="line">        width: <span class="number">1</span>,</span><br><span class="line">        height: <span class="number">1</span>,</span><br><span class="line">        texture: texture,</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">const</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve,reject</span>) =&gt;</span> &#123;</span><br><span class="line">        img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            textureInfo.width = img.width;</span><br><span class="line">            textureInfo.height = img.height;</span><br><span class="line">            gl.bindTexture(gl.TEXTURE_2D, textureInfo.texture);</span><br><span class="line">            gl.texImage2D(gl.TEXTURE_2D, <span class="number">0</span>, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);</span><br><span class="line">            resolve(textureInfo);</span><br><span class="line">        &#125;;</span><br><span class="line">        img.src = url;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="漫反射贴图"><a href="#漫反射贴图" class="headerlink" title="漫反射贴图"></a>漫反射贴图</h2><p>首先实现漫反射光贴图，从网上下载了个地板的贴图，里面包含了各种类型的贴图。</p>
+<p>缓冲区要增加顶点对应的纹理坐标，这样才能通过纹理坐标找到对应的纹理像素，简称纹素。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> arrays = &#123;</span><br><span class="line">    position: [</span><br><span class="line">        <span class="number">-1</span>, <span class="number">0</span>, <span class="number">-1</span>,</span><br><span class="line">        <span class="number">-1</span>, <span class="number">0</span>, <span class="number">1</span>,</span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">-1</span>,</span><br><span class="line">        <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    ],</span><br><span class="line">    texcoord: [</span><br><span class="line">        <span class="number">0.0</span>, <span class="number">1.0</span>,</span><br><span class="line">        <span class="number">0.0</span>, <span class="number">0.0</span>,</span><br><span class="line">        <span class="number">1.0</span>, <span class="number">1.0</span>,</span><br><span class="line">        <span class="number">1.0</span>, <span class="number">0.0</span></span><br><span class="line">    ],</span><br><span class="line">    normal: [ <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span> ],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>顶点着色器唯一区别是增加了纹理坐标，需要插值传入片元着色器</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">attribute vec2 a_texcoord;</span><br><span class="line">varying vec2 v_texcoord;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		<span class="comment">//...</span></span><br><span class="line">    v_texcoord = a_texcoord;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>片元着色器修改的多一些。主要是使用 <strong>texture2D</strong> 获取对应坐标下的纹素，代替之前的颜色就可以了。下面就是片元着色器相关代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">vec3 normal = normalize(v_normal);</span><br><span class="line">vec4 diffMap = texture2D(u_samplerD, v_texcoord);</span><br><span class="line"></span><br><span class="line"><span class="comment">//光线方向</span></span><br><span class="line">vec3 lightDirection = normalize(u_lightPosition - v_position);</span><br><span class="line"><span class="comment">// 计算光线方向和法向量夹角</span></span><br><span class="line"><span class="keyword">float</span> nDotL = max(dot(lightDirection, normal), <span class="number">0.0</span>);</span><br><span class="line"><span class="comment">// 漫反射光亮度</span></span><br><span class="line">vec3 diffuse = u_diffuseColor * nDotL * diffMap.rgb;</span><br><span class="line"><span class="comment">// 环境光亮度</span></span><br><span class="line">vec3 ambient = u_ambientColor * diffMap.rgb;</span><br><span class="line"><span class="comment">//...</span></span><br></pre></td></tr></table></figure>
+<p>js部分加载贴图对应的图片，传递纹理单元，然后渲染</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> ret = <span class="keyword">await</span> loadTexture(<span class="string">'/model/floor_tiles_06_diff_1k.jpg'</span>)</span><br><span class="line">    setUniforms(program, &#123;</span><br><span class="line">        u_samplerD: <span class="number">0</span><span class="comment">//0号纹理</span></span><br><span class="line">    &#125;);</span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line">    draw();</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
+<p>效果如下，镜面高光部分似乎太刺眼了，因为地板是不会有镜子一样光滑强烈的反光的。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/127924-2d0ba07bef4c70bc.png" width="400" alt="漫反射贴图"></p>
+<h2 id="镜面高光贴图"><a href="#镜面高光贴图" class="headerlink" title="镜面高光贴图"></a>镜面高光贴图</h2><p>为了实现更逼真的高光效果，继续实现高光贴图，实现原理和漫反射一样，把对应的高光颜色替换成高光贴图纹素就可以了。<br>下面就是片元着色器增加修改高光部分</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">vec3 normal = normalize(v_normal);</span><br><span class="line">vec4 diffMap = texture2D(u_samplerD, v_texcoord);</span><br><span class="line">vec4 specMap = texture2D(u_samplerS, v_texcoord);</span><br><span class="line"></span><br><span class="line"><span class="comment">//光线方向</span></span><br><span class="line">vec3 lightDirection = normalize(u_lightPosition - v_position);</span><br><span class="line"><span class="comment">// 计算光线方向和法向量夹角</span></span><br><span class="line"><span class="keyword">float</span> nDotL = max(dot(lightDirection, normal), <span class="number">0.0</span>);</span><br><span class="line"><span class="comment">// 漫反射光亮度</span></span><br><span class="line">vec3 diffuse = u_diffuseColor * nDotL * diffMap.rgb;</span><br><span class="line"><span class="comment">// 环境光亮度</span></span><br><span class="line">vec3 ambient = u_ambientColor * diffMap.rgb;</span><br><span class="line"><span class="comment">// 镜面高光</span></span><br><span class="line">vec3 eyeDirection = normalize(u_viewPosition - v_position);<span class="comment">// 反射方向</span></span><br><span class="line">vec3 halfwayDir = normalize(lightDirection + eyeDirection);</span><br><span class="line"><span class="keyword">float</span> specularIntensity = <span class="built_in">pow</span>(max(dot(normal, halfwayDir), <span class="number">0.0</span>), u_shininess);</span><br><span class="line">vec3 specular = (vec3(<span class="number">0.2</span>,<span class="number">0.2</span>,<span class="number">0.2</span>) + specMap.rgb) * specularIntensity;</span><br><span class="line"><span class="comment">//...</span></span><br></pre></td></tr></table></figure>
+<p>js同时加载漫反射和高光贴图<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> ret = <span class="keyword">await</span> <span class="built_in">Promise</span>.all([</span><br><span class="line">        loadTexture(<span class="string">'/model/floor_tiles_06_diff_1k.jpg'</span>),</span><br><span class="line">        loadTexture(<span class="string">'/model/floor_tiles_06_spec_1k.jpg'</span>,<span class="number">1</span>)</span><br><span class="line">    ]);</span><br><span class="line">    setUniforms(program, &#123;</span><br><span class="line">        u_samplerD: <span class="number">0</span>,<span class="comment">//0号纹理</span></span><br><span class="line">    		u_samplerS: <span class="number">1</span> <span class="comment">//1号纹理</span></span><br><span class="line">    &#125;);</span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line">    draw();</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure></p>
+<p>最后实现的效果如下，明显更加接近真实的地板<br><img src="https://upload-images.jianshu.io/upload_images/127924-a312667ead29629f.png" width="400" alt="高光贴图"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>纹理贴图其实包括了很多高级应用，接着我们还将继续深入探索，下一节是法线贴图。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2019/04/29/webgltexture/" data-desc="为了使图形能获得接近于真实物体的材质效果，一般会使用贴图，贴图类型主要包括两种：漫反射贴图和镜..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/webGL/">webGL</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+      <a href="/2019/04/30/webglnormap/" class="prev post-prev">&larr; WebGL学习之法线贴图</a>
+      
+
+      
+      <a href="/2019/04/27/mdtowxml/" class="next post-next">如何将markdown转换为wxml &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2019 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>

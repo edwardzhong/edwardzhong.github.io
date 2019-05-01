@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="WebGL半透明物体的绘制 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content="telphone=no, email=no">
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title>WebGL半透明物体的绘制 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="WebGL半透明物体的绘制 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+    
+      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a href="http://jeffzhong.space/sites/demo/">
+        <i class="icon icon-tag"></i>
+        Demo
+      </a>
+  
+      <a data-tag="search" href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">38<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-1bcbb19d24c33d03.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">WebGL半透明物体的绘制</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2019/05/02 13:16:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。完成的展示Demo请看: 半透明物体和透明物体共存<br>α 混合让物…</p>
+</p> -->
+    	
+    	<div class="post-content"><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。<br>完成的展示Demo请看: <strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglalpha.html" target="_blank" rel="noopener">半透明物体和透明物体共存</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-07fe85ce0e09500c.gif" alt="alpha混合"><br><a id="more"></a></p>
+<h2 id="α-混合"><a href="#α-混合" class="headerlink" title="α 混合"></a>α 混合</h2><p>让物体实现半透明效果需要用到颜色的α分量。该功能被称为a混合(alpha blending) 或 混合 blending，WebGL已经内置该功能，但需要开启，如果只设置了颜色的第四个分量 α 是看不到透明效果的，这第四分量α其实和 css 样式的 rgba / hsla 颜色模式 中的 α 是一样的，或者类似 opacity 属性。必须要执行下面两个步骤才能看到透明效果:</p>
+<ol>
+<li>开启混合功能：gl.enable(gl.BLEND)。</li>
+<li>指定混合函数：gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)。</li>
+</ol>
+<h4 id="gl-blendFunc-src-factor-dst-factor"><a href="#gl-blendFunc-src-factor-dst-factor" class="headerlink" title="gl.blendFunc(src_factor, dst_factor)"></a>gl.blendFunc(src_factor, dst_factor)</h4><p>a混合函数，指定如如何混合两者的颜色，权重因子的类型多种多样，参数：</p>
+<ul>
+<li>src_factor: 指定源颜色在混合颜色的权重因子，如下表所示</li>
+<li>dst_factor: 指定目标颜色在混合后颜色的权重因子，如下表所示</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 混合颜色计算公式： </span></span><br><span class="line">&lt;混合后的颜色&gt; = &lt;源颜色&gt; * src_factor + &lt;目标颜色&gt; * dst_factor</span><br><span class="line"></span><br><span class="line"><span class="comment">// 一般半透明效果常用如下形式</span></span><br><span class="line">gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)</span><br></pre></td></tr></table></figure>
+<h4 id="权重因子列表"><a href="#权重因子列表" class="headerlink" title="权重因子列表"></a>权重因子列表</h4><p>(Rs,Gs,Bs,As) 表示源颜色各分量， (Rd,Gd,Bd,Ad) 表示目标颜色的各分量</p>
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>R分量的系数</th>
+<th>G分量的系数</th>
+<th>B分量的系数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gl.ZERO</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>gl.ONE</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>gl.SRC_COLOR</td>
+<td>Rs</td>
+<td>Gs</td>
+<td>Bs</td>
+</tr>
+<tr>
+<td>gl.ONE_MINUS_SRC_COLOR</td>
+<td>1-Rs</td>
+<td>1-Gs</td>
+<td>1-Bs</td>
+</tr>
+<tr>
+<td>gl.DST_COLOR</td>
+<td>Rd</td>
+<td>Gd</td>
+<td>Bd</td>
+</tr>
+<tr>
+<td>gl.ONE_MINUS_DST_COLOR</td>
+<td>1-Rd</td>
+<td>1-Gd</td>
+<td>1-Bd</td>
+</tr>
+<tr>
+<td>gl.SRC_ALPHA</td>
+<td>As</td>
+<td>As</td>
+<td>As</td>
+</tr>
+<tr>
+<td>gl.ONE_MINUS_SRC_ALPHA</td>
+<td>1-As</td>
+<td>1-As</td>
+<td>1-As</td>
+</tr>
+<tr>
+<td>gl.DST_ALPHA</td>
+<td>Ad</td>
+<td>Ad</td>
+<td>Ad</td>
+</tr>
+<tr>
+<td>gl.ONE_MINUS_DST_ALPHA</td>
+<td>1-Ad</td>
+<td>1-Ad</td>
+<td>1-Ad</td>
+</tr>
+<tr>
+<td>gl.SRC_ALPHA_SATUREATE</td>
+<td>min(As,Ad)</td>
+<td>min(As,Ad)</td>
+<td>min(As,Ad)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="透明和不透明物体共存"><a href="#透明和不透明物体共存" class="headerlink" title="透明和不透明物体共存"></a>透明和不透明物体共存</h2><p>实现 a 混合最简单的方式是屏蔽掉隐藏面消除功能，即去掉 gl.enable(gl.DEPTH_TEST)，但关闭隐藏面消除功能是一个粗暴的解决方案，并不能满足实际需求。其实可通过某些机制，同时实现隐藏面消除和半透明效果，步骤如下：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//1.开启隐藏面消除功能:</span></span><br><span class="line">gl.enable(gl.DEPTH_TEST)。</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.绘制所有不透明的物体(a == 1.0)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//3.锁定深度缓冲区的写入操作，使之只读 (深度缓冲区用于隐藏面消除):</span></span><br><span class="line">gl.depthMask(<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//4.绘制所有半透明的物体 a &lt; 1.0，注意将物体按深度排序，a 最小最先绘制</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//5.释放深度缓冲区，使之可读可写: </span></span><br><span class="line">gl.depthMask(<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="gl-depthMask-mask"><a href="#gl-depthMask-mask" class="headerlink" title="gl.depthMask(mask)"></a>gl.depthMask(mask)</h4><p>锁定或释放深度缓冲区的写入操作</p>
+<p>mask:  锁定深度缓冲区的写入操作 false，释放 true</p>
+<h2 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h2><p>我们写个Demo来实际演示效果，比如我要绘制8个物体，其中前面4个是非透明的物体，即 α 分量值则为1，剩余物体的 α 分量分别从 0.1至0.4不等。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> color = randomColor();</span><br><span class="line">    color[<span class="number">3</span>] = i &gt; <span class="number">3</span> ? (i - <span class="number">3</span>)/<span class="number">10</span> :<span class="number">1</span>;<span class="comment">// 透明物体 α 分量小于1，非透明物体则等于1</span></span><br><span class="line">    </span><br><span class="line">    Polygons.push(&#123;</span><br><span class="line">        x: random(<span class="number">-9</span>,<span class="number">9</span>),</span><br><span class="line">        y: random(<span class="number">0</span>, <span class="number">6</span>),</span><br><span class="line">        z: random(<span class="number">-5</span>,<span class="number">5</span>),</span><br><span class="line">        color: color</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果是绘制的物体队列是无序的，则必须手动排序。但我这里建立图形时已经排好序，前4个为不透明物体，剩余是透明物体，所以可直接按顺序绘制，针对是否为透明物体，分别设置缓冲区写入和隐藏面删除功能。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(i &lt; <span class="number">4</span>)&#123; <span class="comment">// 非透明物体</span></span><br><span class="line">    gl.depthMask(<span class="literal">true</span>);</span><br><span class="line">    gl.disable(gl.BLEND);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123; <span class="comment">//透明物体</span></span><br><span class="line">    gl.depthMask(<span class="literal">false</span>);</span><br><span class="line">    gl.enable(gl.BLEND);</span><br><span class="line">    gl.blendFunc( gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA );</span><br><span class="line">&#125;</span><br><span class="line">drawBufferInfo(gl, vao);</span><br></pre></td></tr></table></figure></p>
+<p>最终完成效果请看：<strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglalpha.html" target="_blank" rel="noopener">半透明物体和透明物体共存</a></strong></p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2019/05/02/webglalpha/" data-desc="WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/webGL/">webGL</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2019/04/30/webglnormap/" class="next post-next">WebGL学习之法线贴图 &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2019 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>
