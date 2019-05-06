@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="WebGL学习之纹理盒 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content="telphone=no, email=no">
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title>WebGL学习之纹理盒 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="WebGL学习之纹理盒 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  <!-- UC Browser Compatible -->
+<!--   <script>
+      var agent = navigator.userAgent.toLowerCase();
+      if(agent.indexOf('ucbrowser')>0) {
+          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+      }
+  </script> -->
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+    
+      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a href="/">
+        <i class="icon icon-home"></i>
+        主页
+      </a>
+  
+      <a href="http://jeffzhong.space/sites/demo/">
+        <i class="icon icon-tag"></i>
+        Demo
+      </a>
+  
+      <a data-tag="search" href="javascript:;">
+        <i class="icon icon-search"></i>
+        搜索
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">39<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-7441b28d0ba8f1f2.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">WebGL学习之纹理盒</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time class="icon icon-calendar"> 2019/05/05 21:34:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon icon-book"></i>
+    			
+                    
+                        <a href="/categories/技术/">技术</a>
+                    
+        			
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>我们之前已经学习过二维纹理 gl.TEXTURE_2D，而且还使用它实现了各种效果。但还有一种立方体纹理 gl.TEXTURE_CUBE_MAP，它包含了6个纹理代表立方体的6个面。不像常规的纹…</p>
+</p> -->
+    	
+    	<div class="post-content"><p>我们之前已经学习过二维纹理 <strong>gl.TEXTURE_2D</strong>，而且还使用它实现了各种效果。但还有一种立方体纹理 <strong>gl.TEXTURE_CUBE_MAP</strong>，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 <strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglskybox.html" target="_blank" rel="noopener">天空盒</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-21b5d76b44dbd274.gif" width="400" alt="sky box"></p>
+<a id="more"></a>
+<p>根据法向量的朝向选取立方体6个面中的一个，这个面的像素用来采样生成颜色。这六个面通过他们相对于立方体中心的方向被引用。它们是分别是</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">gl.TEXTURE_CUBE_MAP_POSITIVE_X<span class="comment">//右</span></span><br><span class="line">gl.TEXTURE_CUBE_MAP_NEGATIVE_X<span class="comment">//左</span></span><br><span class="line">gl.TEXTURE_CUBE_MAP_POSITIVE_Y<span class="comment">//上</span></span><br><span class="line">gl.TEXTURE_CUBE_MAP_NEGATIVE_Y<span class="comment">//下</span></span><br><span class="line">gl.TEXTURE_CUBE_MAP_POSITIVE_Z<span class="comment">//后</span></span><br><span class="line">gl.TEXTURE_CUBE_MAP_NEGATIVE_Z<span class="comment">//前</span></span><br></pre></td></tr></table></figure>
+<h2 id="环境贴图"><a href="#环境贴图" class="headerlink" title="环境贴图"></a>环境贴图</h2><p>其实我们更应该把cube map叫作纹理盒，通常纹理盒不是给立方体设置纹理用的，设置立方体纹理的标准用法其实是使用二维贴图，那么纹理盒用来做什么的呢？纹理盒最常见的用法是用来做环境贴图。在百度和google地图中的3D街景就是环境贴图应用的一个例子。</p>
+<h3 id="纹理"><a href="#纹理" class="headerlink" title="纹理"></a>纹理</h3><p>下面是6张红色峡谷图片<br><img src="https://upload-images.jianshu.io/upload_images/127924-b7d177dc23ef4e0f.jpg" alt="canyon"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/127924-1e9ac45cf368861f.jpg" alt="canyon"></p>
+<p>将以上尺寸为512x512的图片填充到立方体的每个面，以下就是纹理的创建加载过程</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 创建纹理。</span></span><br><span class="line"><span class="keyword">var</span> texture = gl.createTexture();</span><br><span class="line">gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture);</span><br><span class="line"> </span><br><span class="line"><span class="keyword">const</span> faceInfos = [</span><br><span class="line">  &#123;</span><br><span class="line">    target: gl.TEXTURE_CUBE_MAP_POSITIVE_X, </span><br><span class="line">    url: <span class="string">'/img/sorbin_rt.jpg'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    target: gl.TEXTURE_CUBE_MAP_NEGATIVE_X, </span><br><span class="line">    url: <span class="string">'/img/sorbin_lf.jpg'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    target: gl.TEXTURE_CUBE_MAP_POSITIVE_Y, </span><br><span class="line">    url: <span class="string">'/img/sorbin_up.jpg'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    target: gl.TEXTURE_CUBE_MAP_NEGATIVE_Y, </span><br><span class="line">    url: <span class="string">'/img/sorbin_dn.jpg'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    target: gl.TEXTURE_CUBE_MAP_POSITIVE_Z, </span><br><span class="line">    url: <span class="string">'/img/sorbin_bk.jpg'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    target: gl.TEXTURE_CUBE_MAP_NEGATIVE_Z, </span><br><span class="line">    url: <span class="string">'/img/sorbin_ft.jpg'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br><span class="line">faceInfos.forEach(<span class="function">(<span class="params">faceInfo</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> &#123;target, url&#125; = faceInfo;</span><br><span class="line">  <span class="comment">// 上传画布到立方体贴图的每个面</span></span><br><span class="line">  <span class="keyword">const</span> level = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">const</span> format = gl.RGBA;</span><br><span class="line">  <span class="keyword">const</span> width = <span class="number">512</span>;</span><br><span class="line">  <span class="keyword">const</span> height = <span class="number">512</span>;</span><br><span class="line">  <span class="keyword">const</span> type = gl.UNSIGNED_BYTE;</span><br><span class="line">  <span class="comment">// 设置每个面，使其立即可渲染</span></span><br><span class="line">  gl.texImage2D(target, level, format, width, height, <span class="number">0</span>, format, type, <span class="literal">null</span>);</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// 异步加载图片</span></span><br><span class="line">  <span class="keyword">const</span> image = <span class="keyword">new</span> Image();</span><br><span class="line">  image.src = url;</span><br><span class="line">  image.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 图片加载完成将其拷贝到纹理</span></span><br><span class="line">    gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture);</span><br><span class="line">    gl.texImage2D(target, level, internalFormat, format, type, image);</span><br><span class="line">    gl.generateMipmap(gl.TEXTURE_CUBE_MAP);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;);</span><br><span class="line">gl.generateMipmap(gl.TEXTURE_CUBE_MAP);</span><br><span class="line">gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);</span><br></pre></td></tr></table></figure>
+<h3 id="法向量"><a href="#法向量" class="headerlink" title="法向量"></a>法向量</h3><p>标准立方体法向量 和 纹理盒法向量的区别<br><img src="https://upload-images.jianshu.io/upload_images/127924-f3d6044f6ce65e08.jpg" width="300" alt="立方体向量"></p>
+<p>3D立方体使用纹理盒有一个巨大的好处就是不需要额外指定纹理坐标。只要盒子是被放置在世界坐标系的原点，盒子本身的坐标就可以作为纹理坐标使用，因为在3D世界中位置本身就是一个向量，表示一个方向，我们要的就是这个方向。</p>
+<p>所以顶点着色器非常简单</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">attribute vec4 a_position;</span><br><span class="line">uniform mat4 u_vpMatrix;</span><br><span class="line">varying vec3 v_normal;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gl_Position = u_vpMatrix * a_position;</span><br><span class="line">    <span class="comment">//因为位置是以几何中心为原点的,可以用顶点坐标作为法向量</span></span><br><span class="line">    v_normal = normalize(a_position.xyz);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>片段着色器中我们需要用<code>samplerCube</code> 代替 <code>sampler2D</code> 用 <code>textureCube</code>代替<code>texture2D</code>。<code>textureCube</code> 需要vec3类型的向量。 法向量从顶点着色器传递过来经过了插值处理，需要重新单位化。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">precision mediump <span class="keyword">float</span>; <span class="comment">// 从顶点着色器传入。</span></span><br><span class="line">varying vec3 v_normal; <span class="comment">// 纹理。</span></span><br><span class="line">uniform samplerCube u_texture; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;   </span><br><span class="line">  gl_FragColor = textureCube(u_texture, normalize(v_normal));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>运行后得到如下的效果，很明显就能看出是个立方体，并不是我们想要的360度环绕的3D场景。<br><img src="https://upload-images.jianshu.io/upload_images/127924-3baf35fcc34bedfd.jpg" width="400" alt="纹理盒"></p>
+<p>其实我们只需要将相机位置置于原点(0,0,0)，同时lookAt向其中的一个面就可以了。但是在原点有个问题，如果要旋转查看场景怎么办？我们可以通过旋转相机的位置，这其实就相当于立方体旋转，同时我们不需要矩阵位移相关的信息，只需要方向相关的信息就好了。同时还可以禁止写入深度缓存，造成背景在很远的假象，让效果更加真实。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> viewPosition = <span class="keyword">new</span> Vector3([<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>]);<span class="comment">//相机位置</span></span><br><span class="line"><span class="keyword">const</span> lookAt = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>];<span class="comment">//原点</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//相机绕y轴旋转</span></span><br><span class="line">cameraMatrix.rotate(<span class="number">0.2</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">viewPoint = cameraMatrix.multiplyVector3(viewPosition);</span><br><span class="line">vpMatrix.setPerspective( <span class="number">30</span>, canvas.width / canvas.height, <span class="number">0.1</span>, <span class="number">5</span> );</span><br><span class="line">vpMatrix.lookAt(...viewPoint.elements, ...lookAt, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//重置位移</span></span><br><span class="line">vpMatrix.elements[<span class="number">12</span>] = <span class="number">0</span>;</span><br><span class="line">vpMatrix.elements[<span class="number">13</span>] = <span class="number">0</span>;</span><br><span class="line">vpMatrix.elements[<span class="number">14</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 禁止写入深度缓存，造成背景在很远的假象</span></span><br><span class="line">gl.depthMask(<span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="环境纹理映射"><a href="#环境纹理映射" class="headerlink" title="环境纹理映射"></a>环境纹理映射</h1><p>环境贴图还有个更通俗的叫法-天空盒。接着我们还要实现一个非常帅气的效果，在天空盒三维场景中，让其中的物体反射场景周围的着色。这个操作就叫做环境纹理映射（environment mapping）。</p>
+<h3 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h3><p>如果物体的表面像光滑的镜子，那么我们就能看到物体反射出天空和周围的景色。反射的原理非常简单，那就是使用反射公式映射纹理盒对应的纹素：<br><img src="https://upload-images.jianshu.io/upload_images/127924-57795ea16284cdbd.jpg" width="400" alt="纹理映射"></p>
+<p>相机位置(观察点)和 物体顶点的位置，顶点位置又包含着法线信息，通过GLSL的reflect函数就可以非常容易的计算反射向量R，进而确定看到的是哪一块表面的着色。</p>
+<h3 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h3><p>我们就在天空盒下面增加一个镜面立方体，那就需要增加一对着色器，首先顶点着色器需要增加法线，mvp矩阵</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">attribute vec4 a_position;</span><br><span class="line">attribute vec4 a_normal;</span><br><span class="line">uniform mat4 u_vpMatrix;</span><br><span class="line">uniform mat4 u_modelMatrix;</span><br><span class="line">varying vec3 v_position;</span><br><span class="line">varying vec3 v_normal;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    v_position = (u_modelMatrix * a_position).xyz;</span><br><span class="line">    v_normal = vec3(u_modelMatrix * a_normal);</span><br><span class="line">    gl_Position = u_vpMatrix * u_modelMatrix * a_position;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>片元着色器则需要添加相机位置，纹理以及顶点着色器传递过来的法线和顶点位置</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">precision highp <span class="keyword">float</span>;</span><br><span class="line">varying vec3 v_position;</span><br><span class="line">varying vec3 v_normal;</span><br><span class="line">uniform samplerCube u_texture;</span><br><span class="line">uniform vec3 u_viewPosition;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    vec3 normal = normalize(v_normal);</span><br><span class="line">    vec3 eyeToSurfaceDir = normalize(v_position - u_viewPosition);</span><br><span class="line">    vec3 direction = reflect(eyeToSurfaceDir,normal);</span><br><span class="line">    gl_FragColor = textureCube(u_texture, direction);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样我们绘制的时候就要轮流切换着色器program</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//天空盒</span></span><br><span class="line">    gl.useProgram(program.program);</span><br><span class="line">		<span class="comment">//绘制天空盒</span></span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//立方体</span></span><br><span class="line">    gl.useProgram(cProgram.program);</span><br><span class="line">		<span class="comment">//绘制立方体</span></span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line">    requestAnimationFrame(draw);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>最后实现如下效果，demo情况 <strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglskybox.html" target="_blank" rel="noopener">天空盒</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-4650febc8e130ca4.jpg" width="400" alt="天空盒"></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>其实纹理盒除了可以做环境贴图，还可以结合光照，阴影贴图作出很多酷炫的效果。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="share" data-url="/2019/05/05/webglskybox/" data-desc="我们之前已经学习过二维纹理 gl.TEXTURE_2D，而且还使用它实现了各种效果。但还有一种..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+			<div class="tags">
+			<i class="icon icon-tag"></i> 
+			
+				
+				
+                    
+                        <a href="/tags/前端/">前端</a>
+                    
+				
+                    
+                        <a href="/tags/js/">js</a>
+                    
+				
+                    
+                        <a href="/tags/webGL/">webGL</a>
+                    
+				
+			
+			</div>
+		</div>
+	</div>
+</article>
+</div>
+
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+      <a href="/2019/05/02/webglalpha/" class="next post-next">WebGL半透明物体的绘制 &rarr;</a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2019 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <div>
+      <img src="/img/weixinpay.jpg" alt="weixinpay">
+      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/dist/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</body>
+</html>
