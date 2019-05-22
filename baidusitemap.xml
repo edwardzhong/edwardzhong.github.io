@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://jeffzhong.space/2017/11/27/projecttemplate/</loc>
+    <lastmod>2019-05-22</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2017/11/14/webgl3d/</loc>
+    <lastmod>2019-05-22</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
+    <lastmod>2019-05-22</lastmod>
+  </url>  <url>
+    <loc>http://jeffzhong.space/2017/10/26/solar/</loc>
+    <lastmod>2019-05-22</lastmod>
+  </url>  <url>
     <loc>http://jeffzhong.space/2019/05/21/webglhdr/</loc>
     <lastmod>2019-05-22</lastmod>
   </url>  <url>
@@ -31,9 +43,6 @@
     <loc>http://jeffzhong.space/2018/08/07/haskella/</loc>
     <lastmod>2019-05-21</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2017/10/26/solar/</loc>
-    <lastmod>2019-05-21</lastmod>
-  </url>  <url>
     <loc>http://jeffzhong.space/2017/11/02/drawboard/</loc>
     <lastmod>2019-05-21</lastmod>
   </url>  <url>
@@ -43,19 +52,10 @@
     <loc>http://jeffzhong.space/2017/11/21/chartline/</loc>
     <lastmod>2019-05-21</lastmod>
   </url>  <url>
-    <loc>http://jeffzhong.space/2017/11/12/chartbar/</loc>
-    <lastmod>2019-05-21</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2017/11/27/projecttemplate/</loc>
-    <lastmod>2019-05-21</lastmod>
-  </url>  <url>
     <loc>http://jeffzhong.space/2018/08/15/haskellc/</loc>
     <lastmod>2019-05-21</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2018/08/08/haskellb/</loc>
-    <lastmod>2019-05-21</lastmod>
-  </url>  <url>
-    <loc>http://jeffzhong.space/2017/11/14/webgl3d/</loc>
     <lastmod>2019-05-21</lastmod>
   </url>  <url>
     <loc>http://jeffzhong.space/2018/01/12/webglpolygons/</loc>
