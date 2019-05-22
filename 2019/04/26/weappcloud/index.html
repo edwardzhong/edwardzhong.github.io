@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">39<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
   </div>
   <div class="social">
   
@@ -169,7 +169,7 @@ var _hmt = _hmt || [];
 <p>将操作数据库的所有云函数合并成一个文件，将云函数入口封装一下，即把函数名字和参数都做为参数</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">exports.main = <span class="keyword">async</span> (event, context) =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; fn, param &#125; = event;</span><br><span class="line">    <span class="keyword">return</span> dao[fn](param);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>对应前端部分也封装出一个调用数据库的方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">getDbFn(fn, param) &#123;</span><br><span class="line">  <span class="keyword">return</span> Taro.cloud.callFunction(&#123;</span><br><span class="line">    name: <span class="string">"dao"</span>,</span><br><span class="line">    data: &#123; fn, param &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">getDbFn(fn, param) &#123;</span><br><span class="line">  <span class="keyword">return</span> Taro.cloud.callFunction(&#123;</span><br><span class="line">     name: <span class="string">"dao"</span>,</span><br><span class="line">     data: &#123; fn, param &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>云端部分开发完之后，在微信开发者工具里面上传云端代码即可，而其余部分的流程和普通小程序一样，这里也不再介绍。</p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>小程序部分的开发还是比较简单的，我开发的大部分时间其实是用在写 <strong>markdown</strong> 转 <strong>wxml</strong> 解析器上。下一篇讲解如何将 markdown 转换为 wxml 。</p>
 </div>

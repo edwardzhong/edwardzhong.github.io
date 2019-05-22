@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">39<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
   </div>
   <div class="social">
   
@@ -149,12 +149,15 @@ var _hmt = _hmt || [];
     		
     		</span>
     	</div>
-    	<!-- <p><p>&emsp;&emsp;为什么要学习函数式编程？为什么要学习Haskell？&emsp;&emsp;.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的…</p>
+    	<!-- <p><p>为什么要学习函数式编程？为什么要学习Haskell？<br>.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾…</p>
 </p> -->
     	
     	<div class="post-content"><!-- 原文地址：[Haskell学习-函数式编程初探](https://edwardzhong.github.io/2018/08/07/haskella/) -->
-<p>&emsp;&emsp;为什么要学习函数式编程？为什么要学习Haskell？<br>&emsp;&emsp;.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾护航,开山劈石,伴随着我不断成长。同时C#和JavaScript它们本身也在不断地进化，不断出现越来越多方便的语法糖，但追根到底很多都是从函数式语言汲取的精华。比如高阶函数，lambada表达式，柯里化等。<br>&emsp;&emsp;于是从探险的角度，以好奇的心态开始学习函数式语言，探索这个宝库，拾取可供临摹的珍宝。最起码它能让你多一个不同的角度看待编程语言,影响你的思考方式。 学习的对象当然选择函数式语言的集大成者-Haskell。<br><a id="more"></a></p>
-<h2 id="什么是Haskell和函数式编程"><a href="#什么是Haskell和函数式编程" class="headerlink" title="什么是Haskell和函数式编程"></a>什么是Haskell和函数式编程</h2><p>&emsp;&emsp;Haskell 是一门纯粹函数式的语言。<br>&emsp;&emsp;函数式编程是面向数学的抽象，将计算描述为一种表达式求值。命令式编程是关于解决问题的步骤，函数式编程是关于数据的映射。在纯粹函数式程式语言中，你不是像命令式语言那样命令计算机「要做什么」，而是通过用函数来描述出问题「是什么」，也就是所谓范畴论中的映射关系。函数式语言有以下的特性：</p>
+<p>为什么要学习函数式编程？为什么要学习Haskell？</p>
+<p>.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾护航,开山劈石,伴随着我不断成长。同时C#和JavaScript它们本身也在不断地进化，不断出现越来越多方便的语法糖，但追根到底很多都是从函数式语言汲取的精华。比如高阶函数，lambada表达式，柯里化等。 </p>
+<p>于是从探险的角度，以好奇的心态开始学习函数式语言，探索这个宝库，拾取可供临摹的珍宝。最起码它能让你多一个不同的角度看待编程语言,影响你的思考方式。 学习的对象当然选择函数式语言的集大成者-Haskell。<br><a id="more"></a></p>
+<h2 id="什么是Haskell和函数式编程"><a href="#什么是Haskell和函数式编程" class="headerlink" title="什么是Haskell和函数式编程"></a>什么是Haskell和函数式编程</h2><p>Haskell 是一门纯粹函数式的语言。</p>
+<p>函数式编程是面向数学的抽象，将计算描述为一种表达式求值。命令式编程是关于解决问题的步骤，函数式编程是关于数据的映射。在纯粹函数式程式语言中，你不是像命令式语言那样命令计算机「要做什么」，而是通过用函数来描述出问题「是什么」，也就是所谓范畴论中的映射关系。函数式语言有以下的特性：</p>
 <ul>
 <li>函数是一等公民，可以在任何地方定义，在函数内或函数外，可以作为函数的参数和返回值，可以对函数进行组合</li>
 <li>变量的值是不可变的（immutable），也就是说不允许像命令式编程语言中那样多次给一个变量赋值。</li>
@@ -166,7 +169,7 @@ var _hmt = _hmt || [];
 <li>柯里化（Currying）</li>
 <li>闭包（Closure）</li>
 </ul>
-<h2 id="函数式编程的优点"><a href="#函数式编程的优点" class="headerlink" title="函数式编程的优点"></a>函数式编程的优点</h2><p>&emsp;&emsp;函数式的最主要的好处主要是不可变性带来的。没有可变的状态，函数就是引用透明（Referential transparency）的和没有副作用（No Side Effect）。</p>
+<h2 id="函数式编程的优点"><a href="#函数式编程的优点" class="headerlink" title="函数式编程的优点"></a>函数式编程的优点</h2><p>函数式的最主要的好处主要是不可变性带来的。没有可变的状态，函数就是引用透明（Referential transparency）的和没有副作用（No Side Effect）。</p>
 <ol>
 <li>函数即不依赖外部的状态也不修改外部的状态，函数调用的结果不依赖调用的时间和位置，这样写的代码容易进行推理，不容易出错。这使得单元测试和调试都更容易。</li>
 <li>由于（多个线程之间）不共享状态，不会造成资源争用(Race condition)，也就不需要用锁来保护可变状态，也就不会出现死锁，这样可以更好地并发，能够更好地利用多个处理器（核）提供的并行处理能力。</li>
@@ -174,7 +177,7 @@ var _hmt = _hmt || [];
 <h2 id="Haskell基本语法"><a href="#Haskell基本语法" class="headerlink" title="Haskell基本语法"></a>Haskell基本语法</h2><ol>
 <li><p><strong>变量和函数</strong><br>一起介绍是因为在我看来,haskell中变量和函数是没有区别的。它们都是表达式，根据表达式的不同形式，分别对应到命令式语言中变量和函数的概念。 而且 <strong>haskell</strong> 中 <strong>变量</strong> 赋值后就是不可变的，该 <strong>变量</strong> 就等于被赋予的值，与命令式语言中 <strong>变量</strong> 是内存地址的引用是完全不同的概念。 硬要对应的话它更像是 <strong>C#</strong> 中的不可变量 <strong>const</strong> 或 <strong>static readonly</strong> 。<br>你能从下面代码中区分出哪些是变量,哪些是函数吗?</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">a</span> = <span class="number">1</span> <span class="comment">-- 变量</span></span><br><span class="line"><span class="title">arr</span> = map (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">-- 变量还是函数?</span></span><br><span class="line"><span class="title">maxNum</span>  = foldr max <span class="number">0</span> <span class="comment">-- 函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--执行</span></span><br><span class="line"><span class="title">a</span>  </span><br><span class="line">&gt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="title">arr</span></span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">maxNum</span> [<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>]</span><br><span class="line">&gt; <span class="number">5</span></span><br></pre></td></tr></table></figure>
-<p> 定义函数: <strong>函数名 参数 = 代码</strong><br> 调用函数: <strong>函数名 参数</strong><br> 调用函数不用大括号<strong>( )</strong>，注意的是函数首字母不能大写。 还有<strong>maxNum</strong>看不到形式参数是因为柯里化可以去掉参数，后面会介绍。 </p>
+<p>定义函数: <strong>函数名 参数 = 代码</strong><br>调用函数: <strong>函数名 参数</strong><br>调用函数不用大括号<strong>( )</strong>，注意的是函数首字母不能大写。 还有<strong>maxNum</strong>看不到形式参数是因为柯里化可以去掉参数，后面会介绍。 </p>
 </li>
 <li><p><strong>if else</strong><br>haskell中 <strong>if else</strong> 表达式中的 <strong>else</strong> 部分不能省略，也就是你不能只有 <strong>if</strong> 部分</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 等于小于大于0 分别对应 0,-1,1</span></span><br><span class="line"><span class="title">sign</span> x = <span class="keyword">if</span> x == <span class="number">0</span> <span class="keyword">then</span> <span class="number">0</span></span><br><span class="line">         <span class="keyword">else</span> <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">then</span> <span class="number">-1</span></span><br><span class="line">         <span class="keyword">else</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
@@ -255,7 +258,8 @@ var _hmt = _hmt || [];
     	
 		<div class="post-footer">
 			<div class="share" data-url="/2018/08/07/haskella/" data-desc="
-&emsp;&emsp;为什么要学习函数式编程？为什么要学习Haskell？&emsp;&e..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
+为什么要学习函数式编程？为什么要学习Haskell？
+.net到前端，C#和JavaScri..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
 			<i class="icon icon-tag"></i> 
 			
