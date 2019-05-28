@@ -84,7 +84,7 @@ var _hmt = _hmt || [];
         主页
       </a>
   
-      <a href="http://jeffzhong.space/sites/demo/">
+      <a href="/sites/demo/">
         <i class="icon icon-tag"></i>
         Demo
       </a>
@@ -97,7 +97,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">39<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
   </div>
   <div class="social">
   
@@ -177,10 +177,13 @@ var _hmt = _hmt || [];
 <h2 id="Haskell基本语法"><a href="#Haskell基本语法" class="headerlink" title="Haskell基本语法"></a>Haskell基本语法</h2><ol>
 <li><p><strong>变量和函数</strong><br>一起介绍是因为在我看来,haskell中变量和函数是没有区别的。它们都是表达式，根据表达式的不同形式，分别对应到命令式语言中变量和函数的概念。 而且 <strong>haskell</strong> 中 <strong>变量</strong> 赋值后就是不可变的，该 <strong>变量</strong> 就等于被赋予的值，与命令式语言中 <strong>变量</strong> 是内存地址的引用是完全不同的概念。 硬要对应的话它更像是 <strong>C#</strong> 中的不可变量 <strong>const</strong> 或 <strong>static readonly</strong> 。<br>你能从下面代码中区分出哪些是变量,哪些是函数吗?</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">a</span> = <span class="number">1</span> <span class="comment">-- 变量</span></span><br><span class="line"><span class="title">arr</span> = map (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">-- 变量还是函数?</span></span><br><span class="line"><span class="title">maxNum</span>  = foldr max <span class="number">0</span> <span class="comment">-- 函数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--执行</span></span><br><span class="line"><span class="title">a</span>  </span><br><span class="line">&gt; <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="title">arr</span></span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">maxNum</span> [<span class="number">3</span>,<span class="number">5</span>,<span class="number">1</span>]</span><br><span class="line">&gt; <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>定义函数: <strong>函数名 参数 = 代码</strong><br>调用函数: <strong>函数名 参数</strong><br>调用函数不用大括号<strong>( )</strong>，注意的是函数首字母不能大写。 还有<strong>maxNum</strong>看不到形式参数是因为柯里化可以去掉参数，后面会介绍。 </p>
+</blockquote>
 </li>
-<li><p><strong>if else</strong><br>haskell中 <strong>if else</strong> 表达式中的 <strong>else</strong> 部分不能省略，也就是你不能只有 <strong>if</strong> 部分</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 等于小于大于0 分别对应 0,-1,1</span></span><br><span class="line"><span class="title">sign</span> x = <span class="keyword">if</span> x == <span class="number">0</span> <span class="keyword">then</span> <span class="number">0</span></span><br><span class="line">         <span class="keyword">else</span> <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">then</span> <span class="number">-1</span></span><br><span class="line">         <span class="keyword">else</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<li><p><strong>if else</strong></p>
+<p>haskell中 <strong>if else</strong> 表达式中的 <strong>else</strong> 部分不能省略，也就是你不能只有 <strong>if</strong> 部分</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 等于小于大于0 分别对应 0,-1,1</span></span><br><span class="line"><span class="title">sign</span> x = <span class="keyword">if</span> x == <span class="number">0</span> <span class="keyword">then</span> <span class="number">0</span></span><br><span class="line">         <span class="keyword">else</span> <span class="keyword">if</span> x &lt; <span class="number">0</span> <span class="keyword">then</span> <span class="number">-1</span></span><br><span class="line">         <span class="keyword">else</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>case of</strong><br><strong>case of</strong> 表达式,与其他语言的<strong>switch case</strong> 类似。</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- 求出列表第一项</span></span><br><span class="line"><span class="title">head'</span> xs = <span class="keyword">case</span> xs <span class="keyword">of</span></span><br><span class="line">           []    -&gt; <span class="string">"No head for empty lists!"</span></span><br><span class="line">           (x:_) -&gt; show x</span><br><span class="line"><span class="comment">-- 执行</span></span><br><span class="line"><span class="title">head'</span> <span class="string">"hello"</span></span><br><span class="line">&gt;'h'</span><br><span class="line"><span class="title">head'</span> [<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line">&gt; <span class="number">3</span></span><br></pre></td></tr></table></figure>
