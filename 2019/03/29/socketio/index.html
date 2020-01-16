@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="关于socket.io的使用 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>关于socket.io的使用 - Jeff's world</title>
+  <title >关于socket.io的使用 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="关于socket.io的使用 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,23 +121,22 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-7441b28d0ba8f1f2.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner9.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">关于socket.io的使用</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2019/03/29 00:44:00</time>
+    		<time><i class="icon-calendar"></i> 2019/03/29 00:44:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
@@ -152,12 +144,15 @@ var _hmt = _hmt || [];
     	<!-- <p><p>这段时间学习了socket.io，用它写了小项目，在此总结下它的基本使用方式和一些要点。socket.io是基于Node.js和WebSocket协议的实时通信开源框架，它包括客户端的JavaS…</p>
 </p> -->
     	
-    	<div class="post-content"><p>这段时间学习了<strong>socket.io</strong>，用它写了小项目，在此总结下它的基本使用方式和一些要点。<br><strong>socket.io</strong>是基于<strong>Node.js</strong>和<strong>WebSocket</strong>协议的实时通信开源框架，它包括客户端的JavaScript和服务器端的Node.js。</p>
+    		<div class="post-content"><p>这段时间学习了<strong>socket.io</strong>，用它写了小项目，在此总结下它的基本使用方式和一些要点。<br><strong>socket.io</strong>是基于<strong>Node.js</strong>和<strong>WebSocket</strong>协议的实时通信开源框架，它包括客户端的JavaScript和服务器端的Node.js。</p>
 <h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h2><p>这里后端使用的框架是<strong>koa2</strong>，<strong>socket.io</strong>将自身绑定到koa的进程中去，其中最重要的事件就是 <strong>connection</strong> 和 <strong>disconnect</strong>。它们是框架本身定义的系统事件，也就意味着它是自然就存在的不需要我们自定义，当然还有其它系统事件，但很少会用得到。</p>
 <a id="more"></a>
+
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> koa = <span class="built_in">require</span>(<span class="string">'koa'</span>)</span><br><span class="line"><span class="keyword">const</span> app = <span class="keyword">new</span> koa()</span><br><span class="line"><span class="keyword">const</span> server = <span class="built_in">require</span>(<span class="string">'http'</span>).createServer(app.callback())</span><br><span class="line"><span class="keyword">const</span> io = <span class="built_in">require</span>(<span class="string">'socket.io'</span>)(server)</span><br><span class="line"></span><br><span class="line"><span class="comment">//监听connect事件</span></span><br><span class="line">io.on(<span class="string">'connection'</span>, socket =&gt; &#123;</span><br><span class="line">  socket.emit(<span class="string">'open'</span>);<span class="comment">//通知客户端已连接</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'connected'</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//监听disconnect事件</span></span><br><span class="line">  socket.on(<span class="string">'disconnect'</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'disconnect'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">server.listen(<span class="number">3001</span>);</span><br></pre></td></tr></table></figure>
+
 <h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><p>web端直接传入url地址即可，其中这里监听的 <strong>open</strong> 事件是用户自定义的，对应服务端的则是发送<strong>open</strong>事件。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> io <span class="keyword">from</span> <span class="string">'socket.io-client'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//建立websocket连接</span></span><br><span class="line"><span class="keyword">const</span> socket = io(<span class="string">'http://127.0.0.1:3001'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//收到server的连接确认</span></span><br><span class="line">socket.on(<span class="string">'open'</span>, () =&gt; &#123;</span><br><span class="line">    showTip(<span class="string">'socket io is open !'</span>);</span><br><span class="line">    init();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <h2 id="emit-和-on"><a href="#emit-和-on" class="headerlink" title="emit 和 on"></a>emit 和 on</h2><p><strong>emit</strong> 和 <strong>on</strong> 是最重要的两个api，分别对应 <strong>发送</strong> 和 <strong>监听</strong> 事件。</p>
 <ul>
 <li><strong>socket.emit(eventName[, …args])</strong>：发射（触发）一个事件</li>
@@ -166,15 +161,26 @@ var _hmt = _hmt || [];
 <p>我们可以非常自由的在服务端定义并发送一个事件<strong>emit</strong>，然后在客户端监听 <strong>on</strong>，反过来也一样。</p>
 <p>发送的内容格式也非常自由，既可以是基本数据类型 <strong>Number</strong>，<strong>String</strong>，<strong>Boolean</strong> 等，也可以是 <strong>Object</strong>，<strong>Array</strong> 类型，甚至还可以是函数。而用回调函数的方式则可以进行更便携的交互。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*** 服务端 **/</span></span><br><span class="line">socket.on(<span class="string">'message'</span>,data =&gt;&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data)</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">socket.emit(<span class="string">'send'</span>,<span class="string">'hello everybody'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*** 客户端 **/</span></span><br><span class="line">socket.emit(<span class="string">'message'</span>,&#123;<span class="attr">id</span>:<span class="string">'1'</span>,<span class="attr">txt</span>:<span class="string">'hello'</span>&#125;);</span><br><span class="line"></span><br><span class="line">socket.on(<span class="string">'send'</span>,data =&gt;&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//回调函数</span></span><br><span class="line"><span class="comment">/*** 服务端 **/</span></span><br><span class="line">socket.on(<span class="string">'sayit'</span>, (word, callback)=&gt; &#123;</span><br><span class="line">  callback(<span class="string">'say '</span> + word);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*** 客户端 **/</span></span><br><span class="line">socket.emit(<span class="string">'sayit'</span>, <span class="string">'wow'</span>, data =&gt; &#123; </span><br><span class="line">  <span class="built_in">console</span>.log(data); <span class="comment">// say wow</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <h2 id="broadcast-广播"><a href="#broadcast-广播" class="headerlink" title="broadcast 广播"></a>broadcast 广播</h2><p><strong>broadcast</strong> 默认是向所有的socket连接进行广播，但是不包括发送者自身，如果自己也打算接收消息的话，需要给自己单独发送。</p>
  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*** 服务端 **/</span></span><br><span class="line">io.on(<span class="string">'connection'</span>, socket =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> data= &#123;</span><br><span class="line">    txt:<span class="string">'new user login'</span>,</span><br><span class="line">    time:<span class="keyword">new</span> <span class="built_in">Date</span>()</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//广播向所有socket连接</span></span><br><span class="line">  socket.broadcast.emit(<span class="string">'userin'</span>,data);</span><br><span class="line">  <span class="comment">//给自己也发一份</span></span><br><span class="line">  socket.emit(<span class="string">'userin'</span>,data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="namespace-命名空间"><a href="#namespace-命名空间" class="headerlink" title="namespace 命名空间"></a>namespace 命名空间</h2><p>如果你想隔离作用域，或者划分业务模块，<strong>namespace</strong> 是个有效的法子。<strong>namespace</strong> 相当于建立新的频道，你可以在一个 <strong>socket.io</strong> 服务上面隔离不同的连接，事件和中间件。</p>
 <p>默认的连接也是有<strong>namespace</strong>的，那就是 <strong>/</strong>；<br>使用命名空间的方式一：直接在链接后面加子域名，这种其实用的还是同一个 sokcet 服务进程，可以看成是软隔离吧。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*** 客户端 **/</span></span><br><span class="line"><span class="keyword">import</span> io <span class="keyword">from</span> <span class="string">'socket.io-client'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//默认的namespace</span></span><br><span class="line"><span class="keyword">const</span> socket = io(<span class="string">'http://127.0.0.1:3001'</span>);</span><br><span class="line"><span class="comment">// mypath</span></span><br><span class="line"><span class="keyword">const</span> socket = io(<span class="string">'http://127.0.0.1:3001/mypath'</span>, &#123; <span class="attr">forceNew</span>: <span class="literal">true</span> &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*** 服务端 **/</span></span><br><span class="line"><span class="comment">//默认的namespace</span></span><br><span class="line">io.on(<span class="string">'connection'</span>, socket =&gt; &#123;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// mypath</span></span><br><span class="line">io.of(<span class="string">'/mypath'</span>).on(<span class="string">'connection'</span>, socket =&gt; &#123;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>使用命名空间的方式二： path 参数，这种就是实打实的重新起了一个 socket 服务了。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*** 客户端 **/</span></span><br><span class="line"><span class="keyword">const</span> socket = io(<span class="string">'http://localhost'</span>, &#123;</span><br><span class="line">  path: <span class="string">'/mypath'</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*** 服务端 **/</span></span><br><span class="line"><span class="comment">// 另外重新起socket服务</span></span><br><span class="line"><span class="keyword">const</span> io = <span class="built_in">require</span>(<span class="string">'socket.io'</span>)(&#123;</span><br><span class="line">  path: <span class="string">'/mypath'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="middleware-中间件"><a href="#middleware-中间件" class="headerlink" title="middleware 中间件"></a>middleware 中间件</h2><p><strong>socket.io</strong> 的中间件 和 kao2 的非常相似，这意味着我们可以在变动很小的情况下，将koa2的中间件改造为 <strong>socket.io</strong> 所用。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> mypath = io.of(<span class="string">'/mypath'</span>).on(<span class="string">'connection'</span>, socket =&gt; &#123;</span><br><span class="line">    socket.on(<span class="string">'message'</span>, data =&gt; &#123;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//中间件</span></span><br><span class="line"><span class="keyword">const</span> auth = <span class="function">(<span class="params">socket, next</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> data = socket.request;</span><br><span class="line">  <span class="keyword">if</span>(!verify(data))&#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'not verify'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  next();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// mypath 这个 namespace 注册中间件</span></span><br><span class="line">mypath.use(auth);</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="rooms"><a href="#rooms" class="headerlink" title="rooms"></a>rooms</h2><p>每一个socket连接都会有一个独一无二的标志，那就是 socket.id，我们就是通过id来区分不同连接的。除此之外，socket.id 本身也是房间 <strong>room</strong> 的标志，通俗讲，每个socket 连接自身都拥有一间房 <strong>room</strong>。那么我们就可以给这个 <strong>room</strong> 发送消息，还有如果你加入了房间，就能接受到房间里的广播信息。当然你可以自定义 <strong>room</strong> ，让socket连接加入或离开。还有如果 socket 断开连接，也就是 disconnect 后，它会被自动移出room。</p>
 <p>而这就是实现 <em>单独聊天</em> 和 <em>群组聊天</em> 的基础，来看一下对应的api。</p>
 <ul>
@@ -183,52 +189,54 @@ var _hmt = _hmt || [];
 <li><strong>socket.to(room)</strong>： 给房间发送消息</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 自定义room</span></span><br><span class="line">io.on(<span class="string">'connection'</span>, socket =&gt;&#123;    </span><br><span class="line">  socket.join(<span class="string">'some room'</span>)); <span class="comment">// 加入房间</span></span><br><span class="line">  socket.leave(<span class="string">'some room'</span>); <span class="comment">// 离开房间</span></span><br><span class="line">&#125;); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 向房间里的所有客户端发送消息</span></span><br><span class="line">io.to(<span class="string">'some room'</span>).emit(<span class="string">'some event'</span>); </span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认房间（每一个id一个room）</span></span><br><span class="line">socket.on(<span class="string">'say to someone'</span>, (id, msg) =&gt; &#123;    </span><br><span class="line">	socket.broadcast.to(id).emit(<span class="string">'my message'</span>, msg); </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>相信有了以上介绍的基础知识，再加上官网对应的文档，要开发聊天室或者其他 实时通信 的项目，是一件易如反掌的事情</p>
 <p><em><a href="https://socket.io/" target="_blank" rel="noopener">socket.io官网</a></em> 里面有对 api 非常详细的讲解和用例。</p>
 </div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2019/03/29/socketio/" data-desc="这段时间学习了socket.io，用它写了小项目，在此总结下它的基本使用方式和一些要点。soc..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/socket-io/">socket.io</a>
+						
+					
 				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a href="/tags/socket-io/">socket.io</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2019/03/29/socketio/" data-desc="这段时间学习了socket.io，用它写了小项目，在此总结下它的基本使用方式和一些要点。soc..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2019/04/08/fullstack/" class="prev post-prev">&larr; koa+mysql+vue+soc...</a>
+        <a href="/2019/04/08/fullstack/" class="prev post-prev"> <i class="icon-leftarrow"></i> koa+mysql+vue+soc...</a>
       
 
       
-      <a href="/2019/02/04/reacthooks/" class="next post-next">基于Webpack 4 和 Rea... &rarr;</a>
+        <a href="/2019/02/04/reacthooks/" class="next post-next"> 基于Webpack 4 和 Rea... <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -236,13 +244,13 @@ var _hmt = _hmt || [];
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -251,10 +259,10 @@ var _hmt = _hmt || [];
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -268,7 +276,7 @@ var _hmt = _hmt || [];
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -285,7 +293,6 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>

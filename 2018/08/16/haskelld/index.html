@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="Haskell学习-monad - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>Haskell学习-monad - Jeff's world</title>
+  <title >Haskell学习-monad - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="Haskell学习-monad - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,32 +121,36 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-9d5a381abe556316.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner3.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">Haskell学习-monad</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2018/08/16 09:29:00</time>
+    		<time><i class="icon-calendar"></i> 2018/08/16 09:29:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
     	</div>
-    	<!-- <p><p>什么是MonadHaskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的…</p>
+    	<!-- <p><p>什么是MonadHaskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- 原文地址：[Haskell学习-monad](https://edwardzhong.github.io/2018/08/16/haskelld/) -->
-<h2 id="什么是Monad"><a href="#什么是Monad" class="headerlink" title="什么是Monad"></a>什么是Monad</h2><p>Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 <strong>Monad</strong> 就是 Haskell 给出的解决方案。但<strong>Monad</strong> 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 <strong>Maybe</strong> 和 <strong>[]</strong> 都是 <strong>Monad</strong>。Haskell 中漂亮的错误处理方式， <strong>do</strong> 表示法和灵活的列表推导式 (<strong>list comprehension</strong>) 都算是 <strong>Monad</strong> 的贡献。<br><a id="more"></a><br><strong>Monad</strong> 基本上是一种加强版的 <strong>Applicative Functor</strong>，正如 <strong>Applicative Functor</strong> 是 <strong>Functor</strong> 的加强版一样。所以在充分理解 <strong>Applicative Functor</strong> 的基础上，过渡到 <strong>Monad</strong> 其实是非常平滑的。<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Monad的定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Monad</span> m <span class="keyword">where</span></span></span><br><span class="line">	return :: a -&gt; m a</span><br><span class="line">	(&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b</span><br><span class="line">	(&gt;&gt;) :: m a -&gt; m b -&gt; m b</span><br><span class="line">	x &gt;&gt; y = x &gt;&gt;= \_ -&gt; y</span><br><span class="line">	fail :: <span class="type">String</span> -&gt; m a</span><br><span class="line">	fail msg = error msg</span><br></pre></td></tr></table></figure></p>
+    		<div class="post-content"><!-- 原文地址：[Haskell学习-monad](https://edwardzhong.github.io/2018/08/16/haskelld/) -->
+
+<h2 id="什么是Monad"><a href="#什么是Monad" class="headerlink" title="什么是Monad"></a>什么是Monad</h2><p>Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 <strong>Monad</strong> 就是 Haskell 给出的解决方案。但<strong>Monad</strong> 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 <strong>Maybe</strong> 和 <strong>[]</strong> 都是 <strong>Monad</strong>。Haskell 中漂亮的错误处理方式， <strong>do</strong> 表示法和灵活的列表推导式 (<strong>list comprehension</strong>) 都算是 <strong>Monad</strong> 的贡献。</p>
+<a id="more"></a>
+<p><strong>Monad</strong> 基本上是一种加强版的 <strong>Applicative Functor</strong>，正如 <strong>Applicative Functor</strong> 是 <strong>Functor</strong> 的加强版一样。所以在充分理解 <strong>Applicative Functor</strong> 的基础上，过渡到 <strong>Monad</strong> 其实是非常平滑的。</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Monad的定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Monad</span> m <span class="keyword">where</span></span></span><br><span class="line">	return :: a -&gt; m a</span><br><span class="line">	(&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b</span><br><span class="line">	(&gt;&gt;) :: m a -&gt; m b -&gt; m b</span><br><span class="line">	x &gt;&gt; y = x &gt;&gt;= \_ -&gt; y</span><br><span class="line">	fail :: <span class="type">String</span> -&gt; m a</span><br><span class="line">	fail msg = error msg</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><strong>return</strong> 跟其他语言中的 <strong>return</strong> 是完全不一样的，它是一个把普通值包进一个 context 里面的函数，并不是结束函数执行的关键字。其实等价于Applicative中的 <strong>pure</strong>。</li>
 <li><strong>&gt;&gt;</strong> 忽略前面表达式的返回值，直接执行当前表达式。</li>
@@ -163,14 +160,19 @@ var _hmt = _hmt || [];
 <h2 id="Monad-的原理"><a href="#Monad-的原理" class="headerlink" title="Monad 的原理"></a>Monad 的原理</h2><p>函数之间要协作，就必须以各种形式交互连接。但如何隔离纯函数与副作用函数，同时又能让两类函数相互复用呢？</p>
 <p>以 IO 操作为例子分析，为了充分隔离纯函数与 IO 函数，Haskell 中不能实现 <strong>IO Char -&gt; Char</strong> 这样一种输入是 IO 类型返回值却是普通类型的函数。否则副作用函数就能很容易变身为纯函数了。事实上一旦参数中有 IO，返回值必有 IO，这就保证了充分隔离。</p>
 <p>那如何让纯函数与 IO 函数相互复用呢？这就要靠 IO Monad 中定义的 <strong>return</strong> 和 <strong>&gt;&gt;=</strong> 这两个函数了。<strong>return</strong> （在 Haskell 中不是关键字，只是一个函数名）的作用是将某个类型为 <strong>A</strong> 的值 <strong>a</strong> 提升（装箱）为类型为 <strong>IO A</strong> 的值 <strong>Char -&gt; IO Char</strong> 。有了这个函数后，纯函数就可以通过 <strong>return</strong> 变成返回值为 IO 带副作用的函数了。</p>
-<p>有了提升而没有下降操作，怎么复合 <strong>putChar :: Char -&gt; IO()</strong> 与 <strong>getChar :: IO Char</strong> 呢。 getChar 从 IO 读取一个字符， putChar 把字符写入 IO。但 <strong>getChar</strong> 返回的是 <strong>IO Char</strong> 类型，而 <strong>putChar</strong> 需要的是普通的 <strong>Char</strong> 类型，两者不匹配怎么办？ <strong>&gt;&gt;=</strong> 函数出马了！ <strong>&gt;&gt;=</strong> 的类型是<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="type">IO</span> a -&gt; (a -&gt; <span class="type">IO</span> b) -&gt; <span class="type">IO</span> b</span><br></pre></td></tr></table></figure></p>
-<p>这样 <strong>&gt;&gt;=</strong> 就可以连接 <strong>getChar</strong> 与 <strong>putChar</strong> ，把输入写到输出中<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">getChar</span> &gt;&gt;= putChar</span><br></pre></td></tr></table></figure></p>
+<p>有了提升而没有下降操作，怎么复合 <strong>putChar :: Char -&gt; IO()</strong> 与 <strong>getChar :: IO Char</strong> 呢。 getChar 从 IO 读取一个字符， putChar 把字符写入 IO。但 <strong>getChar</strong> 返回的是 <strong>IO Char</strong> 类型，而 <strong>putChar</strong> 需要的是普通的 <strong>Char</strong> 类型，两者不匹配怎么办？ <strong>&gt;&gt;=</strong> 函数出马了！ <strong>&gt;&gt;=</strong> 的类型是</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="type">IO</span> a -&gt; (a -&gt; <span class="type">IO</span> b) -&gt; <span class="type">IO</span> b</span><br></pre></td></tr></table></figure>
+<p>这样 <strong>&gt;&gt;=</strong> 就可以连接 <strong>getChar</strong> 与 <strong>putChar</strong> ，把输入写到输出中</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">getChar</span> &gt;&gt;= putChar</span><br></pre></td></tr></table></figure>
 <p>可以看到 <strong>&gt;&gt;=</strong> 操作实际上是类型下降（或拆箱）操作，同时执行下降操作的函数返回值也必须是 IO 类型。这样既充分隔离纯函数与副作用函数，又能让函数相互复用。通过 <strong>return</strong> 和 <strong>&gt;&gt;=</strong> 两个平行世界 (范畴) 就有了可控的交流通道。</p>
 <h2 id="do-表示法"><a href="#do-表示法" class="headerlink" title="do 表示法"></a>do 表示法</h2><p>Haskell的 do 表示法实际上是Monad的语法糖：它给我们提供了一种不使用 (<strong>&gt;&gt;=</strong>) 和匿名函数来写monadic代码的方式。去除do语法糖的过程就是把它转换为 (<strong>&gt;&gt;=</strong>) 和匿名函数。</p>
 <p>do 表示法可以使用分号 <strong>;</strong> 和大括号 <strong>{ }</strong>  将语句分块；但一般会使用一个表达式一行的方式，不同的作用域用不同的缩进区分。</p>
 <p>我们还是以IO 为例子，接受两次的键盘输入，然后将两次输入的字符串合并成一个字符串，最后屏幕打印输出。 <strong>&gt;&gt;=</strong> 会接受前面表达式的值；<strong>&gt;&gt;</strong> 则会忽略前面表达式的值；这里使用 <strong>return</strong> 实际它返回的仍然是IO String，因为Haskell会自动类型推导得出。monadic 的表达式代码如下：</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">(++) &lt;$&gt; getLine &lt;*&gt; getLine &gt;&gt;= print &gt;&gt; return <span class="string">"over"</span></span><br><span class="line"><span class="number">111</span></span><br><span class="line"><span class="number">222</span></span><br><span class="line">&gt; <span class="string">"111222"</span></span><br><span class="line">&gt; <span class="string">"over"</span></span><br></pre></td></tr></table></figure>
-<p>使用 do改写，明显更加清晰，和我们熟悉的命令式语言风格差不多。<br><strong>&lt;-</strong> 表示从monadic value中取出普通值，可以看成是拆开盒子取出所需要的值。<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">foo</span> :: <span class="type">IO</span> <span class="type">String</span>  </span><br><span class="line"><span class="title">foo</span> = <span class="keyword">do</span>  </span><br><span class="line">    x &lt;- getLine</span><br><span class="line">    y &lt;- getLine</span><br><span class="line">    print (x ++ y)</span><br><span class="line">    return <span class="string">"over"</span></span><br></pre></td></tr></table></figure></p>
+
+<p>使用 do改写，明显更加清晰，和我们熟悉的命令式语言风格差不多。<br><strong>&lt;-</strong> 表示从monadic value中取出普通值，可以看成是拆开盒子取出所需要的值。</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">foo</span> :: <span class="type">IO</span> <span class="type">String</span>  </span><br><span class="line"><span class="title">foo</span> = <span class="keyword">do</span>  </span><br><span class="line">    x &lt;- getLine</span><br><span class="line">    y &lt;- getLine</span><br><span class="line">    print (x ++ y)</span><br><span class="line">    return <span class="string">"over"</span></span><br></pre></td></tr></table></figure>
+
 <p>do语法对应模式</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">do</span> &#123;e&#125;             -&gt; e</span><br><span class="line"><span class="title">do</span> &#123;e; es&#125;         -&gt; e &gt;&gt; <span class="keyword">do</span> &#123;es&#125;</span><br><span class="line"><span class="title">do</span> &#123;<span class="keyword">let</span> decls; es&#125; -&gt; <span class="keyword">let</span> decls <span class="keyword">in</span> <span class="keyword">do</span> &#123;es&#125;</span><br><span class="line"><span class="title">do</span> &#123;p &lt;- e; es&#125;    -&gt; e &gt;&gt;= \p -&gt; es</span><br></pre></td></tr></table></figure>
 <h2 id="Monad-类型"><a href="#Monad-类型" class="headerlink" title="Monad 类型"></a>Monad 类型</h2><p>来看一下几个默认的Monad类型，它们都必须实现 <strong>return</strong>,<strong>&gt;&gt;=</strong>,<strong>fail</strong>这几个函数。</p>
@@ -180,113 +182,117 @@ var _hmt = _hmt || [];
 <p> 使用 do 表示法写成这样：</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">foo</span> :: <span class="type">Maybe</span> <span class="type">String</span></span><br><span class="line"><span class="title">foo</span> = <span class="keyword">do</span></span><br><span class="line">    x &lt;- <span class="type">Just</span> <span class="number">3</span></span><br><span class="line">    y &lt;- <span class="type">Just</span> <span class="string">"!"</span></span><br><span class="line">    <span class="type">Just</span> (show x ++ y)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>List</strong><br><strong>&gt;&gt;=</strong> 基本上就是接受一个有 context 的值，把他喂进一个只接受普通值的函数，并回传一个具有 context 的值。<strong>[]</strong> 其实等价于 Nothing。</p>
-<p> 当我们用 <strong>&gt;&gt;=</strong> 把一个 list 喂给这个函数，lambda 会映射每个元素，会计算出一串包含一堆 list 的 list，最后再把这些 list 压扁，得到一层的 list。这就是我们得到 列表 <strong>list</strong> 处理 Mondic value 的过程。</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">--list 的 Monad instance</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Monad</span> [] <span class="keyword">where</span></span></span><br><span class="line">    return x = [x]</span><br><span class="line">    xs &gt;&gt;= f = concat (map f xs)</span><br><span class="line">    fail _ = []</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line">[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] &gt;&gt;= \x -&gt; [x,-x]</span><br><span class="line">&gt; [<span class="number">3</span>,<span class="number">-3</span>,<span class="number">4</span>,<span class="number">-4</span>,<span class="number">5</span>,<span class="number">-5</span>]</span><br><span class="line"></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] &gt;&gt;= \x -&gt; return (-x)</span><br><span class="line">&gt; [<span class="number">-1</span>,<span class="number">-2</span>,<span class="number">-3</span>]</span><br></pre></td></tr></table></figure>
+<li><p><strong>List</strong></p>
 </li>
 </ol>
-<ul>
+<p><strong>&gt;&gt;=</strong> 基本上就是接受一个有 context 的值，把他喂进一个只接受普通值的函数，并回传一个具有 context 的值。<strong>[]</strong> 其实等价于 Nothing。</p>
+<pre><code>当我们用 **&gt;&gt;=** 把一个 list 喂给这个函数，lambda 会映射每个元素，会计算出一串包含一堆 list 的 list，最后再把这些 list 压扁，得到一层的 list。这就是我们得到 列表 **list** 处理 Mondic value 的过程。
+
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">--list 的 Monad instance</span></span><br><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Monad</span> [] <span class="keyword">where</span></span></span><br><span class="line">    return x = [x]</span><br><span class="line">    xs &gt;&gt;= f = concat (map f xs)</span><br><span class="line">    fail _ = []</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 实例</span></span><br><span class="line">[<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] &gt;&gt;= \x -&gt; [x,-x]</span><br><span class="line">&gt; [<span class="number">3</span>,<span class="number">-3</span>,<span class="number">4</span>,<span class="number">-4</span>,<span class="number">5</span>,<span class="number">-5</span>]</span><br><span class="line"></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] &gt;&gt;= \x -&gt; return (-x)</span><br><span class="line">&gt; [<span class="number">-1</span>,<span class="number">-2</span>,<span class="number">-3</span>]</span><br></pre></td></tr></table></figure></code></pre><ul>
 <li><p><strong>list comprehension</strong> 也不过是 <strong>Monad</strong> 的语法糖</p>
   <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>] &gt;&gt;= \n -&gt; ['a','b'] &gt;&gt;= \ch -&gt; return (n,ch) <span class="comment">-- Monad</span></span><br><span class="line">[ (n,ch) | n &lt;- [<span class="number">1</span>,<span class="number">2</span>], ch &lt;- ['a','b'] ] <span class="comment">-- list comprehension</span></span><br><span class="line">&gt; [(<span class="number">1</span>,'a'),(<span class="number">1</span>,'b'),(<span class="number">2</span>,'a'),(<span class="number">2</span>,'b')]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>list comprehension</strong> 的过滤基本上跟 guard 是一致的。</p>
   <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">[<span class="number">1.</span><span class="number">.50</span>] &gt;&gt;= (\x -&gt; guard ('<span class="number">7</span>' `elem` show x) &gt;&gt; return x)</span><br><span class="line">&gt; [<span class="number">7</span>,<span class="number">17</span>,<span class="number">27</span>,<span class="number">37</span>,<span class="number">47</span>]</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<ul>
-<li>用 <strong>do</strong> 改写, 如果不写最后一行 <strong>return x</strong>，那整个 list 就会是包含一堆空 <strong>tuple</strong> 的 list。  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">sevensOnly</span> :: [<span class="type">Int</span>]</span><br><span class="line"><span class="title">sevensOnly</span> = <span class="keyword">do</span></span><br><span class="line">    x &lt;- [<span class="number">1.</span><span class="number">.50</span>]</span><br><span class="line">    guard ('<span class="number">7</span>' `elem` show x)</span><br><span class="line">    return x</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 对应的 list comprehension</span></span><br><span class="line">[ x | x &lt;- [<span class="number">1.</span><span class="number">.50</span>], '<span class="number">7</span>' `elem` show x ]</span><br><span class="line">&gt; [<span class="number">7</span>,<span class="number">17</span>,<span class="number">27</span>,<span class="number">37</span>,<span class="number">47</span>]</span><br></pre></td></tr></table></figure>
-</li>
+<li><p>用 <strong>do</strong> 改写, 如果不写最后一行 <strong>return x</strong>，那整个 list 就会是包含一堆空 <strong>tuple</strong> 的 list。</p>
+  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">sevensOnly</span> :: [<span class="type">Int</span>]</span><br><span class="line"><span class="title">sevensOnly</span> = <span class="keyword">do</span></span><br><span class="line">    x &lt;- [<span class="number">1.</span><span class="number">.50</span>]</span><br><span class="line">    guard ('<span class="number">7</span>' `elem` show x)</span><br><span class="line">    return x</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 对应的 list comprehension</span></span><br><span class="line">[ x | x &lt;- [<span class="number">1.</span><span class="number">.50</span>], '<span class="number">7</span>' `elem` show x ]</span><br><span class="line">&gt; [<span class="number">7</span>,<span class="number">17</span>,<span class="number">27</span>,<span class="number">37</span>,<span class="number">47</span>]</span><br></pre></td></tr></table></figure></li>
 </ul>
 <ol start="3">
 <li><p><strong>Either</strong><br>在 <strong>Control.Monad.Error</strong> 里面有 <strong>Error</strong>的 <strong>Monad instance</strong>。</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">instance</span> (<span class="type">Error</span> <span class="title">e</span>) =&gt; <span class="type">Monad</span> (<span class="type">Either</span> <span class="title">e</span>) <span class="keyword">where</span></span></span><br><span class="line">	return x = <span class="type">Right</span> x</span><br><span class="line">	<span class="type">Right</span> x &gt;&gt;= f = f x</span><br><span class="line">	<span class="type">Left</span> err &gt;&gt;= f = <span class="type">Left</span> err</span><br><span class="line">	fail msg = <span class="type">Left</span> (strMsg msg)</span><br><span class="line"></span><br><span class="line"><span class="type">Right</span> <span class="number">3</span> &gt;&gt;= \x -&gt; return (x + <span class="number">100</span>) :: <span class="type">Either</span> <span class="type">String</span> <span class="type">Int</span></span><br><span class="line">&gt; <span class="type">Right</span> <span class="number">103</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h2 id="Monad-规则"><a href="#Monad-规则" class="headerlink" title="Monad 规则"></a>Monad 规则</h2><ol>
 <li><p><strong>return a &gt;&gt;= f ==  f a</strong><br>== 左边的表达式等价于右边的表达式。如果仅仅是把一个值包装到monad里面然后使用 (<strong>&gt;&gt;=</strong>) 调用的话，我们就没有必要使用 <strong>return</strong> ；这条规则对于我们的代码风格有着实际的指导意义：我们不应该写一些不必要的代码；这条规则保证了简短的写法和冗余的写法是等价的。</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">return</span> <span class="number">3</span> &gt;&gt;= (\x -&gt; <span class="type">Just</span> (x+<span class="number">100000</span>)) <span class="comment">-- 和直接函数调用没有区别</span></span><br></pre></td></tr></table></figure>
-</li>
+ <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">return</span> <span class="number">3</span> &gt;&gt;= (\x -&gt; <span class="type">Just</span> (x+<span class="number">100000</span>)) <span class="comment">-- 和直接函数调用没有区别</span></span><br></pre></td></tr></table></figure></li>
 <li><p><strong>m &gt;&gt;= return == m</strong><br>这一条规则对风格也有好处：如果在一系列的action块里面，如果最后一句就是需要返回的正确结果，那么就不需要使用 return 了；和第一条规则一样，这条规律也能帮助我们简化代码。</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="type">Just</span> <span class="string">"move on up"</span> &gt;&gt;= return <span class="comment">-- 可以不需要 return</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>(m &gt;&gt;= f) &gt;&gt;= g  == m &gt;&gt;= (\x -&gt; f x &gt;&gt;= g)</strong><br>当我们用 &gt;&gt;= 把一串 monadic function 串在一起，他们的先后顺序不应该影响结果。<br>而这不就是结合律吗？我们可以把那些子action提取出来组合成一个新action。<br> (<strong>&lt;=&lt;</strong>) 可以用来合成两个 monadic functions, 类似于普通函数结合(<strong>.</strong>)，    而(<strong>&gt;=&gt;</strong>) 表示结合顺序相反。 </p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">(&lt;=&lt;) :: (<span class="type">Monad</span> m) =&gt; (b -&gt; m c) -&gt; (a -&gt; m b) -&gt; (a -&gt; m c)</span><br><span class="line"><span class="title">f</span> &lt;=&lt; g = (\x -&gt; g x &gt;&gt;= f)</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 普通函数结合(.)</span></span><br><span class="line"><span class="title">let</span> f = (+<span class="number">1</span>) . (*<span class="number">100</span>)</span><br><span class="line"><span class="title">f</span> <span class="number">4</span></span><br><span class="line">&gt; <span class="number">401</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 合成monadic functions (&lt;=&lt;)</span></span><br><span class="line"><span class="title">let</span> g = (\x -&gt; return (x+<span class="number">1</span>)) &lt;=&lt; (\x -&gt; return (x*<span class="number">100</span>))</span><br><span class="line"><span class="type">Just</span> <span class="number">4</span> &gt;&gt;= g</span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">401</span></span><br><span class="line"></span><br><span class="line"><span class="comment">-- 也可以将 monadic 函数用foldr,id 和(.)合成 </span></span><br><span class="line"><span class="title">let</span> f = foldr (.) id [(+<span class="number">1</span>),(*<span class="number">100</span>),(+<span class="number">1</span>)]</span><br><span class="line"><span class="title">f</span> <span class="number">1</span></span><br><span class="line">&gt; <span class="number">201</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
 <h2 id="Monad-的-gt-r-形态"><a href="#Monad-的-gt-r-形态" class="headerlink" title="Monad 的 (-&gt;) r 形态"></a>Monad 的 (-&gt;) r 形态</h2><p><strong>(-&gt;) r</strong> 不只是一个 <strong>functor</strong> 和 <strong>applicative functor</strong>，同时也是一个 <strong>monad</strong>。</p>
 <p>每一个 <strong>monad</strong> 都是个 <strong>applicative functor</strong>，而每一个 <strong>applicative functor</strong>也都是一个 <strong>functor</strong>。尽管 <strong>moand</strong> 有 <strong>functor</strong> 跟 <strong>applicative functor</strong> 的性质，但他们不见得有 <strong>Functor</strong> 跟 <strong>Applicative</strong> 的 instance 定义。</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">instance</span> <span class="type">Monad</span> ((-&gt;) r) <span class="keyword">where</span></span></span><br><span class="line">    return x = \_ -&gt; x</span><br><span class="line">    h &gt;&gt;= f = \w -&gt; f (h w) w</span><br></pre></td></tr></table></figure>
-<h2 id="Monad-辅助函数"><a href="#Monad-辅助函数" class="headerlink" title="Monad 辅助函数"></a>Monad 辅助函数</h2><p>带下划线函数等价于不带下划线的函数, 只是不返回值<br><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">&gt;&gt;= :: m a -&gt; (a -&gt; m b) -&gt; m b</span><br><span class="line">=&lt;&lt; :: (a -&gt; m b) -&gt; m a -&gt; m b</span><br><span class="line"><span class="title">form</span> :: t a -&gt; (a -&gt; m b) -&gt; m (t b)</span><br><span class="line"><span class="title">form_</span> :: t a -&gt; (a -&gt; m b) -&gt; m ()</span><br><span class="line"><span class="title">mapM</span> :: (a -&gt; m b) -&gt; t a -&gt; m (t b)</span><br><span class="line"><span class="title">mapM_</span> :: (a -&gt; m b) -&gt; t a -&gt; m ()</span><br><span class="line"><span class="title">filterM</span> :: (a -&gt; m <span class="type">Bool</span>) -&gt; [a] -&gt; m [a]</span><br><span class="line"><span class="title">foldM</span> :: (b -&gt; a -&gt; m b) -&gt; b -&gt; t a -&gt; m b</span><br><span class="line"><span class="title">sequence</span> :: t (m a) -&gt; m (t a)</span><br><span class="line"><span class="title">sequence_</span> :: t (m a) -&gt; m ()</span><br><span class="line"><span class="title">liftM</span> :: (a1 -&gt; r) -&gt; m a1 -&gt; m r</span><br><span class="line"><span class="title">when</span> :: <span class="type">Bool</span> -&gt; f () -&gt; f ()</span><br><span class="line"><span class="title">join</span> :: m (m a) -&gt; m a</span><br></pre></td></tr></table></figure></p>
+
+<h2 id="Monad-辅助函数"><a href="#Monad-辅助函数" class="headerlink" title="Monad 辅助函数"></a>Monad 辅助函数</h2><p>带下划线函数等价于不带下划线的函数, 只是不返回值</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">&gt;&gt;= :: m a -&gt; (a -&gt; m b) -&gt; m b</span><br><span class="line">=&lt;&lt; :: (a -&gt; m b) -&gt; m a -&gt; m b</span><br><span class="line"><span class="title">form</span> :: t a -&gt; (a -&gt; m b) -&gt; m (t b)</span><br><span class="line"><span class="title">form_</span> :: t a -&gt; (a -&gt; m b) -&gt; m ()</span><br><span class="line"><span class="title">mapM</span> :: (a -&gt; m b) -&gt; t a -&gt; m (t b)</span><br><span class="line"><span class="title">mapM_</span> :: (a -&gt; m b) -&gt; t a -&gt; m ()</span><br><span class="line"><span class="title">filterM</span> :: (a -&gt; m <span class="type">Bool</span>) -&gt; [a] -&gt; m [a]</span><br><span class="line"><span class="title">foldM</span> :: (b -&gt; a -&gt; m b) -&gt; b -&gt; t a -&gt; m b</span><br><span class="line"><span class="title">sequence</span> :: t (m a) -&gt; m (t a)</span><br><span class="line"><span class="title">sequence_</span> :: t (m a) -&gt; m ()</span><br><span class="line"><span class="title">liftM</span> :: (a1 -&gt; r) -&gt; m a1 -&gt; m r</span><br><span class="line"><span class="title">when</span> :: <span class="type">Bool</span> -&gt; f () -&gt; f ()</span><br><span class="line"><span class="title">join</span> :: m (m a) -&gt; m a</span><br></pre></td></tr></table></figure>
+
 <p>其中在 IO 中经常用到的一些函数</p>
 <ol>
-<li><p><strong>sequence</strong><br><strong>sequence</strong> 接受一串 I/O action，并回传一个会依序执行他们的 I/O action。运算的结果是包在一个 I/O action 的一连串 I/O action 的运算结果。</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">main</span> = <span class="keyword">do</span></span><br><span class="line">    a &lt;- getLine</span><br><span class="line">    b &lt;- getLine</span><br><span class="line">    c &lt;- getLine</span><br><span class="line">    print [a,b,c]</span><br></pre></td></tr></table></figure>
-<p> 其实可以写成</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">main</span> = <span class="keyword">do</span></span><br><span class="line">    rs &lt;- sequence [getLine, getLine, getLine]</span><br><span class="line">    print rs</span><br></pre></td></tr></table></figure>
-<p> 一个常见的使用方式是我们将 <strong>print</strong> 或 <strong>putStrLn</strong> 之类的函数 map 到串列上。</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">sequence</span> (map print [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line">[(),(),(),(),()]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>mapM</strong> 跟 <strong>mapM_</strong><br>由于对一个串列 map 一个回传 I/O action 的函数，然后再 <strong>sequence</strong> 这个动作太常用了。所以函式库中提供了 <strong>mapM</strong> 跟 <strong>mapM_</strong>。<strong>mapM</strong> 接受一个函数跟一个串列，将对串列用函数 map 然后 sequence 结果。<strong>mapM_</strong> 也作同样的事，只是他把运算的结果丢掉而已。在我们不关心 I/O action 结果的情况下，<strong>mapM_</strong> 是最常被使用的。</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">mapM</span> print [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line">[(),(),()]</span><br><span class="line"></span><br><span class="line"><span class="title">mapM_</span> print [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
-<p> <strong>form</strong> 和 <strong>form_</strong> 与 <strong>mapM</strong> 和 <strong>mapM_</strong> 类似，不过只是把列表参数提前。</p>
-</li>
+<li><strong>sequence</strong></li>
+</ol>
+<p><strong>sequence</strong> 接受一串 I/O action，并回传一个会依序执行他们的 I/O action。运算的结果是包在一个 I/O action 的一连串 I/O action 的运算结果。<br>    <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">main</span> = <span class="keyword">do</span></span><br><span class="line">    a &lt;- getLine</span><br><span class="line">    b &lt;- getLine</span><br><span class="line">    c &lt;- getLine</span><br><span class="line">    print [a,b,c]</span><br></pre></td></tr></table></figure><br>    其实可以写成</p>
+<pre><code><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">main</span> = <span class="keyword">do</span></span><br><span class="line">    rs &lt;- sequence [getLine, getLine, getLine]</span><br><span class="line">    print rs</span><br></pre></td></tr></table></figure>
+
+一个常见的使用方式是我们将 **print** 或 **putStrLn** 之类的函数 map 到串列上。
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">sequence</span> (map print [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span></span><br><span class="line"><span class="number">5</span></span><br><span class="line">[(),(),(),(),()]</span><br></pre></td></tr></table></figure></code></pre><ol start="2">
+<li><strong>mapM</strong> 跟 <strong>mapM_</strong><br>由于对一个串列 map 一个回传 I/O action 的函数，然后再 <strong>sequence</strong> 这个动作太常用了。所以函式库中提供了 <strong>mapM</strong> 跟 <strong>mapM_</strong>。<strong>mapM</strong> 接受一个函数跟一个串列，将对串列用函数 map 然后 sequence 结果。<strong>mapM_</strong> 也作同样的事，只是他把运算的结果丢掉而已。在我们不关心 I/O action 结果的情况下，<strong>mapM_</strong> 是最常被使用的。 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">mapM</span> print [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br><span class="line">[(),(),()]</span><br><span class="line"></span><br><span class="line"><span class="title">mapM_</span> print [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="number">3</span></span><br></pre></td></tr></table></figure>
+ <strong>form</strong> 和 <strong>form_</strong> 与 <strong>mapM</strong> 和 <strong>mapM_</strong> 类似，不过只是把列表参数提前。</li>
 </ol>
 <p>还有一些是在 <strong>monad</strong> 中定义，且等价于 <strong>functor</strong> 或 <strong>applicative functor</strong> 中所具有的函数。</p>
 <ol>
-<li><p><strong>liftM</strong><br><strong>liftM</strong> 跟 <strong>fmap</strong> 等价, 也有 <strong>liftM3</strong>，<strong>liftM4</strong> 跟 <strong>liftM5</strong></p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">liftM</span> :: (<span class="type">Monad</span> m) =&gt; (a -&gt; b) -&gt; m a -&gt; m b</span><br><span class="line"><span class="title">liftM</span> f m = m &gt;&gt;= (\x -&gt; return (f x))</span><br><span class="line"></span><br><span class="line"><span class="title">liftM</span> (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>ap</strong><br><strong>ap</strong> 基本上就是 <strong>&lt;*&gt;</strong>，只是他限制在 Monad 上而不是 Applicative 上。</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">ap</span> :: (<span class="type">Monad</span> m) =&gt; m (a -&gt; b) -&gt; m a -&gt; m b</span><br><span class="line"><span class="title">ap</span> mf m = <span class="keyword">do</span></span><br><span class="line">    f &lt;- mf</span><br><span class="line">    x &lt;- m</span><br><span class="line">    return (f x)</span><br><span class="line"></span><br><span class="line"><span class="title">ap</span> [(*<span class="number">2</span>)] [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>join</strong><br><strong>m &gt;&gt;= f</strong> 永远等价于 <strong>join (fmap f m)</strong> 这性质非常有用</p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">join</span> :: (<span class="type">Monad</span> m) =&gt; m (m a) -&gt; m a</span><br><span class="line"></span><br><span class="line"><span class="title">join</span> (<span class="type">Just</span> (<span class="type">Just</span> <span class="number">9</span>))</span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">9</span></span><br><span class="line"></span><br><span class="line"><span class="title">join</span> [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]]  <span class="comment">-- 对于 list 而言 join 不过就是 concat</span></span><br><span class="line">&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br></pre></td></tr></table></figure>
-</li>
+<li><strong>liftM</strong></li>
+</ol>
+<p><strong>liftM</strong> 跟 <strong>fmap</strong> 等价, 也有 <strong>liftM3</strong>，<strong>liftM4</strong> 跟 <strong>liftM5</strong></p>
+<pre><code><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">liftM</span> :: (<span class="type">Monad</span> m) =&gt; (a -&gt; b) -&gt; m a -&gt; m b</span><br><span class="line"><span class="title">liftM</span> f m = m &gt;&gt;= (\x -&gt; return (f x))</span><br><span class="line"></span><br><span class="line"><span class="title">liftM</span> (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>]</span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure></code></pre><ol start="2">
+<li><strong>ap</strong></li>
+</ol>
+<p><strong>ap</strong> 基本上就是 <strong>&lt;*&gt;</strong>，只是他限制在 Monad 上而不是 Applicative 上。</p>
+<pre><code><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">ap</span> :: (<span class="type">Monad</span> m) =&gt; m (a -&gt; b) -&gt; m a -&gt; m b</span><br><span class="line"><span class="title">ap</span> mf m = <span class="keyword">do</span></span><br><span class="line">    f &lt;- mf</span><br><span class="line">    x &lt;- m</span><br><span class="line">    return (f x)</span><br><span class="line"></span><br><span class="line"><span class="title">ap</span> [(*<span class="number">2</span>)] [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br></pre></td></tr></table></figure></code></pre><ol start="3">
+<li><strong>join</strong></li>
+</ol>
+<p><strong>m &gt;&gt;= f</strong> 永远等价于 <strong>join (fmap f m)</strong> 这性质非常有用</p>
+<pre><code><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">join</span> :: (<span class="type">Monad</span> m) =&gt; m (m a) -&gt; m a</span><br><span class="line"></span><br><span class="line"><span class="title">join</span> (<span class="type">Just</span> (<span class="type">Just</span> <span class="number">9</span>))</span><br><span class="line">&gt; <span class="type">Just</span> <span class="number">9</span></span><br><span class="line"></span><br><span class="line"><span class="title">join</span> [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]]  <span class="comment">-- 对于 list 而言 join 不过就是 concat</span></span><br><span class="line">&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</span><br></pre></td></tr></table></figure></code></pre><ol start="4">
 <li><p><strong>filterM</strong></p>
 <p> <strong>filterM</strong>，除了能做 filter 的动作，同时还能保有 monadic context。</p>
  <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">filterM</span> :: (<span class="type">Monad</span> m) =&gt; (a -&gt; m <span class="type">Bool</span>) -&gt; [a] -&gt; m [a]</span><br><span class="line"></span><br><span class="line"><span class="title">filterM</span> (\x -&gt; return (x &gt; <span class="number">2</span>)) [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">&gt; [<span class="number">3</span>,<span class="number">4</span>]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>foldM</strong><br><strong>foldl</strong> 的 monadic 的版本叫做 <strong>foldM</strong></p>
- <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">foldM</span> :: (<span class="type">Monad</span> m) =&gt; (a -&gt; b -&gt; m a) -&gt; a -&gt; [b] -&gt; m a</span><br><span class="line"></span><br><span class="line"><span class="title">foldM</span> (\x y -&gt; return (x + y)) <span class="number">0</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&gt; <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<li><p><strong>foldM</strong></p>
 </li>
 </ol>
-</div>
+<p><strong>foldl</strong> 的 monadic 的版本叫做 <strong>foldM</strong></p>
+<pre><code><figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">foldM</span> :: (<span class="type">Monad</span> m) =&gt; (a -&gt; b -&gt; m a) -&gt; a -&gt; [b] -&gt; m a</span><br><span class="line"></span><br><span class="line"><span class="title">foldM</span> (\x y -&gt; return (x + y)) <span class="number">0</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">&gt; <span class="number">6</span></span><br></pre></td></tr></table></figure></code></pre></div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2018/08/16/haskelld/" data-desc="
-什么是MonadHaskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/haskell/">haskell</a>
+						
+					
 				
-                    
-                        <a href="/tags/haskell/">haskell</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2018/08/16/haskelld/" data-desc="
+
+什么是MonadHaskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2018/12/12/tetris/" class="prev post-prev">&larr; canvas实现俄罗斯方块</a>
+        <a href="/2018/12/12/tetris/" class="prev post-prev"> <i class="icon-leftarrow"></i> canvas实现俄罗斯方块</a>
       
 
       
-      <a href="/2018/08/15/haskellc/" class="next post-next">Haskell学习-functor &rarr;</a>
+        <a href="/2018/08/15/haskellc/" class="next post-next"> Haskell学习-functor <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -294,13 +300,13 @@ var _hmt = _hmt || [];
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -309,10 +315,10 @@ var _hmt = _hmt || [];
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -326,7 +332,7 @@ var _hmt = _hmt || [];
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -343,7 +349,6 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>

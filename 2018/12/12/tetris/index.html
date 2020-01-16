@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="canvas实现俄罗斯方块 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>canvas实现俄罗斯方块 - Jeff's world</title>
+  <title >canvas实现俄罗斯方块 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="canvas实现俄罗斯方块 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,43 +121,50 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-1bcbb19d24c33d03.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner10.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">canvas实现俄罗斯方块</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2018/12/12 21:35:00</time>
+    		<time><i class="icon-calendar"></i> 2018/12/12 21:35:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
     	</div>
-    	<!-- <p><p>好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：canvas俄罗斯方块。<br>原理详解看游戏最…</p>
+    	<!-- <p><p>好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：<em>canvas俄罗斯方块</em>。<br>原理详解看游…</p>
 </p> -->
     	
-    	<div class="post-content"><p>好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：<em><a href="https://edwardzhong.github.io/sites/demo/dist/tetris.html" target="_blank" rel="noopener">canvas俄罗斯方块</a></em>。</p>
+    		<div class="post-content"><p>好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：*<a href="https://edwardzhong.github.io/sites/demo/dist/tetris.html">canvas俄罗斯方块</a>*。</p>
 <h2 id="原理详解"><a href="#原理详解" class="headerlink" title="原理详解"></a>原理详解</h2><p>看游戏最终界面，可知需要实现以下关键功能：</p>
 <ol>
 <li>游戏面板，也就是12 * 20的方格，以及是否填充了方块信息；</li>
 <li>运动方块，方块需要实现移动，变形的功能。<br><img src="https://upload-images.jianshu.io/upload_images/127924-db822f51691a0904.jpg" alt="游戏界面"><a id="more"></a>
 <h4 id="界面的实现"><a href="#界面的实现" class="headerlink" title="界面的实现"></a>界面的实现</h4>整个面板就是以左上角（0,0）为原点的坐标系，右上角（12,0）左下角（0,20）右下角（12,20），每个点的坐标位置都可以确定。是否已经填充方块，我们可以将每个方格看成一个数组元素，0表示没有，1表示已经填充。12 * 20 的面板使用两层数组，即用20个长度为12的数组实现。<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> maps = [[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>], ...];</span><br></pre></td></tr></table></figure>
+
 </li>
 </ol>
-<p>画出面板的代码，用最基础的canvas的api就能实现<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//格子</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">12</span>;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">20</span>;j++)&#123;</span><br><span class="line">		ctx.fillRect(i*<span class="number">40</span>,j*<span class="number">40</span>,<span class="number">40</span>,<span class="number">40</span>);</span><br><span class="line">		ctx.strokeRect(i*<span class="number">40</span>,j*<span class="number">40</span>,<span class="number">40</span>,<span class="number">40</span>);</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">this</span>.maps[j][i]==<span class="number">1</span>)&#123;<span class="comment">//方格已经有填充内容</span></span><br><span class="line">			ctx.save();</span><br><span class="line">			ctx.lineWidth=<span class="number">4</span>;</span><br><span class="line">			ctx.fillStyle=<span class="string">'hsla(200,100%,50%,.5)'</span>;</span><br><span class="line">			ctx.strokeStyle=<span class="string">'hsla(200,100%,50%,.9)'</span>;</span><br><span class="line">			ctx.fillRect(i*<span class="number">40</span>,j*<span class="number">40</span>,<span class="number">40</span>,<span class="number">40</span>);</span><br><span class="line">			ctx.strokeRect(i*<span class="number">40</span>+<span class="number">2</span>,j*<span class="number">40</span>+<span class="number">2</span>,<span class="number">38</span>,<span class="number">38</span>);</span><br><span class="line">			ctx.restore();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//边框</span></span><br><span class="line">ctx.lineWidth=<span class="number">4</span>;</span><br><span class="line">ctx.strokeStyle=<span class="string">'hsla(0,100%,0%,.3)'</span>;</span><br><span class="line">ctx.moveTo(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">ctx.lineTo(<span class="number">0</span>,<span class="number">20</span>*<span class="number">40</span>);</span><br><span class="line">ctx.lineTo(<span class="number">12</span>*<span class="number">40</span>,<span class="number">20</span>*<span class="number">40</span>);</span><br><span class="line">ctx.lineTo(<span class="number">12</span>*<span class="number">40</span>,<span class="number">0</span>);</span><br><span class="line">ctx.stroke();</span><br><span class="line">ctx.restore();</span><br></pre></td></tr></table></figure></p>
+<p>画出面板的代码，用最基础的canvas的api就能实现</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//格子</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">12</span>;i++)&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> j=<span class="number">0</span>;j&lt;<span class="number">20</span>;j++)&#123;</span><br><span class="line">		ctx.fillRect(i*<span class="number">40</span>,j*<span class="number">40</span>,<span class="number">40</span>,<span class="number">40</span>);</span><br><span class="line">		ctx.strokeRect(i*<span class="number">40</span>,j*<span class="number">40</span>,<span class="number">40</span>,<span class="number">40</span>);</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">this</span>.maps[j][i]==<span class="number">1</span>)&#123;<span class="comment">//方格已经有填充内容</span></span><br><span class="line">			ctx.save();</span><br><span class="line">			ctx.lineWidth=<span class="number">4</span>;</span><br><span class="line">			ctx.fillStyle=<span class="string">'hsla(200,100%,50%,.5)'</span>;</span><br><span class="line">			ctx.strokeStyle=<span class="string">'hsla(200,100%,50%,.9)'</span>;</span><br><span class="line">			ctx.fillRect(i*<span class="number">40</span>,j*<span class="number">40</span>,<span class="number">40</span>,<span class="number">40</span>);</span><br><span class="line">			ctx.strokeRect(i*<span class="number">40</span>+<span class="number">2</span>,j*<span class="number">40</span>+<span class="number">2</span>,<span class="number">38</span>,<span class="number">38</span>);</span><br><span class="line">			ctx.restore();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//边框</span></span><br><span class="line">ctx.lineWidth=<span class="number">4</span>;</span><br><span class="line">ctx.strokeStyle=<span class="string">'hsla(0,100%,0%,.3)'</span>;</span><br><span class="line">ctx.moveTo(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">ctx.lineTo(<span class="number">0</span>,<span class="number">20</span>*<span class="number">40</span>);</span><br><span class="line">ctx.lineTo(<span class="number">12</span>*<span class="number">40</span>,<span class="number">20</span>*<span class="number">40</span>);</span><br><span class="line">ctx.lineTo(<span class="number">12</span>*<span class="number">40</span>,<span class="number">0</span>);</span><br><span class="line">ctx.stroke();</span><br><span class="line">ctx.restore();</span><br></pre></td></tr></table></figure>
 <h4 id="方块的实现"><a href="#方块的实现" class="headerlink" title="方块的实现"></a>方块的实现</h4><p>游戏中用到以下 7 种图形<br><img src="https://upload-images.jianshu.io/upload_images/127924-4c66c24062419509.jpg" alt="方块"></p>
-<p>结合上面介绍的坐标系，数组 [x1, y1, x2, y2, x3, y3, x4, y4] 就是上面图形中4个点坐标的数据表现形式，7 种图形的坐标分别如下：<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Arr = [[<span class="number">4</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">0</span>],[<span class="number">4</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">0</span>],</span><br><span class="line">[<span class="number">5</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">7</span>,<span class="number">0</span>],[<span class="number">5</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>]];</span><br></pre></td></tr></table></figure></p>
-<p>方块的移动，遍历整个数组，加上位移向量就行，非常简单<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(m)&#123;</span><br><span class="line">		<span class="keyword">this</span>.m = <span class="built_in">Object</span>.assign([],m);</span><br><span class="line">	&#125;</span><br><span class="line">	move(x,y)&#123; <span class="comment">// 位移</span></span><br><span class="line">		<span class="keyword">var</span> m = <span class="keyword">this</span>.m,</span><br><span class="line">			l = m.length;</span><br><span class="line">		y = y||<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">			m[i]+=x;</span><br><span class="line">			m[i+<span class="number">1</span>]+=y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
-<p>方块的旋转，俄罗斯方块里面方块除了左右和上下运动，还会旋转，不是吗？稍微思考下就知道，这不过就是矩阵变换而已，也就是每次图形绕中心点旋转90度。我这里用数组第三个点作为图形变换的中心点，当然这样处理不够完善。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">	transform()&#123;<span class="comment">//二维矩阵变换</span></span><br><span class="line">		<span class="keyword">var</span> m =<span class="keyword">this</span>.m,</span><br><span class="line">			l = m.length,</span><br><span class="line">			c = <span class="built_in">Math</span>.ceil(l/<span class="number">2</span>),</span><br><span class="line">			x = m[c],</span><br><span class="line">			y = m[c+<span class="number">1</span>],</span><br><span class="line">			cos = <span class="built_in">Math</span>.cos(<span class="built_in">Math</span>.PI/<span class="number">2</span>),</span><br><span class="line">			sin = <span class="built_in">Math</span>.sin(<span class="built_in">Math</span>.PI/<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(i == c) <span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">var</span> mx = m[i]- x,</span><br><span class="line">				my = m[i+<span class="number">1</span>] - y,</span><br><span class="line">				nx = mx*cos - my*sin,</span><br><span class="line">				ny = my*cos + mx*sin;</span><br><span class="line">			m[i]=x+nx;</span><br><span class="line">			m[i+<span class="number">1</span>]=y+ny;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;	</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>结合上面介绍的坐标系，数组 [x1, y1, x2, y2, x3, y3, x4, y4] 就是上面图形中4个点坐标的数据表现形式，7 种图形的坐标分别如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Arr = [[<span class="number">4</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">0</span>],[<span class="number">4</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">0</span>],</span><br><span class="line">[<span class="number">5</span>,<span class="number">0</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>],[<span class="number">4</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">7</span>,<span class="number">0</span>],[<span class="number">5</span>,<span class="number">0</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">5</span>,<span class="number">1</span>,<span class="number">6</span>,<span class="number">1</span>]];</span><br></pre></td></tr></table></figure>
+
+<p>方块的移动，遍历整个数组，加上位移向量就行，非常简单</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(m)&#123;</span><br><span class="line">		<span class="keyword">this</span>.m = <span class="built_in">Object</span>.assign([],m);</span><br><span class="line">	&#125;</span><br><span class="line">	move(x,y)&#123; <span class="comment">// 位移</span></span><br><span class="line">		<span class="keyword">var</span> m = <span class="keyword">this</span>.m,</span><br><span class="line">			l = m.length;</span><br><span class="line">		y = y||<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">			m[i]+=x;</span><br><span class="line">			m[i+<span class="number">1</span>]+=y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方块的旋转，俄罗斯方块里面方块除了左右和上下运动，还会旋转，不是吗？稍微思考下就知道，这不过就是矩阵变换而已，也就是每次图形绕中心点旋转90度。我这里用数组第三个点作为图形变换的中心点，当然这样处理不够完善。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Shape</span> </span>&#123;</span><br><span class="line">	transform()&#123;<span class="comment">//二维矩阵变换</span></span><br><span class="line">		<span class="keyword">var</span> m =<span class="keyword">this</span>.m,</span><br><span class="line">			l = m.length,</span><br><span class="line">			c = <span class="built_in">Math</span>.ceil(l/<span class="number">2</span>),</span><br><span class="line">			x = m[c],</span><br><span class="line">			y = m[c+<span class="number">1</span>],</span><br><span class="line">			cos = <span class="built_in">Math</span>.cos(<span class="built_in">Math</span>.PI/<span class="number">2</span>),</span><br><span class="line">			sin = <span class="built_in">Math</span>.sin(<span class="built_in">Math</span>.PI/<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">			<span class="keyword">if</span>(i == c) <span class="keyword">continue</span>;</span><br><span class="line">			<span class="keyword">var</span> mx = m[i]- x,</span><br><span class="line">				my = m[i+<span class="number">1</span>] - y,</span><br><span class="line">				nx = mx*cos - my*sin,</span><br><span class="line">				ny = my*cos + mx*sin;</span><br><span class="line">			m[i]=x+nx;</span><br><span class="line">			m[i+<span class="number">1</span>]=y+ny;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">this</span>;	</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="边界条件"><a href="#边界条件" class="headerlink" title="边界条件"></a>边界条件</h2><p>主要包括如下三个方面</p>
 <ol>
 <li>方块位置不能超出界面的判断；</li>
@@ -172,54 +172,57 @@ var _hmt = _hmt || [];
 <li>游戏结束的判断。</li>
 </ol>
 <p>遍历数组 （1）任意一个点y坐标为19时表示到达了底部；（2）获取该坐标的y+1位置在maps的信息，如果为1表示已经填充。这两种情况下，运动方块的周期结束，将该方块的坐标填充到maps对应的数组里面即可。</p>
-<p>如果坐标的y+1已经有填充，同时当前坐标小于1，即已经在界面的顶部了，那么表示游戏结束。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> isEnd = <span class="literal">false</span>,isOver=<span class="literal">false</span>,x,y;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,sl=that.shape.m.length;i&lt;sl;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">	x=that.shape.m[i];</span><br><span class="line">	y=that.shape.m[i+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">if</span>(y &gt;= <span class="number">19</span>)&#123; <span class="comment">// 到了底部</span></span><br><span class="line">		isEnd = <span class="literal">true</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(that.maps[y+<span class="number">1</span>][x]==<span class="number">1</span>)&#123; <span class="comment">// y+1位置已经填充</span></span><br><span class="line">		isEnd = <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">if</span>(y &lt;= <span class="number">1</span>)&#123;isOver=<span class="literal">true</span>;&#125; <span class="comment">// 游戏结束</span></span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>方块运动周期结束时检测每一层是否满格，以及满格后的处理。某项数组全部元素都为1则表示已经满格，那么删除该项数组，同时列表头再压入一项每个元素都为0的数组即可。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">checkPoint()&#123;</span><br><span class="line">	<span class="keyword">var</span> that = <span class="keyword">this</span>,</span><br><span class="line">		maps = that.maps;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=maps.length;i&lt;l;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">Math</span>.min.apply(<span class="literal">null</span>,maps[i]) == <span class="number">1</span>)&#123;<span class="comment">// 表示该层已经满格</span></span><br><span class="line">			that.maps.splice(i,<span class="number">1</span>);</span><br><span class="line">			that.score+=<span class="number">10</span>; <span class="comment">// 增加分数</span></span><br><span class="line">			that.maps.unshift([<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h2><p>主要就是绑定keydown事件，要注意的是左移和右移事件包括了边界判断<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">bindEvent()&#123;</span><br><span class="line">	<span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">	<span class="built_in">document</span>.addEventListener(<span class="string">'keydown'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">switch</span>(e.keyCode)&#123;</span><br><span class="line">        	<span class="keyword">case</span> <span class="number">13</span>:        <span class="comment">//enter</span></span><br><span class="line">        		cancelAnimationFrame(that.timer);</span><br><span class="line">	        	that.init().update();</span><br><span class="line">        	<span class="keyword">break</span>;</span><br><span class="line">        	<span class="keyword">case</span> <span class="number">80</span>:        <span class="comment">//p</span></span><br><span class="line">        		that.pause = !that.pause;</span><br><span class="line">				<span class="keyword">break</span>;	</span><br><span class="line">            <span class="keyword">case</span> <span class="number">40</span>:        <span class="comment">//down</span></span><br><span class="line">            	that.d = <span class="number">0.5</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">37</span>:        <span class="comment">//left</span></span><br><span class="line">            	<span class="keyword">var</span> over = <span class="literal">false</span>,</span><br><span class="line">            		maps = that.maps,</span><br><span class="line">            		shape = that.shape,</span><br><span class="line">            		m = shape.m;</span><br><span class="line">            	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=m.length;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            		<span class="keyword">if</span>(m[i]&lt;=<span class="number">0</span> || maps[m[i+<span class="number">1</span>]][m[i]<span class="number">-1</span>] == <span class="number">1</span>)&#123;</span><br><span class="line">            			over = <span class="literal">true</span>;<span class="keyword">break</span>;</span><br><span class="line">            		&#125;</span><br><span class="line">            	&#125;</span><br><span class="line">            	<span class="keyword">if</span>(!over) shape.move(<span class="number">-1</span>,<span class="number">0</span>);</span><br><span class="line">              	<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">39</span>:        <span class="comment">//right</span></span><br><span class="line">            	<span class="keyword">var</span> over = <span class="literal">false</span>,</span><br><span class="line">            		shape = that.shape,</span><br><span class="line">            		maps = that.maps,</span><br><span class="line">            		m = shape.m;</span><br><span class="line">              	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=m.length;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            		<span class="keyword">if</span>(m[i]&gt;=<span class="number">11</span> || maps[m[i+<span class="number">1</span>]][m[i]+<span class="number">1</span>] == <span class="number">1</span>)&#123;</span><br><span class="line">            			over = <span class="literal">true</span>;<span class="keyword">break</span>;</span><br><span class="line">            		&#125;</span><br><span class="line">            	&#125;</span><br><span class="line">            	<span class="keyword">if</span>(!over) shape.move(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">              	<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">32</span>:        <span class="comment">//space</span></span><br><span class="line">              	that.shape.transform();</span><br><span class="line">              	<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,<span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果坐标的y+1已经有填充，同时当前坐标小于1，即已经在界面的顶部了，那么表示游戏结束。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> isEnd = <span class="literal">false</span>,isOver=<span class="literal">false</span>,x,y;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,sl=that.shape.m.length;i&lt;sl;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">	x=that.shape.m[i];</span><br><span class="line">	y=that.shape.m[i+<span class="number">1</span>];</span><br><span class="line">	<span class="keyword">if</span>(y &gt;= <span class="number">19</span>)&#123; <span class="comment">// 到了底部</span></span><br><span class="line">		isEnd = <span class="literal">true</span>;<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span>(that.maps[y+<span class="number">1</span>][x]==<span class="number">1</span>)&#123; <span class="comment">// y+1位置已经填充</span></span><br><span class="line">		isEnd = <span class="literal">true</span>;</span><br><span class="line">		<span class="keyword">if</span>(y &lt;= <span class="number">1</span>)&#123;isOver=<span class="literal">true</span>;&#125; <span class="comment">// 游戏结束</span></span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>方块运动周期结束时检测每一层是否满格，以及满格后的处理。某项数组全部元素都为1则表示已经满格，那么删除该项数组，同时列表头再压入一项每个元素都为0的数组即可。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">checkPoint()&#123;</span><br><span class="line">	<span class="keyword">var</span> that = <span class="keyword">this</span>,</span><br><span class="line">		maps = that.maps;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=maps.length;i&lt;l;i++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">Math</span>.min.apply(<span class="literal">null</span>,maps[i]) == <span class="number">1</span>)&#123;<span class="comment">// 表示该层已经满格</span></span><br><span class="line">			that.maps.splice(i,<span class="number">1</span>);</span><br><span class="line">			that.score+=<span class="number">10</span>; <span class="comment">// 增加分数</span></span><br><span class="line">			that.maps.unshift([<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="绑定事件"><a href="#绑定事件" class="headerlink" title="绑定事件"></a>绑定事件</h2><p>主要就是绑定keydown事件，要注意的是左移和右移事件包括了边界判断</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">bindEvent()&#123;</span><br><span class="line">	<span class="keyword">var</span> that = <span class="keyword">this</span>;</span><br><span class="line">	<span class="built_in">document</span>.addEventListener(<span class="string">'keydown'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">switch</span>(e.keyCode)&#123;</span><br><span class="line">        	<span class="keyword">case</span> <span class="number">13</span>:        <span class="comment">//enter</span></span><br><span class="line">        		cancelAnimationFrame(that.timer);</span><br><span class="line">	        	that.init().update();</span><br><span class="line">        	<span class="keyword">break</span>;</span><br><span class="line">        	<span class="keyword">case</span> <span class="number">80</span>:        <span class="comment">//p</span></span><br><span class="line">        		that.pause = !that.pause;</span><br><span class="line">				<span class="keyword">break</span>;	</span><br><span class="line">            <span class="keyword">case</span> <span class="number">40</span>:        <span class="comment">//down</span></span><br><span class="line">            	that.d = <span class="number">0.5</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">37</span>:        <span class="comment">//left</span></span><br><span class="line">            	<span class="keyword">var</span> over = <span class="literal">false</span>,</span><br><span class="line">            		maps = that.maps,</span><br><span class="line">            		shape = that.shape,</span><br><span class="line">            		m = shape.m;</span><br><span class="line">            	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=m.length;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            		<span class="keyword">if</span>(m[i]&lt;=<span class="number">0</span> || maps[m[i+<span class="number">1</span>]][m[i]<span class="number">-1</span>] == <span class="number">1</span>)&#123;</span><br><span class="line">            			over = <span class="literal">true</span>;<span class="keyword">break</span>;</span><br><span class="line">            		&#125;</span><br><span class="line">            	&#125;</span><br><span class="line">            	<span class="keyword">if</span>(!over) shape.move(<span class="number">-1</span>,<span class="number">0</span>);</span><br><span class="line">              	<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">39</span>:        <span class="comment">//right</span></span><br><span class="line">            	<span class="keyword">var</span> over = <span class="literal">false</span>,</span><br><span class="line">            		shape = that.shape,</span><br><span class="line">            		maps = that.maps,</span><br><span class="line">            		m = shape.m;</span><br><span class="line">              	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=m.length;i&lt;l;i=i+<span class="number">2</span>)&#123;</span><br><span class="line">            		<span class="keyword">if</span>(m[i]&gt;=<span class="number">11</span> || maps[m[i+<span class="number">1</span>]][m[i]+<span class="number">1</span>] == <span class="number">1</span>)&#123;</span><br><span class="line">            			over = <span class="literal">true</span>;<span class="keyword">break</span>;</span><br><span class="line">            		&#125;</span><br><span class="line">            	&#125;</span><br><span class="line">            	<span class="keyword">if</span>(!over) shape.move(<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">              	<span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> <span class="number">32</span>:        <span class="comment">//space</span></span><br><span class="line">              	that.shape.transform();</span><br><span class="line">              	<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,<span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这里面实现了俄罗斯方块的最基本功能，还有关卡等功能点并没有实现，同时该demo仍然有不完善的地方需要修正。</p>
 </div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2018/12/12/tetris/" data-desc="好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的c..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/canvas/">canvas</a>
+						
+					
 				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a href="/tags/canvas/">canvas</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2018/12/12/tetris/" data-desc="好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的c..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2019/01/03/animationfun/" class="prev post-prev">&larr; 动画函数的绘制及自定义动画函数</a>
+        <a href="/2019/01/03/animationfun/" class="prev post-prev"> <i class="icon-leftarrow"></i> 动画函数的绘制及自定义动画函数</a>
       
 
       
-      <a href="/2018/08/16/haskelld/" class="next post-next">Haskell学习-monad &rarr;</a>
+        <a href="/2018/08/16/haskelld/" class="next post-next"> Haskell学习-monad <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -227,13 +230,13 @@ var _hmt = _hmt || [];
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -242,10 +245,10 @@ var _hmt = _hmt || [];
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -259,7 +262,7 @@ var _hmt = _hmt || [];
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -276,7 +279,6 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>

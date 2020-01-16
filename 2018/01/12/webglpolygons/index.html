@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="WebGL多模型光照综合实例 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>WebGL多模型光照综合实例 - Jeff's world</title>
+  <title >WebGL多模型光照综合实例 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="WebGL多模型光照综合实例 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,23 +121,22 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-8dcbc33329b489d8.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner6.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL多模型光照综合实例</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2018/01/12 16:08:00</time>
+    		<time><i class="icon-calendar"></i> 2018/01/12 16:08:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
@@ -152,64 +144,69 @@ var _hmt = _hmt || [];
     	<!-- <p><p>WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++风格的API调用方式就可以看出来,  习惯了高级语言的我们会觉得很不友好,觉得特别繁琐. 这个也是很多人觉得WebGL难…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- 原文地址：[WebGL多模型光照综合实例](https://edwardzhong.github.io/2018/01/12/webglpolygons/)  -->
+    		<div class="post-content"><!-- 原文地址：[WebGL多模型光照综合实例](https://edwardzhong.github.io/2018/01/12/webglpolygons/)  -->
 <p>WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++风格的API调用方式就可以看出来,  习惯了高级语言的我们会觉得很不友好,觉得特别繁琐. 这个也是很多人觉得WebGL难的原因之一. 如果我们要使用WebGL做一些项目,毫无疑问要么使用Three.js之类的3D库, 要么需要对原生的API进行封装. 这段时间查看了一些WebGL工具库的源代码, 参考封装出了一个简单的工具库,这样往后用WebGL做小项目就方便多了. </p>
-<p>经过前面章节的学习, WebGL的知识点掌握的差不多了, 终于到了做特效和Demo的阶段了,来看一下这节实现的特效：<em><a href="https://edwardzhong.github.io/sites/demo/dist/webglPolygons.html" target="_blank" rel="noopener">WebGL多物体多光源场景</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-2ceb13e9d6db6789.gif" width="400"><br><a id="more"></a></p>
+<p>经过前面章节的学习, WebGL的知识点掌握的差不多了, 终于到了做特效和Demo的阶段了,来看一下这节实现的特效：<em><a href="https://edwardzhong.github.io/sites/demo/dist/webglPolygons.html">WebGL多物体多光源场景</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-2ceb13e9d6db6789.gif" width="400"></p>
+<a id="more"></a>
+
 <h2 id="内容大纲"><a href="#内容大纲" class="headerlink" title="内容大纲"></a>内容大纲</h2><p> 实现图形绕坐标原点旋转, 同时给所有的物体增加环境光, 漫反射, 高光. 其中旋转功能使用矩阵复合变换实现; 光照部分比较复杂,实现了多个光源照射.</p>
 <ol>
 <li>着色器</li>
 <li>模型变换</li>
 </ol>
-<h2 id="着色器"><a href="#着色器" class="headerlink" title="着色器"></a>着色器</h2><h3 id="顶点着色器"><a href="#顶点着色器" class="headerlink" title="顶点着色器"></a>顶点着色器</h3><p>代码很简单,逐顶点传入坐标,法向量矩阵,模型矩阵,mvp矩阵.<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">attribute vec4 a_position;</span><br><span class="line">attribute vec4 a_normal;</span><br><span class="line">uniform mat4 u_modelMatrix;</span><br><span class="line">uniform mat4 u_normalMatrix;</span><br><span class="line">uniform mat4 u_mvpMatrix;</span><br><span class="line">varying vec3 v_normal;</span><br><span class="line">varying vec3 v_position;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gl_Position = u_mvpMatrix * a_position;</span><br><span class="line">    v_normal=vec3(u_normalMatrix * a_normal);</span><br><span class="line">    v_position= vec3(u_modelMatrix * a_position);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="片元着色器"><a href="#片元着色器" class="headerlink" title="片元着色器"></a>片元着色器</h3><p>分别在左前方和右后方添加了平行光源和点光源, 平行光源的高光使用的是宾氏模型, 它的高光过渡效果比较平滑; 点光源的高光使用的是冯氏模型, 它的高光部分比较明亮, 反射的效果比较好.<br>最后将两个光源照射产生的漫反射,高光亮度相加,就得到它们的综合光照效果了.<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">precision mediump <span class="keyword">float</span>;</span><br><span class="line">uniform vec3 u_lightColor;</span><br><span class="line">uniform vec3 u_lightPosition;</span><br><span class="line">uniform vec3 u_lightPosition2;</span><br><span class="line">uniform vec3 u_ambientColor;</span><br><span class="line">uniform vec3 u_viewPosition;</span><br><span class="line">uniform vec4 u_color;</span><br><span class="line">varying vec3 v_normal;</span><br><span class="line">varying vec3 v_position;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 法向量归一化</span></span><br><span class="line">    vec3 normal = normalize(v_normal);</span><br><span class="line">    <span class="comment">// 计算环境光反射颜色</span></span><br><span class="line">    vec3 ambient = u_ambientColor * u_color.rgb;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第一个光源:平行光</span></span><br><span class="line">    vec3 lightDirection = normalize(u_lightPosition);</span><br><span class="line">    <span class="comment">// 计算法向量和光线的点积</span></span><br><span class="line">    <span class="keyword">float</span> cosTheta = max(dot(lightDirection, normal), <span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// 计算漫反射光的颜色</span></span><br><span class="line">    vec3 diffuse = u_lightColor * u_color.rgb * cosTheta;</span><br><span class="line">    <span class="comment">// 宾氏模型高光</span></span><br><span class="line">    <span class="keyword">float</span> shininess =<span class="number">100.0</span>;</span><br><span class="line">    vec3 specularColor =vec3(<span class="number">1.0</span>,<span class="number">1.0</span>,<span class="number">1.0</span>);</span><br><span class="line">    vec3 viewDirection = normalize(u_viewPosition-v_position);</span><br><span class="line">    vec3 halfwayDir = normalize(lightDirection + viewDirection);</span><br><span class="line">    <span class="keyword">float</span> specularWeighting = <span class="built_in">pow</span>(max(dot(normal, halfwayDir), <span class="number">0.0</span>), shininess);</span><br><span class="line">    vec3 specular = specularColor.rgb * specularWeighting * step(cosTheta,<span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第二个光源:点光源</span></span><br><span class="line">    vec3 lightDirection2 = normalize(u_lightPosition2 - v_position.xyz);</span><br><span class="line">    <span class="comment">// 计算法向量和光线的点积</span></span><br><span class="line">    <span class="keyword">float</span> cosTheta2 = max(dot(lightDirection2, normal), <span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// 计算漫反射光的颜色</span></span><br><span class="line">    vec3 diffuse2 = u_lightColor * u_color.rgb * cosTheta2;</span><br><span class="line">    <span class="comment">// 冯氏模型高光</span></span><br><span class="line">    <span class="keyword">float</span> shininess2 =<span class="number">30.0</span>;</span><br><span class="line">    vec3 specularColor2 =vec3(<span class="number">1.0</span>,<span class="number">1.0</span>,<span class="number">1.0</span>);</span><br><span class="line">    vec3 reflectionDirection = reflect(-lightDirection2, normal);</span><br><span class="line">    <span class="keyword">float</span> specularWeighting2 = <span class="built_in">pow</span>(max(dot(reflectionDirection, viewDirection), <span class="number">0.0</span>), shininess2);</span><br><span class="line">    vec3 specular2 = specularColor2.rgb * specularWeighting2 * step(cosTheta,<span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// 两个光源亮度相加</span></span><br><span class="line">    gl_FragColor = vec4(diffuse+diffuse2+ambient+specular+specular2,u_color.a);	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="模型变换"><a href="#模型变换" class="headerlink" title="模型变换"></a>模型变换</h2><p>js代码部分使用工具库封装了原生WebGL的很多细节, 现在写起代码来要愉快得多了, 感觉和写canvas差不了太多😂. 这里重点介绍模型变换部分, 其他部分代码的细节之前章节已经介绍过了,所以不再详述.<br>首先初始化着色器,并创建program对象; 这里使用了多种图形(圆球,立方体,圆柱体,圆锥体), 所以分别为它们创建缓冲区, 缓冲区数据主要包括顶点,法向量,索引.<br>接着创建200个图形对象, 给每个对象赋予 随机x/y轴角速度, 随机初始点, 随机颜色.<br>最后终于到了动画的环节了, 绕原点旋转可以分解为x轴旋转, y轴旋转和位移. 要注意的是矩阵复合变换相乘的顺序, 也就是左乘和右乘是有区别的, 学过线性代数的应该都有印象. 这里要实现图形先位移z,然后再旋转, 那么对应的复合变换矩阵就是这样<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;模型矩阵&gt; = &lt;绕x轴旋转矩阵&gt; * &lt;绕y轴旋转矩阵&gt; * &lt;位移矩阵&gt;</span><br></pre></td></tr></table></figure></p>
-<p>模型矩阵与视图投影矩阵相乘得出mvp矩阵, 对模型矩阵逆转置后还可以求出逆转置矩阵.<br>将矩阵和变量的值传递给着色器, 输出对应的图形缓冲区,然后根据图形对象依次绘制图形, 最后调用requestAnimationFrame递归执行动画函数.<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>),</span><br><span class="line">    gl = get3DContext(canvas, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!gl) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Failed to get the rendering context for WebGL"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> program = createProgramInfo(gl, [<span class="string">"vs"</span>, <span class="string">"fs"</span>]),</span><br><span class="line">        sphereBuffer = createBufferInfoFromArrays(gl, Sphere(<span class="number">50</span>)),</span><br><span class="line">        cubeBuffer = createBufferInfoFromArrays(gl, Cube()),</span><br><span class="line">        cylinderBuffer = createBufferInfoFromArrays(gl, Cylinder(<span class="number">1</span>, <span class="number">3</span>, <span class="number">40</span>)),</span><br><span class="line">        coneBuffer = createBufferInfoFromArrays(gl, Cone(<span class="number">1</span>, <span class="number">3</span>, <span class="number">40</span>)),</span><br><span class="line">        buffers = [sphereBuffer, cubeBuffer, cylinderBuffer, coneBuffer];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; NUM; i++) &#123;</span><br><span class="line">        Polygons.push(&#123;</span><br><span class="line">            xRotation: Random(<span class="number">-60</span>, <span class="number">60</span>),</span><br><span class="line">            yRotation: Random(<span class="number">-60</span>, <span class="number">60</span>),</span><br><span class="line">            xAngle: <span class="number">0</span>,</span><br><span class="line">            yAngle: <span class="number">0</span>,</span><br><span class="line">            x: Random(<span class="number">-15</span>, <span class="number">15</span>),</span><br><span class="line">            y: Random(<span class="number">-15</span>, <span class="number">15</span>),</span><br><span class="line">            z: Random(<span class="number">3</span>, <span class="number">20</span>),</span><br><span class="line">            color: Color.rgbToWebgl(Color.hslToRgb(RandomHsl()))</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    gl.clearColor(<span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">1</span>);</span><br><span class="line">    gl.enable(gl.DEPTH_TEST);</span><br><span class="line">    gl.viewport(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height); <span class="comment">//设置绘图区域</span></span><br><span class="line"></span><br><span class="line">    gl.useProgram(program.program);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> modelMatrix = <span class="keyword">new</span> Matrix4(),</span><br><span class="line">        normalMatrix = <span class="keyword">new</span> Matrix4(),</span><br><span class="line">        mvpMatrix = <span class="keyword">new</span> Matrix4(),</span><br><span class="line">        last = <span class="built_in">Date</span>.now();</span><br><span class="line"></span><br><span class="line">    (<span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">            elapsed = now - last;</span><br><span class="line"></span><br><span class="line">        last = now;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">        setUniforms(program, &#123;</span><br><span class="line">            u_lightColor: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">            u_lightPosition: LIGHT_POS,</span><br><span class="line">            u_lightPosition2: LIGHT_POS2,</span><br><span class="line">            u_ambientColor: [<span class="number">0.4</span>, <span class="number">0.4</span>, <span class="number">0.4</span>],</span><br><span class="line">            u_viewPosition: [eyeX, eyeY, eyeZ]</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> buffer;</span><br><span class="line">        Polygons.forEach(<span class="function">(<span class="params">polygon, i</span>) =&gt;</span> &#123;</span><br><span class="line">            polygon.xAngle += (polygon.xRotation * elapsed) / <span class="number">1000</span>;</span><br><span class="line">            polygon.yAngle += (polygon.yRotation * elapsed) / <span class="number">1000</span>;</span><br><span class="line">            polygon.xAngle %= <span class="number">360</span>;</span><br><span class="line">            polygon.yAngle %= <span class="number">360</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 模型矩阵</span></span><br><span class="line">            modelMatrix.setRotate(polygon.xAngle, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">            modelMatrix.rotate(polygon.yAngle, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">            modelMatrix.translate(<span class="number">0</span>, <span class="number">0</span>, polygon.z);</span><br><span class="line">            <span class="comment">// modelMatrix.translate(polygon.x,polygon.y,polygon.z);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 每次重置mvp矩阵</span></span><br><span class="line">            mvpMatrix.setPerspective( <span class="number">45</span>, canvas.width / canvas.height, <span class="number">1.0</span>, <span class="number">200.0</span> );</span><br><span class="line">            mvpMatrix.lookAt(eyeX, eyeY, eyeZ, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);</span><br><span class="line">            mvpMatrix.multiply(modelMatrix);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 逆转置矩阵</span></span><br><span class="line">            normalMatrix.setInverseOf(modelMatrix);</span><br><span class="line">            normalMatrix.transpose();</span><br><span class="line">            buffer = buffers[i % buffers.length];</span><br><span class="line">            setBuffersAndAttributes(gl, program, buffer);</span><br><span class="line">            setUniforms(program, &#123;</span><br><span class="line">                u_color: polygon.color,</span><br><span class="line">                u_modelMatrix: modelMatrix.elements,</span><br><span class="line">                u_normalMatrix: normalMatrix.elements,</span><br><span class="line">                u_mvpMatrix: mvpMatrix.elements</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            gl.drawElements( gl.TRIANGLES, buffer.numElements, buffer.indexType, <span class="number">0</span> );</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        requestAnimationFrame(animate);</span><br><span class="line">    &#125;)();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="着色器"><a href="#着色器" class="headerlink" title="着色器"></a>着色器</h2><h3 id="顶点着色器"><a href="#顶点着色器" class="headerlink" title="顶点着色器"></a>顶点着色器</h3><p>代码很简单,逐顶点传入坐标,法向量矩阵,模型矩阵,mvp矩阵.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">attribute vec4 a_position;</span><br><span class="line">attribute vec4 a_normal;</span><br><span class="line">uniform mat4 u_modelMatrix;</span><br><span class="line">uniform mat4 u_normalMatrix;</span><br><span class="line">uniform mat4 u_mvpMatrix;</span><br><span class="line">varying vec3 v_normal;</span><br><span class="line">varying vec3 v_position;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gl_Position = u_mvpMatrix * a_position;</span><br><span class="line">    v_normal=vec3(u_normalMatrix * a_normal);</span><br><span class="line">    v_position= vec3(u_modelMatrix * a_position);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="片元着色器"><a href="#片元着色器" class="headerlink" title="片元着色器"></a>片元着色器</h3><p>分别在左前方和右后方添加了平行光源和点光源, 平行光源的高光使用的是宾氏模型, 它的高光过渡效果比较平滑; 点光源的高光使用的是冯氏模型, 它的高光部分比较明亮, 反射的效果比较好.<br>最后将两个光源照射产生的漫反射,高光亮度相加,就得到它们的综合光照效果了.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">precision mediump <span class="keyword">float</span>;</span><br><span class="line">uniform vec3 u_lightColor;</span><br><span class="line">uniform vec3 u_lightPosition;</span><br><span class="line">uniform vec3 u_lightPosition2;</span><br><span class="line">uniform vec3 u_ambientColor;</span><br><span class="line">uniform vec3 u_viewPosition;</span><br><span class="line">uniform vec4 u_color;</span><br><span class="line">varying vec3 v_normal;</span><br><span class="line">varying vec3 v_position;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 法向量归一化</span></span><br><span class="line">    vec3 normal = normalize(v_normal);</span><br><span class="line">    <span class="comment">// 计算环境光反射颜色</span></span><br><span class="line">    vec3 ambient = u_ambientColor * u_color.rgb;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第一个光源:平行光</span></span><br><span class="line">    vec3 lightDirection = normalize(u_lightPosition);</span><br><span class="line">    <span class="comment">// 计算法向量和光线的点积</span></span><br><span class="line">    <span class="keyword">float</span> cosTheta = <span class="built_in">max</span>(dot(lightDirection, normal), <span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// 计算漫反射光的颜色</span></span><br><span class="line">    vec3 diffuse = u_lightColor * u_color.rgb * cosTheta;</span><br><span class="line">    <span class="comment">// 宾氏模型高光</span></span><br><span class="line">    <span class="keyword">float</span> shininess =<span class="number">100.0</span>;</span><br><span class="line">    vec3 specularColor =vec3(<span class="number">1.0</span>,<span class="number">1.0</span>,<span class="number">1.0</span>);</span><br><span class="line">    vec3 viewDirection = normalize(u_viewPosition-v_position);</span><br><span class="line">    vec3 halfwayDir = normalize(lightDirection + viewDirection);</span><br><span class="line">    <span class="keyword">float</span> specularWeighting = <span class="built_in">pow</span>(<span class="built_in">max</span>(dot(normal, halfwayDir), <span class="number">0.0</span>), shininess);</span><br><span class="line">    vec3 specular = specularColor.rgb * specularWeighting * <span class="built_in">step</span>(cosTheta,<span class="number">0.0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第二个光源:点光源</span></span><br><span class="line">    vec3 lightDirection2 = normalize(u_lightPosition2 - v_position.xyz);</span><br><span class="line">    <span class="comment">// 计算法向量和光线的点积</span></span><br><span class="line">    <span class="keyword">float</span> cosTheta2 = <span class="built_in">max</span>(dot(lightDirection2, normal), <span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// 计算漫反射光的颜色</span></span><br><span class="line">    vec3 diffuse2 = u_lightColor * u_color.rgb * cosTheta2;</span><br><span class="line">    <span class="comment">// 冯氏模型高光</span></span><br><span class="line">    <span class="keyword">float</span> shininess2 =<span class="number">30.0</span>;</span><br><span class="line">    vec3 specularColor2 =vec3(<span class="number">1.0</span>,<span class="number">1.0</span>,<span class="number">1.0</span>);</span><br><span class="line">    vec3 reflectionDirection = reflect(-lightDirection2, normal);</span><br><span class="line">    <span class="keyword">float</span> specularWeighting2 = <span class="built_in">pow</span>(<span class="built_in">max</span>(dot(reflectionDirection, viewDirection), <span class="number">0.0</span>), shininess2);</span><br><span class="line">    vec3 specular2 = specularColor2.rgb * specularWeighting2 * <span class="built_in">step</span>(cosTheta,<span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// 两个光源亮度相加</span></span><br><span class="line">    gl_FragColor = vec4(diffuse+diffuse2+ambient+specular+specular2,u_color.a);	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="模型变换"><a href="#模型变换" class="headerlink" title="模型变换"></a>模型变换</h2><p>js代码部分使用工具库封装了原生WebGL的很多细节, 现在写起代码来要愉快得多了, 感觉和写canvas差不了太多😂. 这里重点介绍模型变换部分, 其他部分代码的细节之前章节已经介绍过了,所以不再详述.<br>首先初始化着色器,并创建program对象; 这里使用了多种图形(圆球,立方体,圆柱体,圆锥体), 所以分别为它们创建缓冲区, 缓冲区数据主要包括顶点,法向量,索引.<br>接着创建200个图形对象, 给每个对象赋予 随机x/y轴角速度, 随机初始点, 随机颜色.<br>最后终于到了动画的环节了, 绕原点旋转可以分解为x轴旋转, y轴旋转和位移. 要注意的是矩阵复合变换相乘的顺序, 也就是左乘和右乘是有区别的, 学过线性代数的应该都有印象. 这里要实现图形先位移z,然后再旋转, 那么对应的复合变换矩阵就是这样</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;模型矩阵&gt; &#x3D; &lt;绕x轴旋转矩阵&gt; * &lt;绕y轴旋转矩阵&gt; * &lt;位移矩阵&gt;</span><br></pre></td></tr></table></figure>
+<p>模型矩阵与视图投影矩阵相乘得出mvp矩阵, 对模型矩阵逆转置后还可以求出逆转置矩阵.<br>将矩阵和变量的值传递给着色器, 输出对应的图形缓冲区,然后根据图形对象依次绘制图形, 最后调用requestAnimationFrame递归执行动画函数.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">"canvas"</span>),</span><br><span class="line">    gl = get3DContext(canvas, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!gl) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">"Failed to get the rendering context for WebGL"</span>);</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> program = createProgramInfo(gl, [<span class="string">"vs"</span>, <span class="string">"fs"</span>]),</span><br><span class="line">        sphereBuffer = createBufferInfoFromArrays(gl, Sphere(<span class="number">50</span>)),</span><br><span class="line">        cubeBuffer = createBufferInfoFromArrays(gl, Cube()),</span><br><span class="line">        cylinderBuffer = createBufferInfoFromArrays(gl, Cylinder(<span class="number">1</span>, <span class="number">3</span>, <span class="number">40</span>)),</span><br><span class="line">        coneBuffer = createBufferInfoFromArrays(gl, Cone(<span class="number">1</span>, <span class="number">3</span>, <span class="number">40</span>)),</span><br><span class="line">        buffers = [sphereBuffer, cubeBuffer, cylinderBuffer, coneBuffer];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; NUM; i++) &#123;</span><br><span class="line">        Polygons.push(&#123;</span><br><span class="line">            xRotation: Random(<span class="number">-60</span>, <span class="number">60</span>),</span><br><span class="line">            yRotation: Random(<span class="number">-60</span>, <span class="number">60</span>),</span><br><span class="line">            xAngle: <span class="number">0</span>,</span><br><span class="line">            yAngle: <span class="number">0</span>,</span><br><span class="line">            x: Random(<span class="number">-15</span>, <span class="number">15</span>),</span><br><span class="line">            y: Random(<span class="number">-15</span>, <span class="number">15</span>),</span><br><span class="line">            z: Random(<span class="number">3</span>, <span class="number">20</span>),</span><br><span class="line">            color: Color.rgbToWebgl(Color.hslToRgb(RandomHsl()))</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    gl.clearColor(<span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">1</span>);</span><br><span class="line">    gl.enable(gl.DEPTH_TEST);</span><br><span class="line">    gl.viewport(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height); <span class="comment">//设置绘图区域</span></span><br><span class="line"></span><br><span class="line">    gl.useProgram(program.program);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> modelMatrix = <span class="keyword">new</span> Matrix4(),</span><br><span class="line">        normalMatrix = <span class="keyword">new</span> Matrix4(),</span><br><span class="line">        mvpMatrix = <span class="keyword">new</span> Matrix4(),</span><br><span class="line">        last = <span class="built_in">Date</span>.now();</span><br><span class="line"></span><br><span class="line">    (<span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> now = <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">            elapsed = now - last;</span><br><span class="line"></span><br><span class="line">        last = now;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">        gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">        setUniforms(program, &#123;</span><br><span class="line">            u_lightColor: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">            u_lightPosition: LIGHT_POS,</span><br><span class="line">            u_lightPosition2: LIGHT_POS2,</span><br><span class="line">            u_ambientColor: [<span class="number">0.4</span>, <span class="number">0.4</span>, <span class="number">0.4</span>],</span><br><span class="line">            u_viewPosition: [eyeX, eyeY, eyeZ]</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">var</span> buffer;</span><br><span class="line">        Polygons.forEach(<span class="function">(<span class="params">polygon, i</span>) =&gt;</span> &#123;</span><br><span class="line">            polygon.xAngle += (polygon.xRotation * elapsed) / <span class="number">1000</span>;</span><br><span class="line">            polygon.yAngle += (polygon.yRotation * elapsed) / <span class="number">1000</span>;</span><br><span class="line">            polygon.xAngle %= <span class="number">360</span>;</span><br><span class="line">            polygon.yAngle %= <span class="number">360</span>;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 模型矩阵</span></span><br><span class="line">            modelMatrix.setRotate(polygon.xAngle, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">            modelMatrix.rotate(polygon.yAngle, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>);</span><br><span class="line">            modelMatrix.translate(<span class="number">0</span>, <span class="number">0</span>, polygon.z);</span><br><span class="line">            <span class="comment">// modelMatrix.translate(polygon.x,polygon.y,polygon.z);</span></span><br><span class="line"></span><br><span class="line">            <span class="comment">// 每次重置mvp矩阵</span></span><br><span class="line">            mvpMatrix.setPerspective( <span class="number">45</span>, canvas.width / canvas.height, <span class="number">1.0</span>, <span class="number">200.0</span> );</span><br><span class="line">            mvpMatrix.lookAt(eyeX, eyeY, eyeZ, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>, <span class="number">0.0</span>);</span><br><span class="line">            mvpMatrix.multiply(modelMatrix);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 逆转置矩阵</span></span><br><span class="line">            normalMatrix.setInverseOf(modelMatrix);</span><br><span class="line">            normalMatrix.transpose();</span><br><span class="line">            buffer = buffers[i % buffers.length];</span><br><span class="line">            setBuffersAndAttributes(gl, program, buffer);</span><br><span class="line">            setUniforms(program, &#123;</span><br><span class="line">                u_color: polygon.color,</span><br><span class="line">                u_modelMatrix: modelMatrix.elements,</span><br><span class="line">                u_normalMatrix: normalMatrix.elements,</span><br><span class="line">                u_mvpMatrix: mvpMatrix.elements</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            gl.drawElements( gl.TRIANGLES, buffer.numElements, buffer.indexType, <span class="number">0</span> );</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        requestAnimationFrame(animate);</span><br><span class="line">    &#125;)();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>使用工具类省略了很多繁琐无聊的部分,不用再去扣语法细节.比如获取变量地址, 赋值, 创建缓冲区. 我们可以把精力都集中到业务逻辑方面. </p>
 </div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2018/01/12/webglpolygons/" data-desc="
-WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++风格的API调用方式..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/webGL/">webGL</a>
+						
+					
 				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a href="/tags/webGL/">webGL</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2018/01/12/webglpolygons/" data-desc="
+WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++风格的API调用方式..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2018/01/19/webglshadow/" class="prev post-prev">&larr; WebGL光照阴影映射</a>
+        <a href="/2018/01/19/webglshadow/" class="prev post-prev"> <i class="icon-leftarrow"></i> WebGL光照阴影映射</a>
       
 
       
-      <a href="/2017/12/26/webglspitfire/" class="next post-next">WebGL学习(3) - 3D模型 &rarr;</a>
+        <a href="/2017/12/26/webglspitfire/" class="next post-next"> WebGL学习(3) - 3D模型 <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -217,13 +214,13 @@ WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++�
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -232,10 +229,10 @@ WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++�
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -249,7 +246,7 @@ WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++�
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -266,7 +263,6 @@ WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++�
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>

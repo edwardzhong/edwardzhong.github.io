@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="基于Webpack 4 和 React hooks 搭建项目 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>基于Webpack 4 和 React hooks 搭建项目 - Jeff's world</title>
+  <title >基于Webpack 4 和 React hooks 搭建项目 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="基于Webpack 4 和 React hooks 搭建项目 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,23 +121,22 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-8dcbc33329b489d8.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner8.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">基于Webpack 4 和 React hooks 搭建项目</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2019/02/04 13:58:00</time>
+    		<time><i class="icon-calendar"></i> 2019/02/04 13:58:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
@@ -152,87 +144,109 @@ var _hmt = _hmt || [];
     	<!-- <p><p>面对日新月异的前端，我表示快学不动了😂。 Webpack 老早就已经更新到了 V4.x，前段时间 React 又推出了  hooks API。刚好春节在家里休假，时间比较空闲，还是赶紧把 Re…</p>
 </p> -->
     	
-    	<div class="post-content"><p>面对日新月异的前端，我表示快学不动了😂。 <strong>Webpack</strong> 老早就已经更新到了 V4.x，前段时间 <strong>React</strong> 又推出了  <strong>hooks</strong> API。刚好春节在家里休假，时间比较空闲，还是赶紧把 <strong>React</strong>技术栈这块补上。</p>
+    		<div class="post-content"><p>面对日新月异的前端，我表示快学不动了😂。 <strong>Webpack</strong> 老早就已经更新到了 V4.x，前段时间 <strong>React</strong> 又推出了  <strong>hooks</strong> API。刚好春节在家里休假，时间比较空闲，还是赶紧把 <strong>React</strong>技术栈这块补上。</p>
 <p>网上有很多介绍 <strong>hooks</strong> 知识点的文章，但都比较零碎，基本只能写一些小 <strong>Demo</strong>。还没有比较系统的，全新的基于 <strong>hooks</strong> 进行搭建实际项目的讲解。所以这里就从开发实际项目的角度，搭建起单页面 <strong>Web App</strong>项目的基本脚手架，并基于 <strong>hooks</strong> API 实现一个 <strong>react</strong> 项目模版。</p>
-<p> <strong>Hooks</strong> 最吸引人的地方就是用 <strong>函数式组件</strong> 代替面向对象的 <strong>类组件</strong>。此前的 <strong>react</strong> 如果涉及到状态，解决方案通常只能使用 <strong>类组件</strong>，业务逻辑一复杂就容易导致组件臃肿，模块的解藕也是个问题。而使用基于 <strong>hooks</strong> 的 <strong>函数组件</strong> 后，代码不仅更加简洁，写起来更爽，而且模块复用也方便得多，非常看好它的未来。<br><a id="more"></a></p>
+<p> <strong>Hooks</strong> 最吸引人的地方就是用 <strong>函数式组件</strong> 代替面向对象的 <strong>类组件</strong>。此前的 <strong>react</strong> 如果涉及到状态，解决方案通常只能使用 <strong>类组件</strong>，业务逻辑一复杂就容易导致组件臃肿，模块的解藕也是个问题。而使用基于 <strong>hooks</strong> 的 <strong>函数组件</strong> 后，代码不仅更加简洁，写起来更爽，而且模块复用也方便得多，非常看好它的未来。</p>
+<a id="more"></a>
+
 <h2 id="webpack-4-的配置"><a href="#webpack-4-的配置" class="headerlink" title="webpack 4 的配置"></a>webpack 4 的配置</h2><p>没有使用 <strong>create-react-app</strong> 这个脚手架，而是从头开始配置开发环境，因为这样自定义配置某些功能会更方便些。下面这个是通用的配置 <strong>webpack.common.js</strong> 文件。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; resolve &#125; = <span class="built_in">require</span>(<span class="string">'path'</span>);</span><br><span class="line"><span class="keyword">const</span> HtmlWebpackPlugin = <span class="built_in">require</span>(<span class="string">'html-webpack-plugin'</span>);</span><br><span class="line"><span class="keyword">const</span> CleanWebpackPlugin = <span class="built_in">require</span>(<span class="string">'clean-webpack-plugin'</span>);</span><br><span class="line"><span class="keyword">const</span> &#123; HotModuleReplacementPlugin &#125; = <span class="built_in">require</span>(<span class="string">'webpack'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: <span class="string">'./src/index.js'</span>,<span class="comment">//单入口</span></span><br><span class="line">    output: &#123;</span><br><span class="line">        path: resolve(__dirname, <span class="string">'dist'</span>),</span><br><span class="line">        filename: <span class="string">'[name].[hash].js'</span><span class="comment">//输出文件添加hash</span></span><br><span class="line">    &#125;,</span><br><span class="line">    optimization: &#123; <span class="comment">// 代替commonchunk, 代码分割</span></span><br><span class="line">        runtimeChunk: <span class="string">'single'</span>,</span><br><span class="line">        splitChunks: &#123;</span><br><span class="line">            cacheGroups: &#123;</span><br><span class="line">                vendor: &#123;</span><br><span class="line">                    test: <span class="regexp">/[\\/]node_modules[\\/]/</span>,</span><br><span class="line">                    name: <span class="string">'vendors'</span>,</span><br><span class="line">                    chunks: <span class="string">'all'</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        rules: [</span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.jsx?$/</span>,</span><br><span class="line">                exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">                use: [<span class="string">'babel-loader'</span>]</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">                use: [<span class="string">'style-loader'</span>, <span class="string">'css-loader'</span>]</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.scss$/</span>,</span><br><span class="line">                use: [<span class="string">'style-loader'</span>,</span><br><span class="line">                    &#123;</span><br><span class="line">                        loader: <span class="string">'css-loader'</span>,</span><br><span class="line">                        options: &#123;</span><br><span class="line">                            importLoaders: <span class="number">1</span>,</span><br><span class="line">                            modules: <span class="literal">true</span>,<span class="comment">//css modules</span></span><br><span class="line">                            localIdentName: <span class="string">'[name]___[local]___[hash:base64:5]'</span></span><br><span class="line">                        &#125;,</span><br><span class="line">                    &#125;,</span><br><span class="line">                    <span class="string">'postcss-loader'</span>, <span class="string">'sass-loader'</span>]</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;   <span class="comment">/* </span></span><br><span class="line"><span class="comment">                当文件体积小于 limit 时，url-loader 把文件转为 Data URI 的格式内联到引用的地方</span></span><br><span class="line"><span class="comment">                当文件大于 limit 时，url-loader 会调用 file-loader, 把文件储存到输出目录，并把引用的文件路径改写成输出后的路径 </span></span><br><span class="line"><span class="comment">                */</span></span><br><span class="line">                test: <span class="regexp">/\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/</span>,</span><br><span class="line">                use: [&#123;</span><br><span class="line">                    loader: <span class="string">'url-loader'</span>,</span><br><span class="line">                    options: &#123;</span><br><span class="line">                        limit: <span class="number">1000</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> CleanWebpackPlugin([<span class="string">'dist'</span>]),<span class="comment">//生成新文件时，清空生出目录</span></span><br><span class="line">        <span class="keyword">new</span> HtmlWebpackPlugin(&#123;</span><br><span class="line">            template: <span class="string">'./public/index.html'</span>,<span class="comment">//模版路径</span></span><br><span class="line">            favicon: <span class="string">'./public/favicon.png'</span>,</span><br><span class="line">            minify: &#123; <span class="comment">//压缩</span></span><br><span class="line">                removeAttributeQuotes:<span class="literal">true</span>,</span><br><span class="line">                removeComments: <span class="literal">true</span>,</span><br><span class="line">                collapseWhitespace: <span class="literal">true</span>,</span><br><span class="line">                removeScriptTypeAttributes:<span class="literal">true</span>,</span><br><span class="line">                removeStyleLinkTypeAttributes:<span class="literal">true</span></span><br><span class="line">             &#125;,</span><br><span class="line">        &#125;),</span><br><span class="line">        <span class="keyword">new</span> HotModuleReplacementPlugin()<span class="comment">//HMR</span></span><br><span class="line">    ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <p>接着基于 <strong>webpack.common.js</strong> 文件，配置出开发环境的 <strong>webpack.dev.js</strong> 文件，主要就是启动开发服务器。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> merge = <span class="built_in">require</span>(<span class="string">'webpack-merge'</span>);</span><br><span class="line"><span class="keyword">const</span> common = <span class="built_in">require</span>(<span class="string">'./webpack.common.js'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = merge(common, &#123;</span><br><span class="line">    mode: <span class="string">'development'</span>,</span><br><span class="line">    devtool: <span class="string">'inline-source-map'</span>,</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        contentBase: <span class="string">'./dist'</span>,</span><br><span class="line">        port: <span class="number">4001</span>,</span><br><span class="line">        hot: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>生成模式的 <strong>webpack.prod.js</strong> 文件，只要定义了 <strong>mode:’production’</strong>， <strong>webpack 4</strong> 打包时就会自动压缩优化代码。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> merge = <span class="built_in">require</span>(<span class="string">'webpack-merge'</span>);</span><br><span class="line"><span class="keyword">const</span> common = <span class="built_in">require</span>(<span class="string">'./webpack.common.js'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = merge(common, &#123;</span><br><span class="line">  mode: <span class="string">'production'</span>,</span><br><span class="line">  devtool: <span class="string">'source-map'</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>配置 <strong>package.js</strong> 中的 <strong>scripts</strong></p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">     <span class="attr">"start"</span>: <span class="string">"webpack-dev-server --open --config webpack.dev.js"</span>,</span><br><span class="line">     <span class="attr">"build"</span>: <span class="string">"webpack --config webpack.prod.js"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="Babel-的配置"><a href="#Babel-的配置" class="headerlink" title="Babel 的配置"></a>Babel 的配置</h2><p> <strong>babel</strong> 的 <strong>.babelrc</strong> 文件， <strong>css module</strong> 包这里推荐 <em><a href="https://github.com/gajus/babel-plugin-react-css-modules" target="_blank" rel="noopener">babel-plugin-react-css-modules</a></em>。<br> <strong>react-css-modules</strong> 既支持全局的css(默认 <strong>className</strong> 属性)，同时也支持局部css module( <strong>styleName</strong> 属性)，还支持css预编译器，这里使用的是 <strong>scss</strong>。</p>
+
+<h2 id="Babel-的配置"><a href="#Babel-的配置" class="headerlink" title="Babel 的配置"></a>Babel 的配置</h2><p> <strong>babel</strong> 的 <strong>.babelrc</strong> 文件， <strong>css module</strong> 包这里推荐 *<a href="https://github.com/gajus/babel-plugin-react-css-modules" target="_blank" rel="noopener">babel-plugin-react-css-modules</a><em>。<br> *</em>react-css-modules** 既支持全局的css(默认 <strong>className</strong> 属性)，同时也支持局部css module( <strong>styleName</strong> 属性)，还支持css预编译器，这里使用的是 <strong>scss</strong>。</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"presets"</span>: [</span><br><span class="line">        <span class="string">"@babel/preset-env"</span>,</span><br><span class="line">        <span class="string">"@babel/preset-react"</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"plugins"</span>: [</span><br><span class="line">        <span class="string">"@babel/plugin-proposal-class-properties"</span>,</span><br><span class="line">        <span class="string">"@babel/plugin-transform-runtime"</span>,</span><br><span class="line">        [</span><br><span class="line">            <span class="string">"react-css-modules"</span>,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"exclude"</span>: <span class="string">"node_modules"</span>,</span><br><span class="line">                <span class="attr">"filetypes"</span>: &#123;</span><br><span class="line">                    <span class="attr">".scss"</span>: &#123;</span><br><span class="line">                        <span class="attr">"syntax"</span>: <span class="string">"postcss-scss"</span></span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;,</span><br><span class="line">                <span class="attr">"generateScopedName"</span>: <span class="string">"[name]___[local]___[hash:base64:5]"</span></span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="React-项目"><a href="#React-项目" class="headerlink" title="React 项目"></a>React 项目</h2><p>下面是项目基本的目录树结构，接着从入口开始一步步细化整个项目。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├ package.json</span><br><span class="line">├ src</span><br><span class="line">│ ├ component // 组件目录</span><br><span class="line">│ ├ reducer   // reducer目录</span><br><span class="line">│ ├ action.js</span><br><span class="line">│ ├ constants.js</span><br><span class="line">│ ├ context.js</span><br><span class="line">│ └ index.js</span><br><span class="line">├ public // 静态文件目录</span><br><span class="line">│ ├ css</span><br><span class="line">│ └ index.html</span><br><span class="line">├ .babelrc</span><br><span class="line">├ webpack.common.js</span><br><span class="line">├ webpack.dev.js</span><br><span class="line">└ webpack.prod.js</span><br></pre></td></tr></table></figure>
+
 <p>状态管理组件使用 <strong>redux</strong>， <strong>react-router</strong> 用于构建单页面的项目，因为使用了 <strong>hooks</strong> API，所以不再需要 <strong>react-redux</strong> 连接状态 <strong>state</strong>。 </p>
-<p>入口文件 <strong>index.js</strong><br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; useReducer &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> &#123; HashRouter <span class="keyword">as</span> Router, Route, Redirect, Switch &#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"><span class="keyword">import</span> Context <span class="keyword">from</span> <span class="string">'./context.js'</span></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./component/home.js'</span></span><br><span class="line"><span class="keyword">import</span> List <span class="keyword">from</span> <span class="string">'./component/list.js'</span></span><br><span class="line"><span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'./reducer'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'../public/css/index.css'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Root = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> initState = &#123;</span><br><span class="line">        list: [</span><br><span class="line">            &#123; <span class="attr">id</span>: <span class="number">0</span>, <span class="attr">txt</span>: <span class="string">'webpack 4'</span> &#125;,</span><br><span class="line">            &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">txt</span>: <span class="string">'react'</span> &#125;,</span><br><span class="line">            &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">txt</span>: <span class="string">'redux'</span> &#125;,</span><br><span class="line">        ]</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// useReducer映射出state，dispatch</span></span><br><span class="line">    <span class="keyword">const</span> [state, dispatch] = useReducer(rootReducer, initState);</span><br><span class="line">    <span class="comment">// &lt;Context.Provider value=&#123;&#123; state, dispatch &#125;&#125;&gt; 基本代替了 react-redux 的 &lt;Provider store=&#123;store&#125;&gt;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Context.Provider</span> <span class="attr">value</span>=<span class="string">&#123;&#123;</span> <span class="attr">state</span>, <span class="attr">dispatch</span> &#125;&#125;&gt;</span></span></span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">            &lt;Switch&gt;</span><br><span class="line">                &lt;Route exact path="/" component=&#123;Home&#125; /&gt;</span><br><span class="line">                &lt;Route exact path="/list" component=&#123;List&#125; /&gt;</span><br><span class="line">                &lt;Route render=&#123;() =&gt; (&lt;Redirect to="/" /&gt;)&#125; /&gt;</span><br><span class="line">            &lt;/Switch&gt;</span><br><span class="line">        &lt;/Router&gt;</span><br><span class="line">    &lt;/Context.Provider&gt;</span><br><span class="line">&#125;</span><br><span class="line">render(</span><br><span class="line">    &lt;Root /&gt;,</span><br><span class="line">    document.getElementById('root')</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
-<p> <strong>constants.js</strong> ， <strong>action.js</strong> 和 <strong>reducer.js</strong> 与之前的写法是一致的。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// constants.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> ADD_COMMENT = <span class="string">'ADD_COMMENT'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> REMOVE_COMMENT = <span class="string">'REMOVE_COMMENT'</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>action.js</strong><br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// action.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; ADD_COMMENT, REMOVE_COMMENT &#125; <span class="keyword">from</span> <span class="string">'./constants'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">addComment</span>(<span class="params">comment</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    type: ADD_COMMENT,</span><br><span class="line">    comment</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">removeComment</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    type: REMOVE_COMMENT,</span><br><span class="line">    id</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p><strong>list.js</strong><br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//list.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; ADD_COMMENT, REMOVE_COMMENT &#125; <span class="keyword">from</span> <span class="string">'../constants.js'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> list = <span class="function">(<span class="params">state = [], payload</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">switch</span> (payload.type) &#123;</span><br><span class="line">        <span class="keyword">case</span> ADD_COMMENT:</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(payload.comment)) &#123;</span><br><span class="line">                <span class="keyword">return</span> [...state, ...payload.comment];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> [...state, payload.comment];</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">case</span> REMOVE_COMMENT:</span><br><span class="line">            <span class="keyword">return</span> state.filter(<span class="function"><span class="params">i</span> =&gt;</span> i.id != payload.id);</span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">return</span> state;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> list</span><br></pre></td></tr></table></figure></p>
-<p><strong>reducer.js</strong><br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//reducer.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; combineReducers &#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"><span class="keyword">import</span> list <span class="keyword">from</span> <span class="string">'./list.js'</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">'./user.js'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rootReducer = combineReducers(&#123;</span><br><span class="line">  list,</span><br><span class="line">  user</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> rootReducer</span><br></pre></td></tr></table></figure></p>
+<p>入口文件 <strong>index.js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; useReducer &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123; render &#125; <span class="keyword">from</span> <span class="string">'react-dom'</span></span><br><span class="line"><span class="keyword">import</span> &#123; HashRouter <span class="keyword">as</span> Router, Route, Redirect, Switch &#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"><span class="keyword">import</span> Context <span class="keyword">from</span> <span class="string">'./context.js'</span></span><br><span class="line"><span class="keyword">import</span> Home <span class="keyword">from</span> <span class="string">'./component/home.js'</span></span><br><span class="line"><span class="keyword">import</span> List <span class="keyword">from</span> <span class="string">'./component/list.js'</span></span><br><span class="line"><span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'./reducer'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'../public/css/index.css'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Root = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> initState = &#123;</span><br><span class="line">        list: [</span><br><span class="line">            &#123; <span class="attr">id</span>: <span class="number">0</span>, <span class="attr">txt</span>: <span class="string">'webpack 4'</span> &#125;,</span><br><span class="line">            &#123; <span class="attr">id</span>: <span class="number">1</span>, <span class="attr">txt</span>: <span class="string">'react'</span> &#125;,</span><br><span class="line">            &#123; <span class="attr">id</span>: <span class="number">2</span>, <span class="attr">txt</span>: <span class="string">'redux'</span> &#125;,</span><br><span class="line">        ]</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="comment">// useReducer映射出state，dispatch</span></span><br><span class="line">    <span class="keyword">const</span> [state, dispatch] = useReducer(rootReducer, initState);</span><br><span class="line">    <span class="comment">// &lt;Context.Provider value=&#123;&#123; state, dispatch &#125;&#125;&gt; 基本代替了 react-redux 的 &lt;Provider store=&#123;store&#125;&gt;</span></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Context.Provider</span> <span class="attr">value</span>=<span class="string">&#123;&#123;</span> <span class="attr">state</span>, <span class="attr">dispatch</span> &#125;&#125;&gt;</span></span></span><br><span class="line">        &lt;Router&gt;</span><br><span class="line">            &lt;Switch&gt;</span><br><span class="line">                &lt;Route exact path="/" component=&#123;Home&#125; /&gt;</span><br><span class="line">                &lt;Route exact path="/list" component=&#123;List&#125; /&gt;</span><br><span class="line">                &lt;Route render=&#123;() =&gt; (&lt;Redirect to="/" /&gt;)&#125; /&gt;</span><br><span class="line">            &lt;/Switch&gt;</span><br><span class="line">        &lt;/Router&gt;</span><br><span class="line">    &lt;/Context.Provider&gt;</span><br><span class="line">&#125;</span><br><span class="line">render(</span><br><span class="line">    &lt;Root /&gt;,</span><br><span class="line">    document.getElementById('root')</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p> <strong>constants.js</strong> ， <strong>action.js</strong> 和 <strong>reducer.js</strong> 与之前的写法是一致的。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// constants.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> ADD_COMMENT = <span class="string">'ADD_COMMENT'</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> REMOVE_COMMENT = <span class="string">'REMOVE_COMMENT'</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>action.js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// action.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; ADD_COMMENT, REMOVE_COMMENT &#125; <span class="keyword">from</span> <span class="string">'./constants'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">addComment</span>(<span class="params">comment</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    type: ADD_COMMENT,</span><br><span class="line">    comment</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">removeComment</span>(<span class="params">id</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    type: REMOVE_COMMENT,</span><br><span class="line">    id</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>list.js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//list.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; ADD_COMMENT, REMOVE_COMMENT &#125; <span class="keyword">from</span> <span class="string">'../constants.js'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> list = <span class="function">(<span class="params">state = [], payload</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">switch</span> (payload.type) &#123;</span><br><span class="line">        <span class="keyword">case</span> ADD_COMMENT:</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(payload.comment)) &#123;</span><br><span class="line">                <span class="keyword">return</span> [...state, ...payload.comment];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> [...state, payload.comment];</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">case</span> REMOVE_COMMENT:</span><br><span class="line">            <span class="keyword">return</span> state.filter(<span class="function"><span class="params">i</span> =&gt;</span> i.id != payload.id);</span><br><span class="line">        <span class="keyword">default</span>: <span class="keyword">return</span> state;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> list</span><br></pre></td></tr></table></figure>
+
+<p><strong>reducer.js</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//reducer.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; combineReducers &#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"><span class="keyword">import</span> list <span class="keyword">from</span> <span class="string">'./list.js'</span></span><br><span class="line"><span class="keyword">import</span> user <span class="keyword">from</span> <span class="string">'./user.js'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rootReducer = combineReducers(&#123;</span><br><span class="line">  list,</span><br><span class="line">  user</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> rootReducer</span><br></pre></td></tr></table></figure>
+
 <p>最大区别的地方就是 <strong>component</strong> 组件，基于 <strong>函数式</strong>，内部的表达式就像是即插即用的插槽，可以很方便的抽取出通用的组件，然后从外部引用。相比之前的 <strong>面向对象</strong> 方式，我觉得 <strong>函数表达式</strong> 更受前端开发者欢迎。</p>
 <ul>
-<li><strong>useContext</strong> 获取全局的 <strong>state</strong></li>
-<li><strong>useRef</strong> 代替之前的 <strong>ref</strong></li>
-<li><strong>useState</strong> 代替之前的 <strong>state</strong></li>
+<li><p><strong>useContext</strong> 获取全局的 <strong>state</strong></p>
+</li>
+<li><p><strong>useRef</strong> 代替之前的 <strong>ref</strong></p>
+</li>
+<li><p><strong>useState</strong> 代替之前的 <strong>state</strong></p>
+</li>
 <li><p><strong>useEffect</strong> 则可以代替生命周期钩子函数 </p>
  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//监控数组中的参数，一旦变化就执行</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123; updateData(); &#125;,[id]);</span><br><span class="line"></span><br><span class="line"><span class="comment">//不传第二个参数的话，它就等价于每次componentDidMount和componentDidUpdate时执行</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123; updateData(); &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二个参数传空数组，等价于只在componentDidMount和componentWillUnMount时执行， </span></span><br><span class="line"><span class="comment">//第一个参数中的返回函数用于执行清理功能</span></span><br><span class="line">useEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123; </span><br><span class="line">    initData(); </span><br><span class="line">    reutrn () =&gt; <span class="built_in">console</span>.log(<span class="string">'componentWillUnMount cleanup...'</span>); </span><br><span class="line">&#125;, []);</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <p>最后就是实现具体界面和业务逻辑的组件了，下面是其中的List组件</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// list.js</span></span><br><span class="line"><span class="keyword">import</span> React, &#123; useRef, useState, useContext &#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">import</span> &#123; bindActionCreators &#125; <span class="keyword">from</span> <span class="string">'redux'</span></span><br><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">'react-router-dom'</span></span><br><span class="line"><span class="keyword">import</span> Context <span class="keyword">from</span> <span class="string">'../context.js'</span></span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> actions <span class="keyword">from</span> <span class="string">'../action.js'</span></span><br><span class="line"><span class="keyword">import</span> Dialog <span class="keyword">from</span> <span class="string">'./dialog.js'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'./list.scss'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> List = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> ctx = useContext(Context);<span class="comment">//获取全局状态state</span></span><br><span class="line">    <span class="keyword">const</span> &#123; user, list &#125; = ctx.state;</span><br><span class="line">    <span class="keyword">const</span> [visible, setVisible] = useState(<span class="literal">false</span>);</span><br><span class="line">    <span class="keyword">const</span> [rid, setRid] = useState(<span class="string">''</span>);</span><br><span class="line">    <span class="keyword">const</span> inputRef = useRef(<span class="literal">null</span>);</span><br><span class="line">    <span class="keyword">const</span> &#123; removeComment, addComment &#125; = bindActionCreators(actions, ctx.dispatch);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> confirmHandle = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        setVisible(<span class="literal">false</span>);</span><br><span class="line">        removeComment(rid);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> cancelHandle = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        setVisible(<span class="literal">false</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> add = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> input = inputRef.current,</span><br><span class="line">            val = input.value.trim();</span><br><span class="line">        <span class="keyword">if</span> (!val) <span class="keyword">return</span>;</span><br><span class="line">        addComment(&#123;</span><br><span class="line">            id: <span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * <span class="number">1000000</span>),</span><br><span class="line">            txt: val</span><br><span class="line">        &#125;);</span><br><span class="line">        input.value = <span class="string">''</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;&gt;</span></span></span><br><span class="line">        &lt;div styleName="form"&gt;</span><br><span class="line">            &lt;h3 styleName="sub-title"&gt;This is list page&lt;/h3&gt;</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;p&gt;hello, &#123;user.name&#125; !&lt;/p&gt;</span><br><span class="line">                &lt;p&gt;your email is &#123;user.email&#125; !&lt;/p&gt;</span><br><span class="line">                &lt;p styleName="tip"&gt;please add and remove the list item !!&lt;/p&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;ul&gt; &#123;</span><br><span class="line">                list.map(l =&gt; &lt;li key=&#123;l.id&#125;&gt;&#123;l.txt&#125;&lt;i className="icon-minus" title="remove item" onClick=&#123;() =&gt; &#123;</span><br><span class="line">                    setVisible(true);</span><br><span class="line">                    setRid(l.id);</span><br><span class="line">                &#125;&#125;&gt;&lt;/i&gt;&lt;/li&gt;)</span><br><span class="line">            &#125; &lt;/ul&gt;</span><br><span class="line">            &lt;input ref=&#123;inputRef&#125; type="text" /&gt;</span><br><span class="line">            &lt;button onClick=&#123;add&#125; title="add item"&gt;Add Item&lt;/button&gt;</span><br><span class="line">            &lt;Link styleName="link" to="/"&gt;redirect to home&lt;/Link&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;Dialog visible=&#123;visible&#125; confirm=&#123;confirmHandle&#125; cancel=&#123;cancelHandle&#125;&gt;remove this item ?&lt;/Dialog&gt;</span><br><span class="line">    &lt;/&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default List;</span><br></pre></td></tr></table></figure>
+
 <h2 id="项目代码"><a href="#项目代码" class="headerlink" title="项目代码"></a>项目代码</h2><p><em><a href="https://github.com/edwardzhong/webpack_react" target="_blank" rel="noopener">https://github.com/edwardzhong/webpack_react</a></em> </p>
 </div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2019/02/04/reacthooks/" data-desc="面对日新月异的前端，我表示快学不动了😂。 Webpack 老早就已经更新到了 V4.x，前段..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/react/">react</a>
+						
+					
+						
+							<a href="/tags/webpack/">webpack</a>
+						
+					
 				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a href="/tags/react/">react</a>
-                    
-				
-                    
-                        <a href="/tags/webpack/">webpack</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2019/02/04/reacthooks/" data-desc="面对日新月异的前端，我表示快学不动了😂。 Webpack 老早就已经更新到了 V4.x，前段..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2019/03/29/socketio/" class="prev post-prev">&larr; 关于socket.io的使用</a>
+        <a href="/2019/03/29/socketio/" class="prev post-prev"> <i class="icon-leftarrow"></i> 关于socket.io的使用</a>
       
 
       
-      <a href="/2019/01/03/animationfun/" class="next post-next">动画函数的绘制及自定义动画函数 &rarr;</a>
+        <a href="/2019/01/03/animationfun/" class="next post-next"> 动画函数的绘制及自定义动画函数 <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -240,13 +254,13 @@ var _hmt = _hmt || [];
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -255,10 +269,10 @@ var _hmt = _hmt || [];
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -272,7 +286,7 @@ var _hmt = _hmt || [];
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -289,7 +303,6 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>

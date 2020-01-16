@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="canvas图表(3) - 饼图 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>canvas图表(3) - 饼图 - Jeff's world</title>
+  <title >canvas图表(3) - 饼图 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="canvas图表(3) - 饼图 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,33 +121,36 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-8dcbc33329b489d8.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner4.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">canvas图表(3) - 饼图</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2017/11/23 10:23:00</time>
+    		<time><i class="icon-calendar"></i> 2017/11/23 10:23:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
     	</div>
-    	<!-- <p><p>这几天把canvas图表都优化了下，动画效果更加出色了，可以说很逼近Echart了。刚刚写完的饼图，非常好的实现了既定的功能，交互的动画效果也是很棒的。<br>效果请看：饼图<a href="https://edwa..">https://edwa..</a>.</p>
+    	<!-- <p><p>这几天把canvas图表都优化了下，动画效果更加出色了，可以说很逼近Echart了。刚刚写完的饼图，非常好的实现了既定的功能，交互的动画效果也是很棒的。<br>效果请看：饼图<a href="https://edwa" target="_blank" rel="noopener">https://edwa</a>…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- 原文地址：[canvas图表(3) - 饼图](https://edwardzhong.github.io/2017/11/23/chartpie/) -->
+    		<div class="post-content"><!-- 原文地址：[canvas图表(3) - 饼图](https://edwardzhong.github.io/2017/11/23/chartpie/) -->
 <p>这几天把canvas图表都优化了下，动画效果更加出色了，可以说很逼近Echart了。刚刚写完的饼图，非常好的实现了既定的功能，交互的动画效果也是很棒的。</p>
-<p>效果请看：<em><a href="https://edwardzhong.github.io/sites/demo/dist/chartpie.html" target="_blank" rel="noopener">饼图https://edwardzhong.github.io/sites/demo/dist/chartpie.html</a></em><br><!-- ![it](http://oncse3u6r.bkt.clouddn.com/chartpie.jpg) --><br><img src="http://upload-images.jianshu.io/upload_images/127924-a191a2faf468bea5.jpg" width="500"><br><a id="more"></a></p>
+<p>效果请看：<em><a href="https://edwardzhong.github.io/sites/demo/dist/chartpie.html">饼图https://edwardzhong.github.io/sites/demo/dist/chartpie.html</a></em></p>
+<!-- ![it](http://oncse3u6r.bkt.clouddn.com/chartpie.jpg) -->
+<img src="http://upload-images.jianshu.io/upload_images/127924-a191a2faf468bea5.jpg" width="500">
+<a id="more"></a>
+
 <p>功能点包括：</p>
 <ol>
 <li>组织数据；</li>
@@ -162,63 +158,68 @@ var _hmt = _hmt || [];
 <li>数据动画的实现；</li>
 <li>鼠标事件的处理。</li>
 </ol>
-<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>饼图的数据方面要简单很多，因为不用多个分组的数据。把所有的数据相加得出总数，然后每个数据分别求出百分比，有了百分比再相乘360度的弧度得出每个数据在圆盘中对应的要显示的角度。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> con=<span class="built_in">document</span>.getElementById(<span class="string">'container'</span>);</span><br><span class="line"><span class="keyword">var</span> pie=<span class="keyword">new</span> Pie(con);</span><br><span class="line">pie.init(&#123;</span><br><span class="line">	title:<span class="string">'网站用户访问来源'</span>,</span><br><span class="line">	toolTip:<span class="string">'访问来源'</span>,</span><br><span class="line">    data:[</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">435</span>, <span class="attr">name</span>:<span class="string">'直接访问'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">310</span>, <span class="attr">name</span>:<span class="string">'邮件营销'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">234</span>, <span class="attr">name</span>:<span class="string">'联盟广告'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">135</span>, <span class="attr">name</span>:<span class="string">'视频广告'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">1548</span>, <span class="attr">name</span>:<span class="string">'搜索引擎'</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p>因为为了同时实现新增动画和更新动画，这次的代码结构经过了重构和优化，跟之前的有比较大的区别。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Line</span> <span class="keyword">extends</span> <span class="title">Chart</span></span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(container)&#123;</span><br><span class="line">		<span class="keyword">super</span>(container);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 初始化</span></span><br><span class="line">	init(opt)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 绑定事件</span></span><br><span class="line">	bindEvent()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 显示信息</span></span><br><span class="line">	showInfo(pos,arr)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 清除内容再绘制</span></span><br><span class="line">	clearGrid(index)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 执行数据动画</span></span><br><span class="line">	animate()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 执行</span></span><br><span class="line">	create()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 组织数据</span></span><br><span class="line">	initData()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 绘制</span></span><br><span class="line">	draw()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="组织数据"><a href="#组织数据" class="headerlink" title="组织数据"></a>组织数据</h2><p>这次把组织数据的功能单独拎了出来，这样方便重用和修改。然后还要给动画对象增加是否创建的属性create和上次最后更新的度数last，为什么呢？因为我们要同时实现创建和更新图形的动画效果。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">initData()&#123;</span><br><span class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</span><br><span class="line">		item,</span><br><span class="line">		total=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">this</span>.data||!<span class="keyword">this</span>.data.length)&#123;<span class="keyword">return</span>;&#125;</span><br><span class="line">	<span class="keyword">this</span>.legend.length=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.data.length;i++)&#123;</span><br><span class="line">		item=<span class="keyword">this</span>.data[i];</span><br><span class="line">		<span class="comment">// 赋予没有颜色的项</span></span><br><span class="line">		<span class="keyword">if</span>(!item.color)&#123;</span><br><span class="line">			<span class="keyword">var</span> hsl=i%<span class="number">2</span>?<span class="number">180</span>+<span class="number">20</span>*i/<span class="number">2</span>:<span class="number">20</span>*(i<span class="number">-1</span>);</span><br><span class="line">			item.color=<span class="string">'hsla('</span>+hsl+<span class="string">',70%,60%,1)'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		item.name=item.name||<span class="string">'unnamed'</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.legend.push(&#123;</span><br><span class="line">			hide:!!item.hide,</span><br><span class="line">			name:item.name,</span><br><span class="line">			color:item.color,</span><br><span class="line">			x:<span class="number">50</span>,</span><br><span class="line">			y:that.paddingTop+<span class="number">40</span>+i*<span class="number">50</span>,</span><br><span class="line">			w:<span class="number">80</span>,</span><br><span class="line">			h:<span class="number">30</span>,</span><br><span class="line">			r:<span class="number">5</span></span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</span><br><span class="line">		total+=item.value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.data.length;i++)&#123;</span><br><span class="line">		item=<span class="keyword">this</span>.data[i];</span><br><span class="line">		<span class="keyword">if</span>(!<span class="keyword">this</span>.animateArr[i])&#123;<span class="comment">//创建</span></span><br><span class="line">			<span class="keyword">this</span>.animateArr.push(&#123;</span><br><span class="line">				i:i,</span><br><span class="line">				create:<span class="literal">true</span>,</span><br><span class="line">				hide:!!item.hide,</span><br><span class="line">				name:item.name,</span><br><span class="line">				color:item.color,</span><br><span class="line">				num:item.value,</span><br><span class="line">				percent:<span class="built_in">Math</span>.round(item.value/total*<span class="number">10000</span>)/<span class="number">100</span>,</span><br><span class="line">				ang:<span class="built_in">Math</span>.round(item.value/total*<span class="built_in">Math</span>.PI*<span class="number">2</span>*<span class="number">100</span>)/<span class="number">100</span>,</span><br><span class="line">				last:<span class="number">0</span>,</span><br><span class="line">				cur:<span class="number">0</span></span><br><span class="line">			&#125;);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;<span class="comment">//更新				</span></span><br><span class="line">			<span class="keyword">if</span>(that.animateArr[i].hide&amp;&amp;!item.hide)&#123;</span><br><span class="line">				that.animateArr[i].create=<span class="literal">true</span>;</span><br><span class="line">				that.animateArr[i].cur=<span class="number">0</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				that.animateArr[i].create=<span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			that.animateArr[i].hide=item.hide;</span><br><span class="line">			that.animateArr[i].percent=<span class="built_in">Math</span>.round(item.value/total*<span class="number">10000</span>)/<span class="number">100</span>;</span><br><span class="line">			that.animateArr[i].ang=<span class="built_in">Math</span>.round(item.value/total*<span class="built_in">Math</span>.PI*<span class="number">2</span>*<span class="number">100</span>)/<span class="number">100</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="绘制"><a href="#绘制" class="headerlink" title="绘制"></a>绘制</h2><p>饼图的绘制功能很简单，因为不用坐标系，只需要绘制标题和标签列表。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">draw()&#123;</span><br><span class="line">	<span class="keyword">var</span> item,ctx=<span class="keyword">this</span>.ctx;</span><br><span class="line">	ctx.fillStyle=<span class="string">'hsla(0,0%,30%,1)'</span>;</span><br><span class="line">	ctx.strokeStyle=<span class="string">'hsla(0,0%,20%,1)'</span>;</span><br><span class="line">	ctx.textBaseLine=<span class="string">'middle'</span>;</span><br><span class="line">	ctx.font=<span class="string">'24px arial'</span>;</span><br><span class="line">	</span><br><span class="line">	ctx.clearRect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.W,<span class="keyword">this</span>.H);</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.title)&#123;</span><br><span class="line">		ctx.save();</span><br><span class="line">		ctx.textAlign=<span class="string">'center'</span>;</span><br><span class="line">		ctx.font=<span class="string">'bold 40px arial'</span>;</span><br><span class="line">		ctx.fillText(<span class="keyword">this</span>.title,<span class="keyword">this</span>.W/<span class="number">2</span>,<span class="number">70</span>);</span><br><span class="line">		ctx.restore();</span><br><span class="line">	&#125;</span><br><span class="line">	ctx.save();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.legend.length;i++)&#123;</span><br><span class="line">		item=<span class="keyword">this</span>.legend[i];</span><br><span class="line">		<span class="comment">// 画分类标签</span></span><br><span class="line">		ctx.textAlign=<span class="string">'left'</span>;</span><br><span class="line">		ctx.fillStyle=item.color;</span><br><span class="line">		ctx.strokeStyle=item.color;</span><br><span class="line">		roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</span><br><span class="line">		ctx.globalAlpha=item.hide?<span class="number">0.3</span>:<span class="number">1</span>;</span><br><span class="line">		ctx.fill();</span><br><span class="line">		ctx.fillText(item.name,item.x+item.w+<span class="number">20</span>,item.y+item.h<span class="number">-5</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	ctx.restore();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>饼图的数据方面要简单很多，因为不用多个分组的数据。把所有的数据相加得出总数，然后每个数据分别求出百分比，有了百分比再相乘360度的弧度得出每个数据在圆盘中对应的要显示的角度。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> con=<span class="built_in">document</span>.getElementById(<span class="string">'container'</span>);</span><br><span class="line"><span class="keyword">var</span> pie=<span class="keyword">new</span> Pie(con);</span><br><span class="line">pie.init(&#123;</span><br><span class="line">	title:<span class="string">'网站用户访问来源'</span>,</span><br><span class="line">	toolTip:<span class="string">'访问来源'</span>,</span><br><span class="line">    data:[</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">435</span>, <span class="attr">name</span>:<span class="string">'直接访问'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">310</span>, <span class="attr">name</span>:<span class="string">'邮件营销'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">234</span>, <span class="attr">name</span>:<span class="string">'联盟广告'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">135</span>, <span class="attr">name</span>:<span class="string">'视频广告'</span>&#125;,</span><br><span class="line">        &#123;<span class="attr">value</span>:<span class="number">1548</span>, <span class="attr">name</span>:<span class="string">'搜索引擎'</span>&#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><p>因为为了同时实现新增动画和更新动画，这次的代码结构经过了重构和优化，跟之前的有比较大的区别。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Line</span> <span class="keyword">extends</span> <span class="title">Chart</span></span>&#123;</span><br><span class="line">	<span class="keyword">constructor</span>(container)&#123;</span><br><span class="line">		<span class="keyword">super</span>(container);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 初始化</span></span><br><span class="line">	init(opt)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 绑定事件</span></span><br><span class="line">	bindEvent()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 显示信息</span></span><br><span class="line">	showInfo(pos,arr)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 清除内容再绘制</span></span><br><span class="line">	clearGrid(index)&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 执行数据动画</span></span><br><span class="line">	animate()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 执行</span></span><br><span class="line">	create()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 组织数据</span></span><br><span class="line">	initData()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">// 绘制</span></span><br><span class="line">	draw()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="组织数据"><a href="#组织数据" class="headerlink" title="组织数据"></a>组织数据</h2><p>这次把组织数据的功能单独拎了出来，这样方便重用和修改。然后还要给动画对象增加是否创建的属性create和上次最后更新的度数last，为什么呢？因为我们要同时实现创建和更新图形的动画效果。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">initData()&#123;</span><br><span class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</span><br><span class="line">		item,</span><br><span class="line">		total=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">this</span>.data||!<span class="keyword">this</span>.data.length)&#123;<span class="keyword">return</span>;&#125;</span><br><span class="line">	<span class="keyword">this</span>.legend.length=<span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.data.length;i++)&#123;</span><br><span class="line">		item=<span class="keyword">this</span>.data[i];</span><br><span class="line">		<span class="comment">// 赋予没有颜色的项</span></span><br><span class="line">		<span class="keyword">if</span>(!item.color)&#123;</span><br><span class="line">			<span class="keyword">var</span> hsl=i%<span class="number">2</span>?<span class="number">180</span>+<span class="number">20</span>*i/<span class="number">2</span>:<span class="number">20</span>*(i<span class="number">-1</span>);</span><br><span class="line">			item.color=<span class="string">'hsla('</span>+hsl+<span class="string">',70%,60%,1)'</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		item.name=item.name||<span class="string">'unnamed'</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">this</span>.legend.push(&#123;</span><br><span class="line">			hide:!!item.hide,</span><br><span class="line">			name:item.name,</span><br><span class="line">			color:item.color,</span><br><span class="line">			x:<span class="number">50</span>,</span><br><span class="line">			y:that.paddingTop+<span class="number">40</span>+i*<span class="number">50</span>,</span><br><span class="line">			w:<span class="number">80</span>,</span><br><span class="line">			h:<span class="number">30</span>,</span><br><span class="line">			r:<span class="number">5</span></span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</span><br><span class="line">		total+=item.value;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.data.length;i++)&#123;</span><br><span class="line">		item=<span class="keyword">this</span>.data[i];</span><br><span class="line">		<span class="keyword">if</span>(!<span class="keyword">this</span>.animateArr[i])&#123;<span class="comment">//创建</span></span><br><span class="line">			<span class="keyword">this</span>.animateArr.push(&#123;</span><br><span class="line">				i:i,</span><br><span class="line">				create:<span class="literal">true</span>,</span><br><span class="line">				hide:!!item.hide,</span><br><span class="line">				name:item.name,</span><br><span class="line">				color:item.color,</span><br><span class="line">				num:item.value,</span><br><span class="line">				percent:<span class="built_in">Math</span>.round(item.value/total*<span class="number">10000</span>)/<span class="number">100</span>,</span><br><span class="line">				ang:<span class="built_in">Math</span>.round(item.value/total*<span class="built_in">Math</span>.PI*<span class="number">2</span>*<span class="number">100</span>)/<span class="number">100</span>,</span><br><span class="line">				last:<span class="number">0</span>,</span><br><span class="line">				cur:<span class="number">0</span></span><br><span class="line">			&#125;);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;<span class="comment">//更新				</span></span><br><span class="line">			<span class="keyword">if</span>(that.animateArr[i].hide&amp;&amp;!item.hide)&#123;</span><br><span class="line">				that.animateArr[i].create=<span class="literal">true</span>;</span><br><span class="line">				that.animateArr[i].cur=<span class="number">0</span>;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				that.animateArr[i].create=<span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			that.animateArr[i].hide=item.hide;</span><br><span class="line">			that.animateArr[i].percent=<span class="built_in">Math</span>.round(item.value/total*<span class="number">10000</span>)/<span class="number">100</span>;</span><br><span class="line">			that.animateArr[i].ang=<span class="built_in">Math</span>.round(item.value/total*<span class="built_in">Math</span>.PI*<span class="number">2</span>*<span class="number">100</span>)/<span class="number">100</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="绘制"><a href="#绘制" class="headerlink" title="绘制"></a>绘制</h2><p>饼图的绘制功能很简单，因为不用坐标系，只需要绘制标题和标签列表。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">draw()&#123;</span><br><span class="line">	<span class="keyword">var</span> item,ctx=<span class="keyword">this</span>.ctx;</span><br><span class="line">	ctx.fillStyle=<span class="string">'hsla(0,0%,30%,1)'</span>;</span><br><span class="line">	ctx.strokeStyle=<span class="string">'hsla(0,0%,20%,1)'</span>;</span><br><span class="line">	ctx.textBaseLine=<span class="string">'middle'</span>;</span><br><span class="line">	ctx.font=<span class="string">'24px arial'</span>;</span><br><span class="line">	</span><br><span class="line">	ctx.clearRect(<span class="number">0</span>,<span class="number">0</span>,<span class="keyword">this</span>.W,<span class="keyword">this</span>.H);</span><br><span class="line">	<span class="keyword">if</span>(<span class="keyword">this</span>.title)&#123;</span><br><span class="line">		ctx.save();</span><br><span class="line">		ctx.textAlign=<span class="string">'center'</span>;</span><br><span class="line">		ctx.font=<span class="string">'bold 40px arial'</span>;</span><br><span class="line">		ctx.fillText(<span class="keyword">this</span>.title,<span class="keyword">this</span>.W/<span class="number">2</span>,<span class="number">70</span>);</span><br><span class="line">		ctx.restore();</span><br><span class="line">	&#125;</span><br><span class="line">	ctx.save();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="keyword">this</span>.legend.length;i++)&#123;</span><br><span class="line">		item=<span class="keyword">this</span>.legend[i];</span><br><span class="line">		<span class="comment">// 画分类标签</span></span><br><span class="line">		ctx.textAlign=<span class="string">'left'</span>;</span><br><span class="line">		ctx.fillStyle=item.color;</span><br><span class="line">		ctx.strokeStyle=item.color;</span><br><span class="line">		roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</span><br><span class="line">		ctx.globalAlpha=item.hide?<span class="number">0.3</span>:<span class="number">1</span>;</span><br><span class="line">		ctx.fill();</span><br><span class="line">		ctx.fillText(item.name,item.x+item.w+<span class="number">20</span>,item.y+item.h<span class="number">-5</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	ctx.restore();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="执行绘制饼图动画"><a href="#执行绘制饼图动画" class="headerlink" title="执行绘制饼图动画"></a>执行绘制饼图动画</h2><p>动画区分了创建和更新，这样用户很容易就能看出数据的比例关系变化，也就更加的直观。创建就是从0弧度到指定的弧度，只有数值的增加；而更新动画就要区分增加和减少的情况，因为当用户点击某个标签的时候，会隐藏显示某个分类的数据，于是需要重新计算每个分类的比例，那么相应的分类百分比就会增加或减少。我们根据当前最新要达到的比例ang和已经执行完的当前比例last的进行对比，相应执行增加和减少比例，动画原理就是这样。</p>
 <p>canvas绘制圆形context.arc(x,y,r,sAngle,eAngle,counterclockwise);只要我们指定开始角度和结束角度就会画出披萨饼一样的效果，所有的披萨饼加起来就是一个圆。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">animate()&#123;</span><br><span class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</span><br><span class="line">		ctx=that.ctx,</span><br><span class="line">		canvas=that.canvas,</span><br><span class="line">		item,startAng,ang,</span><br><span class="line">		isStop=<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">	(<span class="function"><span class="keyword">function</span> <span class="title">run</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		isStop=<span class="literal">true</span>;</span><br><span class="line">		ctx.save();</span><br><span class="line">		ctx.translate(that.W/<span class="number">2</span>,that.H/<span class="number">2</span>);</span><br><span class="line">		ctx.fillStyle=<span class="string">'#fff'</span>;</span><br><span class="line">		ctx.beginPath();</span><br><span class="line">		ctx.arc(<span class="number">0</span>,<span class="number">0</span>,that.H/<span class="number">3</span>+<span class="number">30</span>,<span class="number">0</span>,<span class="built_in">Math</span>.PI*<span class="number">2</span>,<span class="literal">false</span>);</span><br><span class="line">		ctx.fill();</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=that.animateArr.length;i&lt;l;i++)&#123;</span><br><span class="line">			item=that.animateArr[i];</span><br><span class="line">			<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</span><br><span class="line">			startAng=-<span class="built_in">Math</span>.PI/<span class="number">2</span>;</span><br><span class="line">			that.animateArr.forEach(<span class="function">(<span class="params">obj,j</span>)=&gt;</span>&#123;</span><br><span class="line">				<span class="keyword">if</span>(j&lt;i&amp;&amp;!obj.hide)&#123;startAng+=obj.cur;&#125;</span><br><span class="line">			&#125;);</span><br><span class="line"></span><br><span class="line">			ctx.fillStyle=item.color;</span><br><span class="line">			<span class="keyword">if</span>(item.create)&#123;<span class="comment">//创建动画</span></span><br><span class="line">				<span class="keyword">if</span>(item.cur&gt;=item.ang)&#123;</span><br><span class="line">					item.cur=item.last=item.ang;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					item.cur+=<span class="number">0.05</span>;</span><br><span class="line">					isStop=<span class="literal">false</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;<span class="comment">//更新动画</span></span><br><span class="line">				<span class="keyword">if</span>(item.last&gt;item.ang)&#123;</span><br><span class="line">					ang=item.cur<span class="number">-0.05</span>;</span><br><span class="line">					<span class="keyword">if</span>(ang&lt;item.ang)&#123;</span><br><span class="line">						item.cur=item.last=item.ang;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					ang=item.cur+<span class="number">0.05</span>;</span><br><span class="line">					<span class="keyword">if</span>(ang&gt;item.ang)&#123;</span><br><span class="line">						item.cur=item.last=item.ang;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span>(item.cur!=item.ang)&#123;</span><br><span class="line">					item.cur=ang;</span><br><span class="line">					isStop=<span class="literal">false</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			ctx.beginPath();</span><br><span class="line">			ctx.moveTo(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">			ctx.arc(<span class="number">0</span>,<span class="number">0</span>,that.H/<span class="number">3</span>,startAng,startAng+item.cur,<span class="literal">false</span>);</span><br><span class="line">			ctx.closePath();</span><br><span class="line">			ctx.fill();</span><br><span class="line">		&#125;</span><br><span class="line">		ctx.restore();</span><br><span class="line">		<span class="keyword">if</span>(isStop) &#123;</span><br><span class="line">			that.clearGrid();</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		requestAnimationFrame(run);</span><br><span class="line">	&#125;());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="交互处理"><a href="#交互处理" class="headerlink" title="交互处理"></a>交互处理</h2><p>执行完动画后，我这里再执行了一遍清除绘制，这个也是鼠标触摸标签和饼图时的对应动画方法，会绘制每个分类的名称描述，更方便用户查看。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">clearGrid(index)&#123;</span><br><span class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</span><br><span class="line">		ctx=that.ctx,</span><br><span class="line">		canvas=that.canvas,</span><br><span class="line">		item,startAng=-<span class="built_in">Math</span>.PI/<span class="number">2</span>,</span><br><span class="line">		len=that.animateArr.filter(<span class="function"><span class="params">item</span>=&gt;</span>!item.hide).length,</span><br><span class="line">		j=<span class="number">0</span>,angle=<span class="number">0</span>,</span><br><span class="line">		r=that.H/<span class="number">3</span>;</span><br><span class="line">	ctx.clearRect(<span class="number">0</span>,<span class="number">0</span>,that.W,that.H);</span><br><span class="line">	that.draw();</span><br><span class="line">	ctx.save();</span><br><span class="line">	ctx.translate(that.W/<span class="number">2</span>,that.H/<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=that.animateArr.length;i&lt;l;i++)&#123;</span><br><span class="line">		item=that.animateArr[i];</span><br><span class="line">		<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</span><br><span class="line">		ctx.strokeStyle=item.color;</span><br><span class="line">		ctx.fillStyle=item.color;</span><br><span class="line">		angle=j&gt;=len<span class="number">-1</span>?<span class="built_in">Math</span>.PI*<span class="number">2</span>-<span class="built_in">Math</span>.PI/<span class="number">2</span>:startAng+item.ang;</span><br><span class="line">		ctx.beginPath();</span><br><span class="line">		ctx.moveTo(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">if</span>(index===i)&#123;</span><br><span class="line">			ctx.save();</span><br><span class="line">			<span class="comment">// ctx.shadowColor='hsla(0,0%,50%,1)';</span></span><br><span class="line">			ctx.shadowColor=item.color;</span><br><span class="line">			ctx.shadowBlur=<span class="number">5</span>;</span><br><span class="line">			ctx.arc(<span class="number">0</span>,<span class="number">0</span>,r+<span class="number">20</span>,startAng,angle,<span class="literal">false</span>);</span><br><span class="line">			ctx.closePath();</span><br><span class="line">			ctx.fill();</span><br><span class="line">			ctx.stroke();</span><br><span class="line">			ctx.restore();</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			ctx.arc(<span class="number">0</span>,<span class="number">0</span>,r,startAng,angle,<span class="literal">false</span>);</span><br><span class="line">			ctx.closePath();</span><br><span class="line">			ctx.fill();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//画分类描述</span></span><br><span class="line">		<span class="keyword">var</span> tr=r+<span class="number">40</span>,tw=<span class="number">0</span>,</span><br><span class="line">			tAng=startAng+item.ang/<span class="number">2</span>,</span><br><span class="line">			x=tr*<span class="built_in">Math</span>.cos(tAng),</span><br><span class="line">			y=tr*<span class="built_in">Math</span>.sin(tAng);</span><br><span class="line"></span><br><span class="line">		ctx.lineWidth=<span class="number">2</span>;</span><br><span class="line">		ctx.lineCap=<span class="string">'round'</span>;</span><br><span class="line">		ctx.beginPath();</span><br><span class="line">		ctx.moveTo(<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">		ctx.lineTo(x,y);</span><br><span class="line">		<span class="keyword">if</span>(tAng&gt;=-<span class="built_in">Math</span>.PI/<span class="number">2</span>&amp;&amp;tAng&lt;=<span class="built_in">Math</span>.PI/<span class="number">2</span>)&#123;</span><br><span class="line">			ctx.lineTo(x+<span class="number">30</span>,y);</span><br><span class="line">			ctx.fillText(item.name,x+<span class="number">40</span>,y+<span class="number">10</span>);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			tw=ctx.measureText(item.name).width;<span class="comment">//计算字符长度</span></span><br><span class="line">			ctx.lineTo(x<span class="number">-30</span>,y);</span><br><span class="line">			ctx.fillText(item.name,x<span class="number">-40</span>-tw,y+<span class="number">10</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		ctx.stroke();</span><br><span class="line">		startAng+=item.ang;</span><br><span class="line">		j++;</span><br><span class="line">	&#125;</span><br><span class="line">	ctx.restore();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>mousemove的时候，触摸标签和触摸饼图都是基本相同的效果，选中的分类扩大半径，同时增加阴影，以达到凸出来的动画效果，具体实现请看上面的clearGrid方法。判断是否点中都是使用isPointInPath这个api，之前已经介绍过，不再细讲。</p>
-<p>mousedown某个击标签就会显示隐藏对应分类，每次触发就会看到饼图的比例变化的动画效果，这个和之前的柱状图和折线图的功能一致。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">bindEvent()&#123;</span><br><span class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</span><br><span class="line">		canvas=that.canvas,</span><br><span class="line">		ctx=that.ctx;</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">this</span>.data.length) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousemove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> isLegend=<span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">var</span> box=canvas.getBoundingClientRect(),</span><br><span class="line">			pos = &#123;</span><br><span class="line">			x:e.clientX-box.left,</span><br><span class="line">			y:e.clientY-box.top</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="comment">// 标签</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=that.legend.length;i&lt;len;i++)&#123;</span><br><span class="line">			item=that.legend[i];</span><br><span class="line">			roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</span><br><span class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</span><br><span class="line">				canvas.style.cursor=<span class="string">'pointer'</span>;</span><br><span class="line">				<span class="keyword">if</span>(!item.hide)&#123;</span><br><span class="line">					that.clearGrid(i);</span><br><span class="line">				&#125;</span><br><span class="line">				isLegend=<span class="literal">true</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			canvas.style.cursor=<span class="string">'default'</span>;</span><br><span class="line">			that.tip.style.display=<span class="string">'none'</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(isLegend) <span class="keyword">return</span>;</span><br><span class="line">		<span class="comment">// 图表</span></span><br><span class="line">		<span class="keyword">var</span> startAng=-<span class="built_in">Math</span>.PI/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=that.animateArr.length;i&lt;l;i++)&#123;</span><br><span class="line">			item=that.animateArr[i];</span><br><span class="line">			<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</span><br><span class="line">			ctx.beginPath();</span><br><span class="line">			ctx.moveTo(that.W/<span class="number">2</span>,that.H/<span class="number">2</span>);</span><br><span class="line">			ctx.arc(that.W/<span class="number">2</span>,that.H/<span class="number">2</span>,that.H/<span class="number">3</span>,startAng,startAng+item.ang,<span class="literal">false</span>);</span><br><span class="line">			ctx.closePath();</span><br><span class="line">			startAng+=item.ang;</span><br><span class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</span><br><span class="line">				canvas.style.cursor=<span class="string">'pointer'</span>;</span><br><span class="line">				that.clearGrid(i);</span><br><span class="line">				that.showInfo(pos,that.toolTip,[&#123;<span class="attr">name</span>:item.name,<span class="attr">num</span>:item.num+<span class="string">' ('</span>+item.percent+<span class="string">'%)'</span>&#125;]);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			canvas.style.cursor=<span class="string">'default'</span>;</span><br><span class="line">			that.clearGrid();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;,<span class="literal">false</span>);</span><br><span class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousedown'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">		e.preventDefault();</span><br><span class="line">		<span class="keyword">var</span> box=that.canvas.getBoundingClientRect();</span><br><span class="line">		<span class="keyword">var</span> pos = &#123;</span><br><span class="line">			x:e.clientX-box.left,</span><br><span class="line">			y:e.clientY-box.top</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=that.legend.length;i&lt;len;i++)&#123;</span><br><span class="line">			item=that.legend[i];</span><br><span class="line">			roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</span><br><span class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</span><br><span class="line">				that.data[i].hide=!that.data[i].hide;</span><br><span class="line">				that.create();</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>mousedown某个击标签就会显示隐藏对应分类，每次触发就会看到饼图的比例变化的动画效果，这个和之前的柱状图和折线图的功能一致。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">bindEvent()&#123;</span><br><span class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</span><br><span class="line">		canvas=that.canvas,</span><br><span class="line">		ctx=that.ctx;</span><br><span class="line">	<span class="keyword">if</span>(!<span class="keyword">this</span>.data.length) <span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousemove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> isLegend=<span class="literal">false</span>;</span><br><span class="line">		<span class="keyword">var</span> box=canvas.getBoundingClientRect(),</span><br><span class="line">			pos = &#123;</span><br><span class="line">			x:e.clientX-box.left,</span><br><span class="line">			y:e.clientY-box.top</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="comment">// 标签</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=that.legend.length;i&lt;len;i++)&#123;</span><br><span class="line">			item=that.legend[i];</span><br><span class="line">			roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</span><br><span class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</span><br><span class="line">				canvas.style.cursor=<span class="string">'pointer'</span>;</span><br><span class="line">				<span class="keyword">if</span>(!item.hide)&#123;</span><br><span class="line">					that.clearGrid(i);</span><br><span class="line">				&#125;</span><br><span class="line">				isLegend=<span class="literal">true</span>;</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			canvas.style.cursor=<span class="string">'default'</span>;</span><br><span class="line">			that.tip.style.display=<span class="string">'none'</span>;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span>(isLegend) <span class="keyword">return</span>;</span><br><span class="line">		<span class="comment">// 图表</span></span><br><span class="line">		<span class="keyword">var</span> startAng=-<span class="built_in">Math</span>.PI/<span class="number">2</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,l=that.animateArr.length;i&lt;l;i++)&#123;</span><br><span class="line">			item=that.animateArr[i];</span><br><span class="line">			<span class="keyword">if</span>(item.hide)<span class="keyword">continue</span>;</span><br><span class="line">			ctx.beginPath();</span><br><span class="line">			ctx.moveTo(that.W/<span class="number">2</span>,that.H/<span class="number">2</span>);</span><br><span class="line">			ctx.arc(that.W/<span class="number">2</span>,that.H/<span class="number">2</span>,that.H/<span class="number">3</span>,startAng,startAng+item.ang,<span class="literal">false</span>);</span><br><span class="line">			ctx.closePath();</span><br><span class="line">			startAng+=item.ang;</span><br><span class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</span><br><span class="line">				canvas.style.cursor=<span class="string">'pointer'</span>;</span><br><span class="line">				that.clearGrid(i);</span><br><span class="line">				that.showInfo(pos,that.toolTip,[&#123;<span class="attr">name</span>:item.name,<span class="attr">num</span>:item.num+<span class="string">' ('</span>+item.percent+<span class="string">'%)'</span>&#125;]);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">			canvas.style.cursor=<span class="string">'default'</span>;</span><br><span class="line">			that.clearGrid();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;,<span class="literal">false</span>);</span><br><span class="line">	<span class="keyword">this</span>.canvas.addEventListener(<span class="string">'mousedown'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">		e.preventDefault();</span><br><span class="line">		<span class="keyword">var</span> box=that.canvas.getBoundingClientRect();</span><br><span class="line">		<span class="keyword">var</span> pos = &#123;</span><br><span class="line">			x:e.clientX-box.left,</span><br><span class="line">			y:e.clientY-box.top</span><br><span class="line">		&#125;;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>,item,len=that.legend.length;i&lt;len;i++)&#123;</span><br><span class="line">			item=that.legend[i];</span><br><span class="line">			roundRect(ctx,item.x,item.y,item.w,item.h,item.r);</span><br><span class="line">			<span class="keyword">if</span>(ctx.isPointInPath(pos.x*<span class="number">2</span>,pos.y*<span class="number">2</span>))&#123;</span><br><span class="line">				that.data[i].hide=!that.data[i].hide;</span><br><span class="line">				that.create();</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,<span class="literal">false</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>所有图表代码请看<em><a href="https://github.com/edwardzhong/html5Canvas/blob/master/chart/chart.js" target="_blank" rel="noopener">chart.js</a></em></p>
 </div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2017/11/23/chartpie/" data-desc="
-这几天把canvas图表都优化了下，动画效果更加出色了，可以说很逼近Echart了。刚刚写完..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/canvas/">canvas</a>
+						
+					
 				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a href="/tags/canvas/">canvas</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2017/11/23/chartpie/" data-desc="
+这几天把canvas图表都优化了下，动画效果更加出色了，可以说很逼近Echart了。刚刚写完..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2017/11/24/chartpoint/" class="prev post-prev">&larr; canvas图表(4) - 散点图</a>
+        <a href="/2017/11/24/chartpoint/" class="prev post-prev"> <i class="icon-leftarrow"></i> canvas图表(4) - 散点图</a>
       
 
       
-      <a href="/2017/11/21/chartline/" class="next post-next">canvas图表(2) - 折线图 &rarr;</a>
+        <a href="/2017/11/21/chartline/" class="next post-next"> canvas图表(2) - 折线图 <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -226,13 +227,13 @@ var _hmt = _hmt || [];
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -241,10 +242,10 @@ var _hmt = _hmt || [];
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -258,7 +259,7 @@ var _hmt = _hmt || [];
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -275,7 +276,6 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>

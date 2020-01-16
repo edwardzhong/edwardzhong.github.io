@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="WebGL光照阴影映射 - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>WebGL光照阴影映射 - Jeff's world</title>
+  <title >WebGL光照阴影映射 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="WebGL光照阴影映射 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,23 +121,22 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-7441b28d0ba8f1f2.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner9.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL光照阴影映射</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2018/01/19 13:27:00</time>
+    		<time><i class="icon-calendar"></i> 2018/01/19 13:27:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
@@ -152,9 +144,11 @@ var _hmt = _hmt || [];
     	<!-- <p><p>经过前面的学习,webgl的基本功能都已经掌握了,我们不仅掌握了着色器的编写,图形的绘制,矩阵的变换,添加光照,还通过对webgl的基础api封装,编写出了便利的工具库. 是时候进一步深入学习…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- 原文地址：[WebGL光照阴影映射](https://edwardzhong.github.io/2018/01/19/webglshadow/)  -->
+    		<div class="post-content"><!-- 原文地址：[WebGL光照阴影映射](https://edwardzhong.github.io/2018/01/19/webglshadow/)  -->
 <p>经过前面的学习,webgl的基本功能都已经掌握了,我们不仅掌握了着色器的编写,图形的绘制,矩阵的变换,添加光照,还通过对webgl的基础api封装,编写出了便利的工具库. 是时候进一步深入学习webgl的高级功能了,我认为要做逼真的3D特效,阴影绝对是一个必不可少的环节.现在我们就在之前光照的基础上添加阴影效果吧.</p>
-<p>首先看一下阴影效果的实例：<br><em><a href="https://edwardzhong.github.io/sites/demo/dist/webglShadow.html" target="_blank" rel="noopener">阴影综合(多物体高精度PCF)</a></em><br><em><a href="https://edwardzhong.github.io/sites/demo/dist/webglSpotLight.html" target="_blank" rel="noopener">点光源聚光灯阴影</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-b9a516175dff69fb.jpg" width="400"><br><a id="more"></a></p>
+<p>首先看一下阴影效果的实例：<br><em><a href="https://edwardzhong.github.io/sites/demo/dist/webglShadow.html">阴影综合(多物体高精度PCF)</a></em><br><em><a href="https://edwardzhong.github.io/sites/demo/dist/webglSpotLight.html">点光源聚光灯阴影</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-b9a516175dff69fb.jpg" width="400"></p>
+<a id="more"></a>
+
 <h2 id="内容大纲"><a href="#内容大纲" class="headerlink" title="内容大纲"></a>内容大纲</h2><p>我们以<strong>阴影综合(多物体高精度PCF)</strong>为例, 开始学习阴影相关知识.</p>
 <ol>
 <li>帧缓冲</li>
@@ -195,60 +189,63 @@ var _hmt = _hmt || [];
 <p>左边的图像是第一遍渲染的原理, 一个方向光源（所有的光线都是平行的）在立方体下面的表面投下阴影.我们通过用光源的视图投影矩阵渲染场景(从光线的角度)来创建景深图然后把它存储到帧缓冲区中.</p>
 <p>右边的图形是第二遍渲染的原理, 从眼睛的视图投影矩阵渲染场景(从眼睛的角度), 光源角度下的xy坐标相同的c点和p点,p深度值比c要大, 那么它一定处于阴影当中,那么p点就渲染为阴影.<br><img src="http://upload-images.jianshu.io/upload_images/127924-3e229602b65a0444.png" width="600"><br>来看实现以上功能的着色器代码,因为要渲染两遍,所以也就要建立两对的着色器(顶点/片段),顶点着色器比较简单,基本不涉及阴影映射,在此省略:</p>
 <h3 id="阴影片段着色器"><a href="#阴影片段着色器" class="headerlink" title="阴影片段着色器"></a>阴影片段着色器</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> GL_ES </span></span><br><span class="line">precision mediump <span class="keyword">float</span>; </span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123; </span><br><span class="line">		gl_FragColor = vec4(gl_FragCoord.z, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>); <span class="comment">//将深度值z存放到第一个分量r中</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="正常片段着色器"><a href="#正常片段着色器" class="headerlink" title="正常片段着色器"></a>正常片段着色器</h3><p>深度值后面加了0.005,稍微大于1/256,即8位的表示范围(因为一个分量就是8位),这个是消除马赫带用的,不加这个值,画面会产生难看的条纹,具体的原理可查找马赫带,在此不细讲.<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">precision mediump <span class="keyword">float</span>;</span><br><span class="line">uniform sampler2D u_ShadowMap;</span><br><span class="line">varying vec4 v_PositionFromLight;</span><br><span class="line">varying vec4 v_color;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 获取纹理的坐标</span></span><br><span class="line">		vec3 shadowCoord = (v_PositionFromLight.xyz/v_PositionFromLight.w)/<span class="number">2.0</span> + <span class="number">0.5</span>;</span><br><span class="line">		<span class="comment">// 根据阴影xy坐标,获取纹理中对应的点,z值已经被之前的阴影着色器存放在该点的r分量中了,直接使用即可</span></span><br><span class="line">		vec4 rgbaDepth = texture2D(u_ShadowMap, shadowCoord.xy);<span class="comment">// 获取指定纹理坐标处的像素颜色rgba</span></span><br><span class="line">		<span class="keyword">float</span> visibility = (shadowCoord.z &gt; rgbaDepth.r + <span class="number">0.005</span>) ? <span class="number">0.6</span> : <span class="number">1.0</span>;<span class="comment">//大于阴影的z轴,说明在阴影中并显示为阴影*0.6,否则为正常颜色*1.0</span></span><br><span class="line">		gl_FragColor = vec4(v_color.rgb * visibility, v_color.a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="正常片段着色器"><a href="#正常片段着色器" class="headerlink" title="正常片段着色器"></a>正常片段着色器</h3><p>深度值后面加了0.005,稍微大于1/256,即8位的表示范围(因为一个分量就是8位),这个是消除马赫带用的,不加这个值,画面会产生难看的条纹,具体的原理可查找马赫带,在此不细讲.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">precision mediump <span class="keyword">float</span>;</span><br><span class="line">uniform sampler2D u_ShadowMap;</span><br><span class="line">varying vec4 v_PositionFromLight;</span><br><span class="line">varying vec4 v_color;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 获取纹理的坐标</span></span><br><span class="line">		vec3 shadowCoord = (v_PositionFromLight.xyz/v_PositionFromLight.w)/<span class="number">2.0</span> + <span class="number">0.5</span>;</span><br><span class="line">		<span class="comment">// 根据阴影xy坐标,获取纹理中对应的点,z值已经被之前的阴影着色器存放在该点的r分量中了,直接使用即可</span></span><br><span class="line">		vec4 rgbaDepth = texture2D(u_ShadowMap, shadowCoord.xy);<span class="comment">// 获取指定纹理坐标处的像素颜色rgba</span></span><br><span class="line">		<span class="keyword">float</span> visibility = (shadowCoord.z &gt; rgbaDepth.r + <span class="number">0.005</span>) ? <span class="number">0.6</span> : <span class="number">1.0</span>;<span class="comment">//大于阴影的z轴,说明在阴影中并显示为阴影*0.6,否则为正常颜色*1.0</span></span><br><span class="line">		gl_FragColor = vec4(v_color.rgb * visibility, v_color.a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="提高精度"><a href="#提高精度" class="headerlink" title="提高精度"></a>提高精度</h2><p>完成了最简单的阴影效果,但是当你把光源与物体的距离拉远,问题出来了,怎么看不到阴影了?这是距离超过了8位的存储范围,溢出的缘故.之前我们只使用了一个分量来存储,现在我们把其他的分量也利用起来吧,rgba一共32位.</p>
-<h3 id="阴影片段着色器-1"><a href="#阴影片段着色器-1" class="headerlink" title="阴影片段着色器"></a>阴影片段着色器</h3><p>这中间进行复杂的分解运算,并同时去除异常值,请看如下代码<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 分解保存深度值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">vec4 <span class="title">pack</span> <span class="params">(<span class="keyword">float</span> depth)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用rgba 4字节共32位来存储z值,1个字节精度为1/256</span></span><br><span class="line">    <span class="keyword">const</span> vec4 bitShift = vec4(<span class="number">1.0</span>, <span class="number">256.0</span>, <span class="number">256.0</span> * <span class="number">256.0</span>, <span class="number">256.0</span> * <span class="number">256.0</span> * <span class="number">256.0</span>);</span><br><span class="line">    <span class="keyword">const</span> vec4 bitMask = vec4(<span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// gl_FragCoord:片元的坐标,fract():返回数值的小数部分</span></span><br><span class="line">    vec4 rgbaDepth = fract(depth * bitShift); <span class="comment">//计算每个点的z值 </span></span><br><span class="line">    rgbaDepth -= rgbaDepth.gbaa * bitMask; <span class="comment">// Cut off the value which do not fit in 8 bits</span></span><br><span class="line">    <span class="keyword">return</span> rgbaDepth;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gl_FragColor = pack(gl_FragCoord.z);<span class="comment">// 将z值分开存储到rgba分量中,阴影颜色的同时也是深度值z</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="正常片段着色器-1"><a href="#正常片段着色器-1" class="headerlink" title="正常片段着色器"></a>正常片段着色器</h3><p>这里对应就要解码出深度值<br><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 释出深度值z</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">unpack</span><span class="params">(<span class="keyword">const</span> in vec4 rgbaDepth)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> vec4 bitShift = vec4(<span class="number">1.0</span>, <span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">1.0</span>/(<span class="number">256.0</span>*<span class="number">256.0</span>), <span class="number">1.0</span>/(<span class="number">256.0</span>*<span class="number">256.0</span>*<span class="number">256.0</span>));</span><br><span class="line">    <span class="keyword">return</span> dot(rgbaDepth, bitShift);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="阴影片段着色器-1"><a href="#阴影片段着色器-1" class="headerlink" title="阴影片段着色器"></a>阴影片段着色器</h3><p>这中间进行复杂的分解运算,并同时去除异常值,请看如下代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 分解保存深度值</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function">vec4 <span class="title">pack</span> <span class="params">(<span class="keyword">float</span> depth)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 使用rgba 4字节共32位来存储z值,1个字节精度为1/256</span></span><br><span class="line">    <span class="keyword">const</span> vec4 bitShift = vec4(<span class="number">1.0</span>, <span class="number">256.0</span>, <span class="number">256.0</span> * <span class="number">256.0</span>, <span class="number">256.0</span> * <span class="number">256.0</span> * <span class="number">256.0</span>);</span><br><span class="line">    <span class="keyword">const</span> vec4 bitMask = vec4(<span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// gl_FragCoord:片元的坐标,fract():返回数值的小数部分</span></span><br><span class="line">    vec4 rgbaDepth = fract(depth * bitShift); <span class="comment">//计算每个点的z值 </span></span><br><span class="line">    rgbaDepth -= rgbaDepth.gbaa * bitMask; <span class="comment">// Cut off the value which do not fit in 8 bits</span></span><br><span class="line">    <span class="keyword">return</span> rgbaDepth;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gl_FragColor = pack(gl_FragCoord.z);<span class="comment">// 将z值分开存储到rgba分量中,阴影颜色的同时也是深度值z</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="正常片段着色器-1"><a href="#正常片段着色器-1" class="headerlink" title="正常片段着色器"></a>正常片段着色器</h3><p>这里对应就要解码出深度值</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 释出深度值z</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">unpack</span><span class="params">(<span class="keyword">const</span> in vec4 rgbaDepth)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> vec4 bitShift = vec4(<span class="number">1.0</span>, <span class="number">1.0</span>/<span class="number">256.0</span>, <span class="number">1.0</span>/(<span class="number">256.0</span>*<span class="number">256.0</span>), <span class="number">1.0</span>/(<span class="number">256.0</span>*<span class="number">256.0</span>*<span class="number">256.0</span>));</span><br><span class="line">    <span class="keyword">return</span> dot(rgbaDepth, bitShift);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="抗锯齿-PCF"><a href="#抗锯齿-PCF" class="headerlink" title="抗锯齿(PCF)"></a>抗锯齿(PCF)</h2><p>解决了精度的问题,接着继续优化. 运行起来吧,阴影很粗糙有木有? 你看看下面左图,很严重的锯齿, 抗锯齿有很多种解决方案,我这里使用PCF, 也就是百分比渐近式过滤算法,因为它基于代码实现的,所以也叫软阴影. </p>
 <p>PCF的原理也很简单, 采集当前点周围像素的阴影值，并将其深度与所有采集的样本进行比较，最后对结果进行平均，这样就得到光线和阴影之间更平滑的过渡效果.下面右图是经过PCF处理之后的阴影,效果要自然得多了.<br><img src="http://upload-images.jianshu.io/upload_images/127924-ec2704e818893edb.jpg" width="400"><br>我们看正常着色器的实现代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">vec3 shadowCoord = (v_positionFromLight.xyz/v_positionFromLight.w)/<span class="number">2.0</span> + <span class="number">0.5</span>;</span><br><span class="line"><span class="keyword">float</span> shadows =<span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">float</span> opacity=<span class="number">0.6</span>;<span class="comment">// 阴影alpha值, 值越小暗度越深</span></span><br><span class="line"><span class="keyword">float</span> texelSize=<span class="number">1.0</span>/<span class="number">1024.0</span>;<span class="comment">// 阴影像素尺寸,值越小阴影越逼真</span></span><br><span class="line">vec4 rgbaDepth;</span><br><span class="line"><span class="comment">//  消除阴影边缘的锯齿</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">float</span> y=<span class="number">-1.5</span>; y &lt;= <span class="number">1.5</span>; y += <span class="number">1.0</span>)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">float</span> x=<span class="number">-1.5</span>; x &lt;=<span class="number">1.5</span>; x += <span class="number">1.0</span>)&#123;</span><br><span class="line">        rgbaDepth = texture2D(u_shadowMap, shadowCoord.xy+vec2(x,y)*texelSize);</span><br><span class="line">        shadows += shadowCoord.z-bias &gt; unpack(rgbaDepth) ? <span class="number">1.0</span> : <span class="number">0.0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">shadows/=<span class="number">16.0</span>;<span class="comment">// 4*4的样本</span></span><br><span class="line"><span class="keyword">float</span> visibility=min(opacity+(<span class="number">1.0</span>-shadows),<span class="number">1.0</span>);</span><br><span class="line">specular=visibility &lt; <span class="number">1.0</span> ? vec3(<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>): specular;<span class="comment">// 阴影处没有高光</span></span><br><span class="line">gl_FragColor = vec4((diffuse + ambient + specular) * visibility, v_color.a);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">vec3 shadowCoord = (v_positionFromLight.xyz/v_positionFromLight.w)/<span class="number">2.0</span> + <span class="number">0.5</span>;</span><br><span class="line"><span class="keyword">float</span> shadows =<span class="number">0.0</span>;</span><br><span class="line"><span class="keyword">float</span> opacity=<span class="number">0.6</span>;<span class="comment">// 阴影alpha值, 值越小暗度越深</span></span><br><span class="line"><span class="keyword">float</span> texelSize=<span class="number">1.0</span>/<span class="number">1024.0</span>;<span class="comment">// 阴影像素尺寸,值越小阴影越逼真</span></span><br><span class="line">vec4 rgbaDepth;</span><br><span class="line"><span class="comment">//  消除阴影边缘的锯齿</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">float</span> y=<span class="number">-1.5</span>; y &lt;= <span class="number">1.5</span>; y += <span class="number">1.0</span>)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">float</span> x=<span class="number">-1.5</span>; x &lt;=<span class="number">1.5</span>; x += <span class="number">1.0</span>)&#123;</span><br><span class="line">        rgbaDepth = texture2D(u_shadowMap, shadowCoord.xy+vec2(x,y)*texelSize);</span><br><span class="line">        shadows += shadowCoord.z-bias &gt; unpack(rgbaDepth) ? <span class="number">1.0</span> : <span class="number">0.0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">shadows/=<span class="number">16.0</span>;<span class="comment">// 4*4的样本</span></span><br><span class="line"><span class="keyword">float</span> visibility=<span class="built_in">min</span>(opacity+(<span class="number">1.0</span>-shadows),<span class="number">1.0</span>);</span><br><span class="line">specular=visibility &lt; <span class="number">1.0</span> ? vec3(<span class="number">0.0</span>,<span class="number">0.0</span>,<span class="number">0.0</span>): specular;<span class="comment">// 阴影处没有高光</span></span><br><span class="line">gl_FragColor = vec4((diffuse + ambient + specular) * visibility, v_color.a);</span><br></pre></td></tr></table></figure>
+
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>WebGL的阴影部分,涉及到了很多opengGL的底层,计算机图形学算法. 为了深入理解它,可真是花费了很多脑力,是到目前为止学习webgl的第一道坎,它里面的水很深.比如光是反锯齿部分就涉及到很多低层细节，算法的实现，显卡的性能问题等都是需要考虑的, 阴影部分后续还要慢慢查资料继续优化.</p>
 <p>越是深入学习WebGL，就越觉得它相关的资料真是少，必须看openGL ES相关的东西才能解决,伤不起啊.</p>
 </div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2018/01/19/webglshadow/" data-desc="
-经过前面的学习,webgl的基本功能都已经掌握了,我们不仅掌握了着色器的编写,图形的绘制,矩..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/webGL/">webGL</a>
+						
+					
 				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a href="/tags/webGL/">webGL</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2018/01/19/webglshadow/" data-desc="
+经过前面的学习,webgl的基本功能都已经掌握了,我们不仅掌握了着色器的编写,图形的绘制,矩..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2018/02/27/act/" class="prev post-prev">&larr; 重返喜马拉雅之尼泊尔ACT篇</a>
+        <a href="/2018/02/27/act/" class="prev post-prev"> <i class="icon-leftarrow"></i> 重返喜马拉雅之尼泊尔ACT篇</a>
       
 
       
-      <a href="/2018/01/12/webglpolygons/" class="next post-next">WebGL多模型光照综合实例 &rarr;</a>
+        <a href="/2018/01/12/webglpolygons/" class="next post-next"> WebGL多模型光照综合实例 <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -256,13 +253,13 @@ var _hmt = _hmt || [];
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -271,10 +268,10 @@ var _hmt = _hmt || [];
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -288,7 +285,7 @@ var _hmt = _hmt || [];
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -305,7 +302,6 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>

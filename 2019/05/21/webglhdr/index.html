@@ -9,54 +9,46 @@
 
 
 
-
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!-- 优先使用 IE 最新版本和 Chrome -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <!-- 为移动设备添加 viewport -->
   <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
   <!-- 添加到主屏后的标题（iOS 6 新增） -->
   <meta name="apple-mobile-web-app-title" content="WebGL学习之HDR与Bloom - Jeff's world">
   <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
   <!-- 设置苹果工具栏颜色 -->
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
   <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
   <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
   <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
-  <meta name="format-detection" content="telphone=no, email=no">
+  <meta name="format-detection" content = "telphone=no, email=no" />
   <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://jeffzhong.space">
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
-  <title>WebGL学习之HDR与Bloom - Jeff's world</title>
+  <title >WebGL学习之HDR与Bloom - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://jeffzhong.space">
+  <meta property="og:url" content="https://edwardzhong.github.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="WebGL学习之HDR与Bloom - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
-  <!-- UC Browser Compatible -->
-<!--   <script>
-      var agent = navigator.userAgent.toLowerCase();
-      if(agent.indexOf('ucbrowser')>0) {
-          alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
-      }
-  </script> -->
   
     
     
-      <link rel="stylesheet" href="/lib/fontello/fontello.css?t=1">
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="/lib/reboto/roboto.css?t=1">
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="/dist/css/index.css?t=1">
+      <link rel="stylesheet" href="/css/index.css">
     
   
   <script>
@@ -69,6 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -79,39 +72,39 @@ var _hmt = _hmt || [];
   
   
   
-      <a href="/">
-        <i class="icon icon-home"></i>
-        主页
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
       </a>
   
-      <a href="/sites/demo/">
-        <i class="icon icon-tag"></i>
-        Demo
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
       </a>
   
-      <a data-tag="search" href="javascript:;">
-        <i class="icon icon-search"></i>
-        搜索
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
       </a>
   
   </div>
   <div class="state">
   
-    <a href="/archives">40<br>文章</a><a href="/categories">2<br>分类</a><a href="/tags">58<br>标签</a>
+    <a href="/archives">40<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">58<br>标 签</a>
   </div>
   <div class="social">
   
   
   
-      <a href="https://github.com/edwardzhong" title="Github"><i class="icon icon-github-circled"></i></a>
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
   
-      <a href="https://twitter.com/JianfengEdward" title="Twitter"><i class="icon icon-twitter"></i></a>
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
   
-      <a href="https://www.facebook.com/jianfeng.edward" title="Facebook"><i class="icon icon-facebook"></i></a>
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
   
-      <a href="http://weibo.com/1593251850" title="Weibo"><i class="icon icon-weibo"></i></a>
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon icon-rss"></i></a>
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -128,75 +121,87 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(https://upload-images.jianshu.io/upload_images/127924-1bcbb19d24c33d03.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/images/banner4.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL学习之HDR与Bloom</h3>
     	</div>
 	</a>
 	<div class="post-inner">
 	
     	<div class="post-info">
-    		<time class="icon icon-calendar"> 2019/05/21 15:09:00</time>
+    		<time><i class="icon-calendar"></i> 2019/05/21 15:09:00</time>
     		<span class="category">
     		
     			
-    			<i class="icon icon-book"></i>
+    			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/技术/">技术</a>
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
-        			
     			
     		
     		</span>
     	</div>
-    	<!-- <p><p>什么是HDRHDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低动…</p>
+    	<!-- <p><p>什么是HDRHDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低…</p>
 </p> -->
     	
-    	<div class="post-content"><!-- 原文地址：[WebGL学习之HDR与Bloom](https://edwardzhong.github.io/2018/01/12/webglhdr/)-->
+    		<div class="post-content"><!-- 原文地址：[WebGL学习之HDR与Bloom](https://edwardzhong.github.io/2018/01/12/webglhdr/)-->
+
 <h2 id="什么是HDR"><a href="#什么是HDR" class="headerlink" title="什么是HDR"></a>什么是HDR</h2><p>HDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低动态范围) 图像合成后，就叫HDR，它能同时反映出场景最暗和最亮部分的细节。为什么需要多张图片？因为目前的单反相机的宽容度还是有限的，一张照片不能反映出高动态场景的所有细节。一张图片拍摄就必须要在暗光和高光之间做出取舍，只能亮部暗部两者取其一。但是通过HDR合成多张图片，却能达到我们想要的效果。<br><img src="https://upload-images.jianshu.io/upload_images/127924-2960edbc2c229388.png" alt="hdr"></p>
 <a id="more"></a>
 <p>那么在WebGL中，HDR具体指的是什么。它指的是让我们能用超过1.0的数据表示颜色值。到目前为止，我们用的都是LDR（低动态范围），所有的颜色值都被限制在了 [0,1] 范围。在现实当中，太阳，灯光这类光源它们的颜色值肯定是远远超出1.0的范围的。</p>
-<p>本节实现的效果请看<strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglhdr.html" target="_blank" rel="noopener">hdr &amp; bloom</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-dfec5a31f1dd2b79.png" width="400" alt="hdr & bloom"></p>
+<p>本节实现的效果请看<strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglhdr.html">hdr &amp; bloom</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-dfec5a31f1dd2b79.png" width="400" alt="hdr & bloom"></p>
 <h2 id="浮点帧缓冲"><a href="#浮点帧缓冲" class="headerlink" title="浮点帧缓冲"></a>浮点帧缓冲</h2><p>当帧缓冲使用标准化的定点格式(像gl.RGB)为其颜色缓冲的内部格式，WebGL会在将这些值存入帧缓冲前自动将其约束到0.0到1.0之间。这一操作对大部分帧缓冲格式都是成立的，除了专门用来存放被拓展范围值的浮点格式。</p>
 <p>WebGL扩大颜色值范围的方法就是：把颜色的格式设置成16位浮点数或者32位浮点数，即把帧缓冲的颜色缓冲的内部格式设定成 gl.RGB16F, gl.RGBA16F, gl.RGB32F  或者 gl.RGBA32F，这些帧缓冲被叫做浮点帧缓冲(Floating Point Framebuffer)，浮点帧缓冲可以存储超过0.0到1.0范围的浮点值，所以非常适合HDR渲染。</p>
 <p>创建浮点帧缓冲，我们只需要改变颜色缓冲的内部格式参数就行了（注意 gl.FLOAT参数)：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">gl.bindTexture(gl.TEXTURE_2D, colorBuffer);</span><br><span class="line">gl.texImage2D(gl.TEXTURE_2D, <span class="number">0</span>, gl.RGB16F, SCR_WIDTH, SCR_HEIGHT, <span class="number">0</span>, gl.RGB, gl.FLOAT, <span class="literal">NULL</span>);</span><br></pre></td></tr></table></figure>
+
 <p>帧缓冲默认一个颜色分量只占用8位(bits)。当使用一个使用32位每颜色分量时(使用gl.RGB32F 或者 gl.RGBA32F)，我们需要四倍的内存来存储这些颜色。所以除非你需要一个非常高的精确度，32位不是必须的，使用 gl.RGB16F就足够了。</p>
 <h2 id="色调映射"><a href="#色调映射" class="headerlink" title="色调映射"></a>色调映射</h2><p>色调映射(Tone Mapping)是一个损失很小的转换浮点颜色值至我们所需的LDR[0.0, 1.0]范围内的过程，通常会伴有特定的风格的色平衡(Stylistic Color Balance)。</p>
 <p>最简单的色调映射算法是Reinhard色调映射，它涉及到分散整个HDR颜色值到LDR颜色值上，所有的值都有对应。Reinhard色调映射算法平均地将所有亮度值分散到LDR上。将Reinhard色调映射应用到之前的片段着色器上，并且加上一个Gamma校正过滤：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;             </span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">float</span> gamma = <span class="number">2.2</span>;</span><br><span class="line">    vec3 hdrColor = texture(hdrBuffer, TexCoords).rgb;</span><br><span class="line">    <span class="comment">// Reinhard色调映射</span></span><br><span class="line">    vec3 mapped = hdrColor / (hdrColor + vec3(<span class="number">1.0</span>));</span><br><span class="line">    <span class="comment">// Gamma校正</span></span><br><span class="line">    mapped = <span class="built_in">pow</span>(mapped, vec3(<span class="number">1.0</span> / gamma));</span><br><span class="line">    color = vec4(mapped, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>有了Reinhard色调映射的应用，我们不再会在场景明亮的地方损失细节。当然，这个算法是倾向明亮的区域的，暗的区域会不那么精细也不那么有区分度。</p>
 <p>另一个色调映射应用是曝光(Exposure)参数的使用。HDR图片包含在不同曝光等级的细节。如果我们有一个场景要展现日夜交替，我们当然会在白天使用低曝光，在夜间使用高曝光，就像人眼调节方式一样。有了这个曝光参数，我们可以去设置可以同时在白天和夜晚不同光照条件工作的光照参数，我们只需要调整曝光参数就行了。</p>
 <p>一个简单的曝光色调映射算法会像这样：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">uniform <span class="keyword">float</span> exposure;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;             </span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">float</span> gamma = <span class="number">2.2</span>;</span><br><span class="line">    vec3 hdrColor = texture(hdrBuffer, TexCoords).rgb;</span><br><span class="line">    <span class="comment">// 曝光色调映射</span></span><br><span class="line">    vec3 mapped = vec3(<span class="number">1.0</span>) - <span class="built_in">exp</span>(-hdrColor * exposure);</span><br><span class="line">    <span class="comment">// Gamma校正 </span></span><br><span class="line">    mapped = <span class="built_in">pow</span>(mapped, vec3(<span class="number">1.0</span> / gamma));</span><br><span class="line">    color = vec4(mapped, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h2 id="什么是Bloom"><a href="#什么是Bloom" class="headerlink" title="什么是Bloom"></a>什么是Bloom</h2><p>Bloom 泛光 (或者眩光)，是用来模拟光源那种发光或发热的技术。区分明亮光源的方式是使它们发出光芒，光源的光芒向四周发散，这样观察者就会产生光源或亮区的确是强光区。Bloom使我们感觉到一个明亮的物体真的有种明亮的感觉。而Bloom和HDR的结合使用能非常完美地展示光源效果。<br><img src="https://upload-images.jianshu.io/upload_images/127924-999dd44a72ff945c.png" alt="bloom"></p>
 <p>泛光的品质很大程度上取决于所用的模糊过滤器的质量和类型。下面这几步就是泛光后处理特效的过程，它总结了实现泛光所需的步骤。<br><img src="https://upload-images.jianshu.io/upload_images/127924-a1bb8cf2a3683f3c.png" alt="泛光处理过程"></p>
 <h2 id="提取亮色"><a href="#提取亮色" class="headerlink" title="提取亮色"></a>提取亮色</h2><p>首先我们要从渲染出来的场景中提取两张图片。可以渲染场景两次，每次使用一个不同的不同的着色器渲染到不同的帧缓冲中，但可以使用一个叫做MRT（Multiple Render Targets多渲染目标）的小技巧，有了它我们能够在一个单独渲染处理中提取两个图片。在片元着色器的输出前，我们指定一个布局location标识符，这样我们便可控制一个片元着色器写入到哪个颜色缓冲：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">layout (location = <span class="number">0</span>) out vec4 FragColor;</span><br><span class="line">layout (location = <span class="number">1</span>) out vec4 BrightColor;</span><br></pre></td></tr></table></figure>
+
 <p>使用多个片元着色器输出的必要条件是，有多个颜色缓冲附加到了当前绑定的帧缓冲对象上。直到现在，我们一直使用着 gl.COLOR_ATTACHMENT0，但通过使用 gl.COLOR_ATTACHMENT1，可以得到一个附加了两个颜色缓冲的帧缓冲对象。</p>
 <p>但首先我们还是将创建帧缓冲的功能进行封装：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createFramebuffer</span>(<span class="params">gl,opt,width,height</span>)</span>&#123;  </span><br><span class="line">		<span class="keyword">const</span> fb = gl.createFramebuffer();</span><br><span class="line">    gl.bindFramebuffer(gl.FRAMEBUFFER, fb);</span><br><span class="line">    <span class="keyword">const</span> framebufferInfo = &#123;</span><br><span class="line">        framebuffer: fb,</span><br><span class="line">        textures: []</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">const</span> texs = opt.texs || <span class="number">1</span>;<span class="comment">//颜色缓冲数量</span></span><br><span class="line">    <span class="keyword">const</span> depth = !!opt.depth;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// SECTION 创建纹理</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt; texs;i++)&#123;</span><br><span class="line">        <span class="keyword">const</span> tex = initTexture(gl,opt, width, height);</span><br><span class="line">        framebufferInfo.textures.push(tex);</span><br><span class="line">        gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0 + i, gl.TEXTURE_2D, tex, <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// SECTION 创建用于保存深度的渲染缓冲区</span></span><br><span class="line">    <span class="keyword">if</span>(depth) &#123;</span><br><span class="line">        <span class="keyword">const</span> depthBuffer = gl.createRenderbuffer();</span><br><span class="line">        gl.bindRenderbuffer(gl.RENDERBUFFER, depthBuffer);</span><br><span class="line">        gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height);</span><br><span class="line">        gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, depthBuffer);   </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 检查帧缓冲区对象</span></span><br><span class="line">    <span class="keyword">const</span> e = gl.checkFramebufferStatus(gl.FRAMEBUFFER);</span><br><span class="line">    <span class="keyword">if</span> (gl.FRAMEBUFFER_COMPLETE !== e) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'Frame buffer object is incomplete: '</span> + e.toString());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 解绑帧缓冲区对象</span></span><br><span class="line">    gl.bindFramebuffer(gl.FRAMEBUFFER, <span class="literal">null</span>);</span><br><span class="line">    gl.bindTexture(gl.TEXTURE_2D, <span class="literal">null</span>);</span><br><span class="line">    <span class="keyword">if</span>(depth) gl.bindRenderbuffer(gl.RENDERBUFFER, <span class="literal">null</span>);</span><br><span class="line">    <span class="keyword">return</span> framebufferInfo;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>接着调用上面的函数创建包含两个颜色附件和一个深度附件的帧缓冲区。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//场景帧缓存(2颜色附件 包含正常颜色 和 hdr高光颜色，1深度附件)</span></span><br><span class="line"><span class="keyword">const</span> fbo = createFramebuffer(gl,&#123;<span class="attr">informat</span>:gl.RGBA16F, <span class="attr">type</span>:gl.FLOAT, <span class="attr">texs</span>:<span class="number">2</span>, <span class="attr">depth</span>:<span class="literal">true</span>&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>在渲染的时候还需要显式告知WebGL我们正在通过gl.drawBuffers渲染到多个颜色缓冲，否则WebGL只会渲染到帧缓冲的第一个颜色附件，而忽略所有其他的。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//采样到2个颜色附件</span></span><br><span class="line">gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1]);</span><br></pre></td></tr></table></figure>
+
 <p>当渲染到这个帧缓冲的时候，一个着色器使用一个布局location修饰符，然后把不同颜色值渲染到相应的颜色缓冲。这样就省去了为提取高光区域的额外渲染步骤。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line">precision highp <span class="keyword">float</span>; </span><br><span class="line">layout (location = <span class="number">0</span>) out vec4 FragColor;</span><br><span class="line">layout (location = <span class="number">1</span>) out vec4 BrightColor;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123; </span><br><span class="line">    vec3 normal = normalize(vNormal);</span><br><span class="line">    vec3 viewDirection = normalize(u_viewPosition - vposition);</span><br><span class="line">		<span class="comment">//...</span></span><br><span class="line">		vec3 result = ambient + lighting;</span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 检查结果值是否高于某个门槛，如果高于就渲染到高光颜色缓存中</span></span><br><span class="line">    <span class="keyword">float</span> brightness = dot(result, vec3(<span class="number">0.2126</span>, <span class="number">0.7152</span>, <span class="number">0.0722</span>));</span><br><span class="line">    <span class="keyword">if</span>(brightness &gt; <span class="number">1.0</span>)&#123;</span><br><span class="line">        BrightColor = vec4(result, <span class="number">1.0</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        BrightColor = vec4(<span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">0.0</span>, <span class="number">1.0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    FragColor = vec4(result, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这里先正常计算光照，将其传递给第一个片元着色器的输出变量FragColor。然后我们使用当前储存在FragColor的东西来决定它的亮度是否超过了一定阈限。我们通过恰当地将其转为灰度的方式计算一个fragment的亮度，如果它超过了一定阈限，我们就把颜色输出到第二个颜色缓冲，那里保存着所有亮部。</p>
 <p>这也说明了为什么泛光在HDR基础上能够运行得很好。因为HDR中，我们可以将颜色值指定超过1.0这个默认的范围，我们能够得到对一个图像中的亮度的更好的控制权。没有HDR我们必须将阈限设置为小于1.0的数，虽然可行，但是亮部很容易变得很多，这就导致光晕效果过重。</p>
 <p>有了一个提取出的亮区图像，我们现在就要把这个图像进行模糊处理。</p>
 <h2 id="高斯模糊"><a href="#高斯模糊" class="headerlink" title="高斯模糊"></a>高斯模糊</h2><p>要实现高斯模糊过滤需要一个二维四方形作为权重，从这个二维高斯曲线方程中去获取它。然而这个过程有个问题，就是很快会消耗极大的性能。以一个32×32的模糊kernel为例，我们必须对每个fragment从一个纹理中采样1024次！</p>
 <p>幸运的是，高斯方程有个非常巧妙的特性，它允许我们把二维方程分解为两个更小的方程：一个描述水平权重，另一个描述垂直权重。我们首先用水平权重在整个纹理上进行水平模糊，然后在经改变的纹理上进行垂直模糊。利用这个特性，结果是一样的，但是可以节省难以置信的性能，因为我们现在只需做32+32次采样，不再是1024了！这叫做两步高斯模糊。<br><img src="https://upload-images.jianshu.io/upload_images/127924-0700d0714c7eba87.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="高斯模糊"><br>这意味着我们如果对一个图像进行模糊处理，至少需要两步，最好使用帧缓冲对象做这件事。具体来说，我们将实现像乒乓球一样的帧缓冲来实现高斯模糊。意思是使用一对帧缓冲，我们把另一个帧缓冲的颜色缓冲放进当前的帧缓冲的颜色缓冲中，使用不同的着色效果渲染指定的次数。基本上就是不断地切换帧缓冲和纹理去绘制。这样我们先在场景纹理的第一个缓冲中进行模糊，然后在把第一个帧缓冲的颜色缓冲放进第二个帧缓冲进行模糊，接着将第二个帧缓冲的颜色缓冲放进第一个，循环往复。</p>
 <p>在我们研究帧缓冲之前，先来实现高斯模糊的片元着色器：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line">precision highp <span class="keyword">float</span>;</span><br><span class="line">uniform sampler2D image;</span><br><span class="line">uniform <span class="keyword">bool</span> horizontal;</span><br><span class="line">in vec2 texcoord;</span><br><span class="line">out vec4 FragColor;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> weight[<span class="number">5</span>] = <span class="keyword">float</span>[](<span class="number">0.2270270270</span>, <span class="number">0.1945945946</span>, <span class="number">0.1216216216</span>, <span class="number">0.0540540541</span>, <span class="number">0.0162162162</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    vec2 tex_offset = vec2(<span class="number">1.0</span> / <span class="keyword">float</span>(textureSize(image, <span class="number">0</span>)));<span class="comment">//每个像素的尺寸</span></span><br><span class="line">    vec3 result = texture(image, texcoord).rgb * weight[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span> (horizontal) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">            result += texture(image, texcoord + vec2(tex_offset.x * <span class="keyword">float</span>(i), <span class="number">0.0</span>)).rgb * weight[i];</span><br><span class="line">            result += texture(image, texcoord - vec2(tex_offset.x * <span class="keyword">float</span>(i), <span class="number">0.0</span>)).rgb * weight[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">            result += texture(image, texcoord + vec2(<span class="number">0.0</span>, tex_offset.y * <span class="keyword">float</span>(i))).rgb * weight[i];</span><br><span class="line">            result += texture(image, texcoord - vec2(<span class="number">0.0</span>, tex_offset.y * <span class="keyword">float</span>(i))).rgb * weight[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    FragColor = vec4 (result, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line">precision highp <span class="keyword">float</span>;</span><br><span class="line">uniform sampler2D <span class="built_in">image</span>;</span><br><span class="line">uniform <span class="keyword">bool</span> horizontal;</span><br><span class="line">in vec2 texcoord;</span><br><span class="line">out vec4 FragColor;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> weight[<span class="number">5</span>] = <span class="keyword">float</span>[](<span class="number">0.2270270270</span>, <span class="number">0.1945945946</span>, <span class="number">0.1216216216</span>, <span class="number">0.0540540541</span>, <span class="number">0.0162162162</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    vec2 tex_offset = vec2(<span class="number">1.0</span> / <span class="keyword">float</span>(textureSize(<span class="built_in">image</span>, <span class="number">0</span>)));<span class="comment">//每个像素的尺寸</span></span><br><span class="line">    vec3 result = texture(<span class="built_in">image</span>, texcoord).rgb * weight[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">if</span> (horizontal) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">            result += texture(<span class="built_in">image</span>, texcoord + vec2(tex_offset.x * <span class="keyword">float</span>(i), <span class="number">0.0</span>)).rgb * weight[i];</span><br><span class="line">            result += texture(<span class="built_in">image</span>, texcoord - vec2(tex_offset.x * <span class="keyword">float</span>(i), <span class="number">0.0</span>)).rgb * weight[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; ++i) &#123;</span><br><span class="line">            result += texture(<span class="built_in">image</span>, texcoord + vec2(<span class="number">0.0</span>, tex_offset.y * <span class="keyword">float</span>(i))).rgb * weight[i];</span><br><span class="line">            result += texture(<span class="built_in">image</span>, texcoord - vec2(<span class="number">0.0</span>, tex_offset.y * <span class="keyword">float</span>(i))).rgb * weight[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    FragColor = vec4 (result, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>这里使用一个比较小的高斯权重做例子，每次我们用它来指定当前fragment的水平或垂直样本的特定权重。你会发现我们基本上是将模糊过滤器根据我们在uniform变量horizontal设置的值分割为一个水平和一个垂直部分。通过用1.0除以纹理的大小（从textureSize得到一个vec2）得到一个纹理像素的实际大小，以此作为偏移距离的根据。</p>
 <p>接着为图像的模糊处理创建两个基本的帧缓冲，每个只有一个颜色缓冲纹理，调用上面封装好的createFramebuffer函数即可。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//2乒乓帧缓存(都只包含1颜色附件)</span></span><br><span class="line"><span class="keyword">const</span> hFbo = createFramebuffer(gl,&#123;<span class="attr">informat</span>:gl.RGBA16F, <span class="attr">type</span>:gl.FLOAT&#125;);</span><br><span class="line"><span class="keyword">const</span> vFbo = createFramebuffer(gl,&#123;<span class="attr">informat</span>:gl.RGBA16F, <span class="attr">type</span>:gl.FLOAT&#125;);</span><br></pre></td></tr></table></figure>
+
 <p>得到一个HDR纹理后，我们用提取出来的亮区纹理填充一个帧缓冲，然后对其模糊处理6次（3次垂直3次水平）：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 乒乓帧缓存</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">gl.useProgram(pProgram.program);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i &lt; <span class="number">6</span>; i++)&#123;</span><br><span class="line">    bindFramebufferInfo(gl, i%<span class="number">2</span> ? hFbo:vFbo);</span><br><span class="line">    setBuffersAndAttributes(gl, pProgram, pVao);</span><br><span class="line">    setUniforms(pProgram,&#123;</span><br><span class="line">        horizontal: i%<span class="number">2</span>? <span class="literal">true</span>:<span class="literal">false</span>,</span><br><span class="line">        image: i == <span class="number">0</span> ? fbo.textures[<span class="number">1</span>]: i%<span class="number">2</span> ? vFbo.textures[<span class="number">0</span>]: hFbo.textures[<span class="number">0</span>], <span class="comment">//第1次两个乒乓帧缓存都为空，因此第一次要将灯光纹理传入</span></span><br><span class="line">    &#125;);</span><br><span class="line">    drawBufferInfo(gl, pVao);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>每次循环根据渲染的是水平还是垂直来绑定两个缓冲其中之一，而将另一个绑定为纹理进行模糊。第一次迭代，因为两个颜色缓冲都是空的所以我们随意绑定一个去进行模糊处理。重复这个步骤6次，亮区图像就进行一个重复3次的高斯模糊了。这样我们可以对任意图像进行任意次模糊处理；高斯模糊循环次数越多，模糊的强度越大。</p>
 <h2 id="把两个纹理混合"><a href="#把两个纹理混合" class="headerlink" title="把两个纹理混合"></a>把两个纹理混合</h2><p>有了场景的HDR纹理和模糊处理的亮区纹理，只需把它们结合起来就能实现泛光或称光晕效果了。最终的片元着色器要把两个纹理混合：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line">precision highp <span class="keyword">float</span>;</span><br><span class="line">in vec2 texcoord;</span><br><span class="line">uniform sampler2D image;</span><br><span class="line">uniform sampler2D imageBlur;</span><br><span class="line">uniform <span class="keyword">bool</span> bloom;</span><br><span class="line">out vec4 FragColor;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> exposure = <span class="number">1.0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> gamma = <span class="number">2.2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;   </span><br><span class="line">    vec3 hdrColor = texture(image, texcoord).rgb;</span><br><span class="line">    vec3 bloomColor = texture(imageBlur, texcoord).rgb;</span><br><span class="line">    <span class="keyword">if</span> (bloom)</span><br><span class="line">        hdrColor += bloomColor;     <span class="comment">//添加融合</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//色调映射</span></span><br><span class="line">    <span class="comment">// vec3 result = hdrColor / (hdrColor + vec3(1.0));</span></span><br><span class="line">    vec3 result = vec3 (<span class="number">1.0</span>) - <span class="built_in">exp</span>(-hdrColor * exposure);</span><br><span class="line">    <span class="comment">//进行gamma校正</span></span><br><span class="line">    result = <span class="built_in">pow</span>(result, vec3 (<span class="number">1.0</span> / gamma));</span><br><span class="line">    FragColor = vec4(result, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line">precision highp <span class="keyword">float</span>;</span><br><span class="line">in vec2 texcoord;</span><br><span class="line">uniform sampler2D <span class="built_in">image</span>;</span><br><span class="line">uniform sampler2D imageBlur;</span><br><span class="line">uniform <span class="keyword">bool</span> bloom;</span><br><span class="line">out vec4 FragColor;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> exposure = <span class="number">1.0</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">float</span> gamma = <span class="number">2.2</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;   </span><br><span class="line">    vec3 hdrColor = texture(<span class="built_in">image</span>, texcoord).rgb;</span><br><span class="line">    vec3 bloomColor = texture(imageBlur, texcoord).rgb;</span><br><span class="line">    <span class="keyword">if</span> (bloom)</span><br><span class="line">        hdrColor += bloomColor;     <span class="comment">//添加融合</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//色调映射</span></span><br><span class="line">    <span class="comment">// vec3 result = hdrColor / (hdrColor + vec3(1.0));</span></span><br><span class="line">    vec3 result = vec3 (<span class="number">1.0</span>) - <span class="built_in">exp</span>(-hdrColor * exposure);</span><br><span class="line">    <span class="comment">//进行gamma校正</span></span><br><span class="line">    result = <span class="built_in">pow</span>(result, vec3 (<span class="number">1.0</span> / gamma));</span><br><span class="line">    FragColor = vec4(result, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>注意要在应用色调映射之前添加泛光效果。这样添加的亮区的泛光，也会柔和转换为LDR，光照效果相对会更好。把两个纹理结合以后，场景亮区便有了合适的光晕特效：</p>
 <p>这里只用了一个相对简单的高斯模糊过滤器，它在每个方向上只有5个样本。通过沿着更大的半径或重复更多次数的模糊，进行采样我们就可以提升模糊的效果。因为模糊的质量与泛光效果的质量正相关，提升模糊效果就能够提升泛光效果。</p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这个HDR + Bloom的是目前为止渲染流程最复杂的一个特效了，使用了3个着色器program和3个帧缓冲区，绘制的时候要不断切换program 和 帧缓冲区。目前有个问题是，从帧缓冲渲染到正常缓冲后场景的锯齿感挺严重的，后续还得深入学习下抗锯齿(anti-aliasing)。</p>
@@ -204,48 +209,48 @@ var _hmt = _hmt || [];
 </div>
     	
 		<div class="post-footer">
-			<div class="share" data-url="/2019/05/21/webglhdr/" data-desc="
-什么是HDRHDR (High Dynamic Range，高动态范围)，在摄影领域，指的是..."><a href="javascript:;" data-type="share" class="icon icon-share"> 分享</a></div>
 			<div class="tags">
-			<i class="icon icon-tag"></i> 
-			
+				<i class="icon-tags"></i> 
 				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/webGL/">webGL</a>
+						
+					
 				
-                    
-                        <a href="/tags/前端/">前端</a>
-                    
-				
-                    
-                        <a href="/tags/js/">js</a>
-                    
-				
-                    
-                        <a href="/tags/webGL/">webGL</a>
-                    
-				
-			
 			</div>
+			<a class="share" href="javascript:;" data-url="/2019/05/21/webglhdr/" data-desc="
+
+什么是HDRHDR (High Dynamic Range，高动态范围)，在摄影领域，指的..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
 </article>
 </div>
-
 <nav class="pagination clearfix">
   
     
       
-      <a href="/2019/05/28/webglray/" class="prev post-prev">&larr; WebGL之物体选择</a>
+        <a href="/2019/05/28/webglray/" class="prev post-prev"> <i class="icon-leftarrow"></i> WebGL之物体选择</a>
       
 
       
-      <a href="/2019/05/05/webglskybox/" class="next post-next">WebGL学习之纹理盒 &rarr;</a>
+        <a href="/2019/05/05/webglskybox/" class="next post-next"> WebGL学习之纹理盒 <i class="icon-rightarrow"></i></a>
       
     
   
 </nav>
 
 <div class="wxshare-popup">
-    <a class="close" href="javascript:;"><i class="icon icon-cancel"></i></a>
+    <a class="close" href="javascript:;"></a>
     <p>扫一扫，分享到微信</p>
     <div id="qrcode" class="wx-qrcode"></div>
 </div>
@@ -253,13 +258,13 @@ var _hmt = _hmt || [];
     
     <footer class="footer">
 <p class="theme">
-	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git">simply</a>
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
 <p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
-      <div class="to-top hide" title="to top"><i class="icon icon-up-open"></i></div>
-      <div class="to-bottom hide" title="to bottom"><i class="icon icon-down-open"></i></div>
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
     </div>
     </div>
 
@@ -268,10 +273,10 @@ var _hmt = _hmt || [];
 <i id="barBtn" class="icon icon-menu"></i>
 <div id="payMe" class="payme">
     <i class="icon icon-cancel"></i>
-    <p class="pay-title">给我的早餐加个蛋吧 <i class="icon icon-smile"></i></p>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
     <div>
-      <img src="/img/weixinpay.jpg" alt="weixinpay">
-      <img src="/img/alipay.jpg" alt="alipay" style="display:none;">
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
     </div>
     <div class="pay-selects">
         <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
@@ -285,7 +290,7 @@ var _hmt = _hmt || [];
   
     <script src="/lib/qrcode.min.js"></script>
   
-    <script src="/dist/js/index.js"></script>
+    <script src="/js/index.js"></script>
   
 
 <script>
@@ -302,7 +307,6 @@ var _hmt = _hmt || [];
     s.parentNode.insertBefore(bp, s);
 })();
 </script>
-
 
 </body>
 </html>
