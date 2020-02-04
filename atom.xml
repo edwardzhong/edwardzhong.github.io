@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://edwardzhong.github.io/"/>
-  <updated>2020-01-16T10:14:48.067Z</updated>
+  <updated>2020-02-04T05:46:10.970Z</updated>
   <id>https://edwardzhong.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于typescript的koa开发框架</title>
+    <link href="https://edwardzhong.github.io/2020/02/04/koatypescript/"/>
+    <id>https://edwardzhong.github.io/2020/02/04/koatypescript/</id>
+    <published>2020-02-04T03:37:48.000Z</published>
+    <updated>2020-02-04T05:46:10.970Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;强类型的 &lt;strong&gt;TypeScript&lt;/strong&gt; 开发体验和维护项目上相比 &lt;strong&gt;JavaScript&lt;/strong&gt; 有着明显的优势，那么对常用的脚手架进行改造也就势在必行了。&lt;/p&gt;
+&lt;p&gt;接下来开始对基于 &lt;strong&gt;koa&lt;/strong&gt; 框架的 &lt;strong&gt;node&lt;/strong&gt; 后端脚手架进行改造：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;项目开发环境 和 typescript 编译环境的搭建；&lt;/li&gt;
+&lt;li&gt;对 node、koa、koa中间件和使用到的库 添加类型化支持；&lt;/li&gt;
+&lt;li&gt;基于 typesript 的特性改造项目。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="node" scheme="https://edwardzhong.github.io/tags/node/"/>
+    
+      <category term="koa" scheme="https://edwardzhong.github.io/tags/koa/"/>
+    
+      <category term="typescript" scheme="https://edwardzhong.github.io/tags/typescript/"/>
+    
+  </entry>
   
   <entry>
     <title>WebGL之物体选择</title>
@@ -536,34 +567,6 @@
     
     
       <category term="haskell" scheme="https://edwardzhong.github.io/tags/haskell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WebGL展示3D房屋内景</title>
-    <link href="https://edwardzhong.github.io/2018/05/31/webglroom3d/"/>
-    <id>https://edwardzhong.github.io/2018/05/31/webglroom3d/</id>
-    <published>2018-05-30T16:44:31.000Z</published>
-    <updated>2020-01-16T10:14:54.489Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- 原文地址：[WebGL展示3D房屋内景](https://edwardzhong.github.io/2018/05/31/weblroom3d/)  --&gt;
-&lt;p&gt;由于生活和工作上的原因,从年前开始一直到处奔波,没有太多的时间去关注和学习WebGL图形学相关的技术, 不过陆陆续续都有学习使用blender进行3D建模, 而这篇文章涉及到的房屋内景3D建模就是我这段时间以来的学习成果,现在展示出来.&lt;/p&gt;
-&lt;p&gt;文件模型比较大,页面加载比较慢,请耐心等候, 实例:&lt;/p&gt;
-&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-e648ca6ca124abe4.gif&quot; width=&quot;480&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="前端" scheme="https://edwardzhong.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="js" scheme="https://edwardzhong.github.io/tags/js/"/>
-    
-      <category term="webGL" scheme="https://edwardzhong.github.io/tags/webGL/"/>
     
   </entry>
   

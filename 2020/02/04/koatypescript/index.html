@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="基于typescript的koa开发框架 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >基于typescript的koa开发框架 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://edwardzhong.github.io">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="基于typescript的koa开发框架 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">41<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">59<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner3.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">基于typescript的koa开发框架</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2020/02/04 11:37:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>强类型的 TypeScript 开发体验和维护项目上相比 JavaScript 有着明显的优势，那么对常用的脚手架进行改造也就势在必行了。<br>接下来开始对基于 koa 框架的 node 后端脚手架…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>强类型的 <strong>TypeScript</strong> 开发体验和维护项目上相比 <strong>JavaScript</strong> 有着明显的优势，那么对常用的脚手架进行改造也就势在必行了。</p>
+<p>接下来开始对基于 <strong>koa</strong> 框架的 <strong>node</strong> 后端脚手架进行改造：</p>
+<ol>
+<li>项目开发环境 和 typescript 编译环境的搭建；</li>
+<li>对 node、koa、koa中间件和使用到的库 添加类型化支持；</li>
+<li>基于 typesript 的特性改造项目。</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="项目开发环境搭建"><a href="#项目开发环境搭建" class="headerlink" title="项目开发环境搭建"></a>项目开发环境搭建</h2><p>基于gulp 搭建开发编译环境，gulp-typescript 插件用于编译 typescript 文件， gulp-nodemon 则可以监控文件内容的变更，自动编译和重启node服务，提升开发效率。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D gulp gulp-nodemon gulp-typescript ts-node typescript</span><br></pre></td></tr></table></figure>
+
+<h4 id="gulp-的配置"><a href="#gulp-的配置" class="headerlink" title="gulp 的配置"></a>gulp 的配置</h4><p>gulpfile.js 的设置</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; src, dest, watch, series, task &#125; = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">const</span> del = <span class="built_in">require</span>(<span class="string">'del'</span>);</span><br><span class="line"><span class="keyword">const</span> ts = <span class="built_in">require</span>(<span class="string">'gulp-typescript'</span>);</span><br><span class="line"><span class="keyword">const</span> nodemon = <span class="built_in">require</span>(<span class="string">'gulp-nodemon'</span>);</span><br><span class="line"><span class="keyword">const</span> tsProject = ts.createProject(<span class="string">'tsconfig.json'</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clean</span>(<span class="params">cb</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> del([<span class="string">'dist'</span>], cb);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出 js 到 dist目录</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toJs</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> src(<span class="string">'src/**/*.ts'</span>)</span><br><span class="line">    .pipe(tsProject())</span><br><span class="line">    .pipe(dest(<span class="string">'dist'</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// nodemon 监控 ts 文件</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">runNodemon</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  nodemon(&#123;</span><br><span class="line">    inspect: <span class="literal">true</span>,</span><br><span class="line">    script: <span class="string">'src/app.ts'</span>,</span><br><span class="line">    watch: [<span class="string">'src'</span>],</span><br><span class="line">    ext: <span class="string">'ts'</span>,</span><br><span class="line">    env: &#123; <span class="attr">NODE_ENV</span>: <span class="string">'development'</span> &#125;,</span><br><span class="line">    <span class="comment">// tasks: ['build'],</span></span><br><span class="line">  &#125;).on(<span class="string">'crash'</span>, () =&gt; &#123;</span><br><span class="line">    <span class="built_in">console</span>.error(<span class="string">'Application has crashed!\n'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> build = series(clean, toJs);</span><br><span class="line">task(<span class="string">'build'</span>, build);</span><br><span class="line">exports.build = build;</span><br><span class="line">exports.default = runNodemon;</span><br></pre></td></tr></table></figure>
+
+<h4 id="typescript-的配置"><a href="#typescript-的配置" class="headerlink" title="typescript 的配置"></a>typescript 的配置</h4><p>tsconfig.json 的设置</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compilerOptions"</span>: &#123;</span><br><span class="line">    <span class="attr">"baseUrl"</span>: <span class="string">"."</span>, <span class="comment">// import的相对起始路径</span></span><br><span class="line">    <span class="attr">"outDir"</span>: <span class="string">"./dist"</span>, <span class="comment">// 构建输出目录</span></span><br><span class="line">    <span class="attr">"module"</span>: <span class="string">"commonjs"</span>,</span><br><span class="line">    <span class="attr">"target"</span>: <span class="string">"esnext"</span>,<span class="comment">// node 环境支持 esnext</span></span><br><span class="line">    <span class="attr">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"importHelpers"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"strict"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"moduleResolution"</span>: <span class="string">"node"</span>,</span><br><span class="line">    <span class="attr">"esModuleInterop"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"forceConsistentCasingInFileNames"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"noImplicitAny"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"suppressImplicitAnyIndexErrors"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"noUnusedParameters"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"noUnusedLocals"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"noImplicitReturns"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"experimentalDecorators"</span>: <span class="literal">true</span>, <span class="comment">// 开启装饰器的使用</span></span><br><span class="line">    <span class="attr">"emitDecoratorMetadata"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"allowJs"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"sourceMap"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"paths"</span>: &#123;</span><br><span class="line">      <span class="attr">"@/*"</span>: [ <span class="string">"src/*"</span> ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"include"</span>: [</span><br><span class="line">    <span class="string">"src/**/*"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"exclude"</span>: [</span><br><span class="line">    <span class="string">"node_modules"</span>,</span><br><span class="line">    <span class="string">"dist"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="eslint-的配置"><a href="#eslint-的配置" class="headerlink" title="eslint 的配置"></a>eslint 的配置</h4><p>当然 eslint 也要添加对 typescript 对支持</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D @typescript-eslint/eslint-plugin @typescript-eslint/parser</span><br></pre></td></tr></table></figure>
+
+<p>.eslintrc.json 的设置</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"env"</span>: &#123;</span><br><span class="line">    <span class="attr">"es6"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"node"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"extends"</span>: [</span><br><span class="line">    <span class="string">"eslint:recommended"</span>,</span><br><span class="line">    <span class="string">"plugin:@typescript-eslint/eslint-recommended"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"globals"</span>: &#123;</span><br><span class="line">    <span class="attr">"Atomics"</span>: <span class="string">"readonly"</span>,</span><br><span class="line">    <span class="attr">"SharedArrayBuffer"</span>: <span class="string">"readonly"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"parser"</span>: <span class="string">"@typescript-eslint/parser"</span>,</span><br><span class="line">  <span class="attr">"parserOptions"</span>: &#123;</span><br><span class="line">    <span class="attr">"ecmaVersion"</span>: <span class="number">2018</span>,</span><br><span class="line">    <span class="attr">"sourceType"</span>: <span class="string">"module"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"plugins"</span>: [</span><br><span class="line">    <span class="string">"@typescript-eslint"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"rules"</span>: &#123;</span><br><span class="line">    <span class="attr">"indent"</span>: [ <span class="string">"warn"</span>, <span class="number">2</span> ],</span><br><span class="line">    <span class="attr">"no-unused-vars"</span>: <span class="number">0</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="package-json-运行配置"><a href="#package-json-运行配置" class="headerlink" title="package.json 运行配置"></a>package.json 运行配置</h4><p>最后就是设置 package.json 的 scripts</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "start": "gulp",// dev</span><br><span class="line">  "build": "gulp build", // output</span><br><span class="line">  "eslint": "eslint --fix --ext .js,.ts src/",</span><br><span class="line">  "server": "export NODE_ENV=production &amp;&amp; node dist/app" // production server</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加类型化支持"><a href="#添加类型化支持" class="headerlink" title="添加类型化支持"></a>添加类型化支持</h2><p>项目主要使用到了以下的组件</p>
+<ul>
+<li>jsonwebtoken</li>
+<li>koa</li>
+<li>koa-body</li>
+<li>koa-compress</li>
+<li>koa-favicon</li>
+<li>koa-logger</li>
+<li>koa-router</li>
+<li>koa-static</li>
+<li>koa2-cors</li>
+<li>log4js</li>
+</ul>
+<p>那么就要安装对应的 type 文件，当然别忘了 @types/node</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -D @types/jsonwebtoken @types/koa @types/koa-compress @types/koa-favicon @types/koa-logger @types/koa-router @types/koa-static @types/koa2-cors @types/log4js @types/node</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="使用-typescript-装饰器-改造项目"><a href="#使用-typescript-装饰器-改造项目" class="headerlink" title="使用 typescript 装饰器 改造项目"></a>使用 typescript 装饰器 改造项目</h2><p>.net mvc 框架有个很便利的地方就是 使用装饰器对控制器进行配置，现在通过 typescript 的装饰器也可以实现相同的功能。这里需要使用到反射相关的库 reflect-metadata，用过 Java 或 C# 的小伙伴，对反射的原理一定不陌生。</p>
+<h5 id="定义http请求的装饰器"><a href="#定义http请求的装饰器" class="headerlink" title="定义http请求的装饰器"></a>定义http请求的装饰器</h5><p>我们再也不需要在路由配置和控制器方法之前来回查找和匹配了</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'reflect-metadata'</span></span><br><span class="line"><span class="keyword">import</span> &#123; ROUTER_MAP &#125; <span class="keyword">from</span> <span class="string">'../constant'</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @desc 生成 http method 装饰器</span></span><br><span class="line"><span class="comment"> * @param &#123;string&#125; method - http method，如 get、post、head</span></span><br><span class="line"><span class="comment"> * @return Decorator - 装饰器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createMethodDecorator</span>(<span class="params">method: <span class="built_in">string</span></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 装饰器接收路由 path 作为参数</span></span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">httpMethodDecorator</span>(<span class="params">path: <span class="built_in">string</span></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="function">(<span class="params">proto: <span class="built_in">any</span>, name: <span class="built_in">string</span></span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> target = proto.<span class="keyword">constructor</span>;</span><br><span class="line">      <span class="keyword">const</span> routeMap = Reflect.getMetadata(ROUTER_MAP, target, <span class="string">'method'</span>) || [];</span><br><span class="line">      routeMap.push(&#123; name, method, path &#125;);</span><br><span class="line">      Reflect.defineMetadata(ROUTER_MAP, routeMap, target, <span class="string">'method'</span>);</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出 http method 装饰器</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> post = createMethodDecorator(<span class="string">'post'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="keyword">get</span> = createMethodDecorator(<span class="string">'get'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> del = createMethodDecorator(<span class="string">'del'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> put = createMethodDecorator(<span class="string">'put'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> patch = createMethodDecorator(<span class="string">'patch'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> options = createMethodDecorator(<span class="string">'options'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> head = createMethodDecorator(<span class="string">'head'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> all = createMethodDecorator(<span class="string">'all'</span>);</span><br></pre></td></tr></table></figure>
+
+<h5 id="装饰控制器的方法"><a href="#装饰控制器的方法" class="headerlink" title="装饰控制器的方法"></a>装饰控制器的方法</h5><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> Sign &#123;</span><br><span class="line">    </span><br><span class="line">  <span class="meta">@post</span>(<span class="string">'/login'</span>)</span><br><span class="line">  <span class="keyword">async</span> login (ctx: Context) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = ctx.request.body;</span><br><span class="line">    <span class="keyword">const</span> users = <span class="keyword">await</span> userDao.getUser(&#123; email &#125;);</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> ctx.body = &#123;</span><br><span class="line">      code: <span class="number">0</span>,</span><br><span class="line">      message: <span class="string">'登录成功'</span>,</span><br><span class="line">      data</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@post</span>(<span class="string">'/register'</span>)</span><br><span class="line">  <span class="keyword">async</span> register (ctx: Context) &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; email, password &#125; = ctx.request.body;</span><br><span class="line">    <span class="keyword">const</span> salt = makeSalt();</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> ctx.body = &#123;</span><br><span class="line">      code: <span class="number">0</span>,</span><br><span class="line">      message: <span class="string">'注册成功！'</span>,</span><br><span class="line">      data</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="收集元数据和添加路由"><a href="#收集元数据和添加路由" class="headerlink" title="收集元数据和添加路由"></a>收集元数据和添加路由</h5><p>我们已经把装饰器添加到对应控制器的方法上了，那么怎么把元数据收集起来呢？这就需要用到 node 提供的 fs 文件模块，node服务第一次启动的时候，扫描一遍controller文件夹，收集到所有控制器模块，结合装饰器收集到的metadata，就可以把对应的方法添加到 koa-router。</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'reflect-metadata'</span></span><br><span class="line"><span class="keyword">import</span> fs <span class="keyword">from</span> <span class="string">'fs'</span></span><br><span class="line"><span class="keyword">import</span> path <span class="keyword">from</span> <span class="string">'path'</span></span><br><span class="line"><span class="keyword">import</span> &#123; ROUTER_MAP &#125; <span class="keyword">from</span> <span class="string">'./constant'</span></span><br><span class="line"><span class="keyword">import</span> &#123; RouteMeta &#125; <span class="keyword">from</span> <span class="string">'./type'</span></span><br><span class="line"><span class="keyword">import</span> Router <span class="keyword">from</span> <span class="string">'koa-router'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> addRouter = <span class="function">(<span class="params">router: Router</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">const</span> ctrPath = path.join(__dirname, <span class="string">'controller'</span>);</span><br><span class="line">  <span class="keyword">const</span> modules: <span class="built_in">any</span>[] = [];</span><br><span class="line">  <span class="comment">// 扫描controller文件夹，收集所有controller</span></span><br><span class="line">  fs.readdirSync(ctrPath).forEach(<span class="function"><span class="params">name</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="regexp">/^[^.]+?\.(t|j)s$/</span>.test(name)) &#123;</span><br><span class="line">      modules.push(<span class="built_in">require</span>(path.join(ctrPath, name)).default)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// 结合meta数据添加路由</span></span><br><span class="line">  modules.forEach(<span class="function"><span class="params">m</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> routerMap: RouteMeta[] = Reflect.getMetadata(ROUTER_MAP, m, <span class="string">'method'</span>) || [];</span><br><span class="line">    <span class="keyword">if</span> (routerMap.length) &#123;</span><br><span class="line">      <span class="keyword">const</span> ctr = <span class="keyword">new</span> m();</span><br><span class="line">      routerMap.forEach(<span class="function"><span class="params">route</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> &#123; name, method, path &#125; = route;</span><br><span class="line">        router[method](path, ctr[name]);</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> addRouter</span><br></pre></td></tr></table></figure>
+
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>这样对koa项目脚手架的改造基本完成，源码请查看 <em><a href="https://github.com/edwardzhong/koa-server" target="_blank" rel="noopener">koa-server</a></em></p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/node/">node</a>
+						
+					
+						
+							<a href="/tags/koa/">koa</a>
+						
+					
+						
+							<a href="/tags/typescript/">typescript</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2020/02/04/koatypescript/" data-desc="强类型的 TypeScript 开发体验和维护项目上相比 JavaScript 有着明显的优势..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/2019/05/28/webglray/" class="next post-next"> WebGL之物体选择 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
