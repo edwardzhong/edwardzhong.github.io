@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://edwardzhong.github.io/"/>
-  <updated>2020-02-04T05:53:37.733Z</updated>
+  <updated>2020-02-04T05:58:42.972Z</updated>
   <id>https://edwardzhong.github.io/</id>
   
   <author>
@@ -17,18 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>基于typescript的koa开发框架</title>
+    <title>使用typescript改造koa开发框架</title>
     <link href="https://edwardzhong.github.io/2020/02/04/koatypescript/"/>
     <id>https://edwardzhong.github.io/2020/02/04/koatypescript/</id>
     <published>2020-02-04T03:37:48.000Z</published>
-    <updated>2020-02-04T05:53:37.733Z</updated>
+    <updated>2020-02-04T05:58:42.972Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;强类型的 &lt;strong&gt;TypeScript&lt;/strong&gt; 开发体验和维护项目上相比 &lt;strong&gt;JavaScript&lt;/strong&gt; 有着明显的优势，那么对常用的脚手架进行改造也就势在必行了。&lt;/p&gt;
 &lt;p&gt;接下来开始对基于 &lt;strong&gt;koa&lt;/strong&gt; 框架的 &lt;strong&gt;node&lt;/strong&gt; 后端脚手架进行改造：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;项目开发环境 和 typescript 编译环境的搭建；&lt;/li&gt;
+&lt;li&gt;项目开发环境 和 &lt;strong&gt;typescript&lt;/strong&gt; 编译环境的搭建；&lt;/li&gt;
 &lt;li&gt;对 &lt;strong&gt;node&lt;/strong&gt;、&lt;strong&gt;koa&lt;/strong&gt;、koa中间件和使用到的库 添加类型化支持；&lt;/li&gt;
 &lt;li&gt;基于 &lt;strong&gt;typesript&lt;/strong&gt; 的特性改造项目。&lt;/li&gt;
 &lt;/ol&gt;
