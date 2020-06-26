@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://edwardzhong.github.io/"/>
-  <updated>2020-02-04T06:24:20.217Z</updated>
+  <updated>2020-06-26T04:02:15.526Z</updated>
   <id>https://edwardzhong.github.io/</id>
   
   <author>
@@ -17,11 +17,71 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Flutter开发初探</title>
+    <link href="https://edwardzhong.github.io/2020/06/26/flutter1/"/>
+    <id>https://edwardzhong.github.io/2020/06/26/flutter1/</id>
+    <published>2020-06-26T03:51:06.000Z</published>
+    <updated>2020-06-26T04:02:15.526Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;目前跨端开发比较热门的就是 &lt;code&gt;React Native&lt;/code&gt; 和 &lt;code&gt;Flutter&lt;/code&gt; 了，到底该选哪门技术似乎也快成了大前端圈的一个热门话题。对于web前端来说，基于web生态的 &lt;code&gt;React Native&lt;/code&gt; 应该是一个更加顺畅而自然的选择；但 &lt;code&gt;Flutter&lt;/code&gt; 让人动心的地方就是高性能和 跨端UI一致性。而&lt;code&gt;React Native&lt;/code&gt; 发展不太明朗和 &lt;code&gt;Flutter&lt;/code&gt; 越发成熟的走势对比促使我从观望的心态转为加入 &lt;code&gt;Flutter&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;这里主要就是记录一下学习&lt;code&gt;Flutter&lt;/code&gt;的一些感想和看法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;包管理&lt;/li&gt;
+&lt;li&gt;布局和样式&lt;/li&gt;
+&lt;li&gt;json&lt;/li&gt;
+&lt;li&gt;状态管理&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="https://edwardzhong.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="svg" scheme="https://edwardzhong.github.io/tags/svg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>svg高级应用及动画</title>
+    <link href="https://edwardzhong.github.io/2020/06/04/svg1/"/>
+    <id>https://edwardzhong.github.io/2020/06/04/svg1/</id>
+    <published>2020-06-04T01:42:56.000Z</published>
+    <updated>2020-06-26T03:59:02.731Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;canvas 和 webGL 这两项图形技术结合 css3 可以说能完成绝大部分的动画和需求。但 canvas 和 webGL 毕竟是偏向底层的绘制引擎，某些场景使用起来还是过于繁琐的，不分场合一律使用锤子解决的行为不值得提倡。svg 在解决排版，图标，相关动画还是非常高效的，而且 svg 还是矢量图形，高清还原各种屏幕尺寸的设计简直就是神器。&lt;/p&gt;
+&lt;p&gt;svg 基础知识不再讲解，结合svg特点和应用场景，主要介绍如下几方面的内容&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;svg sprite&lt;/li&gt;
+&lt;li&gt;css background-image 插入svg&lt;/li&gt;
+&lt;li&gt;文字路径&lt;/li&gt;
+&lt;li&gt;路径动画&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="https://edwardzhong.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="svg" scheme="https://edwardzhong.github.io/tags/svg/"/>
+    
+  </entry>
+  
+  <entry>
     <title>使用typescript改造koa开发框架</title>
     <link href="https://edwardzhong.github.io/2020/02/04/koatypescript/"/>
     <id>https://edwardzhong.github.io/2020/02/04/koatypescript/</id>
     <published>2020-02-04T03:37:48.000Z</published>
-    <updated>2020-02-04T06:24:20.217Z</updated>
+    <updated>2020-02-04T06:27:55.710Z</updated>
     
     <summary type="html">
     
@@ -511,55 +571,6 @@
       &lt;!-- 原文地址：[Haskell学习-functor](https://edwardzhong.github.io/2018/08/15/haskellc/) --&gt;
 &lt;h2 id=&quot;什么是Functor&quot;&gt;&lt;a href=&quot;#什么是Functor&quot; class=&quot;headerlink&quot; title=&quot;什么是Functor&quot;&gt;&lt;/a&gt;什么是Functor&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;functor&lt;/strong&gt; 就是可以执行map操作的对象，functor就像是附加了语义的表达式，可以用盒子进行比喻。&lt;strong&gt;functor&lt;/strong&gt; 的定义可以这样理解：给出a映射到b的函数和装了a的盒子，结果会返回装了b的盒子。&lt;strong&gt;fmap&lt;/strong&gt; 可以看作是一个接受一个function 和一个 &lt;strong&gt;functor&lt;/strong&gt; 的函数，它把function 应用到 &lt;strong&gt;functor&lt;/strong&gt; 的每一个元素（映射）。&lt;/p&gt;
 &lt;figure class=&quot;highlight haskell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;-- Functor的定义&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;type&quot;&gt;Functor&lt;/span&gt; f &lt;span class=&quot;keyword&quot;&gt;where&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    fmap :: (a -&amp;gt; b) -&amp;gt; f a -&amp;gt; f b&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="haskell" scheme="https://edwardzhong.github.io/tags/haskell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Haskell学习-高阶函数</title>
-    <link href="https://edwardzhong.github.io/2018/08/08/haskellb/"/>
-    <id>https://edwardzhong.github.io/2018/08/08/haskellb/</id>
-    <published>2018-08-08T15:55:13.000Z</published>
-    <updated>2020-01-16T10:12:28.494Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- 原文地址：[Haskell学习-高阶函数](https://edwardzhong.github.io/2018/08/08/haskellb/) --&gt;
-&lt;p&gt;高阶函数(higher-order function)就是指可以操作函数的函数，即函数可以作为参数，也可以作为返回结果。有了这两个特性，haskell可以实现许多神奇的效果。&lt;/p&gt;
-&lt;h2 id=&quot;柯里化（Currying）&quot;&gt;&lt;a href=&quot;#柯里化（Currying）&quot; class=&quot;headerlink&quot; title=&quot;柯里化（Currying）&quot;&gt;&lt;/a&gt;柯里化（Currying）&lt;/h2&gt;&lt;p&gt;在haskell中所有的算术运算符都是函数(包括大小于等于关系符等)，而它们的快捷方式都可以省略操作数（参数）。&lt;/p&gt;
-&lt;figure class=&quot;highlight haskell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;(+) &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;-- (+) 是需要两个操作数的函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;) &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;-- (+1) 是需要左操作数的函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;(&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;*) &lt;span class=&quot;number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;-- (3*) 是需要右操作数的函数&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; &lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;title&quot;&gt;map&lt;/span&gt; (*&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;) [&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;-- map所有元素 *2 的操作&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; [&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;title&quot;&gt;filter&lt;/span&gt; (&amp;gt;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;) [&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;] &lt;span class=&quot;comment&quot;&gt;-- 过滤 &amp;gt;3的元素&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;gt; [&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;]&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="haskell" scheme="https://edwardzhong.github.io/tags/haskell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Haskell学习-函数式编程初探</title>
-    <link href="https://edwardzhong.github.io/2018/08/07/haskella/"/>
-    <id>https://edwardzhong.github.io/2018/08/07/haskella/</id>
-    <published>2018-08-07T13:49:46.000Z</published>
-    <updated>2020-01-16T10:11:08.909Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- 原文地址：[Haskell学习-函数式编程初探](https://edwardzhong.github.io/2018/08/07/haskella/) --&gt;
-
-&lt;p&gt;为什么要学习函数式编程？为什么要学习Haskell？&lt;/p&gt;
-&lt;p&gt;.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾护航,开山劈石,伴随着我不断成长。同时C#和JavaScript它们本身也在不断地进化，不断出现越来越多方便的语法糖，但追根到底很多都是从函数式语言汲取的精华。比如高阶函数，lambada表达式，柯里化等。 &lt;/p&gt;
-&lt;p&gt;于是从探险的角度，以好奇的心态开始学习函数式语言，探索这个宝库，拾取可供临摹的珍宝。最起码它能让你多一个不同的角度看待编程语言,影响你的思考方式。 学习的对象当然选择函数式语言的集大成者-Haskell。&lt;/p&gt;
     
     </summary>
     

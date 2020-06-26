@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="svg高级应用及动画 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >svg高级应用及动画 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://edwardzhong.github.io">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="svg高级应用及动画 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">43<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">60<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner4.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">svg高级应用及动画</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2020/06/04 09:42:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>canvas 和 webGL 这两项图形技术结合 css3 可以说能完成绝大部分的动画和需求。但 canvas 和 webGL 毕竟是偏向底层的绘制引擎，某些场景使用起来还是过于繁琐的，不分场合…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>canvas 和 webGL 这两项图形技术结合 css3 可以说能完成绝大部分的动画和需求。但 canvas 和 webGL 毕竟是偏向底层的绘制引擎，某些场景使用起来还是过于繁琐的，不分场合一律使用锤子解决的行为不值得提倡。svg 在解决排版，图标，相关动画还是非常高效的，而且 svg 还是矢量图形，高清还原各种屏幕尺寸的设计简直就是神器。</p>
+<p>svg 基础知识不再讲解，结合svg特点和应用场景，主要介绍如下几方面的内容</p>
+<ul>
+<li>svg sprite</li>
+<li>css background-image 插入svg</li>
+<li>文字路径</li>
+<li>路径动画</li>
+</ul>
+<a id="more"></a>
+
+<h2 id="SVG-sprite"><a href="#SVG-sprite" class="headerlink" title="SVG sprite"></a>SVG sprite</h2><p>SVG sprite 之于 font-face 的优势就是矢量图的抗锯齿效果，再也不需要为适配高清屏而操心。使用方式就是 svg 标签结合 symbol元素即可，其中 svg 是容器，而symbol 则是组件模板。怎么把svg组件显示出来呢？使用 use 元素指向组件的id即可，如下所示：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">symbol</span> <span class="attr">id</span>=<span class="string">"ok"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- svg元素或组合 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">symbol</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">use</span> <span class="attr">href</span>=<span class="string">"#ok"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>当然网上有很多工具可以帮我们把图标自动sprite，比如：<a href="https://www.iconfont.cn/" target="_blank" rel="noopener">iconfot</a>，<a href="https://github.com/Hiswe/gulp-svg-symbols" target="_blank" rel="noopener">gulp-svg-symbols</a></p>
+<h2 id="在css中插入svg"><a href="#在css中插入svg" class="headerlink" title="在css中插入svg"></a>在css中插入svg</h2><p>SVG 添加到网页中有多种方法，最常见的是：</p>
+<ol>
+<li>在 HTML 中内联</li>
+<li><code>object</code>、 <code>iframe</code> 或 <code>embed</code> 标签插入</li>
+<li><code>img</code> 标签</li>
+<li>CSS <code>background-image</code> 属性</li>
+</ol>
+<p>html 内联方式</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>line<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">"20"</span> <span class="attr">y1</span>=<span class="string">"20"</span> <span class="attr">x2</span>=<span class="string">"100"</span> <span class="attr">y2</span>=<span class="string">"100"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 object、iframe 或 embed 标签插入</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">object</span> <span class="attr">data</span>=<span class="string">"flag.svg"</span> <span class="attr">type</span>=<span class="string">"image/svg+xml"</span>&gt;</span><span class="tag">&lt;/<span class="name">object</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"flag.svg"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span>=<span class="string">"flag.svg"</span> <span class="attr">type</span>=<span class="string">""</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>使用img标签插入</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"flag.svg"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>现在重点介绍一下使用 css background属性插入的方式；既可以使用图片路径也可以使用 base64 格式的data URI 方式</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.svg-bg</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"./bg.svg"</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.svg-background</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">"data:image/svg+xml;&lt;DATA&gt;"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我认为使用 background base64 引入svg是最具灵活性的一种方式，还可以加入svg动画，不需要额外加载图标，只需引入css即可。同时跟普通图片相比它又有着抗锯齿的优势，因此元素尺寸随意调整不担心失真。比如下面使用background data URI 引入的加载动画css：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-class">.loading</span>&#123;</span></span><br><span class="line">  width: 50px;</span><br><span class="line">  height: 50px;</span><br><span class="line">  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cpath d='M10 40a30 30 0 1130 30' stroke-width='4' stroke='hsl(220,90%,60%)' fill='none'%3E%3CanimateTransform attributeName='transform' begin='0s' dur='1.4s' type='rotate' from='0 40 40' to='360 40 40' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E")</span><br><span class="line">  no-repeat center / cover;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"loading"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="文字路径"><a href="#文字路径" class="headerlink" title="文字路径"></a>文字路径</h2><p>svg 除了绘制图形，插入文字也是很方便的，方式也简单，使用 text 元素包裹文本内容即可</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">text</span> <span class="attr">fill</span>=<span class="string">"hsla(260,80%,50%,1)"</span> <span class="attr">x</span>=<span class="string">"10"</span> <span class="attr">y</span>=<span class="string">"40"</span> <span class="attr">font-size</span>=<span class="string">"30"</span>&gt;</span> I Love SVG <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>还有一种很实用的效果就是文字路径，也就是文字按照定义好的 path 进行排列显示，这需要使用到另一个标签 textPath。实现方式：首先定义一个path元素（这里使用三次贝塞尔曲线），然后 textPath元素使用 xlink:href 属性引入path，最后再用 text标签包裹。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">g</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span> 文字路径 <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">path</span> <span class="attr">id</span>=<span class="string">"path"</span> <span class="attr">d</span>=<span class="string">"M 10 100 C 100 0 150 300 250 100"</span> <span class="attr">fill</span>=<span class="string">"none"</span> <span class="attr">stroke</span>=<span class="string">"#555"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span> <span class="attr">x</span>=<span class="string">"10"</span> <span class="attr">y</span>=<span class="string">"100"</span> <span class="attr">stroke</span>=<span class="string">"hsl(280,100%,50%)"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">textPath</span> <span class="attr">xlink:href</span>=<span class="string">"#path"</span>&gt;</span>I Love SVG I Love SVG I Love SVG<span class="tag">&lt;/<span class="name">textPath</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="svg路径动画"><a href="#svg路径动画" class="headerlink" title="svg路径动画"></a>svg路径动画</h2><p>svg动画既可以使用 css3 相关属性实现，也可以使用自己独有的SMIL实现。SMIL主要用以下标签：</p>
+<ul>
+<li><p>animate：基础动画元素，实现单属性的动画过渡效果</p>
+</li>
+<li><p>animateTransform： 实现transform变换动画效果</p>
+</li>
+<li><p>animateMotion：路径动画效果</p>
+</li>
+</ul>
+<p>这里只介绍路径动画，基础动画和变换动画与css动画相似，就不再介绍。来看一个基于 css3 的 animation 实现百分比加载的动画。这里用到了两个关键属性：</p>
+<ul>
+<li><p>stroke-dasharray：设置线条断开为虚线，数值越大，线就越长</p>
+</li>
+<li><p>stroke-dashoffset：设置线条的偏移，设置后，线段就会偏移相应的值，实现线条动画只要动态改变这个偏移值就好</p>
+</li>
+</ul>
+<p>首先需要通过js获取路径的总长度</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取路径长度</span></span><br><span class="line"><span class="keyword">const</span> arc = <span class="built_in">document</span>.getElementById(<span class="string">'circle'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arc.getTotalLength()); <span class="comment">//250.92141723632812</span></span><br></pre></td></tr></table></figure>
+<p>接着编写svg相关</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  circle &#123;</span><br><span class="line">    fill: transparent;</span><br><span class="line">    stroke-width: 10px;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="selector-id">#circle</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">stroke-dasharray</span>: 250<span class="selector-class">.921</span>;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">stroke-dashoffset</span>: 250<span class="selector-class">.921</span>;</span></span><br><span class="line">    animation: round 3s linear infinite;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="keyword">@keyframes</span> round &#123;</span></span><br><span class="line">    to &#123;</span><br><span class="line">      stroke-dashoffset: 0;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">g</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"100"</span> <span class="attr">cy</span>=<span class="string">"60"</span> <span class="attr">r</span>=<span class="string">"40"</span> <span class="attr">stroke</span>=<span class="string">"#ccc"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">id</span>=<span class="string">"circle"</span> <span class="attr">cx</span>=<span class="string">"100"</span> <span class="attr">cy</span>=<span class="string">"60"</span> <span class="attr">r</span>=<span class="string">"40"</span> <span class="attr">stroke</span>=<span class="string">"hsl(160,80%,50%)"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>当然其他stroke线条动画也类似</p>
+<p>接着我们再基于svg animateMotion标签来实现path路径动画，其中path是运动路径，dur 是持续时间，repeatCount设置是否循环</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">g</span> <span class="attr">id</span>=<span class="string">"pathAnimate"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span> 路径动画 <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">"hsl(0,0%,60%)"</span> <span class="attr">d</span>=<span class="string">"M 10 300 Q 150 100 300 300 T 490 300Z"</span> <span class="attr">stroke-width</span>=<span class="string">"2"</span> <span class="attr">fill</span>=<span class="string">"none"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"0"</span> <span class="attr">cy</span>=<span class="string">"0"</span> <span class="attr">r</span>=<span class="string">"8"</span> <span class="attr">stroke-width</span>=<span class="string">"1"</span> <span class="attr">stroke</span>=<span class="string">"hsl(300,10%,40%)"</span> <span class="attr">fill</span>=<span class="string">"hsl(300,100%,50%)"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">animateMotion</span> <span class="attr">path</span>=<span class="string">"M 10 300 Q 150 100 300 300 T 500 300Z"</span> <span class="attr">dur</span>=<span class="string">"4s"</span> <span class="attr">repeatCount</span>=<span class="string">"indefinite"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>使用svg实现路径动画真是性价比超高。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/svg/">svg</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2020/06/04/svg1/" data-desc="canvas 和 webGL 这两项图形技术结合 css3 可以说能完成绝大部分的动画和需求。..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+        <a href="/2020/06/26/flutter1/" class="prev post-prev"> <i class="icon-leftarrow"></i> Flutter开发初探</a>
+      
+
+      
+        <a href="/2020/02/04/koatypescript/" class="next post-next"> 使用typescript改造koa... <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>

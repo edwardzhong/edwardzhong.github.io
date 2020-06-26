@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="Flutter开发初探 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >Flutter开发初探 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://edwardzhong.github.io">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Flutter开发初探 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">43<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">60<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner5.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">Flutter开发初探</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2020/06/26 11:51:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>目前跨端开发比较热门的就是 React Native 和 Flutter 了，到底该选哪门技术似乎也快成了大前端圈的一个热门话题。对于web前端来说，基于web生态的 React Native …</p>
+</p> -->
+    	
+    		<div class="post-content"><p>目前跨端开发比较热门的就是 <code>React Native</code> 和 <code>Flutter</code> 了，到底该选哪门技术似乎也快成了大前端圈的一个热门话题。对于web前端来说，基于web生态的 <code>React Native</code> 应该是一个更加顺畅而自然的选择；但 <code>Flutter</code> 让人动心的地方就是高性能和 跨端UI一致性。而<code>React Native</code> 发展不太明朗和 <code>Flutter</code> 越发成熟的走势对比促使我从观望的心态转为加入 <code>Flutter</code>。</p>
+<p>这里主要就是记录一下学习<code>Flutter</code>的一些感想和看法：</p>
+<ol>
+<li>包管理</li>
+<li>布局和样式</li>
+<li>json</li>
+<li>状态管理</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h2><p><code>pubspec.yaml</code> 文件的作用类似于 <code>npm</code> 的 <code>package.json</code> ，而yaml格式也比json方便。但是不能用命令行自动安装包却让习惯了npm的我觉得麻烦。因为Flutter 安装依赖包是这么一个流程：</p>
+<ol>
+<li>打开<a href="https://pub.flutter-io.cn/" target="_blank" rel="noopener">pub.dev</a>网站；</li>
+<li>搜索需要的包，得到包的名称和版本；</li>
+<li>把包名称和版本填入<code>pubspec.yaml</code>，最后才开始下载包。</li>
+</ol>
+<p>我觉得应该直接命令行安装包，让它帮我们下载，名称版本自动写入<code>pubspec.yaml</code>。如果没有指定版本就是默认下载最新版本，因为很多时候我们并不想知道版本号，给我个能用的最新的版本号就ok了。</p>
+<h2 id="布局和样式"><a href="#布局和样式" class="headerlink" title="布局和样式"></a>布局和样式</h2><p>就和很多人想的一样，为什么不使用 jsx 或者 xml 格式进行布局，因为基于代码的方式看起来太不直观了，之所以这样听说主要是能更方便的和<code>Dart</code>的hot reload特性配合使用，代码改动能立刻反映布局变化。但我还是期待有适配转化 <code>DSL</code> 的框架出现。</p>
+<p><code>Flutter</code>一切都是widget，但是连很多属性都当成widget 这就让人有些看不明白了，比如 <code>Center</code>，<code>Align</code>，<code>Padding</code>，为什么不把常用的样式属性都加入到布局组件里面呢？这导致出现了这么一种情况：嵌套严重，一个很简单的功能需要层层嵌套才能实现，而且样式也不能方便的复用。目前比较合理的建议就是适当抽取出子组件减少嵌套。</p>
+<h2 id="Json"><a href="#Json" class="headerlink" title="Json"></a>Json</h2><p><code>Dart</code> 作为强类型的语言，一切皆是对象。<code>Dart</code>要方便操作<code>json</code>就得把<code>json</code>转化为对象，这就意味着每用到一个<code>json</code>，就需要定义一个对应的类，这也是强类型语言的通病了。这绝对让人很怀念 js/ts 这种对json操作非常自然顺畅的弱类型/函数式语言。当然也不是没有妥协的解决方案，比较方便的就是 <a href="https://pub.flutter-io.cn/packages/json_model" target="_blank" rel="noopener">json_model</a>，<a href="https://book.flutterchina.club/" target="_blank" rel="noopener">Flutter实战</a>作者写的一个工具库，步骤也简单：</p>
+<ol>
+<li>在工程根目录下创建一个名为 “jsons” 的目录;</li>
+<li>创建或拷贝Json文件到”jsons” 目录中 ;</li>
+<li>运行 <code>pub run json_model</code> (Dart VM工程)or <code>flutter packages pub run json_model</code>(Flutter中) 命令生成Dart model类，生成的文件默认在”lib/models”目录下</li>
+</ol>
+<h2 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h2><p><code>Flutter</code> 使用<code>initState</code>，<code>setState</code>方法设置widget状态，原理类似<code>React</code>。当然这只是widget内部控制状态用的，跨组件通信还是需要其他方案的。官方推荐是使用<code>Provider</code>，使用下来中规中矩吧，当然还可以使用大名鼎鼎的 <code>Redux</code> 以及 <code>mbox</code>。不过<code>Redux</code>本身就以过多的样板代码而出名，写<code>React</code>的时候就不喜欢用，<code>hooks</code> 出来后就果断就放弃<code>Redux</code>了。<code>hooks</code>才是真香啊，<code>Flutter</code>什么时候才支持类似的函数式状态管理方案呢？</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>说了这么多，本质就是为什么 <code>Flutter</code> 不向以 <code>React</code> 为代表的 web 生态看齐？更大的原因是<code>Flutter</code>的很多理念和开发模式其实远远落后于 React 。这也是为什么习惯 <code>react/vue</code> 的 web前端 对<code>于Flutter</code> 感觉很别扭不顺手的原因了。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/svg/">svg</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2020/06/26/flutter1/" data-desc="目前跨端开发比较热门的就是 React Native 和 Flutter 了，到底该选哪门技术..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/2020/06/04/svg1/" class="next post-next"> svg高级应用及动画 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
