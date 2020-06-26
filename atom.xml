@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://edwardzhong.github.io/"/>
-  <updated>2020-06-26T04:02:15.526Z</updated>
+  <updated>2020-06-26T04:05:29.082Z</updated>
   <id>https://edwardzhong.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://edwardzhong.github.io/2020/06/26/flutter1/"/>
     <id>https://edwardzhong.github.io/2020/06/26/flutter1/</id>
     <published>2020-06-26T03:51:06.000Z</published>
-    <updated>2020-06-26T04:02:15.526Z</updated>
+    <updated>2020-06-26T04:05:29.082Z</updated>
     
     <summary type="html">
     
@@ -40,9 +40,7 @@
       <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://edwardzhong.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="svg" scheme="https://edwardzhong.github.io/tags/svg/"/>
+      <category term="flutter" scheme="https://edwardzhong.github.io/tags/flutter/"/>
     
   </entry>
   
