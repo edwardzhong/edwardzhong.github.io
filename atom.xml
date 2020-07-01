@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://edwardzhong.github.io/"/>
-  <updated>2020-07-01T13:30:32.398Z</updated>
+  <updated>2020-07-01T13:32:08.020Z</updated>
   <id>https://edwardzhong.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://edwardzhong.github.io/2020/07/01/flutter2/"/>
     <id>https://edwardzhong.github.io/2020/07/01/flutter2/</id>
     <published>2020-07-01T08:34:40.000Z</published>
-    <updated>2020-07-01T13:30:32.398Z</updated>
+    <updated>2020-07-01T13:32:08.020Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;前端开发当中最有意思的就是实现动画特效，&lt;code&gt;Flutter&lt;/code&gt;提供的各种动画组件可以方便实现各种动画效果。&lt;code&gt;Flutter&lt;/code&gt;中的动画组件主要分为两类：&lt;/p&gt;
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;隐式动画控件：只需设置组件开始值，结束值，执行时间，比如&lt;code&gt;AnimatedOpacity&lt;/code&gt;，&lt;code&gt;AnimatedSize&lt;/code&gt;等组件。&lt;/li&gt;
 &lt;li&gt;显式动画控件：需要设置&lt;code&gt;AnimationController&lt;/code&gt;，手动控制动画的执行。显式动画可以完成隐式动画的效果，甚至更加地可控和灵活，不过需要管理该动画的&lt;code&gt;AnimationController&lt;/code&gt;生命周期，&lt;code&gt;AnimationController&lt;/code&gt;并不是一个控件，所以需要将其放在&lt;code&gt;StatefulWidget&lt;/code&gt;中。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
     
     </summary>
     

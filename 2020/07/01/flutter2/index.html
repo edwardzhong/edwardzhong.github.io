@@ -146,10 +146,10 @@ var _hmt = _hmt || [];
 </p> -->
     	
     		<div class="post-content"><p>前端开发当中最有意思的就是实现动画特效，<code>Flutter</code>提供的各种动画组件可以方便实现各种动画效果。<code>Flutter</code>中的动画组件主要分为两类：</p>
-<ul>
+<ol>
 <li>隐式动画控件：只需设置组件开始值，结束值，执行时间，比如<code>AnimatedOpacity</code>，<code>AnimatedSize</code>等组件。</li>
 <li>显式动画控件：需要设置<code>AnimationController</code>，手动控制动画的执行。显式动画可以完成隐式动画的效果，甚至更加地可控和灵活，不过需要管理该动画的<code>AnimationController</code>生命周期，<code>AnimationController</code>并不是一个控件，所以需要将其放在<code>StatefulWidget</code>中。</li>
-</ul>
+</ol>
 <a id="more"></a>
 
 <p>不难看出，隐式动画控件封装程度更高，无需管理<code>AnimationController</code>的生命周期，代码因此更简单，我们开发时应该尽量选用隐式动画控件。接着我们就用隐式动画控件来实现在web当中很常见的轮播图。</p>
