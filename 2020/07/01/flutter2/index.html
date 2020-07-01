@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="flutter轮播图 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >flutter轮播图 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://edwardzhong.github.io">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="flutter轮播图 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">44<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">61<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner5.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">flutter轮播图</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2020/07/01 16:34:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>前端开发当中最有意思的就是实现动画特效，Flutter提供的各种动画组件可以方便实现各种动画效果。Flutter中的动画组件主要分为两类：</p>
+<p>隐式动画控件：只需设置组件开始值，结束值，执行时间，…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>前端开发当中最有意思的就是实现动画特效，<code>Flutter</code>提供的各种动画组件可以方便实现各种动画效果。<code>Flutter</code>中的动画组件主要分为两类：</p>
+<ul>
+<li>隐式动画控件：只需设置组件开始值，结束值，执行时间，比如<code>AnimatedOpacity</code>，<code>AnimatedSize</code>等组件。</li>
+<li>显式动画控件：需要设置<code>AnimationController</code>，手动控制动画的执行。显式动画可以完成隐式动画的效果，甚至更加地可控和灵活，不过需要管理该动画的<code>AnimationController</code>生命周期，<code>AnimationController</code>并不是一个控件，所以需要将其放在<code>StatefulWidget</code>中。</li>
+</ul>
+<a id="more"></a>
+
+<p>不难看出，隐式动画控件封装程度更高，无需管理<code>AnimationController</code>的生命周期，代码因此更简单，我们开发时应该尽量选用隐式动画控件。接着我们就用隐式动画控件来实现在web当中很常见的轮播图。</p>
+<h2 id="FadeIn-FadeOut"><a href="#FadeIn-FadeOut" class="headerlink" title="FadeIn/FadeOut"></a>FadeIn/FadeOut</h2><p><code>AnimatedOpacity</code>顾名思义就是专门设置<code>opacity</code>属性值变化的动画组件，其实就是类似<code>css3</code> 中的 <code>transition: opacity time</code>，该动画组件可以实现渐隐渐现动画，下面就是实现步骤：</p>
+<ol>
+<li>创建<code>StatefulWidget</code>；</li>
+<li>定义组件属性，<code>zIndex</code>（类似<code>css</code>的<code>z-index</code>），样式列表list，时间<code>timer</code>（实现js的<code>setTimeout</code>和<code>setInterval</code>）；</li>
+<li>实现动画播放的autoPlay功能，在<code>initState</code>方法中启动自动播放的动画，记得在<code>dispose</code>方法回收timer相关资源；</li>
+<li>布局中<code>Stack</code>和<code>Positioned</code>组件就是实现html中 <code>positon: relative/absolute</code>布局；</li>
+<li><code>AnimatedOpacity</code> 组件中的opacity是必须设置的属性，<code>curve</code>属性与<code>css3</code>中 动画函数一样，<code>duration</code> 就是动画持续的时间。</li>
+</ol>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">OpacityBanner</span> <span class="keyword">extends</span> <span class="title">StatefulWidget</span> </span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  _OpacityBannerState createState() =&gt; _OpacityBannerState();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_OpacityBannerState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">OpacityBanner</span>&gt; </span>&#123;</span><br><span class="line">  <span class="built_in">int</span> zIndex = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">List</span>&lt;<span class="built_in">String</span>&gt; list = [<span class="string">'ff0000'</span>, <span class="string">'00ff00'</span>, <span class="string">'0000ff'</span>, <span class="string">'ffff00'</span>];</span><br><span class="line">  Timer timer;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//setInterval控制当前动画元素的下标，实现动画轮播</span></span><br><span class="line">  autoPlay() &#123;</span><br><span class="line">    <span class="keyword">var</span> second = <span class="keyword">const</span> <span class="built_in">Duration</span>(seconds: <span class="number">2</span>);</span><br><span class="line">    timer = Timer.periodic(second, (t) &#123;</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        zIndex = (++zIndex) % list.length;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> initState() &#123;</span><br><span class="line">    <span class="keyword">super</span>.initState();</span><br><span class="line">    timer = Timer(<span class="built_in">Duration</span>(seconds: <span class="number">2</span>), autoPlay);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> dispose() &#123;</span><br><span class="line">    <span class="keyword">if</span> (timer != <span class="keyword">null</span>) timer.cancel();</span><br><span class="line">    <span class="keyword">super</span>.dispose();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">    body: Stack(alignment: Alignment.center, children: [</span><br><span class="line">      Stack(</span><br><span class="line">          children: list</span><br><span class="line">              .asMap()</span><br><span class="line">              .keys</span><br><span class="line">              .map&lt;Widget&gt;((i) =&gt; AnimatedOpacity(</span><br><span class="line">                    curve: Curves.easeIn,</span><br><span class="line">                    duration: <span class="built_in">Duration</span>(milliseconds: <span class="number">600</span>),</span><br><span class="line">                    opacity: i == zIndex ? <span class="number">1</span> : <span class="number">0</span>,</span><br><span class="line">                    child: Container(</span><br><span class="line">                      color: Color(<span class="built_in">int</span>.parse(list[i], radix: <span class="number">16</span>)).withAlpha(<span class="number">255</span>),</span><br><span class="line">                      height: <span class="number">300</span>, <span class="comment">//100%</span></span><br><span class="line">                    ),</span><br><span class="line">                  ))</span><br><span class="line">              .toList()),</span><br><span class="line">      Positioned(</span><br><span class="line">          bottom: <span class="number">20</span>,</span><br><span class="line">          child: Row(</span><br><span class="line">              children: list</span><br><span class="line">                  .asMap()</span><br><span class="line">                  .keys</span><br><span class="line">                  .map((i) =&gt; Container(</span><br><span class="line">                      width: <span class="number">10</span>,</span><br><span class="line">                      height: <span class="number">10</span>,</span><br><span class="line">                      margin: EdgeInsets.symmetric(horizontal: <span class="number">5</span>),</span><br><span class="line">                      decoration:</span><br><span class="line">                          BoxDecoration(color: i == zIndex ? Colors.blue : Colors.grey, shape: BoxShape.circle)))</span><br><span class="line">                  .toList()))</span><br><span class="line">    ]));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>怎么样？实现起来非常简单吧。</p>
+<h2 id="SlideIn-SlideOut"><a href="#SlideIn-SlideOut" class="headerlink" title="SlideIn/SlideOut"></a>SlideIn/SlideOut</h2><p>接着我们使用<code>AnimatedContainer</code>实现移入/移出动画，同时加上touch事件实现手指左右滑动控制轮播图。实现的步骤和上面的一样，这里只介绍用到不同组件的地方：</p>
+<ol>
+<li>移入移出动画和上面渐隐动画不同的是要同时控制两个动画元素，分别是移出和移入的元素，使用属性<code>curr</code>和<code>next</code>下标表示。</li>
+<li><code>AnimatedContainer</code>组件可以控制很多的属性，可以说是实现过渡动画最常用的组件了。我们这里只需要设置transform属性即可，控制动画的属性上面已经介绍过。</li>
+<li><code>MediaQuery</code> 可以查询很多全局的属性，比如高度/宽度，dpr等。</li>
+<li><code>GestureDetector</code>是一个事件的包装器，这里使用到了<code>onHorizontalDragStart</code>，<code>onHorizontalDragUpdate</code>，<code>onHorizontalDragEnd</code>这三个事件，即横向拖动相关的事件。</li>
+</ol>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SlideBanner</span> <span class="keyword">extends</span> <span class="title">StatefulWidget</span> </span>&#123;</span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  _SlideBannerState createState() =&gt; _SlideBannerState();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">_SlideBannerState</span> <span class="keyword">extends</span> <span class="title">State</span>&lt;<span class="title">SlideBanner</span>&gt; </span>&#123;</span><br><span class="line">  <span class="built_in">List</span>&lt;<span class="built_in">String</span>&gt; list = [</span><br><span class="line">    <span class="string">'https://upload-images.jianshu.io/upload_images/127924-dec37275411437de.jpg'</span>,</span><br><span class="line">    <span class="string">'http://upload-images.jianshu.io/upload_images/127924-0999617a887bb6a3.jpg'</span>,</span><br><span class="line">    <span class="string">'http://upload-images.jianshu.io/upload_images/127924-b48e22b6aef713ae.jpg'</span>,</span><br><span class="line">    <span class="string">'http://upload-images.jianshu.io/upload_images/127924-b06e44e6a17caf43.jpg'</span></span><br><span class="line">  ];</span><br><span class="line">  <span class="built_in">double</span> dx = <span class="number">0</span>;<span class="comment">//距离</span></span><br><span class="line">  <span class="built_in">int</span> curr = <span class="number">0</span>;<span class="comment">//要移出的下标</span></span><br><span class="line">  <span class="built_in">int</span> next = <span class="number">0</span>;<span class="comment">//要移入的下标</span></span><br><span class="line">  <span class="built_in">bool</span> toLeft = <span class="keyword">true</span>;<span class="comment">//自动播放的方向，默认向左</span></span><br><span class="line">  Timer timer;</span><br><span class="line"></span><br><span class="line">  <span class="comment"><span class="markdown">/<span class="strong">** 轮播图滑动相关 **</span>/</span></span></span><br><span class="line">  dragStart(Offset offset) &#123;</span><br><span class="line">    dx = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">//累计位移距离</span></span><br><span class="line">  dragUpdate(Offset offset) &#123;</span><br><span class="line">    <span class="keyword">var</span> x = offset.dx;</span><br><span class="line">    dx += x;</span><br><span class="line">  &#125;</span><br><span class="line">	</span><br><span class="line">  <span class="comment">//达到一定距离后则触发轮播图左右滑动</span></span><br><span class="line">  dragEnd(Velocity v) &#123;</span><br><span class="line">    <span class="keyword">if</span> (dx.abs() &lt; <span class="number">20</span>) <span class="keyword">return</span>;</span><br><span class="line">    timer.cancel();</span><br><span class="line">    <span class="keyword">if</span> (dx &lt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="comment">//向左</span></span><br><span class="line">      <span class="keyword">if</span> (!toLeft) &#123;</span><br><span class="line">        setState(() &#123;</span><br><span class="line">          toLeft = <span class="keyword">true</span>;</span><br><span class="line">          curr = next - <span class="number">1</span> &lt; <span class="number">0</span> ? list.length - <span class="number">1</span> : next - <span class="number">1</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        curr = next;</span><br><span class="line">        next = (++next) % list.length;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">//向右</span></span><br><span class="line">      <span class="keyword">if</span> (toLeft) &#123;</span><br><span class="line">        setState(() &#123;</span><br><span class="line">          toLeft = <span class="keyword">false</span>;</span><br><span class="line">          curr = (next + <span class="number">1</span>) % list.length;</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125;</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        curr = next;</span><br><span class="line">        next = --next &lt; <span class="number">0</span> ? list.length - <span class="number">1</span> : next;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//setTimeout</span></span><br><span class="line">    timer = Timer(<span class="built_in">Duration</span>(seconds: <span class="number">2</span>), autoPlay);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  autoPlay() &#123;</span><br><span class="line">    <span class="keyword">var</span> second = <span class="keyword">const</span> <span class="built_in">Duration</span>(seconds: <span class="number">2</span>);</span><br><span class="line">    timer = Timer.periodic(second, (t) &#123;</span><br><span class="line">      setState(() &#123;</span><br><span class="line">        toLeft = <span class="keyword">true</span>;</span><br><span class="line">        curr = next;</span><br><span class="line">        next = (++next) % list.length;</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> initState() &#123;</span><br><span class="line">    <span class="keyword">super</span>.initState();</span><br><span class="line">    timer = Timer(<span class="built_in">Duration</span>(seconds: <span class="number">2</span>), autoPlay);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  <span class="keyword">void</span> dispose() &#123;</span><br><span class="line">    <span class="keyword">if</span> (timer != <span class="keyword">null</span>) timer.cancel();</span><br><span class="line">    <span class="keyword">super</span>.dispose();</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@override</span></span><br><span class="line">  Widget build(BuildContext context) &#123;</span><br><span class="line">    <span class="keyword">final</span> size = MediaQuery.of(context).size;</span><br><span class="line">    <span class="keyword">final</span> width = size.width;</span><br><span class="line">    <span class="keyword">return</span> Scaffold(</span><br><span class="line">        body: GestureDetector(</span><br><span class="line">            onHorizontalDragStart: (details) =&gt; dragStart(details.globalPosition),</span><br><span class="line">            onHorizontalDragUpdate: (details) =&gt; dragUpdate(details.delta),</span><br><span class="line">            onHorizontalDragEnd: (details) =&gt; dragEnd(details.velocity),</span><br><span class="line">            child: Stack(</span><br><span class="line">                children: list</span><br><span class="line">                    .asMap()</span><br><span class="line">                    .keys</span><br><span class="line">                    .map((i) =&gt; AnimatedContainer(</span><br><span class="line">                        duration: <span class="built_in">Duration</span>(milliseconds: (i == next || i == curr) ? <span class="number">600</span> : <span class="number">0</span>),</span><br><span class="line">                        curve: Curves.easeIn,</span><br><span class="line">                        transform: Matrix4.translationValues(</span><br><span class="line">                            i == next ? <span class="number">0</span> : i == curr ? (toLeft ? -width : width) : (toLeft ? width : -width), <span class="number">0</span>, <span class="number">0</span>),</span><br><span class="line">                        width: width,</span><br><span class="line">                        height: <span class="number">300</span>,</span><br><span class="line">                        child: Image.network(list[i], width: width, height:<span class="built_in">double</span>.infinity ,fit: BoxFit.cover)))</span><br><span class="line">                    .toList())));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/flutter/">flutter</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2020/07/01/flutter2/" data-desc="前端开发当中最有意思的就是实现动画特效，Flutter提供的各种动画组件可以方便实现各种动画效..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/2020/06/26/flutter1/" class="next post-next"> Flutter开发初探 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
