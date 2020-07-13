@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://edwardzhong.github.io/"/>
-  <updated>2020-07-01T13:39:53.098Z</updated>
+  <updated>2020-07-13T06:59:48.432Z</updated>
   <id>https://edwardzhong.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker搭建部署Node项目</title>
+    <link href="https://edwardzhong.github.io/2020/07/13/docker/"/>
+    <id>https://edwardzhong.github.io/2020/07/13/docker/</id>
+    <published>2020-07-13T03:39:53.000Z</published>
+    <updated>2020-07-13T06:59:48.432Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间做了个&lt;code&gt;node&lt;/code&gt;全栈项目，服务端技术栈是 &lt;code&gt;nginx&lt;/code&gt; + &lt;code&gt;koa&lt;/code&gt; + &lt;code&gt;postgresql&lt;/code&gt;。其中在&lt;code&gt;centos&lt;/code&gt;上搭建环境和部署都挺费周折，部署测试服务器，接着上线的时候又部署生产环境服务器。这中间就有很多既无聊又费精力，吃力不讨好的”体力活”。所以就开始思考怎么自动化这部分搭建部署的工作，也就引出了&lt;code&gt;Docker&lt;/code&gt;。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="docker" scheme="https://edwardzhong.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Flutter轮播图</title>
@@ -556,29 +577,6 @@
       <category term="js" scheme="https://edwardzhong.github.io/tags/js/"/>
     
       <category term="canvas" scheme="https://edwardzhong.github.io/tags/canvas/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Haskell学习-monad</title>
-    <link href="https://edwardzhong.github.io/2018/08/16/haskelld/"/>
-    <id>https://edwardzhong.github.io/2018/08/16/haskelld/</id>
-    <published>2018-08-16T01:29:31.000Z</published>
-    <updated>2020-01-16T10:12:43.028Z</updated>
-    
-    <summary type="html">
-    
-      &lt;!-- 原文地址：[Haskell学习-monad](https://edwardzhong.github.io/2018/08/16/haskelld/) --&gt;
-
-&lt;h2 id=&quot;什么是Monad&quot;&gt;&lt;a href=&quot;#什么是Monad&quot; class=&quot;headerlink&quot; title=&quot;什么是Monad&quot;&gt;&lt;/a&gt;什么是Monad&lt;/h2&gt;&lt;p&gt;Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 &lt;strong&gt;Monad&lt;/strong&gt; 就是 Haskell 给出的解决方案。但&lt;strong&gt;Monad&lt;/strong&gt; 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 &lt;strong&gt;Maybe&lt;/strong&gt; 和 &lt;strong&gt;[]&lt;/strong&gt; 都是 &lt;strong&gt;Monad&lt;/strong&gt;。Haskell 中漂亮的错误处理方式， &lt;strong&gt;do&lt;/strong&gt; 表示法和灵活的列表推导式 (&lt;strong&gt;list comprehension&lt;/strong&gt;) 都算是 &lt;strong&gt;Monad&lt;/strong&gt; 的贡献。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://edwardzhong.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="haskell" scheme="https://edwardzhong.github.io/tags/haskell/"/>
     
   </entry>
   

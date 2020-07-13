@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="Docker搭建部署Node项目 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://edwardzhong.github.io">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >Docker搭建部署Node项目 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://edwardzhong.github.io">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="Docker搭建部署Node项目 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="/sites/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">45<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">62<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner7.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">Docker搭建部署Node项目</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2020/07/13 11:39:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>前段时间做了个node全栈项目，服务端技术栈是 nginx + koa + postgresql。其中在centos上搭建环境和部署都挺费周折，部署测试服务器，接着上线的时候又部署生产环境服务器…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>前段时间做了个<code>node</code>全栈项目，服务端技术栈是 <code>nginx</code> + <code>koa</code> + <code>postgresql</code>。其中在<code>centos</code>上搭建环境和部署都挺费周折，部署测试服务器，接着上线的时候又部署生产环境服务器。这中间就有很多既无聊又费精力，吃力不讨好的”体力活”。所以就开始思考怎么自动化这部分搭建部署的工作，也就引出了<code>Docker</code>。</p>
+<a id="more"></a>
+
+<h2 id="什么是Docker"><a href="#什么是Docker" class="headerlink" title="什么是Docker"></a>什么是Docker</h2><p><code>Docker</code> 是比虚拟机还要轻量级的虚拟化技术，它虚拟化的实体就叫做容器。容器本身就是一个隔离了作用域的<code>sandbox</code>，同时它只包含了基础库和本身承载的服务，非常精简。容器运行起来后就只是宿主机中的一个进程而已，占用的资源是非常小的，这就为操作系统上运行容器集群创造了条件，可操作性和灵活性极佳。</p>
+<p>镜像和容器又是什么关系呢？可以把镜像看成是类（<code>class</code>），容器看成对象（<code>object</code>），容器是由镜像实例化产生出来的，当然一个镜像可以生成多个容器。</p>
+<h2 id="客户端Docker"><a href="#客户端Docker" class="headerlink" title="客户端Docker"></a>客户端Docker</h2><p>如果不在服务器，我们在客户端要怎么使用 <code>Docker</code>呢？在 <code>Windows</code> 和 <code>OSX</code> 上可以使用 <code>Docker Desktop</code>，再加上<code>Kitematic</code>，这两个都是桌面管理工具，常规的操作方面非常便利。<code>Docker Desktop</code> 和 <code>Kitematic</code> 只是可视化了部分操作，命令行还是必备的，因为很多操作也能命令行才行。</p>
+<h2 id="Docker基本操作"><a href="#Docker基本操作" class="headerlink" title="Docker基本操作"></a>Docker基本操作</h2><h4 id="镜像名称"><a href="#镜像名称" class="headerlink" title="镜像名称"></a>镜像名称</h4><p>关于镜像标签，比如<code>nginx:1.19.0-alpine</code>，1.19.0是 <code>nginx</code> 的版本号，<code>alpine</code>是os的代号。</p>
+<blockquote>
+<p>Jessie: debian 8<br>Stretch: debian 9<br>Buster: debian 10<br>Alpine:  Alpine，推荐使用，因为体积非常小</p>
+</blockquote>
+<p><code>Alpine</code> 是体积最小的一个版本，有些甚至是其他版本的四分之一。这意味着构建镜像更快，运行效率更高，因为加载的组件更加少，无形中也意味着漏洞更少更安全。</p>
+<h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull nginx:1.19.0-alpine</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h4><blockquote>
+<p>–name web：指定容器名称为web<br>-p 8080:80： 容器nginx监听端口为80，映射到本地端口8080<br>-v xxxx:xxxx：这里是用本地配置文件映射到容器nginx配置文件<br>-d：后台运行<br>nginx:1.19.0-alpine：使用的镜像</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name web -p 8080:80 -v /usr/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx:1.19.0-alpine</span><br></pre></td></tr></table></figure>
+
+<h4 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker images <span class="comment">#显示镜像</span></span><br><span class="line">docker rmi xxx <span class="comment">#删除镜像</span></span><br><span class="line">docker ps <span class="comment">#显示运行的容器</span></span><br><span class="line">docker rm xxx <span class="comment">#删除容器</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h2><p>构建镜像比较方便的是使用<code>Dockerfile</code>，它就是镜像的配置文件，只要有<code>Dockerfile</code>，随时可以构建镜像。如下就是构建一个非常简单的<code>nginx</code>镜像，<code>from</code>就是构建时使用的基础镜像：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">FROM nginx</span><br><span class="line">COPY nginx.conf /etc/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<h2 id="Docker-compose"><a href="#Docker-compose" class="headerlink" title="Docker-compose"></a>Docker-compose</h2><p>当我们的项目不仅只有单个容器，而是需要运行多个容器，而且容器之间还需要互相通信的时候，就需要更强大的管理工具了。比如<code>k8s</code>，但我们目前的小项目使用官方自带的<code>Docker-compose</code>已经足矣。</p>
+<p>首先需要<code>docker-compose.yml</code>配置文件，比如下面就是两个容器的模板，<code>image</code>表示使用的镜像，<code>ports</code>则表示端口映射，<code>volumes</code>则是需要映射的数据卷：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">webapp:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">web</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"8080:80"</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">"/data"</span></span><br><span class="line">  <span class="attr">redis:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">"redis:alpine"</span></span><br></pre></td></tr></table></figure>
+
+<p>接着可以使用以下命令行进行操作：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose build [options] [SERVICE...] <span class="comment">#构建（重新构建）项目中的服务容器</span></span><br><span class="line">docker-compose up -d <span class="comment"># 运行 compose 项目,后台执行</span></span><br></pre></td></tr></table></figure>
+
+<p><code>docker-compose up</code> 是个非常强大的命令，它将尝试自动完成包括构建镜像，（重新）创建服务，启动服务，并关联服务相关容器的一系列操作。链接的服务都将会被自动启动，除非已经处于运行状态。可以说，大部分时候都可以直接通过该命令来启动一个项目。</p>
+<h2 id="构建nginx-node-postgres项目"><a href="#构建nginx-node-postgres项目" class="headerlink" title="构建nginx-node-postgres项目"></a>构建nginx-node-postgres项目</h2><p>有了上面的基础，接着就可以构建我们自己的项目了，首先是<code>node</code>服务的<code>dockerfile</code>，主要做了如下步骤</p>
+<ol>
+<li>创建容器工作目录</li>
+<li>复制相关配置文件到容器</li>
+<li>在容器安装<code>npm</code>包</li>
+<li>运行<code>pm2</code>启动容器</li>
+</ol>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:<span class="number">14.5</span>.<span class="number">0</span>-alpine3.<span class="number">12</span></span><br><span class="line"><span class="comment"># 工作目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="comment"># 复制配置文件</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> package*.json ./</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> process.yml ./</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> npm <span class="built_in">set</span> registry https://registry.npm.taobao.org/ \</span></span><br><span class="line"><span class="bash">  &amp;&amp; npm install pm2 -g \</span></span><br><span class="line"><span class="bash">  &amp;&amp; npm install</span></span><br><span class="line"><span class="comment"># 使用pm2管理</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"pm2-runtime"</span>, <span class="string">"process.yml"</span>, <span class="string">"--only"</span>, <span class="string">"app"</span>, <span class="string">"--env"</span>, <span class="string">"production"</span>]</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3010</span></span><br></pre></td></tr></table></figure>
+
+<p>接着配置 docker-compose.yml</p>
+<ol>
+<li>db配置的是数据库<code>postgres</code>，其中数据卷 <code>volumes</code> 映射了数据库目录和初始化脚步</li>
+<li>app配置的是<code>node</code>服务，其中的<code>build</code>是映射上面<code>dockerfile</code>所在的目录；<code>depends_on</code>表示依赖的容器、启动先后，这里先启动db再启动<code>node</code>；<code>links</code>表示将db的名称映射到app容器</li>
+<li>nginx容器<code>depend_on</code>于app容器，同时配置转发<code>node</code>的服务</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">'3'</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">db:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">postgres:12.3-alpine</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">postgres</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">POSTGRES_PASSWORD=xxxx</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./postgres/data:/var/lib/postgresql/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./postgres/init:/docker-entrypoint-initdb.d</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5432</span><span class="string">:5432</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span> <span class="comment">#始终重启,生产环境中推荐配置为 always</span></span><br><span class="line">    <span class="attr">expose:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">5432</span></span><br><span class="line">      </span><br><span class="line">  <span class="attr">app:</span> </span><br><span class="line">    <span class="attr">image:</span> <span class="string">koa-pg</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">koa</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./dist:/usr/src/app/dist</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./logs:/usr/src/app/logs</span></span><br><span class="line">    <span class="attr">build:</span> <span class="string">./</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">    <span class="attr">links:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">db</span></span><br><span class="line">    <span class="attr">expose:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">3010</span></span><br><span class="line">      </span><br><span class="line">  <span class="attr">nginx:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">nginx:1.19.0-alpine</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">nginx</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./nginx.conf:/etc/nginx/nginx.conf</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span><span class="string">:80</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">TZ=Asia/Shanghai</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">app</span></span><br><span class="line">    <span class="attr">links:</span> <span class="comment"># host名代替ip配置nginx的转发</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">app</span></span><br><span class="line">    <span class="attr">expose:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">8080</span></span><br></pre></td></tr></table></figure>
+
+<p>配置完我们的项目之后，接着就是运行起来</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker-compose up</span><br></pre></td></tr></table></figure>
+
+<p>在我们的本地开发机是如此，部署到服务器也是如此，你想要部署几台服务器就部署几台，只要装了<code>docker</code>，都是一句命令行就能解决的事情。</p>
+<p>要启动几个容器，修改下<code>docker-compose.yml</code>的配置，再次<code>docker-compose up</code>，so easy !</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/docker/">docker</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2020/07/13/docker/" data-desc="前段时间做了个node全栈项目，服务端技术栈是 nginx + koa + postgresq..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/2020/07/01/flutter2/" class="next post-next"> Flutter轮播图 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
