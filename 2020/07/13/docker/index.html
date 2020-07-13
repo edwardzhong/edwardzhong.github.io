@@ -152,13 +152,20 @@ var _hmt = _hmt || [];
 <h2 id="客户端Docker"><a href="#客户端Docker" class="headerlink" title="客户端Docker"></a>客户端Docker</h2><p>如果不在服务器，我们在客户端要怎么使用 <code>Docker</code>呢？在 <code>Windows</code> 和 <code>OSX</code> 上可以使用 <code>Docker Desktop</code>，再加上<code>Kitematic</code>，这两个都是桌面管理工具，常规的操作方面非常便利。<code>Docker Desktop</code> 和 <code>Kitematic</code> 只是可视化了部分操作，命令行还是必备的，因为很多操作也能命令行才行。</p>
 <h2 id="Docker基本操作"><a href="#Docker基本操作" class="headerlink" title="Docker基本操作"></a>Docker基本操作</h2><h4 id="镜像名称"><a href="#镜像名称" class="headerlink" title="镜像名称"></a>镜像名称</h4><p>关于镜像标签，比如<code>nginx:1.19.0-alpine</code>，1.19.0是 <code>nginx</code> 的版本号，<code>alpine</code>是os的代号。</p>
 <blockquote>
-<p>Jessie: debian 8<br>Stretch: debian 9<br>Buster: debian 10<br>Alpine:  Alpine，推荐使用，因为体积非常小</p>
+<p>Jessie: debian 8</p>
+<p>Stretch: debian 9</p>
+<p>Buster: debian 10</p>
+<p>Alpine:  Alpine，推荐使用，因为体积非常小</p>
 </blockquote>
 <p><code>Alpine</code> 是体积最小的一个版本，有些甚至是其他版本的四分之一。这意味着构建镜像更快，运行效率更高，因为加载的组件更加少，无形中也意味着漏洞更少更安全。</p>
 <h4 id="拉取镜像"><a href="#拉取镜像" class="headerlink" title="拉取镜像"></a>拉取镜像</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull nginx:1.19.0-alpine</span><br></pre></td></tr></table></figure>
 
 <h4 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h4><blockquote>
-<p>–name web：指定容器名称为web<br>-p 8080:80： 容器nginx监听端口为80，映射到本地端口8080<br>-v xxxx:xxxx：这里是用本地配置文件映射到容器nginx配置文件<br>-d：后台运行<br>nginx:1.19.0-alpine：使用的镜像</p>
+<p>–name web：指定容器名称为web</p>
+<p>-p 8080:80： 容器nginx监听端口为80，映射到本地端口8080</p>
+<p>-v xxxx:xxxx：这里是用本地配置文件映射到容器nginx配置文件</p>
+<p>-d：后台运行</p>
+<p>nginx:1.19.0-alpine：使用的镜像</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run --name web -p 8080:80 -v /usr/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx:1.19.0-alpine</span><br></pre></td></tr></table></figure>
 
@@ -184,7 +191,7 @@ var _hmt = _hmt || [];
 </ol>
 <figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:<span class="number">14.5</span>.<span class="number">0</span>-alpine3.<span class="number">12</span></span><br><span class="line"><span class="comment"># 工作目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /usr/src/app</span></span><br><span class="line"><span class="comment"># 复制配置文件</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> package*.json ./</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> process.yml ./</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> npm <span class="built_in">set</span> registry https://registry.npm.taobao.org/ \</span></span><br><span class="line"><span class="bash">  &amp;&amp; npm install pm2 -g \</span></span><br><span class="line"><span class="bash">  &amp;&amp; npm install</span></span><br><span class="line"><span class="comment"># 使用pm2管理</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"pm2-runtime"</span>, <span class="string">"process.yml"</span>, <span class="string">"--only"</span>, <span class="string">"app"</span>, <span class="string">"--env"</span>, <span class="string">"production"</span>]</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">3010</span></span><br></pre></td></tr></table></figure>
 
-<p>接着配置 docker-compose.yml</p>
+<p>接着配置 <code>docker-compose.yml</code></p>
 <ol>
 <li>db配置的是数据库<code>postgres</code>，其中数据卷 <code>volumes</code> 映射了数据库目录和初始化脚步</li>
 <li>app配置的是<code>node</code>服务，其中的<code>build</code>是映射上面<code>dockerfile</code>所在的目录；<code>depends_on</code>表示依赖的容器、启动先后，这里先启动db再启动<code>node</code>；<code>links</code>表示将db的名称映射到app容器</li>
