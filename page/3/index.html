@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>什么是MonadHaskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-monad](https://edwardzhong.github.io/2018/08/16/haskelld/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-monad](http://02s949.coding-pages.com/2018/08/16/haskelld/) -->
 
 <h2 id="什么是Monad"><a href="#什么是Monad" class="headerlink" title="什么是Monad"></a>什么是Monad</h2><p>Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 <strong>Monad</strong> 就是 Haskell 给出的解决方案。但<strong>Monad</strong> 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 <strong>Maybe</strong> 和 <strong>[]</strong> 都是 <strong>Monad</strong>。Haskell 中漂亮的错误处理方式， <strong>do</strong> 表示法和灵活的列表推导式 (<strong>list comprehension</strong>) 都算是 <strong>Monad</strong> 的贡献。</p></div>
 			<a href="/2018/08/16/haskelld/" class="post-more">more <i class="icon-doubleright"></i></a>
@@ -197,7 +197,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>什么是Functorfunctor 就是可以执行map操作的对象，functor就像是附加了语义的表达式，可以用盒子进行比喻。functor 的定义可以这样理解：给出a映射到b的函数和装了a的…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-functor](https://edwardzhong.github.io/2018/08/15/haskellc/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-functor](http://02s949.coding-pages.com/2018/08/15/haskellc/) -->
 <h2 id="什么是Functor"><a href="#什么是Functor" class="headerlink" title="什么是Functor"></a>什么是Functor</h2><p><strong>functor</strong> 就是可以执行map操作的对象，functor就像是附加了语义的表达式，可以用盒子进行比喻。<strong>functor</strong> 的定义可以这样理解：给出a映射到b的函数和装了a的盒子，结果会返回装了b的盒子。<strong>fmap</strong> 可以看作是一个接受一个function 和一个 <strong>functor</strong> 的函数，它把function 应用到 <strong>functor</strong> 的每一个元素（映射）。</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Functor的定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Functor</span> f <span class="keyword">where</span></span></span><br><span class="line">    fmap :: (a -&gt; b) -&gt; f a -&gt; f b</span><br></pre></td></tr></table></figure></div>
 			<a href="/2018/08/15/haskellc/" class="post-more">more <i class="icon-doubleright"></i></a>
@@ -248,7 +248,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>高阶函数(higher-order function)就是指可以操作函数的函数，即函数可以作为参数，也可以作为返回结果。有了这两个特性，haskell可以实现许多神奇的效果。<br>柯里化（Curr…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-高阶函数](https://edwardzhong.github.io/2018/08/08/haskellb/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-高阶函数](http://02s949.coding-pages.com/2018/08/08/haskellb/) -->
 <p>高阶函数(higher-order function)就是指可以操作函数的函数，即函数可以作为参数，也可以作为返回结果。有了这两个特性，haskell可以实现许多神奇的效果。</p>
 <h2 id="柯里化（Currying）"><a href="#柯里化（Currying）" class="headerlink" title="柯里化（Currying）"></a>柯里化（Currying）</h2><p>在haskell中所有的算术运算符都是函数(包括大小于等于关系符等)，而它们的快捷方式都可以省略操作数（参数）。</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">(+) <span class="number">1</span> <span class="number">2</span> <span class="comment">-- (+) 是需要两个操作数的函数</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line"></span><br><span class="line">(+<span class="number">1</span>) <span class="number">2</span> <span class="comment">-- (+1) 是需要左操作数的函数</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line"></span><br><span class="line">(<span class="number">3</span>*) <span class="number">3</span> <span class="comment">-- (3*) 是需要右操作数的函数</span></span><br><span class="line">&gt; <span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="title">map</span> (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">-- map所有元素 *2 的操作</span></span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">filter</span> (&gt;<span class="number">3</span>) [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] <span class="comment">-- 过滤 &gt;3的元素</span></span><br><span class="line">&gt; [<span class="number">4</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure></div>
@@ -300,7 +300,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>为什么要学习函数式编程？为什么要学习Haskell？<br>.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-函数式编程初探](https://edwardzhong.github.io/2018/08/07/haskella/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-函数式编程初探](http://02s949.coding-pages.com/2018/08/07/haskella/) -->
 
 <p>为什么要学习函数式编程？为什么要学习Haskell？</p>
 <p>.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾护航,开山劈石,伴随着我不断成长。同时C#和JavaScript它们本身也在不断地进化，不断出现越来越多方便的语法糖，但追根到底很多都是从函数式语言汲取的精华。比如高阶函数，lambada表达式，柯里化等。 </p>
@@ -355,9 +355,9 @@ var _hmt = _hmt || [];
     	<!-- <p><p>由于生活和工作上的原因,从年前开始一直到处奔波,没有太多的时间去关注和学习WebGL图形学相关的技术, 不过陆陆续续都有学习使用blender进行3D建模, 而这篇文章涉及到的房屋内景3D建模…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[WebGL展示3D房屋内景](https://edwardzhong.github.io/2018/05/31/weblroom3d/)  -->
+			<div class="post-content"><!-- 原文地址：[WebGL展示3D房屋内景](http://02s949.coding-pages.com/2018/05/31/weblroom3d/)  -->
 <p>由于生活和工作上的原因,从年前开始一直到处奔波,没有太多的时间去关注和学习WebGL图形学相关的技术, 不过陆陆续续都有学习使用blender进行3D建模, 而这篇文章涉及到的房屋内景3D建模就是我这段时间以来的学习成果,现在展示出来.</p>
-<p>文件模型比较大,页面加载比较慢,请耐心等候, 实例:</p>
+<p>本节实现的效果: <strong><a href="http://ufcjd3.coding-pages.com/dist/webglroom.html" target="_blank" rel="noopener">Room</a></strong></p>
 <img src="https://upload-images.jianshu.io/upload_images/127924-e648ca6ca124abe4.gif" width="480"></div>
 			<a href="/2018/05/31/webglroom3d/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
@@ -592,9 +592,9 @@ var _hmt = _hmt || [];
     	<!-- <p><p>经过前面的学习,webgl的基本功能都已经掌握了,我们不仅掌握了着色器的编写,图形的绘制,矩阵的变换,添加光照,还通过对webgl的基础api封装,编写出了便利的工具库. 是时候进一步深入学习…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[WebGL光照阴影映射](https://edwardzhong.github.io/2018/01/19/webglshadow/)  -->
+			<div class="post-content"><!-- 原文地址：[WebGL光照阴影映射](http://02s949.coding-pages.com/2018/01/19/webglshadow/)  -->
 <p>经过前面的学习,webgl的基本功能都已经掌握了,我们不仅掌握了着色器的编写,图形的绘制,矩阵的变换,添加光照,还通过对webgl的基础api封装,编写出了便利的工具库. 是时候进一步深入学习webgl的高级功能了,我认为要做逼真的3D特效,阴影绝对是一个必不可少的环节.现在我们就在之前光照的基础上添加阴影效果吧.</p>
-<p>首先看一下阴影效果的实例：<br><em><a href="https://edwardzhong.github.io/sites/demo/dist/webglShadow.html">阴影综合(多物体高精度PCF)</a></em><br><em><a href="https://edwardzhong.github.io/sites/demo/dist/webglSpotLight.html">点光源聚光灯阴影</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-b9a516175dff69fb.jpg" width="400"></p></div>
+<p>首先看一下阴影效果的实例：<br><em><a href="http://ufcjd3.coding-pages.com/dist/webglShadow.html" target="_blank" rel="noopener">阴影综合(多物体高精度PCF)</a></em><br><em><a href="http://ufcjd3.coding-pages.com/dist/webglSpotLight.html" target="_blank" rel="noopener">点光源聚光灯阴影</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-b9a516175dff69fb.jpg" width="400"></p></div>
 			<a href="/2018/01/19/webglshadow/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -651,9 +651,9 @@ var _hmt = _hmt || [];
     	<!-- <p><p>WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++风格的API调用方式就可以看出来,  习惯了高级语言的我们会觉得很不友好,觉得特别繁琐. 这个也是很多人觉得WebGL难…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[WebGL多模型光照综合实例](https://edwardzhong.github.io/2018/01/12/webglpolygons/)  -->
+			<div class="post-content"><!-- 原文地址：[WebGL多模型光照综合实例](http://02s949.coding-pages.com/2018/01/12/webglpolygons/)  -->
 <p>WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++风格的API调用方式就可以看出来,  习惯了高级语言的我们会觉得很不友好,觉得特别繁琐. 这个也是很多人觉得WebGL难的原因之一. 如果我们要使用WebGL做一些项目,毫无疑问要么使用Three.js之类的3D库, 要么需要对原生的API进行封装. 这段时间查看了一些WebGL工具库的源代码, 参考封装出了一个简单的工具库,这样往后用WebGL做小项目就方便多了. </p>
-<p>经过前面章节的学习, WebGL的知识点掌握的差不多了, 终于到了做特效和Demo的阶段了,来看一下这节实现的特效：<em><a href="https://edwardzhong.github.io/sites/demo/dist/webglPolygons.html">WebGL多物体多光源场景</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-2ceb13e9d6db6789.gif" width="400"></p></div>
+<p>经过前面章节的学习, WebGL的知识点掌握的差不多了, 终于到了做特效和Demo的阶段了,来看一下这节实现的特效：<em><a href="http://ufcjd3.coding-pages.com/dist/webglPolygons.html" target="_blank" rel="noopener">WebGL多物体多光源场景</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-2ceb13e9d6db6789.gif" width="400"></p></div>
 			<a href="/2018/01/12/webglpolygons/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -710,10 +710,10 @@ WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++�
     	<!-- <p><p>相信很多人是以创建逼真酷炫的三维效果为目标而学习webGL的吧，首先我就是😂。我掌握了足够的webGL技巧后，正准备大展身手时，遇到了一种尴尬的情况：还是做不出想要的东西😭。为啥呢，因为没…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[WebGL学习(3) - 3D模型](https://edwardzhong.github.io/2017/12/26/webglspitfire/) -->
+			<div class="post-content"><!-- 原文地址：[WebGL学习(3) - 3D模型](http://02s949.coding-pages.com/2017/12/26/webglspitfire/) -->
 <p>相信很多人是以创建逼真酷炫的三维效果为目标而学习webGL的吧，首先我就是😂。我掌握了足够的webGL技巧后，正准备大展身手时，遇到了一种尴尬的情况：还是做不出想要的东西😭。为啥呢，因为没有3D模型可供操作啊，纯粹用代码构建复杂的3D模型完全不可想象。</p>
 <p>必须使用3dMax，maya，以及开源的blender等建模软件进行构建。既然已经入了webGL的坑了，那也只能硬着头皮继续学习3D建模，断断续续学了一个多月的blender教程，总算入门了。</p>
-<p>这节主要学习如何导入模型文件，然后用代码应用效果，操作模型。首先展示下我的大作，喷火战斗机的3D模型：<em><a href="https://edwardzhong.github.io/sites/demo/dist/webglSpitfire.html">webGL 喷火战斗机</a></em><br><img src="https://upload-images.jianshu.io/upload_images/127924-b8917d8e69f3f44b.gif" width="600"></p></div>
+<p>这节主要学习如何导入模型文件，然后用代码应用效果，操作模型。首先展示下我的大作，喷火战斗机的3D模型：<em><a href="http://ufcjd3.coding-pages.com/dist/webglSpitfire.html" target="_blank" rel="noopener">webGL 喷火战斗机</a></em><br><img src="https://upload-images.jianshu.io/upload_images/127924-b8917d8e69f3f44b.gif" width="600"></p></div>
 			<a href="/2017/12/26/webglspitfire/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">

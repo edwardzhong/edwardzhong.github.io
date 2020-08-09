@@ -144,12 +144,12 @@ var _hmt = _hmt || [];
     	<!-- <p><p>什么是HDRHDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低…</p>
 </p> -->
     	
-    		<div class="post-content"><!-- 原文地址：[WebGL学习之HDR与Bloom](https://edwardzhong.github.io/2018/01/12/webglhdr/)-->
+    		<div class="post-content"><!-- 原文地址：[WebGL学习之HDR与Bloom](http://02s949.coding-pages.com/2018/01/12/webglhdr/)-->
 
 <h2 id="什么是HDR"><a href="#什么是HDR" class="headerlink" title="什么是HDR"></a>什么是HDR</h2><p>HDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低动态范围) 图像合成后，就叫HDR，它能同时反映出场景最暗和最亮部分的细节。为什么需要多张图片？因为目前的单反相机的宽容度还是有限的，一张照片不能反映出高动态场景的所有细节。一张图片拍摄就必须要在暗光和高光之间做出取舍，只能亮部暗部两者取其一。但是通过HDR合成多张图片，却能达到我们想要的效果。<br><img src="https://upload-images.jianshu.io/upload_images/127924-2960edbc2c229388.png" alt="hdr"></p>
 <a id="more"></a>
 <p>那么在WebGL中，HDR具体指的是什么。它指的是让我们能用超过1.0的数据表示颜色值。到目前为止，我们用的都是LDR（低动态范围），所有的颜色值都被限制在了 [0,1] 范围。在现实当中，太阳，灯光这类光源它们的颜色值肯定是远远超出1.0的范围的。</p>
-<p>本节实现的效果请看<strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglhdr.html">hdr &amp; bloom</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-dfec5a31f1dd2b79.png" width="400" alt="hdr & bloom"></p>
+<p>本节实现的效果请看<strong><a href="http://ufcjd3.coding-pages.com/dist/webglhdr.html" target="_blank" rel="noopener">hdr &amp; bloom</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-dfec5a31f1dd2b79.png" width="400" alt="hdr & bloom"></p>
 <h2 id="浮点帧缓冲"><a href="#浮点帧缓冲" class="headerlink" title="浮点帧缓冲"></a>浮点帧缓冲</h2><p>当帧缓冲使用标准化的定点格式(像gl.RGB)为其颜色缓冲的内部格式，WebGL会在将这些值存入帧缓冲前自动将其约束到0.0到1.0之间。这一操作对大部分帧缓冲格式都是成立的，除了专门用来存放被拓展范围值的浮点格式。</p>
 <p>WebGL扩大颜色值范围的方法就是：把颜色的格式设置成16位浮点数或者32位浮点数，即把帧缓冲的颜色缓冲的内部格式设定成 gl.RGB16F, gl.RGBA16F, gl.RGB32F  或者 gl.RGBA32F，这些帧缓冲被叫做浮点帧缓冲(Floating Point Framebuffer)，浮点帧缓冲可以存储超过0.0到1.0范围的浮点值，所以非常适合HDR渲染。</p>
 <p>创建浮点帧缓冲，我们只需要改变颜色缓冲的内部格式参数就行了（注意 gl.FLOAT参数)：</p>

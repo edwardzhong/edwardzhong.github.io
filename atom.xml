@@ -131,11 +131,11 @@
     <link href="https://edwardzhong.github.io/2020/02/04/koatypescript/"/>
     <id>https://edwardzhong.github.io/2020/02/04/koatypescript/</id>
     <published>2020-02-04T03:37:48.000Z</published>
-    <updated>2020-02-04T06:27:55.710Z</updated>
+    <updated>2020-08-09T07:55:11.632Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;原文地址：&lt;a href=&quot;https://edwardzhong.github.io/2020/02/04/koatypescript/&quot;&gt;使用typescript改造koa开发框架&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;原文地址：&lt;a href=&quot;http://02s949.coding-pages.com/2020/02/04/koatypescript/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;使用typescript改造koa开发框架&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;强类型的 &lt;strong&gt;TypeScript&lt;/strong&gt; 开发体验和维护项目上相比 &lt;strong&gt;JavaScript&lt;/strong&gt; 有着明显的优势，那么对常用的脚手架进行改造也就势在必行了。&lt;/p&gt;
 &lt;p&gt;接下来开始对基于 &lt;strong&gt;koa&lt;/strong&gt; 框架的 &lt;strong&gt;node&lt;/strong&gt; 后端脚手架进行改造：&lt;/p&gt;
 &lt;ol&gt;
@@ -163,12 +163,12 @@
     <link href="https://edwardzhong.github.io/2019/05/28/webglray/"/>
     <id>https://edwardzhong.github.io/2019/05/28/webglray/</id>
     <published>2019-05-28T07:07:25.000Z</published>
-    <updated>2020-01-16T10:14:48.067Z</updated>
+    <updated>2020-08-09T07:47:55.127Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;使用WebGL将图形绘制到画布后，如何与外部进行交互？这其中最关键的就是如何实现物体的选择。比如鼠标点击后判断是否选中了某个图形或图形的某个部分。&lt;/p&gt;
-&lt;p&gt;本节实现的效果: &lt;strong&gt;&lt;a href=&quot;https://edwardzhong.github.io/sites/demo/dist/webglray.html&quot;&gt;WebGL选中物体&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-f6e7de79c53b2935.png&quot; width=&quot;400&quot; alt=&quot;WebGL选中物体&quot;&gt;&lt;/p&gt;
+&lt;p&gt;本节实现的效果: &lt;strong&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglray.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WebGL选中物体&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-f6e7de79c53b2935.png&quot; width=&quot;400&quot; alt=&quot;WebGL选中物体&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -189,11 +189,11 @@
     <link href="https://edwardzhong.github.io/2019/05/21/webglhdr/"/>
     <id>https://edwardzhong.github.io/2019/05/21/webglhdr/</id>
     <published>2019-05-21T07:09:15.000Z</published>
-    <updated>2020-01-16T10:14:26.359Z</updated>
+    <updated>2020-08-09T07:52:39.402Z</updated>
     
     <summary type="html">
     
-      &lt;!-- 原文地址：[WebGL学习之HDR与Bloom](https://edwardzhong.github.io/2018/01/12/webglhdr/)--&gt;
+      &lt;!-- 原文地址：[WebGL学习之HDR与Bloom](http://02s949.coding-pages.com/2018/01/12/webglhdr/)--&gt;
 
 &lt;h2 id=&quot;什么是HDR&quot;&gt;&lt;a href=&quot;#什么是HDR&quot; class=&quot;headerlink&quot; title=&quot;什么是HDR&quot;&gt;&lt;/a&gt;什么是HDR&lt;/h2&gt;&lt;p&gt;HDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低动态范围) 图像合成后，就叫HDR，它能同时反映出场景最暗和最亮部分的细节。为什么需要多张图片？因为目前的单反相机的宽容度还是有限的，一张照片不能反映出高动态场景的所有细节。一张图片拍摄就必须要在暗光和高光之间做出取舍，只能亮部暗部两者取其一。但是通过HDR合成多张图片，却能达到我们想要的效果。&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-2960edbc2c229388.png&quot; alt=&quot;hdr&quot;&gt;&lt;/p&gt;
     
@@ -216,11 +216,11 @@
     <link href="https://edwardzhong.github.io/2019/05/05/webglskybox/"/>
     <id>https://edwardzhong.github.io/2019/05/05/webglskybox/</id>
     <published>2019-05-05T13:34:20.000Z</published>
-    <updated>2020-01-16T10:15:09.466Z</updated>
+    <updated>2020-08-09T07:50:03.090Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;我们之前已经学习过二维纹理 &lt;strong&gt;gl.TEXTURE_2D&lt;/strong&gt;，而且还使用它实现了各种效果。但还有一种立方体纹理 &lt;strong&gt;gl.TEXTURE_CUBE_MAP&lt;/strong&gt;，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 &lt;strong&gt;&lt;a href=&quot;https://edwardzhong.github.io/sites/demo/dist/webglskybox.html&quot;&gt;天空盒&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-21b5d76b44dbd274.gif&quot; width=&quot;400&quot; alt=&quot;sky box&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;我们之前已经学习过二维纹理 &lt;strong&gt;gl.TEXTURE_2D&lt;/strong&gt;，而且还使用它实现了各种效果。但还有一种立方体纹理 &lt;strong&gt;gl.TEXTURE_CUBE_MAP&lt;/strong&gt;，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 &lt;strong&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglskybox.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;天空盒&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-21b5d76b44dbd274.gif&quot; width=&quot;400&quot; alt=&quot;sky box&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -241,11 +241,11 @@
     <link href="https://edwardzhong.github.io/2019/05/02/webglalpha/"/>
     <id>https://edwardzhong.github.io/2019/05/02/webglalpha/</id>
     <published>2019-05-02T05:16:29.000Z</published>
-    <updated>2020-01-16T10:14:19.851Z</updated>
+    <updated>2020-08-09T07:47:10.577Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。&lt;br&gt;完成的展示Demo请看: &lt;strong&gt;&lt;a href=&quot;https://edwardzhong.github.io/sites/demo/dist/webglalpha.html&quot;&gt;半透明物体和透明物体共存&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-07fe85ce0e09500c.gif&quot; alt=&quot;alpha混合&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。&lt;br&gt;完成的展示Demo请看: &lt;strong&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglalpha.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;半透明物体和透明物体共存&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-07fe85ce0e09500c.gif&quot; alt=&quot;alpha混合&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -266,11 +266,11 @@
     <link href="https://edwardzhong.github.io/2019/04/30/webglnormap/"/>
     <id>https://edwardzhong.github.io/2019/04/30/webglnormap/</id>
     <published>2019-04-30T03:07:27.000Z</published>
-    <updated>2020-01-16T10:14:35.347Z</updated>
+    <updated>2020-08-09T07:47:34.433Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;实际效果请看demo：&lt;strong&gt;&lt;a href=&quot;https://edwardzhong.github.io/sites/demo/dist/webglTexture.html&quot;&gt;纹理贴图&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;实际效果请看demo：&lt;strong&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglTexture.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;纹理贴图&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-a2003e57ddd79184.png&quot; width=&quot;400&quot; alt=&quot;法线贴图&quot;&gt;
 
 &lt;p&gt;为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-91a0ac5e7a16904f.png&quot; alt=&quot;表面法线&quot;&gt;&lt;/p&gt;
@@ -294,11 +294,11 @@
     <link href="https://edwardzhong.github.io/2019/04/29/webgltexture/"/>
     <id>https://edwardzhong.github.io/2019/04/29/webgltexture/</id>
     <published>2019-04-29T03:24:21.000Z</published>
-    <updated>2020-01-16T10:15:25.119Z</updated>
+    <updated>2020-08-09T07:50:26.169Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;为了使图形能获得接近于真实物体的材质效果，一般会使用贴图，贴图类型主要包括两种：漫反射贴图和镜面高光贴图。其中漫反射贴图可以同时实现漫反射光和环境光的效果。&lt;br&gt;实际效果请看demo：&lt;strong&gt;&lt;a href=&quot;https://edwardzhong.github.io/sites/demo/dist/webglTexture.html&quot;&gt;纹理贴图&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;为了使图形能获得接近于真实物体的材质效果，一般会使用贴图，贴图类型主要包括两种：漫反射贴图和镜面高光贴图。其中漫反射贴图可以同时实现漫反射光和环境光的效果。&lt;br&gt;实际效果请看demo：&lt;strong&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglTexture.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;纹理贴图&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
@@ -319,7 +319,7 @@
     <link href="https://edwardzhong.github.io/2019/04/27/mdtowxml/"/>
     <id>https://edwardzhong.github.io/2019/04/27/mdtowxml/</id>
     <published>2019-04-27T02:36:23.000Z</published>
-    <updated>2020-01-16T10:12:58.021Z</updated>
+    <updated>2020-08-09T07:54:22.640Z</updated>
     
     <summary type="html">
     
@@ -531,7 +531,7 @@
     <link href="https://edwardzhong.github.io/2019/01/03/animationfun/"/>
     <id>https://edwardzhong.github.io/2019/01/03/animationfun/</id>
     <published>2019-01-02T18:01:23.000Z</published>
-    <updated>2020-01-16T10:09:43.455Z</updated>
+    <updated>2020-08-09T07:56:48.886Z</updated>
     
     <summary type="html">
     
@@ -562,11 +562,11 @@
     <link href="https://edwardzhong.github.io/2018/12/12/tetris/"/>
     <id>https://edwardzhong.github.io/2018/12/12/tetris/</id>
     <published>2018-12-12T13:35:33.000Z</published>
-    <updated>2020-01-16T10:13:56.516Z</updated>
+    <updated>2020-08-09T07:46:48.803Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：*&lt;a href=&quot;https://edwardzhong.github.io/sites/demo/dist/tetris.html&quot;&gt;canvas俄罗斯方块&lt;/a&gt;*。&lt;/p&gt;
+      &lt;p&gt;好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：*&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/tetris.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;canvas俄罗斯方块&lt;/a&gt;*。&lt;/p&gt;
 &lt;h2 id=&quot;原理详解&quot;&gt;&lt;a href=&quot;#原理详解&quot; class=&quot;headerlink&quot; title=&quot;原理详解&quot;&gt;&lt;/a&gt;原理详解&lt;/h2&gt;&lt;p&gt;看游戏最终界面，可知需要实现以下关键功能：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;游戏面板，也就是12 * 20的方格，以及是否填充了方块信息；&lt;/li&gt;

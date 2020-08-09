@@ -2,6 +2,209 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://edwardzhong.github.io/2019/01/03/animationfun/</loc>
+    
+    <lastmod>2020-08-09T07:56:48.886Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/12/chartbar/</loc>
+    
+    <lastmod>2020-08-09T07:56:39.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/21/chartline/</loc>
+    
+    <lastmod>2020-08-09T07:56:32.574Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/23/chartpie/</loc>
+    
+    <lastmod>2020-08-09T07:56:25.239Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/24/chartpoint/</loc>
+    
+    <lastmod>2020-08-09T07:56:15.823Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/02/drawboard/</loc>
+    
+    <lastmod>2020-08-09T07:56:02.192Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/08/07/haskella/</loc>
+    
+    <lastmod>2020-08-09T07:55:40.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/08/08/haskellb/</loc>
+    
+    <lastmod>2020-08-09T07:55:33.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/08/15/haskellc/</loc>
+    
+    <lastmod>2020-08-09T07:55:24.569Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/08/16/haskelld/</loc>
+    
+    <lastmod>2020-08-09T07:55:19.112Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2020/02/04/koatypescript/</loc>
+    
+    <lastmod>2020-08-09T07:55:11.632Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/30/managedemo/</loc>
+    
+    <lastmod>2020-08-09T07:55:00.792Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2019/04/27/mdtowxml/</loc>
+    
+    <lastmod>2020-08-09T07:54:22.640Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/12/01/netgrab/</loc>
+    
+    <lastmod>2020-08-09T07:54:14.449Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/27/projecttemplate/</loc>
+    
+    <lastmod>2020-08-09T07:53:55.719Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/10/26/solar/</loc>
+    
+    <lastmod>2020-08-09T07:53:41.516Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/14/webgl3d/</loc>
+    
+    <lastmod>2020-08-09T07:52:58.795Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2019/05/21/webglhdr/</loc>
+    
+    <lastmod>2020-08-09T07:52:39.402Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/01/12/webglpolygons/</loc>
+    
+    <lastmod>2020-08-09T07:52:22.149Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/05/31/webglroom3d/</loc>
+    
+    <lastmod>2020-08-09T07:52:02.149Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/01/19/webglshadow/</loc>
+    
+    <lastmod>2020-08-09T07:51:52.692Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/12/26/webglspitfire/</loc>
+    
+    <lastmod>2020-08-09T07:51:35.253Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2017/11/08/webgltriangle/</loc>
+    
+    <lastmod>2020-08-09T07:51:08.089Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2019/04/29/webgltexture/</loc>
+    
+    <lastmod>2020-08-09T07:50:26.169Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2019/05/05/webglskybox/</loc>
+    
+    <lastmod>2020-08-09T07:50:03.090Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2019/05/28/webglray/</loc>
+    
+    <lastmod>2020-08-09T07:47:55.127Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2019/04/30/webglnormap/</loc>
+    
+    <lastmod>2020-08-09T07:47:34.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2019/05/02/webglalpha/</loc>
+    
+    <lastmod>2020-08-09T07:47:10.577Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://edwardzhong.github.io/2018/12/12/tetris/</loc>
+    
+    <lastmod>2020-08-09T07:46:48.803Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://edwardzhong.github.io/2020/07/13/docker/</loc>
     
     <lastmod>2020-07-15T04:43:50.191Z</lastmod>
@@ -26,13 +229,6 @@
     <loc>https://edwardzhong.github.io/2020/06/26/flutter1/</loc>
     
     <lastmod>2020-06-26T04:05:29.082Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2020/02/04/koatypescript/</loc>
-    
-    <lastmod>2020-02-04T06:27:55.710Z</lastmod>
     
   </url>
   
@@ -79,107 +275,9 @@
   </url>
   
   <url>
-    <loc>https://edwardzhong.github.io/2017/11/08/webgltriangle/</loc>
-    
-    <lastmod>2020-01-16T10:15:33.391Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/04/29/webgltexture/</loc>
-    
-    <lastmod>2020-01-16T10:15:25.119Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/12/26/webglspitfire/</loc>
-    
-    <lastmod>2020-01-16T10:15:18.696Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/05/05/webglskybox/</loc>
-    
-    <lastmod>2020-01-16T10:15:09.466Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/01/19/webglshadow/</loc>
-    
-    <lastmod>2020-01-16T10:15:00.752Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/05/31/webglroom3d/</loc>
-    
-    <lastmod>2020-01-16T10:14:54.489Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/05/28/webglray/</loc>
-    
-    <lastmod>2020-01-16T10:14:48.067Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/01/12/webglpolygons/</loc>
-    
-    <lastmod>2020-01-16T10:14:41.865Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/04/30/webglnormap/</loc>
-    
-    <lastmod>2020-01-16T10:14:35.347Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/05/21/webglhdr/</loc>
-    
-    <lastmod>2020-01-16T10:14:26.359Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/05/02/webglalpha/</loc>
-    
-    <lastmod>2020-01-16T10:14:19.851Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/14/webgl3d/</loc>
-    
-    <lastmod>2020-01-16T10:14:12.699Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://edwardzhong.github.io/2019/04/26/weappcloud/</loc>
     
     <lastmod>2020-01-16T10:14:06.379Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/12/12/tetris/</loc>
-    
-    <lastmod>2020-01-16T10:13:56.516Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/10/26/solar/</loc>
-    
-    <lastmod>2020-01-16T10:13:43.274Z</lastmod>
     
   </url>
   
@@ -194,62 +292,6 @@
     <loc>https://edwardzhong.github.io/2019/02/04/reacthooks/</loc>
     
     <lastmod>2020-01-16T10:13:21.308Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/27/projecttemplate/</loc>
-    
-    <lastmod>2020-01-16T10:13:14.308Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/12/01/netgrab/</loc>
-    
-    <lastmod>2020-01-16T10:13:06.774Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/04/27/mdtowxml/</loc>
-    
-    <lastmod>2020-01-16T10:12:58.021Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/30/managedemo/</loc>
-    
-    <lastmod>2020-01-16T10:12:50.750Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/08/16/haskelld/</loc>
-    
-    <lastmod>2020-01-16T10:12:43.028Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/08/15/haskellc/</loc>
-    
-    <lastmod>2020-01-16T10:12:35.052Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/08/08/haskellb/</loc>
-    
-    <lastmod>2020-01-16T10:12:28.494Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2018/08/07/haskella/</loc>
-    
-    <lastmod>2020-01-16T10:11:08.909Z</lastmod>
     
   </url>
   
@@ -271,48 +313,6 @@
     <loc>https://edwardzhong.github.io/2019/04/08/fullstack/</loc>
     
     <lastmod>2020-01-16T10:10:42.302Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/02/drawboard/</loc>
-    
-    <lastmod>2020-01-16T10:10:31.566Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/24/chartpoint/</loc>
-    
-    <lastmod>2020-01-16T10:10:23.735Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/23/chartpie/</loc>
-    
-    <lastmod>2020-01-16T10:10:14.271Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/21/chartline/</loc>
-    
-    <lastmod>2020-01-16T10:10:06.946Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2017/11/12/chartbar/</loc>
-    
-    <lastmod>2020-01-16T10:09:59.664Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://edwardzhong.github.io/2019/01/03/animationfun/</loc>
-    
-    <lastmod>2020-01-16T10:09:43.455Z</lastmod>
     
   </url>
   

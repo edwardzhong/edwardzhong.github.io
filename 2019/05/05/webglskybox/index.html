@@ -144,7 +144,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>我们之前已经学习过二维纹理 gl.TEXTURE_2D，而且还使用它实现了各种效果。但还有一种立方体纹理 gl.TEXTURE_CUBE_MAP，它包含了6个纹理代表立方体的6个面。不像常规的纹…</p>
 </p> -->
     	
-    		<div class="post-content"><p>我们之前已经学习过二维纹理 <strong>gl.TEXTURE_2D</strong>，而且还使用它实现了各种效果。但还有一种立方体纹理 <strong>gl.TEXTURE_CUBE_MAP</strong>，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 <strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglskybox.html">天空盒</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-21b5d76b44dbd274.gif" width="400" alt="sky box"></p>
+    		<div class="post-content"><p>我们之前已经学习过二维纹理 <strong>gl.TEXTURE_2D</strong>，而且还使用它实现了各种效果。但还有一种立方体纹理 <strong>gl.TEXTURE_CUBE_MAP</strong>，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 <strong><a href="http://ufcjd3.coding-pages.com/dist/webglskybox.html" target="_blank" rel="noopener">天空盒</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-21b5d76b44dbd274.gif" width="400" alt="sky box"></p>
 <a id="more"></a>
 
 <p>根据法向量的朝向选取立方体6个面中的一个，这个面的像素用来采样生成颜色。这六个面通过他们相对于立方体中心的方向被引用。它们是分别是</p>
@@ -183,7 +183,7 @@ var _hmt = _hmt || [];
 <p>这样我们绘制的时候就要轮流切换着色器program</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//天空盒</span></span><br><span class="line">    gl.useProgram(program.program);</span><br><span class="line">		<span class="comment">//绘制天空盒</span></span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//立方体</span></span><br><span class="line">    gl.useProgram(cProgram.program);</span><br><span class="line">		<span class="comment">//绘制立方体</span></span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line"></span><br><span class="line">    requestAnimationFrame(draw);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>最后实现如下效果，demo情况 <strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglskybox.html">天空盒</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-4650febc8e130ca4.jpg" width="400" alt="天空盒"></p>
+<p>最后实现如下效果，demo情况 <strong><a href="http://ufcjd3.coding-pages.com/dist/webglskybox.html" target="_blank" rel="noopener">天空盒</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-4650febc8e130ca4.jpg" width="400" alt="天空盒"></p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>其实纹理盒除了可以做环境贴图，还可以结合光照，阴影贴图作出很多酷炫的效果。</p>
 </div>
     	

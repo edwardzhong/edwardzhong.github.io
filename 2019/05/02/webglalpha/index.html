@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
 <p>α 混合…</p>
 </p> -->
     	
-    		<div class="post-content"><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。<br>完成的展示Demo请看: <strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglalpha.html">半透明物体和透明物体共存</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-07fe85ce0e09500c.gif" alt="alpha混合"></p>
+    		<div class="post-content"><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。<br>完成的展示Demo请看: <strong><a href="http://ufcjd3.coding-pages.com/dist/webglalpha.html" target="_blank" rel="noopener">半透明物体和透明物体共存</a></strong><br><img src="https://upload-images.jianshu.io/upload_images/127924-07fe85ce0e09500c.gif" alt="alpha混合"></p>
 <a id="more"></a>
 
 <h2 id="α-混合"><a href="#α-混合" class="headerlink" title="α 混合"></a>α 混合</h2><p>让物体实现半透明效果需要用到颜色的α分量。该功能被称为a混合(alpha blending) 或 混合 blending，WebGL已经内置该功能，但需要开启，如果只设置了颜色的第四个分量 α 是看不到透明效果的，这第四分量α其实和 css 样式的 rgba / hsla 颜色模式 中的 α 是一样的，或者类似 opacity 属性。必须要执行下面两个步骤才能看到透明效果:</p>
@@ -246,7 +246,7 @@ var _hmt = _hmt || [];
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">8</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> color = randomColor();</span><br><span class="line">    color[<span class="number">3</span>] = i &gt; <span class="number">3</span> ? (i - <span class="number">3</span>)/<span class="number">10</span> :<span class="number">1</span>;<span class="comment">// 透明物体 α 分量小于1，非透明物体则等于1</span></span><br><span class="line">    </span><br><span class="line">    Polygons.push(&#123;</span><br><span class="line">        x: random(<span class="number">-9</span>,<span class="number">9</span>),</span><br><span class="line">        y: random(<span class="number">0</span>, <span class="number">6</span>),</span><br><span class="line">        z: random(<span class="number">-5</span>,<span class="number">5</span>),</span><br><span class="line">        color: color</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>如果是绘制的物体队列是无序的，则必须手动排序。但我这里建立图形时已经排好序，前4个为不透明物体，剩余是透明物体，所以可直接按顺序绘制，针对是否为透明物体，分别设置缓冲区写入和隐藏面删除功能。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(i &lt; <span class="number">4</span>)&#123; <span class="comment">// 非透明物体</span></span><br><span class="line">    gl.depthMask(<span class="literal">true</span>);</span><br><span class="line">    gl.disable(gl.BLEND);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123; <span class="comment">//透明物体</span></span><br><span class="line">    gl.depthMask(<span class="literal">false</span>);</span><br><span class="line">    gl.enable(gl.BLEND);</span><br><span class="line">    gl.blendFunc( gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA );</span><br><span class="line">&#125;</span><br><span class="line">drawBufferInfo(gl, vao);</span><br></pre></td></tr></table></figure>
-<p>最终完成效果请看：<strong><a href="https://edwardzhong.github.io/sites/demo/dist/webglalpha.html">半透明物体和透明物体共存</a></strong></p>
+<p>最终完成效果请看：<strong><a href="http://ufcjd3.coding-pages.com/dist/webglalpha.html" target="_blank" rel="noopener">半透明物体和透明物体共存</a></strong></p>
 </div>
     	
 		<div class="post-footer">
