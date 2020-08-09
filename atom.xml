@@ -163,12 +163,12 @@
     <link href="http://02s949.coding-pages.com/2019/05/28/webglray/"/>
     <id>http://02s949.coding-pages.com/2019/05/28/webglray/</id>
     <published>2019-05-28T07:07:25.000Z</published>
-    <updated>2020-08-09T07:47:55.127Z</updated>
+    <updated>2020-08-09T08:16:42.525Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;使用WebGL将图形绘制到画布后，如何与外部进行交互？这其中最关键的就是如何实现物体的选择。比如鼠标点击后判断是否选中了某个图形或图形的某个部分。&lt;/p&gt;
-&lt;p&gt;本节实现的效果: &lt;strong&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglray.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WebGL选中物体&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-f6e7de79c53b2935.png&quot; width=&quot;400&quot; alt=&quot;WebGL选中物体&quot;&gt;&lt;/p&gt;
+&lt;p&gt;本节实现的效果: &lt;em&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglray.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WebGL选中物体&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/127924-f6e7de79c53b2935.png&quot; width=&quot;400&quot; alt=&quot;WebGL选中物体&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -562,11 +562,11 @@
     <link href="http://02s949.coding-pages.com/2018/12/12/tetris/"/>
     <id>http://02s949.coding-pages.com/2018/12/12/tetris/</id>
     <published>2018-12-12T13:35:33.000Z</published>
-    <updated>2020-08-09T07:46:48.803Z</updated>
+    <updated>2020-08-09T08:17:37.851Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：*&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/tetris.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;canvas俄罗斯方块&lt;/a&gt;*。&lt;/p&gt;
+      &lt;p&gt;好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：&lt;br&gt;*&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/tetris.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;canvas俄罗斯方块&lt;/a&gt;*。&lt;/p&gt;
 &lt;h2 id=&quot;原理详解&quot;&gt;&lt;a href=&quot;#原理详解&quot; class=&quot;headerlink&quot; title=&quot;原理详解&quot;&gt;&lt;/a&gt;原理详解&lt;/h2&gt;&lt;p&gt;看游戏最终界面，可知需要实现以下关键功能：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;游戏面板，也就是12 * 20的方格，以及是否填充了方块信息；&lt;/li&gt;
