@@ -358,7 +358,7 @@ var _hmt = _hmt || [];
 			<div class="post-content"><!-- 原文地址：[WebGL展示3D房屋内景](http://02s949.coding-pages.com/2018/05/31/weblroom3d/)  -->
 <p>由于生活和工作上的原因,从年前开始一直到处奔波,没有太多的时间去关注和学习WebGL图形学相关的技术, 不过陆陆续续都有学习使用blender进行3D建模, 而这篇文章涉及到的房屋内景3D建模就是我这段时间以来的学习成果,现在展示出来.</p>
 <p>本节实现的效果: <strong><a href="http://ufcjd3.coding-pages.com/dist/webglroom.html" target="_blank" rel="noopener">Room</a></strong></p>
-<img src="https://upload-images.jianshu.io/upload_images/127924-e648ca6ca124abe4.gif" width="480"></div>
+<img src="/images/room.gif" width="480"></div>
 			<a href="/2018/05/31/webglroom3d/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -594,7 +594,7 @@ var _hmt = _hmt || [];
     	
 			<div class="post-content"><!-- 原文地址：[WebGL光照阴影映射](http://02s949.coding-pages.com/2018/01/19/webglshadow/)  -->
 <p>经过前面的学习,webgl的基本功能都已经掌握了,我们不仅掌握了着色器的编写,图形的绘制,矩阵的变换,添加光照,还通过对webgl的基础api封装,编写出了便利的工具库. 是时候进一步深入学习webgl的高级功能了,我认为要做逼真的3D特效,阴影绝对是一个必不可少的环节.现在我们就在之前光照的基础上添加阴影效果吧.</p>
-<p>首先看一下阴影效果的实例：<br><em><a href="http://ufcjd3.coding-pages.com/dist/webglShadow.html" target="_blank" rel="noopener">阴影综合(多物体高精度PCF)</a></em><br><em><a href="http://ufcjd3.coding-pages.com/dist/webglSpotLight.html" target="_blank" rel="noopener">点光源聚光灯阴影</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-b9a516175dff69fb.jpg" width="400"></p></div>
+<p>首先看一下阴影效果的实例：<br><em><a href="http://ufcjd3.coding-pages.com/dist/webglShadow.html" target="_blank" rel="noopener">阴影综合(多物体高精度PCF)</a></em><br><em><a href="http://ufcjd3.coding-pages.com/dist/webglSpotLight.html" target="_blank" rel="noopener">点光源聚光灯阴影</a></em><br><img src="/images/shadow.jpg" width="400"></p></div>
 			<a href="/2018/01/19/webglshadow/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -653,7 +653,7 @@ var _hmt = _hmt || [];
     	
 			<div class="post-content"><!-- 原文地址：[WebGL多模型光照综合实例](http://02s949.coding-pages.com/2018/01/12/webglpolygons/)  -->
 <p>WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++风格的API调用方式就可以看出来,  习惯了高级语言的我们会觉得很不友好,觉得特别繁琐. 这个也是很多人觉得WebGL难的原因之一. 如果我们要使用WebGL做一些项目,毫无疑问要么使用Three.js之类的3D库, 要么需要对原生的API进行封装. 这段时间查看了一些WebGL工具库的源代码, 参考封装出了一个简单的工具库,这样往后用WebGL做小项目就方便多了. </p>
-<p>经过前面章节的学习, WebGL的知识点掌握的差不多了, 终于到了做特效和Demo的阶段了,来看一下这节实现的特效：<em><a href="http://ufcjd3.coding-pages.com/dist/webglPolygons.html" target="_blank" rel="noopener">WebGL多物体多光源场景</a></em><br><img src="http://upload-images.jianshu.io/upload_images/127924-2ceb13e9d6db6789.gif" width="400"></p></div>
+<p>经过前面章节的学习, WebGL的知识点掌握的差不多了, 终于到了做特效和Demo的阶段了,来看一下这节实现的特效：<em><a href="http://ufcjd3.coding-pages.com/dist/webglPolygons.html" target="_blank" rel="noopener">WebGL多物体多光源场景</a></em><br><img src="/images/multlights.gif" width="400"></p></div>
 			<a href="/2018/01/12/webglpolygons/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -713,7 +713,7 @@ WebGL是一个非常的接近硬件底层的光栅化API, 从非常类似C/C++�
 			<div class="post-content"><!-- 原文地址：[WebGL学习(3) - 3D模型](http://02s949.coding-pages.com/2017/12/26/webglspitfire/) -->
 <p>相信很多人是以创建逼真酷炫的三维效果为目标而学习webGL的吧，首先我就是😂。我掌握了足够的webGL技巧后，正准备大展身手时，遇到了一种尴尬的情况：还是做不出想要的东西😭。为啥呢，因为没有3D模型可供操作啊，纯粹用代码构建复杂的3D模型完全不可想象。</p>
 <p>必须使用3dMax，maya，以及开源的blender等建模软件进行构建。既然已经入了webGL的坑了，那也只能硬着头皮继续学习3D建模，断断续续学了一个多月的blender教程，总算入门了。</p>
-<p>这节主要学习如何导入模型文件，然后用代码应用效果，操作模型。首先展示下我的大作，喷火战斗机的3D模型：<em><a href="http://ufcjd3.coding-pages.com/dist/webglSpitfire.html" target="_blank" rel="noopener">webGL 喷火战斗机</a></em><br><img src="https://upload-images.jianshu.io/upload_images/127924-b8917d8e69f3f44b.gif" width="600"></p></div>
+<p>这节主要学习如何导入模型文件，然后用代码应用效果，操作模型。首先展示下我的大作，喷火战斗机的3D模型：<em><a href="http://ufcjd3.coding-pages.com/dist/webglSpitfire.html" target="_blank" rel="noopener">webGL 喷火战斗机</a></em><br><img src="/images/fighter.gif" width="600"></p></div>
 			<a href="/2017/12/26/webglspitfire/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">

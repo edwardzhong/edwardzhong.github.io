@@ -146,7 +146,7 @@ var _hmt = _hmt || [];
 </p> -->
     	
     		<div class="post-content"><p>使用WebGL将图形绘制到画布后，如何与外部进行交互？这其中最关键的就是如何实现物体的选择。比如鼠标点击后判断是否选中了某个图形或图形的某个部分。</p>
-<p>本节实现的效果: <em><a href="http://ufcjd3.coding-pages.com/dist/webglray.html" target="_blank" rel="noopener">WebGL选中物体</a></em><br><img src="https://upload-images.jianshu.io/upload_images/127924-f6e7de79c53b2935.png" width="400" alt="WebGL选中物体"></p>
+<p>本节实现的效果: <em><a href="http://ufcjd3.coding-pages.com/dist/webglray.html" target="_blank" rel="noopener">WebGL选中物体</a></em><br><img src="/images/polygonselect.png" width="400" alt="WebGL选中物体"></p>
 <a id="more"></a>
 
 <h2 id="如何实现选中物体"><a href="#如何实现选中物体" class="headerlink" title="如何实现选中物体"></a>如何实现选中物体</h2><h3 id="颜色区分法"><a href="#颜色区分法" class="headerlink" title="颜色区分法"></a>颜色区分法</h3><p>《WebGL编程指南》中提出了一个原理很简单的解决方案，步骤如下：</p>
@@ -162,7 +162,7 @@ var _hmt = _hmt || [];
 </li>
 </ol>
 <p>可以说这是个非常容易实现的方案，不过要为每个物体分别设置不同的区分颜色却是个隐患，同时也不够友好。</p>
-<h3 id="光线投射法"><a href="#光线投射法" class="headerlink" title="光线投射法"></a>光线投射法</h3><p>这是使用最广泛也最精确的一种方案了，Three.js 中的<a href="https://github.com/mrdoob/three.js/blob/master/src/core/Raycaster.js" target="_blank" rel="noopener">光线投射器 (Raycaster)</a> 就实现了这种方案，可以看里面的源代码。<br><img src="https://upload-images.jianshu.io/upload_images/127924-f89c60cd37b3d4ea.png" width="600" alt="光线投射"><br>它的基本原理: 从视点出发的光线首先投射到近截面，最后投射到远截面，结合鼠标点击的位置 (x, y) 和视图投影矩阵 (viewProjection)。可以得出由近截面坐标 (x1, y1, z1) 和远截面坐标 (x2, y2, z2) 组成的射线向量。然后我们就可以将物体坐标构成的面逐个与这个向量进行对比。这涉及到线性代数中的向量，点积，叉积，矩阵等概念，比较复杂。主要分两个步骤：</p>
+<h3 id="光线投射法"><a href="#光线投射法" class="headerlink" title="光线投射法"></a>光线投射法</h3><p>这是使用最广泛也最精确的一种方案了，Three.js 中的<a href="https://github.com/mrdoob/three.js/blob/master/src/core/Raycaster.js" target="_blank" rel="noopener">光线投射器 (Raycaster)</a> 就实现了这种方案，可以看里面的源代码。<br><img src="/images/lightmath.png" width="600" alt="光线投射"><br>它的基本原理: 从视点出发的光线首先投射到近截面，最后投射到远截面，结合鼠标点击的位置 (x, y) 和视图投影矩阵 (viewProjection)。可以得出由近截面坐标 (x1, y1, z1) 和远截面坐标 (x2, y2, z2) 组成的射线向量。然后我们就可以将物体坐标构成的面逐个与这个向量进行对比。这涉及到线性代数中的向量，点积，叉积，矩阵等概念，比较复杂。主要分两个步骤：</p>
 <ol>
 <li>创建物体的包围盒，判断射线是否穿过该物体包围盒</li>
 <li>判断射线是否穿过该物体的某个三角形面，如果经过即可判断选中了该物体</li>

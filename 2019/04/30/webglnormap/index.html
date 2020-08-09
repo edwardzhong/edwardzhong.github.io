@@ -146,20 +146,20 @@ var _hmt = _hmt || [];
 </p> -->
     	
     		<div class="post-content"><p>实际效果请看demo：<strong><a href="http://ufcjd3.coding-pages.com/dist/webglTexture.html" target="_blank" rel="noopener">纹理贴图</a></strong></p>
-<img src="https://upload-images.jianshu.io/upload_images/127924-a2003e57ddd79184.png" width="400" alt="法线贴图">
+<img src="/images/texture.png" width="400" alt="法线贴图">
 
-<p>为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：<br><img src="https://upload-images.jianshu.io/upload_images/127924-91a0ac5e7a16904f.png" alt="表面法线"></p>
+<p>为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：<br><img src="/images/norplane.png" alt="表面法线"></p>
 <a id="more"></a>
 <p>每个片元使用了自己的法线，我们就可以让光照相信一个表面由很多微小的（垂直于法线向量的）平面所组成，物体表面的细节将会得到极大提升。这种每个片元使用各自的法线，替代一个面上所有片元使用同一个法线的技术叫做法线贴图（normal mapping）或凹凸贴图（bump mapping）。</p>
 <p>以上都是从 LearnOpenGL CN 相关的文章摘抄 <strong><a href="https://learnopengl-cn.github.io/05%20Advanced%20Lighting/04%20Normal%20Mapping/" target="_blank" rel="noopener">法线贴图</a></strong>。没办法，WebGL相关比较深入的知识你只能去看openGL，好在原理基本相同，WebGL1就是基于openGL es 2.0，WebGL2就是基于openGL es 3.0。</p>
 <h2 id="法线贴图"><a href="#法线贴图" class="headerlink" title="法线贴图"></a>法线贴图</h2><p>法线贴图就是用纹理中的颜色向量r、g、b存储法线向量的x、y、z。不过它们有另外的称呼：t (切线)、b (副切线)、n (法线)，它们组成了一个切线空间，被称为TBN坐标系。由于颜色与方向的表示范围有区别，颜色范围是[0,1]，而作为表示位置方向的TBN坐标系则是[-1,1]，那么从法线贴图取出来的值要使用的话，得进行转换。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 将法线向量转换为范围[-1,1]</span></span><br><span class="line">vec3 normal = normalize(normal * <span class="number">2.0</span> - <span class="number">1.0</span>);</span><br></pre></td></tr></table></figure>
 
-<p>法线贴图偏蓝是因为所有法线的指向都偏向z轴（0, 0, 1）， 对应于rgb 中的 blue分量，也就是蓝色。法线向量从z轴方向向其他方向轻微偏移，于是颜色也就发生轻微变化，这样看起来便有了一种深度。例如，你可以看到顶部颜色倾向于偏绿，这是因为顶部的法线偏向于指向正y轴方向（0, 1, 0）对应于rgb总的 green分量，也就是绿色。<br><img src="https://upload-images.jianshu.io/upload_images/127924-31c207a874927a96.png" width="400" alt="法线贴图颜色"></p>
-<p>法线贴图的优点是可以用一个低精度模型表现出非常高的细节，看起来像高精度模型那样。<br><img src="https://upload-images.jianshu.io/upload_images/127924-2cb177969bbac3e9.png" alt="高精度模型"></p>
+<p>法线贴图偏蓝是因为所有法线的指向都偏向z轴（0, 0, 1）， 对应于rgb 中的 blue分量，也就是蓝色。法线向量从z轴方向向其他方向轻微偏移，于是颜色也就发生轻微变化，这样看起来便有了一种深度。例如，你可以看到顶部颜色倾向于偏绿，这是因为顶部的法线偏向于指向正y轴方向（0, 1, 0）对应于rgb总的 green分量，也就是绿色。<br><img src="/images/nortexture.png" width="400" alt="法线贴图颜色"></p>
+<p>法线贴图的优点是可以用一个低精度模型表现出非常高的细节，看起来像高精度模型那样。<br><img src="/images/highpolygon.png" width="600" alt="高精度模型"></p>
 <p>只需要500个三角形的简单网格加上法线贴图就能达到媲美4M个三角形的精细网格模型的效果，可以说法线贴图优势巨大，处理4M个三角形的复杂度简直不可想象。</p>
 <p>但法线贴图也不是万能的，它也有缺点。因为它只是改变了物体表面的光照计算方式，所以不适合用在凹凸起伏较大的物体上，这些物体会有遮挡的效果，法线贴图是无法实现的。</p>
-<p>而文章 <strong><a href="https://learnopengl-cn.github.io/05%20Advanced%20Lighting/04%20Normal%20Mapping/" target="_blank" rel="noopener">法线贴图</a></strong> 里面有很详细的原理讲解和切线推导过程，最后求出如下的公式，我这里也不再叙述了。<br><img src="https://upload-images.jianshu.io/upload_images/127924-69ffbf23bd54803f.png" alt="公式"></p>
+<p>而文章 <strong><a href="https://learnopengl-cn.github.io/05%20Advanced%20Lighting/04%20Normal%20Mapping/" target="_blank" rel="noopener">法线贴图</a></strong> 里面有很详细的原理讲解和切线推导过程，最后求出如下的公式，我这里也不再叙述了。<br><img src="/images/formula.png" width="600" alt="公式"></p>
 <h2 id="着色器"><a href="#着色器" class="headerlink" title="着色器"></a>着色器</h2><p>我这里使用了另外一种更加方便的算法，能达到同样的效果，原理就是使用导数(dFdx/dFdy)求出每个像素在插值化传值过来的点的变化率当成一个法线，请看函数 <strong>dHdxy_fwd</strong>。然后再通过与当前平面的法向量进行叉积 (cross)，即可求得同时垂直于这两个方向的法向量，请看函数 <strong>perturbNormalArb</strong>，而最终的这个法向量就是我们所要求的值，非常地高明。下面是glsl 内置的几个关键函数。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">dFdx(p) <span class="comment">//在x方向的偏导数</span></span><br><span class="line">dFdy(p) <span class="comment">//在y方向的偏导数</span></span><br><span class="line">cross(p0,p1) <span class="comment">//向量p0,p1的叉乘</span></span><br></pre></td></tr></table></figure>
 
