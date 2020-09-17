@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="WebGL之延迟着色 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://02s949.coding-pages.com">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >WebGL之延迟着色 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://02s949.coding-pages.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="WebGL之延迟着色 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="http://ufcjd3.coding-pages.com/" target="_blank" rel="noopener" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">46<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">64<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner8.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">WebGL之延迟着色</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2020/09/17 19:30:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>什么是延迟着色(Deferred Shading)？它是相对于正常使用的正向着色(Forward Shading)而言的，正向着色的工作模式：遍历光源，获取光照条件，接着遍历物体，获取物体的几何…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>什么是<strong>延迟着色(Deferred Shading)</strong>？它是相对于正常使用的<strong>正向着色(Forward Shading)</strong>而言的，正向着色的工作模式：遍历光源，获取光照条件，接着遍历物体，获取物体的几何数据，最后根据光照和物体几何数据进行计算。</p>
+<p>但是<strong>正向着色(Forward Shading)</strong>在光源非常多的情况下，对性能的消耗非常大。因为程序要对每一个光源，每一个需要渲染的物体，每一个需要渲染的片段进行迭代！还有片段着色器的输出会被之后的输出覆盖，正向渲染会在场景中因多个物体重合在一个像素上浪费大量的片段着色器运行时间。</p>
+<p><strong>延迟着色(Deferred Shading)</strong>，就是为了解决上述问题而生，尤其是需要渲染几百上千个光源的场景。</p>
+<a id="more"></a>
+
+<p>本节实现的效果请看：<em><a href="http://ufcjd3.coding-pages.com/dist/deferredShading.html" target="_blank" rel="noopener">延迟着色 deferred sharding</a></em></p>
+<img src="/images/deferred.gif" width="400" alt="延迟着色">
+
+<p>正向着色伪代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">foreach light &#123;</span><br><span class="line">  foreach visible mesh &#123;</span><br><span class="line">    <span class="keyword">if</span> (light volume intersects mesh) &#123;</span><br><span class="line">      render using <span class="keyword">this</span> material/light shader;</span><br><span class="line">      accumulate <span class="keyword">in</span> framebuffer using additive blending;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="延迟着色"><a href="#延迟着色" class="headerlink" title="延迟着色"></a>延迟着色</h2><p><strong>延迟着色(Deferred Shading)</strong>工作模式就是将计算量大的渲染光照部分 <strong>延迟(Defer)</strong> 到后期进行处理，因此它包含两个处理阶段(Pass)：</p>
+<ol>
+<li>第一个 <strong>几何处理阶段(Geometry Pass)</strong> 是将对象的各种几何信息进行渲染并储存在叫做<strong>G缓冲(G-buffer)</strong>的纹理中。主要包括<strong>位置向量(Position Vector)</strong>、<strong>颜色向量(Color Vector)</strong>、<strong>法向量(Normal Vector)</strong>。这些储存在G缓冲中的几何信息将会用来做之后的光照计算。</li>
+<li>第二个 <strong>光照处理阶段(Lighting Pass)</strong> 是对G缓冲中的几何数据的每一个片段进行光照计算。光照处理阶段不是直接将每个对象从顶点着色器带到片段着色器，而是对G缓冲中的每个像素进行迭代，从对应的G缓冲纹理获取输入变量。</li>
+</ol>
+<p>延迟着色伪代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// g-buffer pass</span></span><br><span class="line">foreach visible mesh &#123;</span><br><span class="line">  write material properties to g-buffer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// light accumulation pass</span></span><br><span class="line">foreach light &#123;</span><br><span class="line">  compute light by reading g-buffer;</span><br><span class="line">  accumulate <span class="keyword">in</span> framebuffer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="帧缓冲"><a href="#帧缓冲" class="headerlink" title="帧缓冲"></a>帧缓冲</h2><p><strong>延迟着色(Deferred Shading)</strong> 的 <strong>G缓冲(G-buffer)</strong> 是基于 <strong>帧缓冲(frameBuffer)</strong> 实现的，涉及到高级应用，帧缓冲 真的是无处不在啊！该demo的几何处理阶段分别对<strong>位置(position)</strong>，<strong>法向量(normal)</strong>，<strong>颜色(color)</strong> 进行缓存，那么对应就要建立3个颜色附件，别忘了同时建立用于深度测试用的 <strong>深度缓冲(Z-Buffer)</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fb = gl.createFramebuffer();</span><br><span class="line">gl.bindFramebuffer(gl.FRAMEBUFFER, fb);</span><br><span class="line"><span class="keyword">const</span> fbo = &#123;</span><br><span class="line">  framebuffer: fb,</span><br><span class="line">  textures: []</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建颜色纹理</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++)&#123;</span><br><span class="line">  <span class="keyword">const</span> tex = initTexture(gl, &#123; <span class="attr">informat</span>: gl.RGBA16F, <span class="attr">type</span>: gl.FLOAT &#125;, width, height);</span><br><span class="line">  framebufferInfo.textures.push(tex);</span><br><span class="line">  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0 + i, gl.TEXTURE_2D, tex, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建深度渲染缓冲区</span></span><br><span class="line"><span class="keyword">const</span> depthBuffer = gl.createRenderbuffer();</span><br><span class="line">gl.bindRenderbuffer(gl.RENDERBUFFER, depthBuffer);</span><br><span class="line">gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height);</span><br><span class="line">gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, depthBuffer);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="多渲染目标-draw-buffers"><a href="#多渲染目标-draw-buffers" class="headerlink" title="多渲染目标 draw buffers"></a>多渲染目标 draw buffers</h2><p><strong>WebGL</strong> 实现多渲染目标需要打开 <strong>WEBGL_draw_buffers</strong> 这个扩展，但是 <strong>WebGL 2.0</strong> 直接就能使用的。我这里为了方便就基于 <strong>WebGL 2.0</strong> 来实现，多渲染目标调用方式如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1, gl.COLOR_ATTACHMENT2]);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="着色器"><a href="#着色器" class="headerlink" title="着色器"></a>着色器</h2><p>因为延迟着色器分两个阶段，那么对应就需要两队着色器，首先来看几何处理阶段的着色器。</p>
+<p>几何处理阶段 <strong>顶点着色器(vertex)</strong></p>
+<figure class="highlight glsl"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line"><span class="keyword">in</span> <span class="type">vec4</span> aPosition;</span><br><span class="line"><span class="keyword">in</span> <span class="type">vec4</span> aNormal;</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">mat4</span> modelMatrix;</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">mat4</span> vpMatrix;</span><br><span class="line"><span class="keyword">out</span> <span class="type">vec3</span> vPosition;</span><br><span class="line"><span class="keyword">out</span> <span class="type">vec3</span> vNormal;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> main() &#123;</span><br><span class="line">  <span class="built_in">gl_Position</span> = vpMatrix * modelMatrix * aPosition;</span><br><span class="line">  vNormal = <span class="type">vec3</span>(<span class="built_in">transpose</span>(<span class="built_in">inverse</span>(modelMatrix)) * aNormal);</span><br><span class="line">  vPosition = <span class="type">vec3</span>(modelMatrix * aPosition);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>几何处理阶段 <strong>片段着色器(fragment)</strong>，这里的三个输出变量对应就是帧缓冲中的三个颜色纹理。</p>
+<figure class="highlight glsl"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">highp</span> <span class="type">float</span>;</span><br><span class="line"><span class="keyword">layout</span> (<span class="keyword">location</span> = <span class="number">0</span>) <span class="keyword">out</span> <span class="type">vec3</span> gPosition;<span class="comment">// 位置</span></span><br><span class="line"><span class="keyword">layout</span> (<span class="keyword">location</span> = <span class="number">1</span>) <span class="keyword">out</span> <span class="type">vec3</span> gNormal;  <span class="comment">// 法向量</span></span><br><span class="line"><span class="keyword">layout</span> (<span class="keyword">location</span> = <span class="number">2</span>) <span class="keyword">out</span> <span class="type">vec4</span> gColor;   <span class="comment">// 颜色</span></span><br><span class="line"><span class="keyword">uniform</span> <span class="type">vec4</span> color;</span><br><span class="line"><span class="keyword">in</span> <span class="type">vec3</span> vPosition;</span><br><span class="line"><span class="keyword">in</span> <span class="type">vec3</span> vNormal;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> main() &#123;</span><br><span class="line">  gPosition = vPosition;</span><br><span class="line">  gNormal = <span class="built_in">normalize</span>(vNormal);</span><br><span class="line">  gColor = color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接着就是光照处理阶段的着色器组了。</p>
+<p>光照处理阶段 <strong>顶点着色器(vertex)</strong>，这个非常简单，对应到帧缓冲，也就是个平面贴图而已。</p>
+<figure class="highlight glsl"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line"><span class="keyword">in</span> <span class="type">vec3</span> aPosition;</span><br><span class="line"><span class="keyword">in</span> <span class="type">vec2</span> aTexcoord;</span><br><span class="line"><span class="keyword">out</span> <span class="type">vec2</span> texcoord;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> main() &#123;</span><br><span class="line">  texcoord = aTexcoord;</span><br><span class="line">  <span class="built_in">gl_Position</span> = <span class="type">vec4</span>(aPosition, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>光照处理阶段 <strong>片段着色器(fragment)</strong>，需要从对应的纹理贴图取出对应的几何数据。也就是使用 <strong>texture</strong> 函数结合贴图和 <strong>贴图坐标(texcoord)</strong> 就可以计算出对应的几何数据，接着就是根结合照进行渲染最终结果。</p>
+<figure class="highlight glsl"><table><tr><td class="code"><pre><span class="line"><span class="meta">#version 300 es</span></span><br><span class="line"><span class="keyword">precision</span> <span class="keyword">highp</span> <span class="type">float</span>;</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">vec3</span> viewPosition;</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">vec3</span> lightDirection;</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">vec3</span> lightColor;</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">vec3</span> ambientColor;</span><br><span class="line"><span class="keyword">uniform</span> <span class="type">float</span> shininess;</span><br><span class="line"><span class="comment">// 各种自定义变量 ...</span></span><br><span class="line"><span class="keyword">uniform</span> <span class="type">sampler2D</span> gPosition;<span class="comment">// 位置</span></span><br><span class="line"><span class="keyword">uniform</span> <span class="type">sampler2D</span> gNormal;  <span class="comment">// 法向量</span></span><br><span class="line"><span class="keyword">uniform</span> <span class="type">sampler2D</span> gColor;   <span class="comment">// 颜色</span></span><br><span class="line"><span class="keyword">in</span> <span class="type">vec2</span> texcoord;           <span class="comment">// 坐标</span></span><br><span class="line"><span class="keyword">out</span> <span class="type">vec4</span> FragColor;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> main() &#123;</span><br><span class="line">  <span class="type">vec3</span> fragPos = <span class="built_in">texture</span>(gPosition, texcoord).rgb;</span><br><span class="line">  <span class="type">vec3</span> normal = <span class="built_in">texture</span>(gNormal, texcoord).rgb;</span><br><span class="line">  <span class="type">vec3</span> color = <span class="built_in">texture</span>(gColor, texcoord).rgb;</span><br><span class="line"> </span><br><span class="line">  <span class="comment">// todo: 各种计算过程...</span></span><br><span class="line">  <span class="comment">// 环境光</span></span><br><span class="line">  <span class="type">vec3</span> ambient = ambientColor * color;</span><br><span class="line">	</span><br><span class="line">  <span class="comment">// 漫反射</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="type">vec3</span> diffuse = lightColor * color * cosTheta;</span><br><span class="line">	</span><br><span class="line">  <span class="comment">// 高光</span></span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">  <span class="type">vec3</span> specular = lightColor * specularIntensity;</span><br><span class="line"></span><br><span class="line">  FragColor = <span class="type">vec4</span>(ambient + diffuse + specular, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="WebGL-流程"><a href="#WebGL-流程" class="headerlink" title="WebGL 流程"></a>WebGL 流程</h2><p>最后就是使用 <strong>JavaScript</strong> 将整个流程串起来，<strong>WebGL</strong> 的其他技术细节不再详细介绍了，具体可以看我之前的 <strong>WebGL</strong> 教程。这里介绍一下大体的流程：</p>
+<ol>
+<li>几何处理阶段：绑定帧缓冲，切换到对应的program，设置各种变量，输出到帧缓冲；</li>
+<li>光照处理阶段：切换回正常缓冲，切换到对应的program，设置各种变量，同时将前面几何处理阶段的得到纹理作为输入变量，输出渲染结果；</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 场景绘制到帧缓冲区 </span></span><br><span class="line"><span class="comment"> */</span> </span><br><span class="line">gl.bindFramebuffer(target, fbo.framebuffer); <span class="comment">// 绑定帧缓冲</span></span><br><span class="line">gl.viewport(<span class="number">0</span>, <span class="number">0</span>, width, height);</span><br><span class="line">gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); <span class="comment">// 清屏</span></span><br><span class="line">gl.useProgram(program);</span><br><span class="line"><span class="comment">//采样到3个颜色附件(对应的几何纹理)</span></span><br><span class="line">gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1, gl.COLOR_ATTACHMENT2]);</span><br><span class="line">setUniforms(program, uniforms);<span class="comment">// 设置uniform变量</span></span><br><span class="line">setBuffersAndAttributes(gl, vao);<span class="comment">// 设置缓存和attribute变量</span></span><br><span class="line">drawBufferInfo(gl, vao); <span class="comment">// 写入缓冲区</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 从帧缓存渲染到正常缓冲区</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">gl.bindFramebuffer(target, <span class="literal">null</span>); <span class="comment">// 切换回正常缓冲</span></span><br><span class="line">gl.viewport(<span class="number">0</span>, <span class="number">0</span>, width, height);</span><br><span class="line">gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line">gl.useProgram(fProgram);</span><br><span class="line"><span class="keyword">const</span> uniforms = &#123;</span><br><span class="line">  <span class="comment">// 其他变量 ...</span></span><br><span class="line">  gPosition: fbo.textures[<span class="number">0</span>],<span class="comment">// 位置纹理</span></span><br><span class="line">  gNormal: fbo.textures[<span class="number">1</span>],<span class="comment">// 法向量纹理</span></span><br><span class="line">  gColor: fbo.textures[<span class="number">2</span>], <span class="comment">// 颜色纹理</span></span><br><span class="line">&#125;;</span><br><span class="line">setUniforms(fProgram, uniforms);</span><br><span class="line">setBuffersAndAttributes(gl, fVao);</span><br><span class="line">drawBufferInfo(gl, fVao); <span class="comment">// 输出画面</span></span><br></pre></td></tr></table></figure>
+
+<p>本节实现的效果请看：<em><a href="http://ufcjd3.coding-pages.com/dist/deferredShading.html" target="_blank" rel="noopener">延迟着色 deferred sharding</a></em></p>
+<p><strong>demo</strong> 使用了1个平行光源，10个点光源，3个聚光灯实现了类似舞厅五彩斑斓的渲染效果。</p>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><strong>延迟着色(Deferred Shading)</strong> 在复杂光照条件下有着性能优势，但它也有缺点：大内存开销。还有在光源不是很多的场景中，延迟渲染并不一定会更快，甚至有时候由于开销过大还会变得更慢。当然在更复杂的场景中，延迟渲染会变成一个重要的性能优化手段。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/webGL/">webGL</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2020/09/17/webgldeferred/" data-desc="什么是延迟着色(Deferred Shading)？它是相对于正常使用的正向着色(Forwar..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/2020/07/13/docker/" class="next post-next"> Docker搭建部署Node项目 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2020 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
