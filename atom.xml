@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://02s949.coding-pages.com/"/>
-  <updated>2020-09-18T02:17:12.300Z</updated>
+  <updated>2021-04-25T07:06:30.157Z</updated>
   <id>http://02s949.coding-pages.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WebGL之绘制三维地球</title>
+    <link href="http://02s949.coding-pages.com/2021/04/25/webglsphere/"/>
+    <id>http://02s949.coding-pages.com/2021/04/25/webglsphere/</id>
+    <published>2021-04-25T02:46:32.000Z</published>
+    <updated>2021-04-25T07:06:30.157Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过Three.js也许可以很方便的展示出3D模型，但是你知道它是怎么一步一步从构建网格到贴图到最终渲染出3D模型的吗？现在我们直接使用底层的webgl加上一点点的数学知识就可以实现它。&lt;/p&gt;
+&lt;p&gt;本节实现的效果: &lt;em&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/webglsphere.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;WebGL三维地球&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;img src=&quot;/images/earth3d.jpg&quot; width=&quot;400&quot; alt=&quot;WebGL三维地球&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://02s949.coding-pages.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="http://02s949.coding-pages.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="js" scheme="http://02s949.coding-pages.com/tags/js/"/>
+    
+      <category term="webGL" scheme="http://02s949.coding-pages.com/tags/webGL/"/>
+    
+  </entry>
   
   <entry>
     <title>WebGL之延迟着色</title>
@@ -550,37 +576,6 @@
       <category term="react" scheme="http://02s949.coding-pages.com/tags/react/"/>
     
       <category term="webpack" scheme="http://02s949.coding-pages.com/tags/webpack/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>动画函数的绘制及自定义动画函数</title>
-    <link href="http://02s949.coding-pages.com/2019/01/03/animationfun/"/>
-    <id>http://02s949.coding-pages.com/2019/01/03/animationfun/</id>
-    <published>2019-01-02T18:01:23.000Z</published>
-    <updated>2020-08-09T10:16:40.095Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;制作动画效果离不开动画运动函数，而我们用得最多的无疑就是 &lt;strong&gt;Tween.js&lt;/strong&gt;。根据不同的数学公式原理，&lt;strong&gt;Tween.js&lt;/strong&gt; 划分出了不同的动画类型，每种动画类型里面都包含以下的缓动类型：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;ease in&lt;/strong&gt; 先慢后快&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ease out&lt;/strong&gt; 先块后慢&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ease in out&lt;/strong&gt; 先慢后快再慢&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;关于缓动函数，我们在 &lt;strong&gt;css3&lt;/strong&gt; 动画里已经用得太多了，不再细讲。&lt;strong&gt;Tween.js&lt;/strong&gt; 源代码请看：&lt;em&gt;&lt;a href=&quot;https://github.com/edwardzhong/html5Canvas/blob/master/js/tween.js&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Tween.js&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://02s949.coding-pages.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="前端" scheme="http://02s949.coding-pages.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="js" scheme="http://02s949.coding-pages.com/tags/js/"/>
-    
-      <category term="canvas" scheme="http://02s949.coding-pages.com/tags/canvas/"/>
     
   </entry>
   

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="WebGL之绘制三维地球 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://02s949.coding-pages.com">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >WebGL之绘制三维地球 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://02s949.coding-pages.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="WebGL之绘制三维地球 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="http://ufcjd3.coding-pages.com/" target="_blank" rel="noopener" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">47<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">64<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner9.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">WebGL之绘制三维地球</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2021/04/25 10:46:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>通过Three.js也许可以很方便的展示出3D模型，但是你知道它是怎么一步一步从构建网格到贴图到最终渲染出3D模型的吗？现在我们直接使用底层的webgl加上一点点的数学知识就可以实现它。<br>本节实…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>通过Three.js也许可以很方便的展示出3D模型，但是你知道它是怎么一步一步从构建网格到贴图到最终渲染出3D模型的吗？现在我们直接使用底层的webgl加上一点点的数学知识就可以实现它。</p>
+<p>本节实现的效果: <em><a href="http://ufcjd3.coding-pages.com/dist/webglsphere.html" target="_blank" rel="noopener">WebGL三维地球</a></em><br><img src="/images/earth3d.jpg" width="400" alt="WebGL三维地球"></p>
+<a id="more"></a>
+
+<p>内容大纲</p>
+<ol>
+<li><p>构建网格</p>
+</li>
+<li><p>编写着色器</p>
+</li>
+<li><p>实现3D地球</p>
+</li>
+</ol>
+<h2 id="构建网格"><a href="#构建网格" class="headerlink" title="构建网格"></a>构建网格</h2><p>首先我们要建立球体的三维模型，三维网格模型包括如下属性（不熟悉请复习webgl教程）：</p>
+<ul>
+<li>顶点(position)</li>
+<li>法线(normal)</li>
+<li>贴图坐标(uv)</li>
+<li>顶点索引(indices)</li>
+</ul>
+<p>最后要构建出如下所示的经纬球模型</p>
+<img src="/images/uv.jpg" width="400" alt="经纬球">
+
+<p>首先可以从xy平面构建圆形，接着再从xz平面将圆形转化为圆球，这其中只需使用到三角函数而已，是不是非常简单。</p>
+<ul>
+<li>法线使用的是顶点坐标，因为法线与顶点其实方向是一致的</li>
+<li>顶点索引为6个点，是因为每个面由两个三角形构成</li>
+<li>贴图uv坐标不需要深度信息，它对应上贴图的xy坐标即可</li>
+</ul>
+<p>下面就是构建网格模型的基本逻辑:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> radius = <span class="number">8</span>;<span class="comment">//半径</span></span><br><span class="line"><span class="keyword">const</span> n = <span class="number">20</span>;<span class="comment">//经纬度格数</span></span><br><span class="line"><span class="keyword">const</span> position = [];<span class="comment">//顶点</span></span><br><span class="line"><span class="keyword">const</span> normal = [];<span class="comment">//法线</span></span><br><span class="line"><span class="keyword">const</span> texcoord = [];<span class="comment">//uv坐标</span></span><br><span class="line"><span class="keyword">const</span> indices = [];<span class="comment">//顶点索引</span></span><br><span class="line"><span class="keyword">let</span> x, y, z;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">  <span class="keyword">const</span> rad = <span class="built_in">Math</span>.PI / n * i - <span class="built_in">Math</span>.PI / <span class="number">2</span>;<span class="comment">//从-90度开始计算</span></span><br><span class="line">  <span class="keyword">const</span> r = radius * <span class="built_in">Math</span>.cos(rad);</span><br><span class="line">  y = radius * <span class="built_in">Math</span>.sin(rad);</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> j = <span class="number">0</span>; j &lt; n; j++) &#123;</span><br><span class="line">    x = r * <span class="built_in">Math</span>.sin(xRadian * j);</span><br><span class="line">    z = r * <span class="built_in">Math</span>.cos(xRadian * j);</span><br><span class="line">    position.push(x, y, z);</span><br><span class="line">    texcoord.push(j / n, i / n);</span><br><span class="line">    normal.push(x, y, z); <span class="comment">//顶点作为法线，法线从圆心360度放射</span></span><br><span class="line">    <span class="keyword">const</span> c = i * (n + <span class="number">1</span>) + j</span><br><span class="line">    indices.push(c, c + <span class="number">1</span>, c + l + <span class="number">1</span>, c, c + l + <span class="number">1</span>, c + l);<span class="comment">//平面的索引</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="编写着色器"><a href="#编写着色器" class="headerlink" title="编写着色器"></a>编写着色器</h2><p>和普通着色器相比，只是增加了uv坐标，uv直接通过顶点着色器差值透传到片段着色器即可，在片段着色器使用texture2D函数获取uv坐标对应的颜色，整体上也是比较基础。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 顶点着色器</span></span><br><span class="line">attribute vec4 aPosition;</span><br><span class="line">attribute vec4 aNormal;</span><br><span class="line">attribute vec2 aTexcoord;</span><br><span class="line">uniform mat4 modelMatrix;</span><br><span class="line">uniform mat4 vpMatrix;</span><br><span class="line">varying vec3 fragPos;</span><br><span class="line">varying vec3 fragNor;</span><br><span class="line">varying vec2 texcoord;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  gl_Position = vpMatrix * modelMatrix * aPosition;</span><br><span class="line">  fragPos= vec3(modelMatrix * aPosition);</span><br><span class="line">  fragNor = vec3(modelMatrix * aNormal);</span><br><span class="line">  texcoord = aTexcoord;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 片段着色器</span></span><br><span class="line">precision mediump <span class="keyword">float</span>;</span><br><span class="line">uniform vec3 viewPos;</span><br><span class="line">uniform vec3 lightPos;</span><br><span class="line">uniform vec3 lightColor;</span><br><span class="line">uniform vec3 ambientColor;</span><br><span class="line">uniform sampler2D diffMap;</span><br><span class="line">varying vec3 fragPos;</span><br><span class="line">varying vec3 fragNor;</span><br><span class="line">varying vec2 texcoord;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	vec3 normal = normalize(fragNor);</span><br><span class="line">	vec3 color = texture2D(diffMap, texcoord).rgb;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">// 光线方向</span></span><br><span class="line">	vec3 lightDir = normalize(lightPos - fragPos);</span><br><span class="line">	<span class="comment">// 光线方向和法向量夹角</span></span><br><span class="line">	<span class="keyword">float</span> cosTheta = <span class="built_in">max</span>(dot(lightDir, normal), <span class="number">0.0</span>);</span><br><span class="line">	<span class="comment">// 漫反射</span></span><br><span class="line">	vec3 diffuse = lightColor * color * cosTheta;</span><br><span class="line">	</span><br><span class="line">  <span class="comment">// 环境光</span></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">	<span class="comment">// 高光</span></span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">	gl_FragColor = vec4(ambient + diffuse + specular, <span class="number">1.0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="实现3D地球"><a href="#实现3D地球" class="headerlink" title="实现3D地球"></a>实现3D地球</h2><p>最后实现部分就和之前的webgl基本逻辑一致，不过要准备好地球贴图</p>
+<img src="/images/earthuv.jpg" width="400" alt="地图">
+
+<p>图片加载完将构建好的贴图sampler传入着色器即可，其他都是基础业务逻辑，不再详述，这样我们就将三维地球实现了</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">const</span> vpMatrix = m4.identity();</span><br><span class="line"><span class="keyword">const</span> uniforms = &#123;</span><br><span class="line">  modelMatrix: m4.identity(),</span><br><span class="line">  lightPos: [<span class="number">20</span>, <span class="number">0</span>, <span class="number">-20</span>],</span><br><span class="line">  lightColor: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">  ambientColor: [<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">gl.clearColor(<span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">1</span>);</span><br><span class="line">gl.enable(gl.DEPTH_TEST);<span class="comment">//深度测试</span></span><br><span class="line">gl.enable(gl.CULL_FACE);<span class="comment">//背面剔除</span></span><br><span class="line">gl.viewport(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height); <span class="comment">//设置绘图区域</span></span><br><span class="line">gl.useProgram(program.program);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line">  m4.multiply(projection, m4.inverse(m4.lookAt(eye, [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>])), vpMatrix);</span><br><span class="line">  setBuffersAndAttributes(gl, vao);</span><br><span class="line">  setUniforms(program, &#123; vpMatrix &#125;);</span><br><span class="line">  drawBufferInfo(gl, vao);</span><br><span class="line">  gl.bindVertexArray(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  requestAnimationFrame(animate);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//加载贴图后执行</span></span><br><span class="line">createTexture(gl, &#123; <span class="attr">src</span>: <span class="string">'/img/earth.jpg'</span>, <span class="attr">flipY</span>: <span class="literal">true</span> &#125;, texture =&gt; &#123;</span><br><span class="line">  uniforms.diffMap = texture;</span><br><span class="line">  setUniforms(program, uniforms );</span><br><span class="line">  animate();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/webGL/">webGL</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2021/04/25/webglsphere/" data-desc="通过Three.js也许可以很方便的展示出3D模型，但是你知道它是怎么一步一步从构建网格到贴图..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/2020/09/17/webgldeferred/" class="next post-next"> WebGL之延迟着色 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2021 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
