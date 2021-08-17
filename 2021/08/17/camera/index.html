@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="html5调用摄像头截图 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="http://02s949.coding-pages.com">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >html5调用摄像头截图 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="http://02s949.coding-pages.com">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="html5调用摄像头截图 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="http://ufcjd3.coding-pages.com/" target="_blank" rel="noopener" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/archives">48<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">64<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/images/banner10.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">html5调用摄像头截图</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2021/08/17 10:54:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>关于html5调用音视频等多媒体硬件的API已经很成熟，不过一直找不到机会把这些硬件转化为实际的应用场景，不过近年来随着iot和AI的浪潮，我觉得软硬结合的时机已经成熟。那我们就提前熟悉下怎么操…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>关于html5调用音视频等多媒体硬件的API已经很成熟，不过一直找不到机会把这些硬件转化为实际的应用场景，不过近年来随着iot和AI的浪潮，我觉得软硬结合的时机已经成熟。那我们就提前熟悉下怎么操作这些多媒体硬件吧，首先图像识别是其中最热门的应用场景，首先实现调用摄像头以及截图。</p>
+<p>demo的效果请看：<em><a href="http://ufcjd3.coding-pages.com/dist/camera.html" target="_blank" rel="noopener">摄像头截图</a></em></p>
+<a id="more"></a>
+
+<h2 id="API兼容性"><a href="#API兼容性" class="headerlink" title="API兼容性"></a>API兼容性</h2><p>核心的api就是<strong>navigator.MediaDevices</strong>，从caniuse可看出，PC端除了IE，已经没多大问题。移动端新版本浏览器也支持，同时很多项目都已经转向小程序，加上移动端一向紧跟最新标准，问题也不大。接着就是支持度就更好的<strong>video</strong>标签。最后还有<strong>canvas</strong>，支持度就更加乐观了。</p>
+<h2 id="硬件的获取"><a href="#硬件的获取" class="headerlink" title="硬件的获取"></a>硬件的获取</h2><p>使用到的api：<strong>enumerateDevices</strong>，它返回的是一个<strong>promise</strong>，结果就是设备列表。设备的对象属性主要包括 <strong>deviceId</strong>，<strong>groupId</strong>，<strong>kind</strong>。其中<strong>deviceId</strong>，<strong>groupId</strong> 是设备的标记，可以通过这两个id调用所属的硬件。而<strong>kind</strong> 顾名思义就是硬件类型了。有了<strong>enumerateDevices</strong>就可以遍历硬件，同时可以实现选择对应的硬件并调用。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//遍历多媒体硬件</span></span><br><span class="line">navigator.mediaDevices.enumerateDevices().then(<span class="function"><span class="keyword">function</span> (<span class="params">devices</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(devices);</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	&#123;</span></span><br><span class="line"><span class="comment">    deviceId: ""</span></span><br><span class="line"><span class="comment">    groupId: "8cac2d9a9e5d30a7bfc5a33b9971a3d40a850f7b0f6634b7f41f7dbe1de0a519"</span></span><br><span class="line"><span class="comment">    kind: "audioinput"</span></span><br><span class="line"><span class="comment">    label: ""</span></span><br><span class="line"><span class="comment">  &#125; []</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="调用摄像头"><a href="#调用摄像头" class="headerlink" title="调用摄像头"></a>调用摄像头</h2><p>接着开始调用对应的硬件，这里会使用到另一个api，<strong>getUserMedia</strong>，同样它返回的也是一个<strong>promise</strong>，结果是一个视频流。有了视频流就好办了，把stream设置到<strong>video</strong>的<strong>srcObject</strong>，马上一个视频监控的应用就出来了。</p>
+<p><strong>getUserMedia</strong>的参数设置比较复杂，具体可参考MDN里面的文档 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/MediaDevices/getUserMedia" target="_blank" rel="noopener">getUserMedia</a>，我这里设置的是对应的摄像头及视频的尺寸。<strong>loadedmetadata</strong>事件在元数据（metadata）被加载完成后触发视频播放。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 调用摄像头，并将流导入video</span></span><br><span class="line">navigator.mediaDevices.getUserMedia(&#123; </span><br><span class="line">  video: &#123; groupId, <span class="attr">width</span>: <span class="number">800</span>, <span class="attr">height</span>: <span class="number">600</span> &#125;</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span> (<span class="params">stream</span>) </span>&#123;</span><br><span class="line">    video.srcObject = stream;</span><br><span class="line">    mediaTrack = stream.getTracks()[<span class="number">0</span>];</span><br><span class="line">    video.onloadedmetadata = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">      video.play();</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="built_in">console</span>.log);</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="视频的截图"><a href="#视频的截图" class="headerlink" title="视频的截图"></a>视频的截图</h2><p>最后就是截取视频画面了，这就用到了<strong>canvas</strong>的<strong>drawImage</strong>，这个api不仅支持把<strong>canvas</strong>对象和<strong>image</strong>对象渲染进画布，同时还支持<strong>video</strong>对象，这就完美解决了我们的需求，核心代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//写入画布，并转换为base64</span></span><br><span class="line">ctx.drawImage(video, <span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</span><br><span class="line"><span class="keyword">const</span> imgURL = canvas.toDataURL(<span class="string">'image/jpeg'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>根据需求我们可以把图片数据转换为流或二进制，我这里转换为base64，拿到了数据就可以发挥想象了，tensorflow，机器学习，模式识别，大把的应用场景。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/tags/js/">js</a>
+						
+					
+						
+							<a href="/tags/canvas/">canvas</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/2021/08/17/camera/" data-desc="关于html5调用音视频等多媒体硬件的API已经很成熟，不过一直找不到机会把这些硬件转化为实际..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/2021/04/25/webglsphere/" class="next post-next"> WebGL之绘制三维地球 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2021 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/lib/qrcode.min.js"></script>
+  
+    <script src="/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>

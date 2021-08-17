@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://02s949.coding-pages.com/"/>
-  <updated>2021-04-25T08:09:38.303Z</updated>
+  <updated>2021-08-17T05:52:06.276Z</updated>
   <id>http://02s949.coding-pages.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html5调用摄像头截图</title>
+    <link href="http://02s949.coding-pages.com/2021/08/17/camera/"/>
+    <id>http://02s949.coding-pages.com/2021/08/17/camera/</id>
+    <published>2021-08-17T02:54:23.000Z</published>
+    <updated>2021-08-17T05:52:06.276Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关于html5调用音视频等多媒体硬件的API已经很成熟，不过一直找不到机会把这些硬件转化为实际的应用场景，不过近年来随着iot和AI的浪潮，我觉得软硬结合的时机已经成熟。那我们就提前熟悉下怎么操作这些多媒体硬件吧，首先图像识别是其中最热门的应用场景，首先实现调用摄像头以及截图。&lt;/p&gt;
+&lt;p&gt;demo的效果请看：&lt;em&gt;&lt;a href=&quot;http://ufcjd3.coding-pages.com/dist/camera.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;摄像头截图&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="http://02s949.coding-pages.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="http://02s949.coding-pages.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="js" scheme="http://02s949.coding-pages.com/tags/js/"/>
+    
+      <category term="canvas" scheme="http://02s949.coding-pages.com/tags/canvas/"/>
+    
+  </entry>
   
   <entry>
     <title>WebGL之绘制三维地球</title>
@@ -547,35 +573,6 @@
       <category term="js" scheme="http://02s949.coding-pages.com/tags/js/"/>
     
       <category term="socket.io" scheme="http://02s949.coding-pages.com/tags/socket-io/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>基于Webpack 4 和 React hooks 搭建项目</title>
-    <link href="http://02s949.coding-pages.com/2019/02/04/reacthooks/"/>
-    <id>http://02s949.coding-pages.com/2019/02/04/reacthooks/</id>
-    <published>2019-02-04T05:58:44.000Z</published>
-    <updated>2020-01-16T10:13:21.308Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;面对日新月异的前端，我表示快学不动了😂。 &lt;strong&gt;Webpack&lt;/strong&gt; 老早就已经更新到了 V4.x，前段时间 &lt;strong&gt;React&lt;/strong&gt; 又推出了  &lt;strong&gt;hooks&lt;/strong&gt; API。刚好春节在家里休假，时间比较空闲，还是赶紧把 &lt;strong&gt;React&lt;/strong&gt;技术栈这块补上。&lt;/p&gt;
-&lt;p&gt;网上有很多介绍 &lt;strong&gt;hooks&lt;/strong&gt; 知识点的文章，但都比较零碎，基本只能写一些小 &lt;strong&gt;Demo&lt;/strong&gt;。还没有比较系统的，全新的基于 &lt;strong&gt;hooks&lt;/strong&gt; 进行搭建实际项目的讲解。所以这里就从开发实际项目的角度，搭建起单页面 &lt;strong&gt;Web App&lt;/strong&gt;项目的基本脚手架，并基于 &lt;strong&gt;hooks&lt;/strong&gt; API 实现一个 &lt;strong&gt;react&lt;/strong&gt; 项目模版。&lt;/p&gt;
-&lt;p&gt; &lt;strong&gt;Hooks&lt;/strong&gt; 最吸引人的地方就是用 &lt;strong&gt;函数式组件&lt;/strong&gt; 代替面向对象的 &lt;strong&gt;类组件&lt;/strong&gt;。此前的 &lt;strong&gt;react&lt;/strong&gt; 如果涉及到状态，解决方案通常只能使用 &lt;strong&gt;类组件&lt;/strong&gt;，业务逻辑一复杂就容易导致组件臃肿，模块的解藕也是个问题。而使用基于 &lt;strong&gt;hooks&lt;/strong&gt; 的 &lt;strong&gt;函数组件&lt;/strong&gt; 后，代码不仅更加简洁，写起来更爽，而且模块复用也方便得多，非常看好它的未来。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="http://02s949.coding-pages.com/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="前端" scheme="http://02s949.coding-pages.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="js" scheme="http://02s949.coding-pages.com/tags/js/"/>
-    
-      <category term="react" scheme="http://02s949.coding-pages.com/tags/react/"/>
-    
-      <category term="webpack" scheme="http://02s949.coding-pages.com/tags/webpack/"/>
     
   </entry>
   
