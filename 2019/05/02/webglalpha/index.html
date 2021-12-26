@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(/images/banner3.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner3.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL半透明物体的绘制</h3>
     	</div>
 	</a>
@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
 <p>α 混合…</p>
 </p> -->
     	
-    		<div class="post-content"><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。<br>完成的展示Demo请看: <strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglalpha.html">半透明物体和透明物体共存</a></strong><br><img src="/images/alpha.gif" alt="alpha混合"></p>
+    		<div class="post-content"><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。<br>完成的展示Demo请看: <strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglalpha.html">半透明物体和透明物体共存</a></strong><br><img src="/blog/images/alpha.gif" alt="alpha混合"></p>
 <a id="more"></a>
 
 <h2 id="α-混合"><a href="#α-混合" class="headerlink" title="α 混合"></a>α 混合</h2><p>让物体实现半透明效果需要用到颜色的α分量。该功能被称为a混合(alpha blending) 或 混合 blending，WebGL已经内置该功能，但需要开启，如果只设置了颜色的第四个分量 α 是看不到透明效果的，这第四分量α其实和 css 样式的 rgba / hsla 颜色模式 中的 α 是一样的，或者类似 opacity 属性。必须要执行下面两个步骤才能看到透明效果:</p>

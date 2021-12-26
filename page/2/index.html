@@ -122,7 +122,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="/blog/2019/05/05/webglskybox/">
-        <div class="post-banner" style="background: url(/images/banner10.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner10.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL学习之纹理盒</h3>
     	</div>
 	</a>
@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>我们之前已经学习过二维纹理 gl.TEXTURE_2D，而且还使用它实现了各种效果。但还有一种立方体纹理 gl.TEXTURE_CUBE_MAP，它包含了6个纹理代表立方体的6个面。不像常规的纹…</p>
 </p> -->
     	
-			<div class="post-content"><p>我们之前已经学习过二维纹理 <strong>gl.TEXTURE_2D</strong>，而且还使用它实现了各种效果。但还有一种立方体纹理 <strong>gl.TEXTURE_CUBE_MAP</strong>，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 <strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglskybox.html">天空盒</a></strong><br><img src="/images/skybox.gif" width="400" alt="sky box"></p></div>
+			<div class="post-content"><p>我们之前已经学习过二维纹理 <strong>gl.TEXTURE_2D</strong>，而且还使用它实现了各种效果。但还有一种立方体纹理 <strong>gl.TEXTURE_CUBE_MAP</strong>，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 <strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglskybox.html">天空盒</a></strong><br><img src="/blog/images/skybox.gif" width="400" alt="sky box"></p></div>
 			<a href="/blog/2019/05/05/webglskybox/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -178,7 +178,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="/blog/2019/05/02/webglalpha/">
-        <div class="post-banner" style="background: url(/images/banner3.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner3.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL半透明物体的绘制</h3>
     	</div>
 	</a>
@@ -202,7 +202,7 @@ var _hmt = _hmt || [];
 <p>α 混合…</p>
 </p> -->
     	
-			<div class="post-content"><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。<br>完成的展示Demo请看: <strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglalpha.html">半透明物体和透明物体共存</a></strong><br><img src="/images/alpha.gif" alt="alpha混合"></p></div>
+			<div class="post-content"><p>WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。<br>完成的展示Demo请看: <strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglalpha.html">半透明物体和透明物体共存</a></strong><br><img src="/blog/images/alpha.gif" alt="alpha混合"></p></div>
 			<a href="/blog/2019/05/02/webglalpha/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -235,7 +235,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="/blog/2019/04/30/webglnormap/">
-        <div class="post-banner" style="background: url(/images/banner5.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner5.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL学习之法线贴图</h3>
     	</div>
 	</a>
@@ -260,9 +260,9 @@ var _hmt = _hmt || [];
 </p> -->
     	
 			<div class="post-content"><p>实际效果请看demo：<strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglTexture.html">纹理贴图</a></strong></p>
-<img src="/images/texture.png" width="400" alt="法线贴图">
+<img src="/blog/images/texture.png" width="400" alt="法线贴图">
 
-<p>为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：<br><img src="/images/norplane.png" alt="表面法线"></p></div>
+<p>为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：<br><img src="/blog/images/norplane.png" alt="表面法线"></p></div>
 			<a href="/blog/2019/04/30/webglnormap/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
 		<div class="post-footer">
@@ -298,7 +298,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="/blog/2019/04/29/webgltexture/">
-        <div class="post-banner" style="background: url(/images/banner2.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner2.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL学习之纹理贴图</h3>
     	</div>
 	</a>
@@ -355,7 +355,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="/blog/2019/04/27/mdtowxml/">
-        <div class="post-banner" style="background: url(/images/banner5.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner5.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">如何将markdown转换为wxml</h3>
     	</div>
 	</a>
@@ -416,7 +416,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="/blog/2019/04/26/weappcloud/">
-        <div class="post-banner" style="background: url(/images/banner1.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/blog/images/banner1.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">小试小程序云开发</h3>
     	</div>
 	</a>
@@ -469,7 +469,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="/blog/2019/04/13/fullstack3/">
-        <div class="post-banner" style="background: url(/images/banner9.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner9.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">koa+mysql+vue+socket.io全栈开发之前端篇</h3>
     	</div>
 	</a>
@@ -545,7 +545,7 @@ vue 简易上手的脚手架，以及官..." data-type="share" title="share"><i 
     
 	
 	<a href="/blog/2019/04/12/fullstack2/">
-        <div class="post-banner" style="background: url(/images/banner8.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner8.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">koa+mysql+vue+socket.io全栈开发之数据访问篇</h3>
     	</div>
 	</a>
@@ -604,7 +604,7 @@ vue 简易上手的脚手架，以及官..." data-type="share" title="share"><i 
     
 	
 	<a href="/blog/2019/04/08/fullstack/">
-        <div class="post-banner" style="background: url(/images/banner7.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner7.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">koa+mysql+vue+socket.io全栈开发之web api篇</h3>
     	</div>
 	</a>
@@ -673,7 +673,7 @@ vue 简易上手的脚手架，以及官..." data-type="share" title="share"><i 
     
 	
 	<a href="/blog/2019/03/29/socketio/">
-        <div class="post-banner" style="background: url(/images/banner9.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner9.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">关于socket.io的使用</h3>
     	</div>
 	</a>

@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(/images/banner8.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner8.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL之延迟着色</h3>
     	</div>
 	</a>
@@ -150,7 +150,7 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 
 <p>本节实现的效果请看：<em><a href="https://jeff_zhong.gitee.io/demo/dist/deferredShading.html">延迟着色 deferred sharding</a></em></p>
-<img src="/images/deferred.gif" width="400" alt="延迟着色">
+<img src="/blog/images/deferred.gif" width="400" alt="延迟着色">
 
 <p>正向着色伪代码：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">foreach light &#123;</span><br><span class="line">  foreach visible mesh &#123;</span><br><span class="line">    <span class="keyword">if</span> (light volume intersects mesh) &#123;</span><br><span class="line">      render using <span class="keyword">this</span> material/light shader;</span><br><span class="line">      accumulate <span class="keyword">in</span> framebuffer using additive blending;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

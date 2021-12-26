@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(/images/banner6.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner6.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">canvas图形编辑器</h3>
     	</div>
 	</a>
@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 
 </li>
 </ol>
-<p>实际效果: <em><a href="https://jeff_zhong.gitee.io/demo/dist/drawboard.html">drawboard</a></em><br><img src="/images/drawtool.jpg" width="600"></p>
+<p>实际效果: <em><a href="https://jeff_zhong.gitee.io/demo/dist/drawboard.html">drawboard</a></em><br><img src="/blog/images/drawtool.jpg" width="600"></p>
 <p>功能点包括：</p>
 <ol>
 <li>所有的图形都可以拖拽位置，直线和曲线需要拖拽中点(黄色圆点)，其他图形只需要把鼠标放于图形内部拖拽即可；</li>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
 <li>基本的三角函数</li>
 <li>canvas部分有：坐标变换，渐变，混合模式，线条和图形的绘制。</li>
 </ol>
-<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><img src="/images/drawtoolbar.jpg" width="600">
+<h2 id="工具栏"><a href="#工具栏" class="headerlink" title="工具栏"></a>工具栏</h2><img src="/blog/images/drawtoolbar.jpg" width="600">
 首先我们实现如图所示的工具栏，也就是基本的html/css，使用了flex布局，同时使用了html5的color, range, number标签，其它都是普通的html和css代码。主要注意的地方就是如下用纯css实现选择效果
 
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span> <span class="selector-attr">[type=radio]</span>&#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">99</span>;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">cursor</span>: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.wrap</span> <span class="selector-attr">[type=radio]</span><span class="selector-pseudo">:checked</span>~<span class="selector-class">.label</span>&#123;<span class="comment">/* 覆盖radio */</span></span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">hsl</span>(<span class="number">200</span>, <span class="number">100%</span>, <span class="number">40%</span>);</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">hsl</span>(<span class="number">0</span>, <span class="number">0%</span>, <span class="number">100%</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

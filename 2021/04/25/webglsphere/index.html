@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(/images/banner9.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner9.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL之绘制三维地球</h3>
     	</div>
 	</a>
@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
 </p> -->
     	
     		<div class="post-content"><p>通过Three.js也许可以很方便的展示出3D模型，但是你知道它是怎么一步一步从构建网格到贴图到最终渲染出3D模型的吗？现在我们直接使用底层的webgl加上一点点的数学知识就可以实现它。</p>
-<p>本节实现的效果: <em><a href="https://jeff_zhong.gitee.io/demo/dist/webglsphere.html">WebGL三维地球</a></em><br><img src="/images/earth3d.jpg" width="400" alt="WebGL三维地球"></p>
+<p>本节实现的效果: <em><a href="https://jeff_zhong.gitee.io/demo/dist/webglsphere.html">WebGL三维地球</a></em><br><img src="/blog/images/earth3d.jpg" width="400" alt="WebGL三维地球"></p>
 <a id="more"></a>
 
 <p>内容大纲</p>
@@ -165,7 +165,7 @@ var _hmt = _hmt || [];
 <li>顶点索引(indices)</li>
 </ul>
 <p>最后要构建出如下所示的经纬球模型</p>
-<img src="/images/uv.jpg" width="400" alt="经纬球">
+<img src="/blog/images/uv.jpg" width="400" alt="经纬球">
 
 <p>首先可以从xy平面构建圆形，接着再从xz平面将圆形转化为圆球，这其中只需使用到三角函数而已，是不是非常简单。</p>
 <ul>
@@ -184,7 +184,7 @@ var _hmt = _hmt || [];
 
 
 <h2 id="实现3D地球"><a href="#实现3D地球" class="headerlink" title="实现3D地球"></a>实现3D地球</h2><p>最后实现部分就和之前的webgl基本逻辑一致，不过要准备好地球贴图</p>
-<img src="/images/earthuv.jpg" width="400" alt="地图">
+<img src="/blog/images/earthuv.jpg" width="400" alt="地图">
 
 <p>图片加载完将构建好的贴图sampler传入着色器即可，其他都是基础业务逻辑，不再详述，这样我们就将三维地球实现了</p>
  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="keyword">const</span> vpMatrix = m4.identity();</span><br><span class="line"><span class="keyword">const</span> uniforms = &#123;</span><br><span class="line">    modelMatrix: m4.identity(),</span><br><span class="line">    lightPos: [<span class="number">20</span>, <span class="number">0</span>, <span class="number">-20</span>],</span><br><span class="line">    lightColor: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>],</span><br><span class="line">    ambientColor: [<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>],</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">gl.clearColor(<span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">0.1</span>, <span class="number">1</span>);</span><br><span class="line">gl.enable(gl.DEPTH_TEST);<span class="comment">//深度测试</span></span><br><span class="line">gl.enable(gl.CULL_FACE);<span class="comment">//背面剔除</span></span><br><span class="line">gl.viewport(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height); <span class="comment">//设置绘图区域</span></span><br><span class="line">gl.useProgram(program.program);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">animate</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line">    m4.multiply(projection, m4.inverse(m4.lookAt(eye, [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>])), vpMatrix);</span><br><span class="line">    setBuffersAndAttributes(gl, vao);</span><br><span class="line">    setUniforms(program, &#123; vpMatrix &#125;);</span><br><span class="line">    drawBufferInfo(gl, vao);</span><br><span class="line">    gl.bindVertexArray(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">    requestAnimationFrame(animate);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//加载贴图后执行</span></span><br><span class="line">createTexture(gl, &#123; <span class="attr">src</span>: <span class="string">'/img/earth.jpg'</span>, <span class="attr">flipY</span>: <span class="literal">true</span> &#125;, texture =&gt; &#123;</span><br><span class="line">    uniforms.diffMap = texture;</span><br><span class="line">    setUniforms(program, uniforms );</span><br><span class="line">    animate();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>

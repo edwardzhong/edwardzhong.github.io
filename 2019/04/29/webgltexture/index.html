@@ -121,7 +121,7 @@ var _hmt = _hmt || [];
     
 	
 	<a href="javascript:;">
-        <div class="post-banner" style="background: url(/images/banner2.jpg)  center top / 100% no-repeat">
+        <div class="post-banner" style="background: url(/blog/images/banner2.jpg)  center top / 100% no-repeat">
     		<h3 class="post-title">WebGL学习之纹理贴图</h3>
     	</div>
 	</a>
@@ -147,7 +147,7 @@ var _hmt = _hmt || [];
     	
     		<div class="post-content"><p>为了使图形能获得接近于真实物体的材质效果，一般会使用贴图，贴图类型主要包括两种：漫反射贴图和镜面高光贴图。其中漫反射贴图可以同时实现漫反射光和环境光的效果。<br>实际效果请看demo：<strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglTexture.html">纹理贴图</a></strong></p>
 <a id="more"></a>
-<img src="/images/texturestudy.png" width="400" alt="纹理贴图">
+<img src="/blog/images/texturestudy.png" width="400" alt="纹理贴图">
 
 
 <h2 id="2D纹理"><a href="#2D纹理" class="headerlink" title="2D纹理"></a>2D纹理</h2><p>实现贴图就需要用到纹理，常用的纹理格式有：2D纹理，立方体纹理，3D纹理。我们使用最基本的2D纹理就能实现本节需要的效果，我们来看一下使用纹理需要的api。</p>
@@ -209,7 +209,7 @@ var _hmt = _hmt || [];
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> ret = <span class="keyword">await</span> loadTexture(<span class="string">'/model/floor_tiles_06_diff_1k.jpg'</span>)</span><br><span class="line">    setUniforms(program, &#123;</span><br><span class="line">        u_samplerD: <span class="number">0</span><span class="comment">//0号纹理</span></span><br><span class="line">    &#125;);</span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line">    draw();</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
 
 <p>效果如下，镜面高光部分似乎太刺眼了，因为地板是不会有镜子一样光滑强烈的反光的。</p>
-<img src="/images/texturestudy2.png" width="400" alt="漫反射贴图">
+<img src="/blog/images/texturestudy2.png" width="400" alt="漫反射贴图">
 
 
 <h2 id="镜面高光贴图"><a href="#镜面高光贴图" class="headerlink" title="镜面高光贴图"></a>镜面高光贴图</h2><p>为了实现更逼真的高光效果，继续实现高光贴图，实现原理和漫反射一样，把对应的高光颜色替换成高光贴图纹素就可以了。<br>下面就是片元着色器增加修改高光部分</p>
@@ -217,7 +217,7 @@ var _hmt = _hmt || [];
 
 <p>js同时加载漫反射和高光贴图</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//...</span></span><br><span class="line">(<span class="keyword">async</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">const</span> ret = <span class="keyword">await</span> <span class="built_in">Promise</span>.all([</span><br><span class="line">        loadTexture(<span class="string">'/model/floor_tiles_06_diff_1k.jpg'</span>),</span><br><span class="line">        loadTexture(<span class="string">'/model/floor_tiles_06_spec_1k.jpg'</span>,<span class="number">1</span>)</span><br><span class="line">    ]);</span><br><span class="line">    setUniforms(program, &#123;</span><br><span class="line">        u_samplerD: <span class="number">0</span>,<span class="comment">//0号纹理</span></span><br><span class="line">    		u_samplerS: <span class="number">1</span> <span class="comment">//1号纹理</span></span><br><span class="line">    &#125;);</span><br><span class="line">  	<span class="comment">//...</span></span><br><span class="line">    draw();</span><br><span class="line">&#125;)()</span><br></pre></td></tr></table></figure>
-<p>最后实现的效果如下，明显更加接近真实的地板<br><img src="/images/texturestudy3.png" width="400" alt="高光贴图"></p>
+<p>最后实现的效果如下，明显更加接近真实的地板<br><img src="/blog/images/texturestudy3.png" width="400" alt="高光贴图"></p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>纹理贴图其实包括了很多高级应用，接着我们还将继续深入探索，下一节是法线贴图。</p>
 </div>
     	

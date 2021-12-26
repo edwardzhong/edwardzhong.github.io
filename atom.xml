@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jeff_zhong.gitee.io/blog/"/>
-  <updated>2021-12-26T06:29:36.440Z</updated>
+  <updated>2021-12-26T06:47:30.903Z</updated>
   <id>https://jeff_zhong.gitee.io/blog/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2021/08/17/camera/"/>
     <id>https://jeff_zhong.gitee.io/blog/2021/08/17/camera/</id>
     <published>2021-08-17T02:54:23.000Z</published>
-    <updated>2021-12-26T06:29:36.440Z</updated>
+    <updated>2021-12-26T06:47:30.903Z</updated>
     
     <summary type="html">
     
@@ -47,12 +47,12 @@
     <link href="https://jeff_zhong.gitee.io/blog/2021/04/25/webglsphere/"/>
     <id>https://jeff_zhong.gitee.io/blog/2021/04/25/webglsphere/</id>
     <published>2021-04-25T02:46:32.000Z</published>
-    <updated>2021-12-26T06:32:42.814Z</updated>
+    <updated>2021-12-26T06:49:57.884Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;通过Three.js也许可以很方便的展示出3D模型，但是你知道它是怎么一步一步从构建网格到贴图到最终渲染出3D模型的吗？现在我们直接使用底层的webgl加上一点点的数学知识就可以实现它。&lt;/p&gt;
-&lt;p&gt;本节实现的效果: &lt;em&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglsphere.html&quot;&gt;WebGL三维地球&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;img src=&quot;/images/earth3d.jpg&quot; width=&quot;400&quot; alt=&quot;WebGL三维地球&quot;&gt;&lt;/p&gt;
+&lt;p&gt;本节实现的效果: &lt;em&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglsphere.html&quot;&gt;WebGL三维地球&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;img src=&quot;/blog/images/earth3d.jpg&quot; width=&quot;400&quot; alt=&quot;WebGL三维地球&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -73,7 +73,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2020/09/17/webgldeferred/"/>
     <id>https://jeff_zhong.gitee.io/blog/2020/09/17/webgldeferred/</id>
     <published>2020-09-17T11:30:31.000Z</published>
-    <updated>2021-12-26T06:31:48.494Z</updated>
+    <updated>2021-12-26T06:49:24.985Z</updated>
     
     <summary type="html">
     
@@ -100,7 +100,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2020/07/13/docker/"/>
     <id>https://jeff_zhong.gitee.io/blog/2020/07/13/docker/</id>
     <published>2020-07-13T03:39:53.000Z</published>
-    <updated>2021-09-10T02:17:37.159Z</updated>
+    <updated>2021-12-26T06:47:50.574Z</updated>
     
     <summary type="html">
     
@@ -127,7 +127,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2020/07/01/flutter2/"/>
     <id>https://jeff_zhong.gitee.io/blog/2020/07/01/flutter2/</id>
     <published>2020-07-01T08:34:40.000Z</published>
-    <updated>2020-08-09T09:29:26.108Z</updated>
+    <updated>2021-12-26T06:48:07.625Z</updated>
     
     <summary type="html">
     
@@ -152,7 +152,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2020/06/26/flutter1/"/>
     <id>https://jeff_zhong.gitee.io/blog/2020/06/26/flutter1/</id>
     <published>2020-06-26T03:51:06.000Z</published>
-    <updated>2020-06-26T04:05:29.082Z</updated>
+    <updated>2021-12-26T06:48:04.428Z</updated>
     
     <summary type="html">
     
@@ -180,7 +180,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2020/06/04/svg1/"/>
     <id>https://jeff_zhong.gitee.io/blog/2020/06/04/svg1/</id>
     <published>2020-06-04T01:42:56.000Z</published>
-    <updated>2020-08-09T09:41:13.174Z</updated>
+    <updated>2021-12-26T06:49:03.926Z</updated>
     
     <summary type="html">
     
@@ -210,7 +210,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2020/02/04/koatypescript/"/>
     <id>https://jeff_zhong.gitee.io/blog/2020/02/04/koatypescript/</id>
     <published>2020-02-04T03:37:48.000Z</published>
-    <updated>2021-12-26T06:37:25.341Z</updated>
+    <updated>2021-12-26T06:48:37.425Z</updated>
     
     <summary type="html">
     
@@ -242,12 +242,12 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/05/28/webglray/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/05/28/webglray/</id>
     <published>2019-05-28T07:07:25.000Z</published>
-    <updated>2021-12-26T06:32:24.463Z</updated>
+    <updated>2021-12-26T06:49:36.011Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;使用WebGL将图形绘制到画布后，如何与外部进行交互？这其中最关键的就是如何实现物体的选择。比如鼠标点击后判断是否选中了某个图形或图形的某个部分。&lt;/p&gt;
-&lt;p&gt;本节实现的效果: &lt;em&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglray.html&quot;&gt;WebGL选中物体&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;img src=&quot;/images/polygonselect.png&quot; width=&quot;400&quot; alt=&quot;WebGL选中物体&quot;&gt;&lt;/p&gt;
+&lt;p&gt;本节实现的效果: &lt;em&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglray.html&quot;&gt;WebGL选中物体&lt;/a&gt;&lt;/em&gt;&lt;br&gt;&lt;img src=&quot;/blog/images/polygonselect.png&quot; width=&quot;400&quot; alt=&quot;WebGL选中物体&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -268,13 +268,13 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/05/21/webglhdr/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/05/21/webglhdr/</id>
     <published>2019-05-21T07:09:15.000Z</published>
-    <updated>2021-12-26T06:36:56.164Z</updated>
+    <updated>2021-12-26T06:49:27.571Z</updated>
     
     <summary type="html">
     
       &lt;!-- 原文地址：[WebGL学习之HDR与Bloom](https://jeff_zhong.gitee.io/blog/2018/01/12/webglhdr/)--&gt;
 
-&lt;h2 id=&quot;什么是HDR&quot;&gt;&lt;a href=&quot;#什么是HDR&quot; class=&quot;headerlink&quot; title=&quot;什么是HDR&quot;&gt;&lt;/a&gt;什么是HDR&lt;/h2&gt;&lt;p&gt;HDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低动态范围) 图像合成后，就叫HDR，它能同时反映出场景最暗和最亮部分的细节。为什么需要多张图片？因为目前的单反相机的宽容度还是有限的，一张照片不能反映出高动态场景的所有细节。一张图片拍摄就必须要在暗光和高光之间做出取舍，只能亮部暗部两者取其一。但是通过HDR合成多张图片，却能达到我们想要的效果。&lt;br&gt;&lt;img src=&quot;/images/hdr.png&quot; alt=&quot;hdr&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;什么是HDR&quot;&gt;&lt;a href=&quot;#什么是HDR&quot; class=&quot;headerlink&quot; title=&quot;什么是HDR&quot;&gt;&lt;/a&gt;什么是HDR&lt;/h2&gt;&lt;p&gt;HDR (High Dynamic Range，高动态范围)，在摄影领域，指的是可以提供更多的动态范围和图像细节的一种技术手段。简单讲就是将不同曝光拍摄出的最佳细节的LDR (低动态范围) 图像合成后，就叫HDR，它能同时反映出场景最暗和最亮部分的细节。为什么需要多张图片？因为目前的单反相机的宽容度还是有限的，一张照片不能反映出高动态场景的所有细节。一张图片拍摄就必须要在暗光和高光之间做出取舍，只能亮部暗部两者取其一。但是通过HDR合成多张图片，却能达到我们想要的效果。&lt;br&gt;&lt;img src=&quot;/blog/images/hdr.png&quot; alt=&quot;hdr&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -295,11 +295,11 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/05/05/webglskybox/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/05/05/webglskybox/</id>
     <published>2019-05-05T13:34:20.000Z</published>
-    <updated>2021-12-26T06:32:38.761Z</updated>
+    <updated>2021-12-26T06:49:54.788Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;我们之前已经学习过二维纹理 &lt;strong&gt;gl.TEXTURE_2D&lt;/strong&gt;，而且还使用它实现了各种效果。但还有一种立方体纹理 &lt;strong&gt;gl.TEXTURE_CUBE_MAP&lt;/strong&gt;，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 &lt;strong&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglskybox.html&quot;&gt;天空盒&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;/images/skybox.gif&quot; width=&quot;400&quot; alt=&quot;sky box&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;我们之前已经学习过二维纹理 &lt;strong&gt;gl.TEXTURE_2D&lt;/strong&gt;，而且还使用它实现了各种效果。但还有一种立方体纹理 &lt;strong&gt;gl.TEXTURE_CUBE_MAP&lt;/strong&gt;，它包含了6个纹理代表立方体的6个面。不像常规的纹理坐标有2个纬度，立方体纹理使用法向量，换句话说三维方向。本节实现的demo请看 &lt;strong&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglskybox.html&quot;&gt;天空盒&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;/blog/images/skybox.gif&quot; width=&quot;400&quot; alt=&quot;sky box&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -320,11 +320,11 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/05/02/webglalpha/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/05/02/webglalpha/</id>
     <published>2019-05-02T05:16:29.000Z</published>
-    <updated>2021-12-26T06:31:49.843Z</updated>
+    <updated>2021-12-26T06:49:22.315Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。&lt;br&gt;完成的展示Demo请看: &lt;strong&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglalpha.html&quot;&gt;半透明物体和透明物体共存&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;/images/alpha.gif&quot; alt=&quot;alpha混合&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;WebGL 中当透明和半透明物体共存时，相关设置不正确的话，物体表面会出现破碎杂乱的断面，非常影响效果，我们接着就来解决这个问题。&lt;br&gt;完成的展示Demo请看: &lt;strong&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglalpha.html&quot;&gt;半透明物体和透明物体共存&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;img src=&quot;/blog/images/alpha.gif&quot; alt=&quot;alpha混合&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -345,14 +345,14 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/30/webglnormap/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/30/webglnormap/</id>
     <published>2019-04-30T03:07:27.000Z</published>
-    <updated>2021-12-26T06:32:14.544Z</updated>
+    <updated>2021-12-26T06:49:30.058Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;实际效果请看demo：&lt;strong&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/webglTexture.html&quot;&gt;纹理贴图&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;img src=&quot;/images/texture.png&quot; width=&quot;400&quot; alt=&quot;法线贴图&quot;&gt;
+&lt;img src=&quot;/blog/images/texture.png&quot; width=&quot;400&quot; alt=&quot;法线贴图&quot;&gt;
 
-&lt;p&gt;为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：&lt;br&gt;&lt;img src=&quot;/images/norplane.png&quot; alt=&quot;表面法线&quot;&gt;&lt;/p&gt;
+&lt;p&gt;为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：&lt;br&gt;&lt;img src=&quot;/blog/images/norplane.png&quot; alt=&quot;表面法线&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -373,7 +373,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/29/webgltexture/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/29/webgltexture/</id>
     <published>2019-04-29T03:24:21.000Z</published>
-    <updated>2021-12-26T06:32:50.340Z</updated>
+    <updated>2021-12-26T06:50:04.378Z</updated>
     
     <summary type="html">
     
@@ -398,7 +398,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/27/mdtowxml/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/27/mdtowxml/</id>
     <published>2019-04-27T02:36:23.000Z</published>
-    <updated>2021-12-26T06:37:22.760Z</updated>
+    <updated>2021-12-26T06:48:42.996Z</updated>
     
     <summary type="html">
     
@@ -426,7 +426,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/26/weappcloud/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/26/weappcloud/</id>
     <published>2019-04-26T02:13:20.000Z</published>
-    <updated>2020-01-16T10:14:06.379Z</updated>
+    <updated>2021-12-26T06:49:17.138Z</updated>
     
     <summary type="html">
     
@@ -450,7 +450,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/13/fullstack3/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/13/fullstack3/</id>
     <published>2019-04-13T05:43:45.000Z</published>
-    <updated>2020-08-09T10:14:15.276Z</updated>
+    <updated>2021-12-26T06:48:19.625Z</updated>
     
     <summary type="html">
     
@@ -490,7 +490,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/12/fullstack2/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/12/fullstack2/</id>
     <published>2019-04-12T07:34:17.000Z</published>
-    <updated>2020-01-16T10:10:51.126Z</updated>
+    <updated>2021-12-26T06:48:16.700Z</updated>
     
     <summary type="html">
     
@@ -520,7 +520,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/08/fullstack/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/08/fullstack/</id>
     <published>2019-04-08T07:50:03.000Z</published>
-    <updated>2020-01-16T10:10:42.302Z</updated>
+    <updated>2021-12-26T06:48:13.996Z</updated>
     
     <summary type="html">
     
@@ -555,7 +555,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/03/29/socketio/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/03/29/socketio/</id>
     <published>2019-03-28T16:44:31.000Z</published>
-    <updated>2020-01-16T10:13:27.652Z</updated>
+    <updated>2021-12-26T06:48:58.472Z</updated>
     
     <summary type="html">
     
