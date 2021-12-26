@@ -44,11 +44,11 @@
   
     
     
-      <link rel="stylesheet" href="./lib/fontello/fontello.css">
+      <link rel="stylesheet" href="/blog/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="./lib/reboto/roboto.css">
+      <link rel="stylesheet" href="/blog/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="./css/index.css">
+      <link rel="stylesheet" href="/blog/css/index.css">
     
   
   <script>
@@ -145,7 +145,7 @@ var _hmt = _hmt || [];
 <p>为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照…</p>
 </p> -->
     	
-    		<div class="post-content"><p>实际效果请看demo：<strong><a href="http://ufcjd3.coding-pages.com/dist/webglTexture.html" target="_blank" rel="noopener">纹理贴图</a></strong></p>
+    		<div class="post-content"><p>实际效果请看demo：<strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglTexture.html">纹理贴图</a></strong></p>
 <img src="/images/texture.png" width="400" alt="法线贴图">
 
 <p>为了增加额外细节，提升真实感，我们使用了漫反射贴图和高光贴图，它们都是向三角形进行附加纹理。但是从光的视角来看是表面法线向量使表面被视为平坦光滑的表面。以光照算法的视角考虑的话，只有一件事决定物体的形状，那就是垂直于它的法线向量。砖块表面只有一个法向量，表面完全根据这个法向量被以一致的方式照亮。如果每个片元都用不同的法线会怎样？这样我们就可以根据表面细微的细节对法线向量进行改变；这样就会获得一种表面看起来要复杂得多的幻觉：<br><img src="/images/norplane.png" alt="表面法线"></p>
@@ -166,7 +166,7 @@ var _hmt = _hmt || [];
 <p>我们用到的求导函数 dFdx / dFdy，在WebGL1是需要开启扩展的，顶点着色器无需变动，主要变动的是片元着色器。具体的计算过程，请看如下片元着色器代码：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#extension GL_OES_standard_derivatives : enable<span class="comment">// 注意要开启该扩展</span></span></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line">uniform sampler2D u_diffMap;</span><br><span class="line">uniform sampler2D u_specMap;</span><br><span class="line">uniform sampler2D u_normMap;</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="function">vec2 <span class="title">dHdxy_fwd</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    vec2 dSTdx = dFdx( v_texcoord );</span><br><span class="line">    vec2 dSTdy = dFdy( v_texcoord );</span><br><span class="line">    <span class="keyword">float</span> Hll = bumpScale * texture2D( u_normMap, v_texcoord ).x;</span><br><span class="line">    <span class="keyword">float</span> dBx = bumpScale * texture2D( u_normMap, v_texcoord + dSTdx ).x - Hll;</span><br><span class="line">    <span class="keyword">float</span> dBy = bumpScale * texture2D( u_normMap, v_texcoord + dSTdy ).x - Hll;</span><br><span class="line">    <span class="keyword">return</span> vec2( dBx, dBy );</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">vec3 <span class="title">perturbNormalArb</span><span class="params">( vec3 surf_pos, vec3 surf_norm, vec2 dHdxy )</span> </span>&#123;</span><br><span class="line">    vec3 vSigmaX = vec3( dFdx( surf_pos.x ), dFdx( surf_pos.y ), dFdx( surf_pos.z ) );</span><br><span class="line">    vec3 vSigmaY = vec3( dFdy( surf_pos.x ), dFdy( surf_pos.y ), dFdy( surf_pos.z ) );</span><br><span class="line">    vec3 vN = surf_norm;</span><br><span class="line">    vec3 R1 = cross( vSigmaY, vN );</span><br><span class="line">    vec3 R2 = cross( vN, vSigmaX );</span><br><span class="line">    <span class="keyword">float</span> fDet = dot( vSigmaX, R1 );</span><br><span class="line">    fDet *= ( <span class="keyword">float</span>( gl_FrontFacing ) * <span class="number">2.0</span> - <span class="number">1.0</span> );</span><br><span class="line">    vec3 vGrad = sign( fDet ) * ( dHdxy.x * R1 + dHdxy.y * R2 );</span><br><span class="line">    <span class="keyword">return</span> normalize( <span class="built_in">abs</span>( fDet ) * surf_norm - vGrad );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="comment">// 从法线贴图计算出逐像素法线向量</span></span><br><span class="line">vec3 normal = perturbNormalArb( -v_position, normal, dHdxy_fwd());</span><br><span class="line"><span class="comment">//...</span></span><br><span class="line"><span class="comment">// 总的光照</span></span><br><span class="line">gl_FragColor = vec4(ambient + diffuse + specular, diffuseColor.a);</span><br></pre></td></tr></table></figure>
 
-<p>最后效果请看demo：<strong><a href="http://ufcjd3.coding-pages.com/dist/webglTexture.html" target="_blank" rel="noopener">纹理贴图</a></strong></p>
+<p>最后效果请看demo：<strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglTexture.html">纹理贴图</a></strong></p>
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>相关资料 <strong><a href="https://learnopengl-cn.github.io/" target="_blank" rel="noopener">LearnOpenGL CN</a></strong></p>
 </div>
     	
@@ -249,11 +249,11 @@ var _hmt = _hmt || [];
 
   
   
-    <script src="./lib/jquery-2.2.3.min.js"></script>
+    <script src="/blog/lib/jquery-2.2.3.min.js"></script>
   
-    <script src="./lib/qrcode.min.js"></script>
+    <script src="/blog/lib/qrcode.min.js"></script>
   
-    <script src="./js/index.js"></script>
+    <script src="/blog/js/index.js"></script>
   
 
 <script>

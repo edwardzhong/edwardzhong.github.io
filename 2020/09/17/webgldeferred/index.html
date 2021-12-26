@@ -44,11 +44,11 @@
   
     
     
-      <link rel="stylesheet" href="./lib/fontello/fontello.css">
+      <link rel="stylesheet" href="/blog/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="./lib/reboto/roboto.css">
+      <link rel="stylesheet" href="/blog/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="./css/index.css">
+      <link rel="stylesheet" href="/blog/css/index.css">
     
   
   <script>
@@ -149,7 +149,7 @@ var _hmt = _hmt || [];
 <p><strong>延迟着色(Deferred Shading)</strong>，就是为了解决上述问题而生，尤其是需要渲染几百上千个光源的场景。</p>
 <a id="more"></a>
 
-<p>本节实现的效果请看：<em><a href="http://ufcjd3.coding-pages.com/dist/deferredShading.html" target="_blank" rel="noopener">延迟着色 deferred sharding</a></em></p>
+<p>本节实现的效果请看：<em><a href="https://jeff_zhong.gitee.io/demo/dist/deferredShading.html">延迟着色 deferred sharding</a></em></p>
 <img src="/images/deferred.gif" width="400" alt="延迟着色">
 
 <p>正向着色伪代码：</p>
@@ -198,7 +198,7 @@ var _hmt = _hmt || [];
 </ol>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 场景绘制到帧缓冲区 </span></span><br><span class="line"><span class="comment"> */</span> </span><br><span class="line">gl.bindFramebuffer(target, fbo.framebuffer); <span class="comment">// 绑定帧缓冲</span></span><br><span class="line">gl.viewport(<span class="number">0</span>, <span class="number">0</span>, width, height);</span><br><span class="line">gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT); <span class="comment">// 清屏</span></span><br><span class="line">gl.useProgram(program);</span><br><span class="line"><span class="comment">//采样到3个颜色附件(对应的几何纹理)</span></span><br><span class="line">gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1, gl.COLOR_ATTACHMENT2]);</span><br><span class="line">setUniforms(program, uniforms);<span class="comment">// 设置uniform变量</span></span><br><span class="line">setBuffersAndAttributes(gl, vao);<span class="comment">// 设置缓存和attribute变量</span></span><br><span class="line">drawBufferInfo(gl, vao); <span class="comment">// 写入缓冲区</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 从帧缓存渲染到正常缓冲区</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">gl.bindFramebuffer(target, <span class="literal">null</span>); <span class="comment">// 切换回正常缓冲</span></span><br><span class="line">gl.viewport(<span class="number">0</span>, <span class="number">0</span>, width, height);</span><br><span class="line">gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);</span><br><span class="line">gl.useProgram(fProgram);</span><br><span class="line"><span class="keyword">const</span> uniforms = &#123;</span><br><span class="line">  <span class="comment">// 其他变量 ...</span></span><br><span class="line">  gPosition: fbo.textures[<span class="number">0</span>],<span class="comment">// 位置纹理</span></span><br><span class="line">  gNormal: fbo.textures[<span class="number">1</span>],<span class="comment">// 法向量纹理</span></span><br><span class="line">  gColor: fbo.textures[<span class="number">2</span>], <span class="comment">// 颜色纹理</span></span><br><span class="line">&#125;;</span><br><span class="line">setUniforms(fProgram, uniforms);</span><br><span class="line">setBuffersAndAttributes(gl, fVao);</span><br><span class="line">drawBufferInfo(gl, fVao); <span class="comment">// 输出画面</span></span><br></pre></td></tr></table></figure>
 
-<p>本节实现的效果请看：<em><a href="http://ufcjd3.coding-pages.com/dist/deferredShading.html" target="_blank" rel="noopener">延迟着色 deferred sharding</a></em></p>
+<p>本节实现的效果请看：<em><a href="https://jeff_zhong.gitee.io/demo/dist/deferredShading.html">延迟着色 deferred sharding</a></em></p>
 <p><strong>demo</strong> 使用了1个平行光源，10个点光源，3个聚光灯实现了类似舞厅五彩斑斓的渲染效果。</p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p><strong>延迟着色(Deferred Shading)</strong> 在复杂光照条件下有着性能优势，但它也有缺点：大内存开销。还有在光源不是很多的场景中，延迟渲染并不一定会更快，甚至有时候由于开销过大还会变得更慢。当然在更复杂的场景中，延迟渲染会变成一个重要的性能优化手段。</p>
 </div>
@@ -279,11 +279,11 @@ var _hmt = _hmt || [];
 
   
   
-    <script src="./lib/jquery-2.2.3.min.js"></script>
+    <script src="/blog/lib/jquery-2.2.3.min.js"></script>
   
-    <script src="./lib/qrcode.min.js"></script>
+    <script src="/blog/lib/qrcode.min.js"></script>
   
-    <script src="./js/index.js"></script>
+    <script src="/blog/js/index.js"></script>
   
 
 <script>

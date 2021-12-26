@@ -44,11 +44,11 @@
   
     
     
-      <link rel="stylesheet" href="./lib/fontello/fontello.css">
+      <link rel="stylesheet" href="/blog/lib/fontello/fontello.css">
     
-      <link rel="stylesheet" href="./lib/reboto/roboto.css">
+      <link rel="stylesheet" href="/blog/lib/reboto/roboto.css">
     
-      <link rel="stylesheet" href="./css/index.css">
+      <link rel="stylesheet" href="/blog/css/index.css">
     
   
   <script>
@@ -270,7 +270,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：<em>canvas俄罗斯方块</em>。<br>原理详解看游…</p>
 </p> -->
     	
-			<div class="post-content"><p>好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：<br>*<a href="http://ufcjd3.coding-pages.com/dist/tetris.html" target="_blank" rel="noopener">canvas俄罗斯方块</a>*。</p>
+			<div class="post-content"><p>好久没使用canvas了，于是通过写小游戏“俄罗斯方块”再次熟悉下canvas，如果有一定的canvas基础，要实现还是不难的。实际完成的Demo请看：<br>*<a href="https://jeff_zhong.gitee.io/demo/dist/tetris.html">canvas俄罗斯方块</a>*。</p>
 <h2 id="原理详解"><a href="#原理详解" class="headerlink" title="原理详解"></a>原理详解</h2><p>看游戏最终界面，可知需要实现以下关键功能：</p>
 <ol>
 <li>游戏面板，也就是12 * 20的方格，以及是否填充了方块信息；</li>
@@ -330,7 +330,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>什么是MonadHaskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-monad](http://02s949.coding-pages.com/2018/08/16/haskelld/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-monad](https://jeff_zhong.gitee.io/blog/2018/08/16/haskelld/) -->
 
 <h2 id="什么是Monad"><a href="#什么是Monad" class="headerlink" title="什么是Monad"></a>什么是Monad</h2><p>Haskell是一门纯函数式的语言，纯函数的优点是安全可靠。函数输出完全取决于输入，不存在任何隐式依赖，它的存在如同数学公式般完美无缺。可是纯函数因为隔绝了外部环境，连最基本的输入输出都无法完成。而 <strong>Monad</strong> 就是 Haskell 给出的解决方案。但<strong>Monad</strong> 并不仅仅是 IO 操作的抽象，它更是多种类似操作之间共性的抽象。所以 Monad 解决的问题并不局限在 IO 上，像 Haskell 中的 <strong>Maybe</strong> 和 <strong>[]</strong> 都是 <strong>Monad</strong>。Haskell 中漂亮的错误处理方式， <strong>do</strong> 表示法和灵活的列表推导式 (<strong>list comprehension</strong>) 都算是 <strong>Monad</strong> 的贡献。</p></div>
 			<a href="/blog/2018/08/16/haskelld/" class="post-more">more <i class="icon-doubleright"></i></a>
@@ -382,7 +382,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>什么是Functorfunctor 就是可以执行map操作的对象，functor就像是附加了语义的表达式，可以用盒子进行比喻。functor 的定义可以这样理解：给出a映射到b的函数和装了a的…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-functor](http://02s949.coding-pages.com/2018/08/15/haskellc/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-functor](https://jeff_zhong.gitee.io/blog/2018/08/15/haskellc/) -->
 <h2 id="什么是Functor"><a href="#什么是Functor" class="headerlink" title="什么是Functor"></a>什么是Functor</h2><p><strong>functor</strong> 就是可以执行map操作的对象，functor就像是附加了语义的表达式，可以用盒子进行比喻。<strong>functor</strong> 的定义可以这样理解：给出a映射到b的函数和装了a的盒子，结果会返回装了b的盒子。<strong>fmap</strong> 可以看作是一个接受一个function 和一个 <strong>functor</strong> 的函数，它把function 应用到 <strong>functor</strong> 的每一个元素（映射）。</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">-- Functor的定义</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="type">Functor</span> f <span class="keyword">where</span></span></span><br><span class="line">    fmap :: (a -&gt; b) -&gt; f a -&gt; f b</span><br></pre></td></tr></table></figure></div>
 			<a href="/blog/2018/08/15/haskellc/" class="post-more">more <i class="icon-doubleright"></i></a>
@@ -433,7 +433,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>高阶函数(higher-order function)就是指可以操作函数的函数，即函数可以作为参数，也可以作为返回结果。有了这两个特性，haskell可以实现许多神奇的效果。<br>柯里化（Curr…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-高阶函数](http://02s949.coding-pages.com/2018/08/08/haskellb/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-高阶函数](https://jeff_zhong.gitee.io/blog/2018/08/08/haskellb/) -->
 <p>高阶函数(higher-order function)就是指可以操作函数的函数，即函数可以作为参数，也可以作为返回结果。有了这两个特性，haskell可以实现许多神奇的效果。</p>
 <h2 id="柯里化（Currying）"><a href="#柯里化（Currying）" class="headerlink" title="柯里化（Currying）"></a>柯里化（Currying）</h2><p>在haskell中所有的算术运算符都是函数(包括大小于等于关系符等)，而它们的快捷方式都可以省略操作数（参数）。</p>
 <figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line">(+) <span class="number">1</span> <span class="number">2</span> <span class="comment">-- (+) 是需要两个操作数的函数</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line"></span><br><span class="line">(+<span class="number">1</span>) <span class="number">2</span> <span class="comment">-- (+1) 是需要左操作数的函数</span></span><br><span class="line">&gt; <span class="number">3</span></span><br><span class="line"></span><br><span class="line">(<span class="number">3</span>*) <span class="number">3</span> <span class="comment">-- (3*) 是需要右操作数的函数</span></span><br><span class="line">&gt; <span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="title">map</span> (*<span class="number">2</span>) [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="comment">-- map所有元素 *2 的操作</span></span><br><span class="line">&gt; [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</span><br><span class="line"></span><br><span class="line"><span class="title">filter</span> (&gt;<span class="number">3</span>) [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>] <span class="comment">-- 过滤 &gt;3的元素</span></span><br><span class="line">&gt; [<span class="number">4</span>,<span class="number">5</span>]</span><br></pre></td></tr></table></figure></div>
@@ -485,7 +485,7 @@ var _hmt = _hmt || [];
     	<!-- <p><p>为什么要学习函数式编程？为什么要学习Haskell？<br>.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[Haskell学习-函数式编程初探](http://02s949.coding-pages.com/2018/08/07/haskella/) -->
+			<div class="post-content"><!-- 原文地址：[Haskell学习-函数式编程初探](https://jeff_zhong.gitee.io/blog/2018/08/07/haskella/) -->
 
 <p>为什么要学习函数式编程？为什么要学习Haskell？</p>
 <p>.net到前端，C#和JavaScript对我来说如果谈不上精通，最起码也算是到了非常熟悉的程度。这两门语言就像是我的盾牌和宝剑,给我保驾护航,开山劈石,伴随着我不断成长。同时C#和JavaScript它们本身也在不断地进化，不断出现越来越多方便的语法糖，但追根到底很多都是从函数式语言汲取的精华。比如高阶函数，lambada表达式，柯里化等。 </p>
@@ -540,9 +540,9 @@ var _hmt = _hmt || [];
     	<!-- <p><p>由于生活和工作上的原因,从年前开始一直到处奔波,没有太多的时间去关注和学习WebGL图形学相关的技术, 不过陆陆续续都有学习使用blender进行3D建模, 而这篇文章涉及到的房屋内景3D建模…</p>
 </p> -->
     	
-			<div class="post-content"><!-- 原文地址：[WebGL展示3D房屋内景](http://02s949.coding-pages.com/2018/05/31/weblroom3d/)  -->
+			<div class="post-content"><!-- 原文地址：[WebGL展示3D房屋内景](https://jeff_zhong.gitee.io/blog/2018/05/31/weblroom3d/)  -->
 <p>由于生活和工作上的原因,从年前开始一直到处奔波,没有太多的时间去关注和学习WebGL图形学相关的技术, 不过陆陆续续都有学习使用blender进行3D建模, 而这篇文章涉及到的房屋内景3D建模就是我这段时间以来的学习成果,现在展示出来.</p>
-<p>本节实现的效果: <strong><a href="http://ufcjd3.coding-pages.com/dist/webglroom.html" target="_blank" rel="noopener">Room</a></strong></p>
+<p>本节实现的效果: <strong><a href="https://jeff_zhong.gitee.io/demo/dist/webglroom.html">Room</a></strong></p>
 <img src="/images/room.gif" width="480"></div>
 			<a href="/blog/2018/05/31/webglroom3d/" class="post-more">more <i class="icon-doubleright"></i></a>
     	
@@ -797,11 +797,11 @@ var _hmt = _hmt || [];
 
   
   
-    <script src="./lib/jquery-2.2.3.min.js"></script>
+    <script src="/blog/lib/jquery-2.2.3.min.js"></script>
   
-    <script src="./lib/qrcode.min.js"></script>
+    <script src="/blog/lib/qrcode.min.js"></script>
   
-    <script src="./js/index.js"></script>
+    <script src="/blog/js/index.js"></script>
   
 
 <script>
