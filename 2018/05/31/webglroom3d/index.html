@@ -30,14 +30,14 @@
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://02s949.coding-pages.com">
+  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io/blog">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
   <title >WebGL展示3D房屋内景 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://02s949.coding-pages.com">
+  <meta property="og:url" content="https://jeff_zhong.gitee.io/blog">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="WebGL展示3D房屋内景 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
@@ -61,7 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/blog/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -72,12 +72,12 @@ var _hmt = _hmt || [];
   
   
   
-      <a  href="/" title="主 页">
+      <a  href="/blog/" title="主 页">
         <i class="icon-home"></i>
         <span>主 页</span>
       </a>
   
-      <a  href="http://ufcjd3.coding-pages.com/" target="_blank" rel="noopener" title="Demo">
+      <a  href="/blog/demo/" title="Demo">
         <i class="icon-page"></i>
         <span>Demo</span>
       </a>
@@ -90,7 +90,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">48<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">64<br>标 签</a>
+    <a href="/blog/archives">48<br>文 章</a><a href="/blog/categories">2<br>分 类</a><a href="/blog/tags">64<br>标 签</a>
   </div>
   <div class="social">
   
@@ -104,7 +104,7 @@ var _hmt = _hmt || [];
   
       <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+      <a href="/blog/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -135,7 +135,7 @@ var _hmt = _hmt || [];
     			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                        <a href="/blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
     			
     		
@@ -151,7 +151,7 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 
 <h2 id="Blender"><a href="#Blender" class="headerlink" title="Blender"></a>Blender</h2><p>Blender是开源的建模和动画制作软件,功能虽然没有3dmax和maya强大,但它精简,易学易用,而且还是开源的, 非常适合像我这样的入门级新手.如果你也想做模型和特效,创建自己心目中的3D世界,Blender值得你去尝试.<br>入门教程推荐<em><a href="https://www.bilibili.com/video/av909518/" target="_blank" rel="noopener">台湾大神的blender教程全集</a></em></p>
-<h2 id="模型文件"><a href="#模型文件" class="headerlink" title="模型文件"></a>模型文件</h2><p>在blender制作好模型之后,接着就是导出obj文件,接着就是使用js读取obj文件,之后就开始涉及到WebGL,具体的步骤可以参考我之前的文章 <em><a href="http://02s949.coding-pages.com/2017/12/26/webglspitfire/">WebGL学习(3) - 3D模型</a></em></p>
+<h2 id="模型文件"><a href="#模型文件" class="headerlink" title="模型文件"></a>模型文件</h2><p>在blender制作好模型之后,接着就是导出obj文件,接着就是使用js读取obj文件,之后就开始涉及到WebGL,具体的步骤可以参考我之前的文章 <em><a href="http://02s949.coding-pages.com/2017/12/26/webglspitfire/" target="_blank" rel="noopener">WebGL学习(3) - 3D模型</a></em></p>
 <h2 id="着色器"><a href="#着色器" class="headerlink" title="着色器"></a>着色器</h2><p>着色器代码实现的是WebGL最基本的功能,使用了一个平行光源,光照部分有环境光,漫反射,冯氏高光镜面反射.代码详情如下:</p>
 <p>顶点着色器</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line">attribute vec4 a_position;<span class="comment">//顶点位置</span></span><br><span class="line">attribute vec4 a_color;<span class="comment">//顶点颜色</span></span><br><span class="line">attribute vec4 a_scolor;<span class="comment">//顶点高光颜色</span></span><br><span class="line">attribute vec4 a_normal;<span class="comment">//法向量</span></span><br><span class="line">uniform mat4 u_MvpMatrix;<span class="comment">//mvp矩阵</span></span><br><span class="line">uniform mat4 u_ModelMatrix;<span class="comment">//模型矩阵</span></span><br><span class="line">uniform mat4 u_NormalMatrix;</span><br><span class="line">varying vec4 v_Color;</span><br><span class="line">varying vec4 v_Scolor;</span><br><span class="line">varying vec3 v_Normal;</span><br><span class="line">varying vec3 v_Position;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    gl_Position = u_MvpMatrix * a_position;</span><br><span class="line">    <span class="comment">// 计算顶点在世界坐标系的位置，以便计算点光源在顶点处点位置</span></span><br><span class="line">    v_Position = vec3(u_ModelMatrix * a_position);</span><br><span class="line">    <span class="comment">// 计算变换后的法向量</span></span><br><span class="line">    v_Normal = vec3(u_NormalMatrix * a_normal);</span><br><span class="line">    v_Color = a_color;</span><br><span class="line">    v_Scolor = a_scolor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -159,7 +159,7 @@ var _hmt = _hmt || [];
 <p>片段着色器</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifdef</span> GL_ES</span></span><br><span class="line">precision mediump <span class="keyword">float</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">uniform vec3 u_LightPosition;<span class="comment">//光源位置</span></span><br><span class="line">uniform vec3 u_diffuseColor;<span class="comment">//漫反射光颜色</span></span><br><span class="line">uniform vec3 u_AmbientColor;<span class="comment">//环境光颜色</span></span><br><span class="line">uniform vec3 u_specularColor;<span class="comment">//镜面反射光颜色</span></span><br><span class="line">uniform <span class="keyword">float</span> u_Shininess;<span class="comment">// 镜面反射光泽度</span></span><br><span class="line">uniform vec3 u_viewPosition;<span class="comment">// 视点位置</span></span><br><span class="line">varying vec3 v_Normal;<span class="comment">//法向量</span></span><br><span class="line">varying vec3 v_Position;<span class="comment">//顶点位置</span></span><br><span class="line">varying vec4 v_Color;<span class="comment">//顶点颜色</span></span><br><span class="line">varying vec4 v_Scolor;<span class="comment">//顶点高光颜色</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    vec3 normal = normalize(v_Normal);</span><br><span class="line">    <span class="comment">// 平行光</span></span><br><span class="line">    vec3 lightDirection = normalize(u_LightPosition);</span><br><span class="line">    <span class="comment">// 计算光线方向和法向量点积</span></span><br><span class="line">    <span class="keyword">float</span> nDotL = <span class="built_in">max</span>(dot(lightDirection, normal), <span class="number">0.0</span>);</span><br><span class="line">    <span class="comment">// 漫反射光亮度</span></span><br><span class="line">    vec3 diffuse = u_diffuseColor  * nDotL * v_Color.rgb;</span><br><span class="line">    <span class="comment">// 环境光亮度</span></span><br><span class="line">    vec3 ambient = u_AmbientColor * v_Color.rgb;</span><br><span class="line">    <span class="comment">// gl_FragColor = vec4(diffuse + ambient, v_Color.a);</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 观察方向的单位向量V</span></span><br><span class="line">    vec3 eyeDirection = normalize(u_viewPosition - v_Position.xyz);<span class="comment">// 反射方向</span></span><br><span class="line">    <span class="comment">// 反射方向</span></span><br><span class="line">    vec3 reflectionDirection = reflect(-lightDirection, normal);</span><br><span class="line">    <span class="comment">// 镜面反射亮度权重</span></span><br><span class="line">    <span class="keyword">float</span> specularWeighting = <span class="built_in">pow</span>(<span class="built_in">max</span>(dot(reflectionDirection, eyeDirection), <span class="number">0.0</span>), u_Shininess);</span><br><span class="line">    vec3 specular =  u_specularColor.rgb * specularWeighting;</span><br><span class="line">    gl_FragColor = vec4(ambient + diffuse + specular, v_Color.a);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="模型变换"><a href="#模型变换" class="headerlink" title="模型变换"></a>模型变换</h2><p>模型变换同样可参考我之前的文章<em><a href="http://02s949.coding-pages.com/2018/01/12/webglpolygons/">WebGL多模型光照综合实例</a></em></p>
+<h2 id="模型变换"><a href="#模型变换" class="headerlink" title="模型变换"></a>模型变换</h2><p>模型变换同样可参考我之前的文章<em><a href="http://02s949.coding-pages.com/2018/01/12/webglpolygons/" target="_blank" rel="noopener">WebGL多模型光照综合实例</a></em></p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这个实例最困难和花费时间最多的其实是3D建模部分,而开发所使用到的WebGL知识点由于比较基础,反而没多大难度.总之要做出酷炫逼真的特效和模型,还得继续深入学习3D建模.</p>
 </div>
     	
@@ -170,20 +170,20 @@ var _hmt = _hmt || [];
 					
 					
 						
-							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+							<a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a>
 						
 					
 						
-							<a href="/tags/js/">js</a>
+							<a href="/blog/tags/js/">js</a>
 						
 					
 						
-							<a href="/tags/webGL/">webGL</a>
+							<a href="/blog/tags/webGL/">webGL</a>
 						
 					
 				
 			</div>
-			<a class="share" href="javascript:;" data-url="/2018/05/31/webglroom3d/" data-desc="
+			<a class="share" href="javascript:;" data-url="/blog/2018/05/31/webglroom3d/" data-desc="
 由于生活和工作上的原因,从年前开始一直到处奔波,没有太多的时间去关注和学习WebGL图形学相..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
@@ -193,11 +193,11 @@ var _hmt = _hmt || [];
   
     
       
-        <a href="/2018/08/07/haskella/" class="prev post-prev"> <i class="icon-leftarrow"></i> Haskell学习-函数式编程初探</a>
+        <a href="/blog/2018/08/07/haskella/" class="prev post-prev"> <i class="icon-leftarrow"></i> Haskell学习-函数式编程初探</a>
       
 
       
-        <a href="/2018/05/09/train/" class="next post-next"> 2018春夏火车之旅 <i class="icon-rightarrow"></i></a>
+        <a href="/blog/2018/05/09/train/" class="next post-next"> 2018春夏火车之旅 <i class="icon-rightarrow"></i></a>
       
     
   

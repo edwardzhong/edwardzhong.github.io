@@ -30,14 +30,14 @@
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="http://02s949.coding-pages.com">
+  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io/blog">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
   <title >canvas图表(4) - 散点图 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="http://02s949.coding-pages.com">
+  <meta property="og:url" content="https://jeff_zhong.gitee.io/blog">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="canvas图表(4) - 散点图 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
@@ -61,7 +61,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Jeff's world" type="application/atom+xml">
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/blog/atom.xml" title="Jeff's world" type="application/atom+xml">
 </head>
 <body>
 <header class="header">
@@ -72,12 +72,12 @@ var _hmt = _hmt || [];
   
   
   
-      <a  href="/" title="主 页">
+      <a  href="/blog/" title="主 页">
         <i class="icon-home"></i>
         <span>主 页</span>
       </a>
   
-      <a  href="http://ufcjd3.coding-pages.com/" target="_blank" rel="noopener" title="Demo">
+      <a  href="/blog/demo/" title="Demo">
         <i class="icon-page"></i>
         <span>Demo</span>
       </a>
@@ -90,7 +90,7 @@ var _hmt = _hmt || [];
   </div>
   <div class="state">
   
-    <a href="/archives">48<br>文 章</a><a href="/categories">2<br>分 类</a><a href="/tags">64<br>标 签</a>
+    <a href="/blog/archives">48<br>文 章</a><a href="/blog/categories">2<br>分 类</a><a href="/blog/tags">64<br>标 签</a>
   </div>
   <div class="social">
   
@@ -104,7 +104,7 @@ var _hmt = _hmt || [];
   
       <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
   
-      <a href="/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+      <a href="/blog/atom.xml" title="Rss"><i class="icon-rss"></i></a>
   
   </div>
   <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
@@ -135,7 +135,7 @@ var _hmt = _hmt || [];
     			<i class="icon-book"></i>
     			
                     
-                        <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                        <a href="/blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
                     
     			
     		
@@ -149,7 +149,7 @@ var _hmt = _hmt || [];
 <p>本节效果请看：<em><a href="http://ufcjd3.coding-pages.com/dist/chartpoint.html" target="_blank" rel="noopener">散点气泡图http://ufcjd3.coding-pages.com/dist/chartpoint.html</a></em><br><img src="/images/charpoint.jpg" width="480"></p>
 <a id="more"></a>
 
-<p>经过学习之前的*<a href="http://02s949.coding-pages.com/2017/11/23/chartpie/">其他图表</a>*后，就会发现很多地方都是相似的，只是具体的细节有些区别，所以这次主要就是讲解散点图不同的部分，功能点包括： </p>
+<p>经过学习之前的*<a href="http://02s949.coding-pages.com/2017/11/23/chartpie/" target="_blank" rel="noopener">其他图表</a>*后，就会发现很多地方都是相似的，只是具体的细节有些区别，所以这次主要就是讲解散点图不同的部分，功能点包括： </p>
 <ol>
 <li>组织数据；</li>
 <li>画面绘制；</li>
@@ -166,7 +166,7 @@ var _hmt = _hmt || [];
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">drawLine(pos)&#123;</span><br><span class="line">	<span class="keyword">var</span> that=<span class="keyword">this</span>,</span><br><span class="line">		ctx=that.ctx,</span><br><span class="line">		padding=<span class="keyword">this</span>.padding,</span><br><span class="line">		xmax=<span class="keyword">this</span>.xAxis.data.slice(<span class="number">-1</span>)[<span class="number">0</span>],</span><br><span class="line">		xdis=<span class="keyword">this</span>.W-padding*<span class="number">2</span>,</span><br><span class="line">		ymin=<span class="keyword">this</span>.info.min,</span><br><span class="line">		ymax=<span class="keyword">this</span>.info.max,</span><br><span class="line">		ydis=<span class="keyword">this</span>.H-padding*<span class="number">2</span>-<span class="keyword">this</span>.paddingTop,</span><br><span class="line">		yNum,xNum,space=<span class="number">8</span>;</span><br><span class="line">	</span><br><span class="line">	ctx.save();</span><br><span class="line">	ctx.lineWidth=<span class="number">0.5</span>;</span><br><span class="line">	ctx.strokeStyle=<span class="string">'hsla(0,0%,30%,1)'</span>;</span><br><span class="line">	<span class="comment">// 绘制虚线十字坐标</span></span><br><span class="line">	ctx.beginPath();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i*space&lt;=xdis;i++)&#123;</span><br><span class="line">		ctx[i%<span class="number">2</span>?<span class="string">'lineTo'</span>:<span class="string">'moveTo'</span>](padding+i*space,pos.y*<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i*space&lt;=ydis;i++)&#123;</span><br><span class="line">		ctx[i%<span class="number">2</span>?<span class="string">'lineTo'</span>:<span class="string">'moveTo'</span>](pos.x*<span class="number">2</span>,padding+that.paddingTop+i*space);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	ctx.stroke();</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 绘制在xy轴对应的数值</span></span><br><span class="line">	ctx.fillStyle=<span class="string">'hsla(0,0%,30%,1)'</span>;</span><br><span class="line">	ctx.fillRect(padding<span class="number">-75</span>,pos.y*<span class="number">2</span><span class="number">-20</span>,<span class="number">70</span>,<span class="number">36</span>);</span><br><span class="line">	ctx.fillRect(pos.x*<span class="number">2</span><span class="number">-55</span>,that.H-padding+<span class="number">10</span>,<span class="number">110</span>,<span class="number">40</span>);</span><br><span class="line">	yNum=<span class="built_in">Math</span>.round((ymin+(that.H-padding-pos.y*<span class="number">2</span>)/ydis*(ymax-ymin))*<span class="number">100</span>)/<span class="number">100</span>;</span><br><span class="line">	xNum=<span class="built_in">Math</span>.round((pos.x*<span class="number">2</span>-padding)/xdis*xmax*<span class="number">100</span>)/<span class="number">100</span>;</span><br><span class="line"></span><br><span class="line">	ctx.font=<span class="string">'22px arial'</span>;</span><br><span class="line">	ctx.textAlign=<span class="string">'center'</span>;</span><br><span class="line">	ctx.textBaseLine=<span class="string">'middle'</span>;</span><br><span class="line">	ctx.fillStyle=<span class="string">'hsla(0,0%,100%,1)'</span>;</span><br><span class="line">	ctx.fillText(yNum,padding<span class="number">-40</span>,pos.y*<span class="number">2</span>+<span class="number">5</span>);</span><br><span class="line">	ctx.fillText(xNum,pos.x*<span class="number">2</span>,that.H-padding+<span class="number">40</span>);</span><br><span class="line">	ctx.restore();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="事件处理"><a href="#事件处理" class="headerlink" title="事件处理"></a>事件处理</h2><p>mousemove的时候，如果位置在标签上和在图表画面上时，变为手形图标。滑过画板内容的时候，还要判断是否在某个气泡上面，如果是则用浮层显示该气泡对应的内容，同时前置该气泡并用scale放大。接着还要绘制该点的虚线十字架并在xy轴绘制对应数值。</p>
 <p>mousedown某个击标签就会显示隐藏对应分类，每次触发就会看到气泡的半径变化和位移的动画效果。</p>
-<p>事件相关内容具体实现可参考<em><a href="http://02s949.coding-pages.com/2017/11/23/chartpie/">canvas图表(3) - 饼图</a></em></p>
+<p>事件相关内容具体实现可参考<em><a href="http://02s949.coding-pages.com/2017/11/23/chartpie/" target="_blank" rel="noopener">canvas图表(3) - 饼图</a></em></p>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>所有图表代码请看<em><a href="https://github.com/edwardzhong/html5Canvas/blob/master/chart/chart.js" target="_blank" rel="noopener">chart.js</a></em></p>
 </div>
     	
@@ -177,20 +177,20 @@ var _hmt = _hmt || [];
 					
 					
 						
-							<a href="/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+							<a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a>
 						
 					
 						
-							<a href="/tags/js/">js</a>
+							<a href="/blog/tags/js/">js</a>
 						
 					
 						
-							<a href="/tags/canvas/">canvas</a>
+							<a href="/blog/tags/canvas/">canvas</a>
 						
 					
 				
 			</div>
-			<a class="share" href="javascript:;" data-url="/2017/11/24/chartpoint/" data-desc="
+			<a class="share" href="javascript:;" data-url="/blog/2017/11/24/chartpoint/" data-desc="
 今天开始完成散点图，做完这一节，我的canvas图表系列就算是完成了，毕竟平时最频繁用到的就..." data-type="share" title="share"><i class="icon-share"></i></a>
 		</div>
 	</div>
@@ -200,11 +200,11 @@ var _hmt = _hmt || [];
   
     
       
-        <a href="/2017/11/27/projecttemplate/" class="prev post-prev"> <i class="icon-leftarrow"></i> 前端快速开发模版</a>
+        <a href="/blog/2017/11/27/projecttemplate/" class="prev post-prev"> <i class="icon-leftarrow"></i> 前端快速开发模版</a>
       
 
       
-        <a href="/2017/11/23/chartpie/" class="next post-next"> canvas图表(3) - 饼图 <i class="icon-rightarrow"></i></a>
+        <a href="/blog/2017/11/23/chartpie/" class="next post-next"> canvas图表(3) - 饼图 <i class="icon-rightarrow"></i></a>
       
     
   
