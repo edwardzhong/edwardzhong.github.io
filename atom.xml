@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jeff_zhong.gitee.io/blog/"/>
-  <updated>2021-12-26T06:47:30.903Z</updated>
+  <updated>2022-05-11T13:08:58.531Z</updated>
   <id>https://jeff_zhong.gitee.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>opencv学习之基础</title>
+    <link href="https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/"/>
+    <id>https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/</id>
+    <published>2022-05-05T08:05:49.000Z</published>
+    <updated>2022-05-11T13:08:58.531Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始做起，那简直太麻烦和低效了。为解决这个问题，openCV就此应运而生，它屏蔽了很多底层技术细节，抽象出方便的API，而我们只需要灵活组合相关的 api 就能实现强大的功能。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="opencv" scheme="https://jeff_zhong.gitee.io/blog/tags/opencv/"/>
+    
+  </entry>
   
   <entry>
     <title>html5调用摄像头截图</title>
@@ -73,7 +96,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2020/09/17/webgldeferred/"/>
     <id>https://jeff_zhong.gitee.io/blog/2020/09/17/webgldeferred/</id>
     <published>2020-09-17T11:30:31.000Z</published>
-    <updated>2021-12-26T06:49:24.985Z</updated>
+    <updated>2021-12-26T06:49:24.000Z</updated>
     
     <summary type="html">
     
@@ -268,7 +291,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/05/21/webglhdr/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/05/21/webglhdr/</id>
     <published>2019-05-21T07:09:15.000Z</published>
-    <updated>2021-12-26T06:49:27.571Z</updated>
+    <updated>2021-12-26T06:49:27.000Z</updated>
     
     <summary type="html">
     
@@ -320,7 +343,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/05/02/webglalpha/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/05/02/webglalpha/</id>
     <published>2019-05-02T05:16:29.000Z</published>
-    <updated>2021-12-26T06:49:22.315Z</updated>
+    <updated>2021-12-26T06:49:22.000Z</updated>
     
     <summary type="html">
     
@@ -345,7 +368,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/30/webglnormap/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/30/webglnormap/</id>
     <published>2019-04-30T03:07:27.000Z</published>
-    <updated>2021-12-26T06:49:30.058Z</updated>
+    <updated>2021-12-26T06:49:30.000Z</updated>
     
     <summary type="html">
     
@@ -490,7 +513,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2019/04/12/fullstack2/"/>
     <id>https://jeff_zhong.gitee.io/blog/2019/04/12/fullstack2/</id>
     <published>2019-04-12T07:34:17.000Z</published>
-    <updated>2021-12-26T06:48:16.700Z</updated>
+    <updated>2021-12-26T06:48:16.000Z</updated>
     
     <summary type="html">
     
@@ -547,32 +570,6 @@
       <category term="koa" scheme="https://jeff_zhong.gitee.io/blog/tags/koa/"/>
     
       <category term="jwt" scheme="https://jeff_zhong.gitee.io/blog/tags/jwt/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于socket.io的使用</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/03/29/socketio/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/03/29/socketio/</id>
-    <published>2019-03-28T16:44:31.000Z</published>
-    <updated>2021-12-26T06:48:58.472Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这段时间学习了&lt;strong&gt;socket.io&lt;/strong&gt;，用它写了小项目，在此总结下它的基本使用方式和一些要点。&lt;br&gt;&lt;strong&gt;socket.io&lt;/strong&gt;是基于&lt;strong&gt;Node.js&lt;/strong&gt;和&lt;strong&gt;WebSocket&lt;/strong&gt;协议的实时通信开源框架，它包括客户端的JavaScript和服务器端的Node.js。&lt;/p&gt;
-&lt;h2 id=&quot;服务端&quot;&gt;&lt;a href=&quot;#服务端&quot; class=&quot;headerlink&quot; title=&quot;服务端&quot;&gt;&lt;/a&gt;服务端&lt;/h2&gt;&lt;p&gt;这里后端使用的框架是&lt;strong&gt;koa2&lt;/strong&gt;，&lt;strong&gt;socket.io&lt;/strong&gt;将自身绑定到koa的进程中去，其中最重要的事件就是 &lt;strong&gt;connection&lt;/strong&gt; 和 &lt;strong&gt;disconnect&lt;/strong&gt;。它们是框架本身定义的系统事件，也就意味着它是自然就存在的不需要我们自定义，当然还有其它系统事件，但很少会用得到。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
-    
-      <category term="socket.io" scheme="https://jeff_zhong.gitee.io/blog/tags/socket-io/"/>
     
   </entry>
   

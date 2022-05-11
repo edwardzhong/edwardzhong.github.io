@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="opencv学习之基础 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io/blog">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >opencv学习之基础 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://jeff_zhong.gitee.io/blog">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="opencv学习之基础 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/blog/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/blog/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/blog/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/blog/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/blog/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="https://jeff_zhong.gitee.io/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/blog/archives">49<br>文 章</a><a href="/blog/categories">2<br>分 类</a><a href="/blog/tags">65<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/blog/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/blog/images/banner1.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">opencv学习之基础</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2022/05/05 16:05:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始做起，那简直太麻烦和低效了。为解决这个问题，openCV就此应运而生，它屏蔽了很多底层技术细节，抽象出方便的API，而我们只需要灵活组合相关的 api 就能实现强大的功能。</p>
+<a id="more"></a>
+
+<h2 id="内容大纲"><a href="#内容大纲" class="headerlink" title="内容大纲"></a>内容大纲</h2><ol>
+<li>构建openCV.js</li>
+<li>opencv基础操作</li>
+</ol>
+<h2 id="构建openCV-js"><a href="#构建openCV-js" class="headerlink" title="构建openCV.js"></a>构建openCV.js</h2><p>openCV有各种语言的版本，比较常用的是C++ 和Python，也有JavaScript版本，因为基于js可以更快的验证和查看效果，同时也是因为本人不太擅长C++和Python，真的是有了 <strong>js</strong> 这把锤子把什么问题都看成钉子了😄。当然前提是因为目前V8引擎和wasm性能足够强悍，很多轻量级的需求完全可以放在前端来完成。</p>
+<ol>
+<li><p>安装Emscripten</p>
+<p>openCV是基于C/C++的，我们要用js版本的openCV，需要做转换，这就需要<a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> 这个编译器了。</p>
+<p><a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> 是一个基于LLVM的编译器，可以将C/C++语言编译为JavaScript。我们按着官网步骤一步一步下载安装就好：</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Get the emsdk repo</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/emscripten-core/emsdk.git</span><br><span class="line"><span class="comment"># Enter that directory</span></span><br><span class="line"><span class="built_in">cd</span> emsdk</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Fetch the latest version of the emsdk (not needed the first time you clone)</span></span><br><span class="line">git pull</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Download and install the latest SDK tools.</span></span><br><span class="line">./emsdk install latest</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Make the "latest" SDK "active" for the current user. (writes .emscripten file)</span></span><br><span class="line">./emsdk activate latest</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Activate PATH and other environment variables in the current terminal</span></span><br><span class="line"><span class="built_in">source</span> ./emsdk_env.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载openCV源码</p>
+<p>安装完编译器，接着就是获取openCV的源码</p>
+ <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打包openCV.js</p>
+<p>工具链和源码都准备完毕，最后一步还需要安装Python，步骤确实有点多，Python的安装就不提了，下载包安装或者homebrew安装都可以，我们直接看打包的命令吧，默认打包为asm，我们选webAssembly版本的，最后从build_wasm拷贝出opencv.js。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> opencv <span class="comment">#进入opencv目录</span></span><br><span class="line">python ./platforms/js/build_js.py build_js <span class="comment"># default asm</span></span><br><span class="line">python ./platforms/js/build_js.py build_wasm --build_wasm <span class="comment"># build wasm</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="opencv基础操作"><a href="#opencv基础操作" class="headerlink" title="opencv基础操作"></a>opencv基础操作</h2><ol>
+<li><p>运行openCV.js，cv 默认是一个Promise，因此需要异步才能获取出openCV全局对象。</p>
+<p>这里只做最简单的操作，读取图片，转换灰度图，显示图片</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./opencv.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> CV;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    CV = <span class="keyword">await</span> cv;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">'cv: '</span>, CV);</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> img = <span class="keyword">new</span> Image();</span></span><br><span class="line"><span class="actionscript">    img.src = <span class="string">'./img.png'</span>;</span></span><br><span class="line"><span class="actionscript">    img.onload = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">const</span> src = CV.imread(img);<span class="comment">//读取图片</span></span></span><br><span class="line"><span class="actionscript">      <span class="keyword">const</span> dst = <span class="keyword">new</span> CV.Mat();</span></span><br><span class="line"><span class="actionscript">      CV.cvtColor(src, dst, CV.COLOR_RGBA2GRAY);<span class="comment">//转换为灰度图</span></span></span><br><span class="line"><span class="actionscript">      CV.imshow(canvas, dst);<span class="comment">//显示图片</span></span></span><br><span class="line">      src.delete();</span><br><span class="line">      dst.delete();</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  init();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>矩阵操作，矩阵就是一个多维数组，而图片就是二维数组，这些基础操作我认为也是挺有用的。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> mat = <span class="keyword">new</span> cv.Mat();<span class="comment">// 默认矩阵</span></span><br><span class="line"><span class="keyword">const</span> mat = <span class="keyword">new</span> cv.Mat(rows, cols, type);<span class="comment">// 类型二维矩阵</span></span><br><span class="line"><span class="keyword">const</span> mat = <span class="keyword">new</span> cv.Mat(rows, cols, type, <span class="keyword">new</span> cv.Scalar());<span class="comment">// 有初始值的类型二维矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mat = cv.Mat.zeros(rows, cols, type);<span class="comment">//全部填充为0</span></span><br><span class="line"><span class="keyword">const</span> mat = cv.Mat.ones(rows, cols, type);<span class="comment">//全部填充为1</span></span><br><span class="line"><span class="keyword">const</span> mat = cv.Mat.eye(rows, cols, type); <span class="comment">//单位矩阵</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mat = cv.matFromArray(rows, cols, type, array);<span class="comment">//由数组构建矩阵</span></span><br><span class="line"><span class="keyword">const</span> mat = cv.matFromImageData(imgData);<span class="comment">//由图片构建矩阵</span></span><br><span class="line"><span class="keyword">const</span> dst = src.clone();<span class="comment">//克隆</span></span><br><span class="line">src.copyTo(dst, mask);<span class="comment">//根据mask拷贝</span></span><br><span class="line"></span><br><span class="line">cv.add(src1, src2, dst, mask, dtype);<span class="comment">//矩阵相加</span></span><br><span class="line">cv.subtract(src1, src2, dst, mask, dtype);<span class="comment">//矩阵相减</span></span><br><span class="line">cv.bitwise_and(roi, roi, imgBg, maskInv);<span class="comment">//矩阵与运算</span></span><br><span class="line">cv.bitwise_or(roi, roi, imgBg, maskInv);<span class="comment">//矩阵或运算</span></span><br><span class="line">cv.bitwise_xor(roi, roi, imgBg, maskInv);<span class="comment">//矩阵异或运算</span></span><br><span class="line">cv.bitwise_not(mask, maskInv);<span class="comment">//矩阵非运算</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>数据结构类型</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//点</span></span><br><span class="line"><span class="keyword">const</span> point = <span class="keyword">new</span> cv.Point(x, y);</span><br><span class="line"><span class="keyword">const</span> point = &#123;<span class="attr">x</span>: x, <span class="attr">y</span>: y&#125;;</span><br><span class="line"><span class="comment">//向量</span></span><br><span class="line"><span class="keyword">let</span> scalar = <span class="keyword">new</span> cv.Scalar(R, G, B, Alpha);</span><br><span class="line"><span class="keyword">let</span> scalar = [R, G, B, Alpha];</span><br><span class="line"><span class="comment">//大小</span></span><br><span class="line"><span class="keyword">const</span> size = <span class="keyword">new</span> cv.Size(width, height);</span><br><span class="line"><span class="keyword">const</span> size = &#123;<span class="attr">width</span> : width, <span class="attr">height</span> : height&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//圆形</span></span><br><span class="line"><span class="keyword">let</span> circle = <span class="keyword">new</span> cv.Circle(center, radius);</span><br><span class="line"><span class="keyword">let</span> circle = &#123;<span class="attr">center</span> : center, <span class="attr">radius</span> : radius&#125;;</span><br><span class="line"><span class="comment">//矩形</span></span><br><span class="line"><span class="keyword">let</span> rect = <span class="keyword">new</span> cv.Rect(x, y, width, height);</span><br><span class="line"><span class="keyword">let</span> rect = &#123;<span class="attr">x</span> : x, <span class="attr">y</span> : y, <span class="attr">width</span> : width, <span class="attr">height</span> : height&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//旋转矩形</span></span><br><span class="line"><span class="keyword">let</span> rotatedRect = <span class="keyword">new</span> cv.RotatedRect(center, size, angle);</span><br><span class="line"><span class="keyword">let</span> rotatedRect = &#123;<span class="attr">center</span> : center, <span class="attr">size</span> : size, <span class="attr">angle</span> : angle&#125;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>打包构建出openCV.js，同时也学习了openCV相关的基础。后面我们就可以基于openCV做很多有趣的操作了，敬请期待。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/blog/tags/opencv/">opencv</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/blog/2022/05/05/opencv/" data-desc="前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/blog/2021/08/17/camera/" class="next post-next"> html5调用摄像头截图 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2022 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/blog/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/blog/lib/qrcode.min.js"></script>
+  
+    <script src="/blog/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
