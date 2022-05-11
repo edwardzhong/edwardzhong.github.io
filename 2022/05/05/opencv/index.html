@@ -144,32 +144,32 @@ var _hmt = _hmt || [];
     	<!-- <p><p>前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始…</p>
 </p> -->
     	
-    		<div class="post-content"><p>前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始做起，那简直太麻烦和低效了。为解决这个问题，openCV就此应运而生，它屏蔽了很多底层技术细节，抽象出方便的API，而我们只需要灵活组合相关的 api 就能实现强大的功能。</p>
+    		<div class="post-content"><p>前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始做起，那简直太麻烦和低效了。为解决这个问题，<strong>openCV</strong>就此应运而生，它屏蔽了很多底层技术细节，抽象出方便的API，而我们只需要灵活组合相关的 api 就能实现强大的功能。</p>
 <a id="more"></a>
 
 <h2 id="内容大纲"><a href="#内容大纲" class="headerlink" title="内容大纲"></a>内容大纲</h2><ol>
-<li>构建openCV.js</li>
-<li>opencv基础操作</li>
+<li>构建<strong>openCV.js</strong></li>
+<li><strong>opencv</strong>基础操作</li>
 </ol>
-<h2 id="构建openCV-js"><a href="#构建openCV-js" class="headerlink" title="构建openCV.js"></a>构建openCV.js</h2><p>openCV有各种语言的版本，比较常用的是C++ 和Python，也有JavaScript版本，因为基于js可以更快的验证和查看效果，同时也是因为本人不太擅长C++和Python，真的是有了 <strong>js</strong> 这把锤子把什么问题都看成钉子了😄。当然前提是因为目前V8引擎和wasm性能足够强悍，很多轻量级的需求完全可以放在前端来完成。</p>
+<h2 id="构建openCV-js"><a href="#构建openCV-js" class="headerlink" title="构建openCV.js"></a>构建openCV.js</h2><p><strong>openCV</strong>有各种语言的版本，比较常用的是<strong>C++</strong> 和<strong>Python</strong>，也有<strong>JavaScript</strong>版本，因为基于js可以更快的验证和查看效果，同时也是因为本人不太擅长<strong>C++</strong>和<strong>Python</strong>，真的是有了 <strong>js</strong> 这把锤子把什么问题都看成钉子了😄。当然前提是因为目前<strong>V8</strong>引擎和<strong>wasm</strong>性能足够强悍，很多轻量级的需求完全可以放在前端来完成。</p>
 <ol>
-<li><p>安装Emscripten</p>
-<p>openCV是基于C/C++的，我们要用js版本的openCV，需要做转换，这就需要<a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> 这个编译器了。</p>
-<p><a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> 是一个基于LLVM的编译器，可以将C/C++语言编译为JavaScript。我们按着官网步骤一步一步下载安装就好：</p>
+<li><p>安装<strong>Emscripten</strong></p>
+<p><strong>openCV</strong>是基于<strong>C/C++</strong>的，我们要用<strong>js</strong>版本的<strong>openCV</strong>，需要做转换，这就需要<a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> 这个编译器了。</p>
+<p><a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> 是一个基于<strong>LLVM</strong>的编译器，可以将<strong>C/C++</strong>语言编译为<strong>JavaScript</strong>。我们按着官网步骤一步一步下载安装就好：</p>
  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Get the emsdk repo</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/emscripten-core/emsdk.git</span><br><span class="line"><span class="comment"># Enter that directory</span></span><br><span class="line"><span class="built_in">cd</span> emsdk</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Fetch the latest version of the emsdk (not needed the first time you clone)</span></span><br><span class="line">git pull</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Download and install the latest SDK tools.</span></span><br><span class="line">./emsdk install latest</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Make the "latest" SDK "active" for the current user. (writes .emscripten file)</span></span><br><span class="line">./emsdk activate latest</span><br><span class="line">   </span><br><span class="line"><span class="comment"># Activate PATH and other environment variables in the current terminal</span></span><br><span class="line"><span class="built_in">source</span> ./emsdk_env.sh</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>下载openCV源码</p>
+<li><p>下载<strong>openCV</strong>源码</p>
 <p>安装完编译器，接着就是获取openCV的源码</p>
  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv.git</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>打包openCV.js</p>
+<li><p>打包<strong>openCV.js</strong></p>
 <p>工具链和源码都准备完毕，最后一步还需要安装Python，步骤确实有点多，Python的安装就不提了，下载包安装或者homebrew安装都可以，我们直接看打包的命令吧，默认打包为asm，我们选webAssembly版本的，最后从build_wasm拷贝出opencv.js。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> opencv <span class="comment">#进入opencv目录</span></span><br><span class="line">python ./platforms/js/build_js.py build_js <span class="comment"># default asm</span></span><br><span class="line">python ./platforms/js/build_js.py build_wasm --build_wasm <span class="comment"># build wasm</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <h2 id="opencv基础操作"><a href="#opencv基础操作" class="headerlink" title="opencv基础操作"></a>opencv基础操作</h2><ol>
-<li><p>运行openCV.js，cv 默认是一个Promise，因此需要异步才能获取出openCV全局对象。</p>
+<li><p>运行<strong>openCV.js</strong>，cv 默认是一个<strong>Promise</strong>，因此需要异步才能获取出<strong>openCV</strong>全局对象。</p>
 <p>这里只做最简单的操作，读取图片，转换灰度图，显示图片</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"canvas"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./opencv.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">const</span> canvas = <span class="built_in">document</span>.createElement(<span class="string">'canvas'</span>);</span></span><br><span class="line"><span class="javascript">  <span class="keyword">let</span> CV;</span></span><br><span class="line"><span class="javascript">  <span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    CV = <span class="keyword">await</span> cv;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="string">'cv: '</span>, CV);</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">    <span class="keyword">const</span> img = <span class="keyword">new</span> Image();</span></span><br><span class="line"><span class="actionscript">    img.src = <span class="string">'./img.png'</span>;</span></span><br><span class="line"><span class="actionscript">    img.onload = <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">const</span> src = CV.imread(img);<span class="comment">//读取图片</span></span></span><br><span class="line"><span class="actionscript">      <span class="keyword">const</span> dst = <span class="keyword">new</span> CV.Mat();</span></span><br><span class="line"><span class="actionscript">      CV.cvtColor(src, dst, CV.COLOR_RGBA2GRAY);<span class="comment">//转换为灰度图</span></span></span><br><span class="line"><span class="actionscript">      CV.imshow(canvas, dst);<span class="comment">//显示图片</span></span></span><br><span class="line">      src.delete();</span><br><span class="line">      dst.delete();</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  init();</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -181,7 +181,7 @@ var _hmt = _hmt || [];
 
 </li>
 </ol>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>打包构建出openCV.js，同时也学习了openCV相关的基础。后面我们就可以基于openCV做很多有趣的操作了，敬请期待。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>打包构建出<strong>openCV.js</strong>，同时也学习了<strong>openCV</strong>相关的基础。后面我们就可以基于<strong>openCV</strong>做很多有趣的操作了，敬请期待。</p>
 </div>
     	
 		<div class="post-footer">

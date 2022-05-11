@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jeff_zhong.gitee.io/blog/"/>
-  <updated>2022-05-11T13:11:36.126Z</updated>
+  <updated>2022-05-11T13:17:31.885Z</updated>
   <id>https://jeff_zhong.gitee.io/blog/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/"/>
     <id>https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/</id>
     <published>2022-05-05T08:05:49.000Z</published>
-    <updated>2022-05-11T13:11:36.126Z</updated>
+    <updated>2022-05-11T13:17:31.885Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始做起，那简直太麻烦和低效了。为解决这个问题，openCV就此应运而生，它屏蔽了很多底层技术细节，抽象出方便的API，而我们只需要灵活组合相关的 api 就能实现强大的功能。&lt;/p&gt;
+      &lt;p&gt;前段时间一直在钻研深度学习中的卷积神经网络，其中的预处理环节可以说非常关键，主要就是对图片和视频进行处理。而图像处理就涉及到图形学和底层技术细节，这是一个比较精深和专业的领域，假设我们要从头开始做起，那简直太麻烦和低效了。为解决这个问题，&lt;strong&gt;openCV&lt;/strong&gt;就此应运而生，它屏蔽了很多底层技术细节，抽象出方便的API，而我们只需要灵活组合相关的 api 就能实现强大的功能。&lt;/p&gt;
     
     </summary>
     
