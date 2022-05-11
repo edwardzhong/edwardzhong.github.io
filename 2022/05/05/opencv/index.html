@@ -151,7 +151,7 @@ var _hmt = _hmt || [];
 <li>构建<strong>openCV.js</strong></li>
 <li><strong>opencv</strong>基础操作</li>
 </ol>
-<h2 id="构建openCV-js"><a href="#构建openCV-js" class="headerlink" title="构建openCV.js"></a>构建openCV.js</h2><p><strong>openCV</strong>有各种语言的版本，比较常用的是<strong>C++</strong> 和<strong>Python</strong>，也有<strong>JavaScript</strong>版本，因为基于js可以更快的验证和查看效果，同时也是因为本人不太擅长<strong>C++</strong>和<strong>Python</strong>，真的是有了 <strong>js</strong> 这把锤子把什么问题都看成钉子了😄。当然前提是因为目前<strong>V8</strong>引擎和<strong>wasm</strong>性能足够强悍，很多轻量级的需求完全可以放在前端来完成。</p>
+<h2 id="构建openCV-js"><a href="#构建openCV-js" class="headerlink" title="构建openCV.js"></a>构建openCV.js</h2><p><strong>openCV</strong>有各种语言的版本，比较常用的是<strong>C++</strong> 和<strong>Python</strong>，也有<strong>JavaScript</strong>版本，因为基于<strong>js</strong>可以更快的验证和查看效果，同时也是因为本人不太擅长<strong>C++</strong>和<strong>Python</strong>，真的是有了 <strong>js</strong> 这把锤子把什么问题都看成钉子了😄。当然前提是因为目前<strong>V8</strong>引擎和<strong>wasm</strong>性能足够强悍，很多轻量级的需求完全可以放在前端来完成。</p>
 <ol>
 <li><p>安装<strong>Emscripten</strong></p>
 <p><strong>openCV</strong>是基于<strong>C/C++</strong>的，我们要用<strong>js</strong>版本的<strong>openCV</strong>，需要做转换，这就需要<a href="https://emscripten.org/" target="_blank" rel="noopener">Emscripten</a> 这个编译器了。</p>
@@ -163,7 +163,7 @@ var _hmt = _hmt || [];
  <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/opencv/opencv.git</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>打包<strong>openCV.js</strong></p>
-<p>工具链和源码都准备完毕，最后一步还需要安装Python，步骤确实有点多，Python的安装就不提了，下载包安装或者homebrew安装都可以，我们直接看打包的命令吧，默认打包为asm，我们选webAssembly版本的，最后从build_wasm拷贝出opencv.js。</p>
+<p>工具链和源码都准备完毕，最后一步还需要安装<strong>Python</strong>，步骤确实有点多，<strong>Python</strong>的安装就不提了，下载包安装或者<strong>homebrew</strong>安装都可以，我们直接看打包的命令吧，默认打包为<strong>asm</strong>，我们选<strong>webAssembly</strong>版本的，最后从build_wasm拷贝出opencv.js。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> opencv <span class="comment">#进入opencv目录</span></span><br><span class="line">python ./platforms/js/build_js.py build_js <span class="comment"># default asm</span></span><br><span class="line">python ./platforms/js/build_js.py build_wasm --build_wasm <span class="comment"># build wasm</span></span><br></pre></td></tr></table></figure>
 
 </li>
