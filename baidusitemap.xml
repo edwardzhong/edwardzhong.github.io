@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://jeff_zhong.gitee.io/blog/blog/2022/05/12/opencv2/</loc>
+    <lastmod>2022-05-15</lastmod>
+  </url>
+  <url>
     <loc>https://jeff_zhong.gitee.io/blog/blog/2022/05/05/opencv/</loc>
     <lastmod>2022-05-11</lastmod>
   </url>

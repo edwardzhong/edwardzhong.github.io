@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="opencv学习之边缘检测 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io/blog">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >opencv学习之边缘检测 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://jeff_zhong.gitee.io/blog">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="opencv学习之边缘检测 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/blog/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/blog/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/blog/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/blog/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/blog/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="https://jeff_zhong.gitee.io/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/blog/archives">50<br>文 章</a><a href="/blog/categories">2<br>分 类</a><a href="/blog/tags">65<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/blog/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/blog/images/banner1.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">opencv学习之边缘检测</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2022/05/12 11:04:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>边缘检测 是图像处理 过程中经常会涉及到的一个环节。而在计算机视觉 和 机器学习领域，边缘检测 用于 特征提取 和 特征检测 效果也是特别明显。而 openCV 中进行边缘检测的 算法 真是五花…</p>
+</p> -->
+    	
+    		<div class="post-content"><p><a href="https://jeff_zhong.gitee.io/demo/dist/edge.html">边缘检测</a> 是<strong>图像处理</strong> 过程中经常会涉及到的一个环节。而在<strong>计算机视觉</strong> 和 <strong>机器学习</strong>领域，<strong>边缘检测</strong> 用于 <strong>特征提取</strong> 和 <strong>特征检测</strong> 效果也是特别明显。而 openCV 中进行边缘检测的 算法 真是五花八门，下面我就选几个最常用算法的函数api进行介绍。</p>
+<p>本文涉及到的效果请看：<a href="https://jeff_zhong.gitee.io/demo/dist/edge.html">边缘检测</a></p>
+<a id="more"></a>
+
+<h2 id="内容大纲"><a href="#内容大纲" class="headerlink" title="内容大纲"></a>内容大纲</h2><ol>
+<li><p>转换灰度图</p>
+</li>
+<li><p>自适应阈值处理</p>
+</li>
+<li><p>Sobel算子</p>
+</li>
+<li><p>Scharr算子</p>
+</li>
+<li><p>Laplacian算子</p>
+</li>
+<li><p>Canny边缘检测</p>
+</li>
+<li><p>Sobel算子 结合 Laplacian算子</p>
+</li>
+</ol>
+<h2 id="转换灰度图"><a href="#转换灰度图" class="headerlink" title="转换灰度图"></a>转换灰度图</h2><p><strong>openCV</strong> 中有个色彩类型转换函数，其中转换为灰度图（ <strong>cv.COLOR_RGB2GRAY</strong>）出现频率非常高，是其他操作的基础，色彩类型转换函数：</p>
+<p><strong>cv.cvtColor (src, dst, code, dstCn = 0)</strong></p>
+<ul>
+<li>src: 原始图像</li>
+<li>dst: 输出图像</li>
+<li>code: 色彩空间转换码，灰度图为<strong>cv.COLOR_RGB2GRAY</strong>，其他类型可查api文档</li>
+<li>dstcn: 图像通道数</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> src = cv.imread(img);<span class="comment">//读取图像数据</span></span><br><span class="line"><span class="keyword">const</span> dst = <span class="keyword">new</span> cv.Mat();<span class="comment">//输出的图像</span></span><br><span class="line">cv.cvtColor(src, dst, cv.COLOR_RGB2GRAY, <span class="number">0</span>);<span class="comment">//转换为灰度图</span></span><br><span class="line">cv.imshow(canvas, dst);</span><br><span class="line">src.delete();</span><br><span class="line">dst.delete();</span><br></pre></td></tr></table></figure>
+
+<h2 id="自适应阈值处理"><a href="#自适应阈值处理" class="headerlink" title="自适应阈值处理"></a>自适应阈值处理</h2><p>自适应阈值处理的方式通过计算每个像素点周围邻近区域的加权平均值获得阈值，并使用该阈值对当前像素点进行处理。自适应阈值处理函数：</p>
+<p><strong>cv.adaptiveThreshold(src, dst, maxValue, adaptiveMethod, thresholdType)</strong></p>
+<ul>
+<li>maxValue：需要处理的最大值</li>
+<li>adaptiveMethod：自适应阈值算法，可选 <strong>cv.ADAPTIVE_THRESH_GAUSSIAN_C</strong> （高斯方程） 或 <strong>cv.ADAPTIVE_THRESH_MEAN_C</strong>（加权平均）</li>
+<li>thresholdType： 阈值处理方法，可选 <strong>cv.THRESH_BINARY</strong>（二值化） 或 <strong>cv.THRESH_BINARY_INV</strong>（二值化取反）</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> src = cv.imread(img);</span><br><span class="line"><span class="keyword">const</span> dst = <span class="keyword">new</span> cv.Mat();</span><br><span class="line">cv.cvtColor(src, src, cv.COLOR_RGBA2GRAY, <span class="number">0</span>);<span class="comment">//转换为灰度图</span></span><br><span class="line">cv.adaptiveThreshold(src, dst, <span class="number">255</span>, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY, <span class="number">5</span>, <span class="number">7</span>);<span class="comment">//自适应阈值处理</span></span><br><span class="line">cv.imshow(canvas, dst);<span class="comment">//显示输出图像</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下：<br><img src="https://upload-images.jianshu.io/upload_images/127924-dd1130cd7d25bd0c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800" alt="1.png"></p>
+<h2 id="Sobel算子"><a href="#Sobel算子" class="headerlink" title="Sobel算子"></a>Sobel算子</h2><p>Sobel算子结合了高斯平滑 和微分求导运算，利用局部差分寻找边缘，计算所得到的是一个梯度近似值。Sobel算子比较特殊的地方是要分别横向计算和纵向计算，然后再把两者结合，这就需要用到 <strong>cv.addWeighted</strong> 这个函数按比例显示输出图像xy方向的占比。Sobel算子函数： </p>
+<p><strong>cv.Sobel (src, dst, ddepth, dx, dy, ksize = 3, scale = 1, delta = 0, borderType = cv.BORDER_DEFAULT)</strong></p>
+<ul>
+<li>ddepth：输出图像的深度，可选 cv.CV_8U，cv.CV_16U，cv.CV_32F，cv.CV_64F</li>
+<li>dx：x方向求导</li>
+<li>dy：y方向求导</li>
+<li>ksize：核大小，可选1，3，5，7</li>
+<li>scale：缩放因子，默认1</li>
+<li>delta：图像dst的值，默认0</li>
+<li>borderType：边界样式，具体可查看api文档</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> src = cv.imread(img);</span><br><span class="line"><span class="keyword">const</span> dstx = <span class="keyword">new</span> cv.Mat();</span><br><span class="line"><span class="keyword">const</span> dsty = <span class="keyword">new</span> cv.Mat();</span><br><span class="line"><span class="keyword">const</span> dst = <span class="keyword">new</span> cv.Mat();</span><br><span class="line">cv.cvtColor(src, src, cv.COLOR_RGB2GRAY, <span class="number">0</span>);</span><br><span class="line">cv.Sobel(src, dstx, cv.CV_8U, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//Sobel算子 x方向</span></span><br><span class="line">cv.Sobel(src, dsty, cv.CV_8U, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//Sobel算子 y方向</span></span><br><span class="line">cv.addWeighted(dstx, <span class="number">0.5</span>, dsty, <span class="number">0.5</span>, <span class="number">0</span>, dst); <span class="comment">//分别给xy方向分配权重比例</span></span><br><span class="line">cv.imshow(canvas, dst);</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：<br><img src="https://upload-images.jianshu.io/upload_images/127924-2aeca99806821ad5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800" alt="2.png"></p>
+<h2 id="Scharr算子"><a href="#Scharr算子" class="headerlink" title="Scharr算子"></a>Scharr算子</h2><p>Scharr算子可以看做是对Sobel算子的改进，它的精度更高，调用方式和Sobel算子基本一致，只是少了ksize 这个参数，下面直接看调用代码不同的部分：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">cv.Scharr(src, dstx, cv.CV_8U, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//Scharr算子 x方向</span></span><br><span class="line">cv.Scharr(src, dsty, cv.CV_8U, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//Scharr算子 y方向</span></span><br><span class="line">cv.addWeighted(dstx, <span class="number">0.5</span>, dsty, <span class="number">0.5</span>, <span class="number">0</span>, dst); <span class="comment">//分别给xy方向分配权重比例</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下：<br><img src="https://upload-images.jianshu.io/upload_images/127924-fe5a9f0a314193a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800" alt="3.png"></p>
+<h2 id="Laplacian算子"><a href="#Laplacian算子" class="headerlink" title="Laplacian算子"></a>Laplacian算子</h2><p>Laplacian（拉普拉斯）算子是一种二阶导数算子，可以满足不同方向的图像边缘锐化，Laplacian（拉普拉斯）算子分别进行了两次横向和纵向的计算。因此就不用跟 Sobel算子 和 Scharr算子 一样要分别单独计算xy了。Laplacian算子函数：</p>
+<p><strong>cv.Laplacian (src, dst, ddepth, ksize = 1, scale = 1, delta = 0, borderType = cv.BORDER_DEFAULT)</strong></p>
+<ul>
+<li>ddepth：输出图像的深度，可选 cv.CV_8U，cv.CV_16U，cv.CV_32F，cv.CV_64F</li>
+<li>ksize：核大小，可选1，3，5，7</li>
+<li>scale：缩放因子，默认1</li>
+<li>delta：图像dst的值，默认0</li>
+<li>borderType：边界样式，具体可查看api文档</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> src = cv.imread(img);</span><br><span class="line"><span class="keyword">const</span> dst = <span class="keyword">new</span> cv.Mat();</span><br><span class="line">cv.cvtColor(src, src, cv.COLOR_RGB2GRAY, <span class="number">0</span>);</span><br><span class="line">cv.Laplacian(src, dst, cv.CV_8U, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//拉普拉斯算子</span></span><br><span class="line">cv.imshow(canvas, dst);</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：<br><img src="https://upload-images.jianshu.io/upload_images/127924-fcbba05119043459.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800" alt="4.png"></p>
+<h2 id="Canny边缘检测"><a href="#Canny边缘检测" class="headerlink" title="Canny边缘检测"></a>Canny边缘检测</h2><p>Canny边缘检测是一种使用多级边缘检测算法的方法。它会经过去噪，计算梯度，非极大值抑制，确定边缘这几个步骤，好像很强大的感觉。Canny函数：</p>
+<p><strong>cv.Canny(src, dot, threshold1, threshold2, apertureSize = 3, L2gradient = false)</strong></p>
+<ul>
+<li>threshold1: 第一个阈值，值较小时能获取更多边缘信息</li>
+<li>threshold2: 第二个阈值，值较小时能获取更多边缘信息</li>
+<li>apertureSize: 孔径大小</li>
+<li>L2gradient: 图像梯度幅度，默认False</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> src = cv.imread(img);</span><br><span class="line"><span class="keyword">const</span> dst = <span class="keyword">new</span> cv.Mat();</span><br><span class="line">cv.cvtColor(src, src, cv.COLOR_RGB2GRAY, <span class="number">0</span>);</span><br><span class="line">cv.Canny(src, dst, <span class="number">50</span>, <span class="number">100</span>, <span class="number">3</span>, <span class="literal">false</span>);</span><br><span class="line">cv.imshow(canvas, dst);</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：<br><img src="https://upload-images.jianshu.io/upload_images/127924-3492a6384d1fca2b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800" alt="5.png"></p>
+<h2 id="Sobel算子-结合-Laplacian算子"><a href="#Sobel算子-结合-Laplacian算子" class="headerlink" title="Sobel算子 结合 Laplacian算子"></a>Sobel算子 结合 Laplacian算子</h2><p>openCV 还可以将不同算法结合起来，达到更好的效果，我们就以 Sobel算子 结合 Laplacian算子 为例</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> src = cv.imread(img);</span><br><span class="line"><span class="keyword">const</span> dstx = <span class="keyword">new</span> cv.Mat();</span><br><span class="line"><span class="keyword">const</span> dsty = <span class="keyword">new</span> cv.Mat();</span><br><span class="line"><span class="keyword">const</span> dst = <span class="keyword">new</span> cv.Mat();</span><br><span class="line"><span class="keyword">const</span> dst2 = <span class="keyword">new</span> cv.Mat();</span><br><span class="line">cv.Sobel(src, dstx, cv.CV_8U, <span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//sobel算子 x方向</span></span><br><span class="line">cv.Sobel(src, dsty, cv.CV_8U, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//sobel算子 y方向</span></span><br><span class="line">cv.addWeighted(dstx, <span class="number">0.5</span>, dsty, <span class="number">0.5</span>, <span class="number">0</span>, dst); <span class="comment">//分别给xy方向分配权重比例</span></span><br><span class="line">cv.Laplacian(src, dst2, cv.CV_8U, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, cv.BORDER_DEFAULT); <span class="comment">//拉普拉斯算子</span></span><br><span class="line"><span class="keyword">const</span> mask = <span class="keyword">new</span> cv.Mat();</span><br><span class="line">cv.add(dst, dst2, dst2, mask, <span class="number">-1</span>); <span class="comment">//图像相加</span></span><br><span class="line">cv.imshow(canvas, dst2);</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：<br><img src="https://upload-images.jianshu.io/upload_images/127924-914a1cd3963e13d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/800" alt="6.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>openCV中实现边缘检测远不止上面介绍的几种，还有一种更强大的方式实现边缘检测，那就是傅立叶变换，它完全可以实现上面说的算法，但是比较复杂而已。我们需要做的就是了解清楚每种算法 效果有什么差异，以及最适合使用的场景。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/blog/tags/opencv/">opencv</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/blog/2022/05/12/opencv2/" data-desc="边缘检测 是图像处理 过程中经常会涉及到的一个环节。而在计算机视觉 和 机器学习领域，边缘检测..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/blog/2022/05/05/opencv/" class="next post-next"> opencv学习之基础 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2022 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/blog/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/blog/lib/qrcode.min.js"></script>
+  
+    <script src="/blog/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>

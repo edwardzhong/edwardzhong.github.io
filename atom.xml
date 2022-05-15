@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jeff_zhong.gitee.io/blog/"/>
-  <updated>2022-05-11T13:19:05.856Z</updated>
+  <updated>2022-05-15T05:40:59.081Z</updated>
   <id>https://jeff_zhong.gitee.io/blog/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>opencv学习之边缘检测</title>
+    <link href="https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/"/>
+    <id>https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/</id>
+    <published>2022-05-12T03:04:04.000Z</published>
+    <updated>2022-05-15T05:40:59.081Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/edge.html&quot;&gt;边缘检测&lt;/a&gt; 是&lt;strong&gt;图像处理&lt;/strong&gt; 过程中经常会涉及到的一个环节。而在&lt;strong&gt;计算机视觉&lt;/strong&gt; 和 &lt;strong&gt;机器学习&lt;/strong&gt;领域，&lt;strong&gt;边缘检测&lt;/strong&gt; 用于 &lt;strong&gt;特征提取&lt;/strong&gt; 和 &lt;strong&gt;特征检测&lt;/strong&gt; 效果也是特别明显。而 openCV 中进行边缘检测的 算法 真是五花八门，下面我就选几个最常用算法的函数api进行介绍。&lt;/p&gt;
+&lt;p&gt;本文涉及到的效果请看：&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/edge.html&quot;&gt;边缘检测&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="opencv" scheme="https://jeff_zhong.gitee.io/blog/tags/opencv/"/>
+    
+  </entry>
   
   <entry>
     <title>opencv学习之基础</title>
@@ -535,41 +559,6 @@
       <category term="node" scheme="https://jeff_zhong.gitee.io/blog/tags/node/"/>
     
       <category term="mysql" scheme="https://jeff_zhong.gitee.io/blog/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>koa+mysql+vue+socket.io全栈开发之web api篇</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/04/08/fullstack/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/04/08/fullstack/</id>
-    <published>2019-04-08T07:50:03.000Z</published>
-    <updated>2021-12-26T06:48:13.996Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;目标是建立一个 &lt;strong&gt;web QQ&lt;/strong&gt; 的项目，使用的技术栈如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;后端是基于 &lt;strong&gt;koa2&lt;/strong&gt; 的 web api 服务层，提供 curd 操作的 http 接口，登录验证使用的是 &lt;strong&gt;json web token&lt;/strong&gt;，跨域方案使用的是 &lt;strong&gt;cors&lt;/strong&gt;；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;数据库使用的是 &lt;strong&gt;mysql&lt;/strong&gt;；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;为了实时通信，使用的是基于 websocket 协议的 &lt;strong&gt;socket.io&lt;/strong&gt; 框架；&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;前端则使用的是 &lt;strong&gt;vue + vuex&lt;/strong&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="node" scheme="https://jeff_zhong.gitee.io/blog/tags/node/"/>
-    
-      <category term="koa" scheme="https://jeff_zhong.gitee.io/blog/tags/koa/"/>
-    
-      <category term="jwt" scheme="https://jeff_zhong.gitee.io/blog/tags/jwt/"/>
     
   </entry>
   
