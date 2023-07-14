@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="机器学习之线性回归 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io/blog">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >机器学习之线性回归 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://jeff_zhong.gitee.io/blog">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="机器学习之线性回归 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/blog/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/blog/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/blog/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/blog/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/blog/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="https://jeff_zhong.gitee.io/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/blog/archives">52<br>文 章</a><a href="/blog/categories">2<br>分 类</a><a href="/blog/tags">69<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/blog/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/blog/images/banner3.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">机器学习之线性回归</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2023/07/12 16:42:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>回归是机器学习中最常见的任务之一，回归（regression）问题预测的是一个连续值，而不是离散标签，比如根据气象数据预测明日气温，或者根据房地产数据估算房价（标量回归问题）。<br>接下来就以回归问…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>回归是机器学习中最常见的任务之一，回归（regression）问题预测的是一个连续值，而不是离散标签，比如根据气象数据预测明日气温，或者根据房地产数据估算房价（标量回归问题）。</p>
+<p>接下来就以回归问题最经典的波士顿房价为例，了解标量回归问题的基本配置。当然主要是对深度学习的训练与推理建立一个基本的认知，训练结果好坏反而不太重要。</p>
+<p>既然是机器学习，了解python是必备的（上手也很容易），使用的也是易上手的keras框架，接着再了解一下numpy，可以上路了。</p>
+<p>基于tensorflow.js实现的纯前端小样例请看：<a href="https://jeff_zhong.gitee.io/demo/dist/linear.html">线性回归</a></p>
+<h2 id="大纲"><a href="#大纲" class="headerlink" title="大纲"></a>大纲</h2><ol>
+<li><p>准备数据</p>
+</li>
+<li><p>构建模型</p>
+</li>
+<li><p>训练模型</p>
+</li>
+<li><p>预测结果</p>
+</li>
+</ol>
+<a id="more"></a>
+
+<p>波士顿房价数据集介绍</p>
+<ul>
+<li><p>data：样本都有13个数值特征，比如人均犯罪率、住宅的平均房间数、高速公路可达性等</p>
+</li>
+<li><p>target：目标是房价中位数，单位是千美元</p>
+</li>
+</ul>
+<p>由数据集训练出的模型要达到的效果：用户输入13个数值特征数据，预测出一个房价中位数（输入data，输出target）。</p>
+<h2 id="准备数据"><a href="#准备数据" class="headerlink" title="准备数据"></a>准备数据</h2><p>取值范围差异很大的数据输入到神经网络中是有问题的，这会让模型学习变得困难。对于这类数据，普遍采用的最佳处理方法是对每个特征进行标准化，即对于输入数据的每个特征（输入数据矩阵的每一列），减去特征平均值，再除以标准差，这样得到的特征平均值为0，标准差为1。</p>
+<p>这个步骤一般叫做数据的标准化（normalization），目的就是把所有数据都映射到同一个数据空间，一般是[0,1]或[-1,1]范围内，以方便后续模型的学习。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow.keras.datasets <span class="keyword">import</span> boston_housing</span><br><span class="line"></span><br><span class="line">(train_data, train_targets), (test_data, test_targets) = boston_housing.load_data()<span class="comment">#加载波士顿房价数据集</span></span><br><span class="line">　</span><br><span class="line">mean = train_data.mean(axis=<span class="number">0</span>)<span class="comment">#平均值</span></span><br><span class="line">train_data -= mean</span><br><span class="line">std = train_data.std(axis=<span class="number">0</span>)<span class="comment">#标准差</span></span><br><span class="line">train_data /= std</span><br><span class="line">test_data -= mean</span><br><span class="line">test_data /= std</span><br></pre></td></tr></table></figure>
+
+<p>mean方法用于得出数据集的平均值，这是numpy的ndarrays对象自带的方法，同理std是封装好的标准差方法，标准差原理比较繁琐，想了解具体细节可自己去了解。</p>
+<h2 id="构建模型"><a href="#构建模型" class="headerlink" title="构建模型"></a>构建模型</h2><p>由于样本数量比较小，因此合适的选择是使用一个小的模型。它包含两个中间层，每层有64个单元，一般来说，训练数据越少，过拟合就会越严重，而较小的模型可以降低过拟合。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras</span><br><span class="line"><span class="keyword">from</span> tensorflow.keras <span class="keyword">import</span> layers</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">build_model</span><span class="params">()</span>:</span></span><br><span class="line">    model = keras.Sequential([</span><br><span class="line">        layers.Dense(<span class="number">64</span>, activation=<span class="string">"relu"</span>),<span class="comment">#64个单元，激活函数为relu</span></span><br><span class="line">        layers.Dense(<span class="number">64</span>, activation=<span class="string">"relu"</span>),</span><br><span class="line">        layers.Dense(<span class="number">1</span>)<span class="comment">#最后一层（输出层）</span></span><br><span class="line">    ])</span><br><span class="line">    model.compile(optimizer=<span class="string">"rmsprop"</span>, loss=<span class="string">"mse"</span>, metrics=[<span class="string">"mae"</span>])</span><br><span class="line">    <span class="keyword">return</span> model</span><br></pre></td></tr></table></figure>
+
+<p>因为是标量回归（标量回归是预测单一连续值的回归），模型的最后一层只有一个单元，并不需要激活函数。损失函数为均方误差（mean squared error，MSE），预测值与目标值之差的平方，这是回归问题常用的损失函数。</p>
+<p>在训练过程中要监控的指标：平均绝对误差（mean absolute error，MAE），它是预测值与目标值之差的绝对值。</p>
+<h2 id="训练模型"><a href="#训练模型" class="headerlink" title="训练模型"></a>训练模型</h2><p>中间省了评估训练结果，调节超参数的过程，这里直接用所有的数据进行训练，这里数据量比较少，没有再区分出验证集（validation data）。如果想看直观的查看训练效果，可以使用 matplotlib 库绘制验证MAE曲线。</p>
+<ul>
+<li><p>epochs 顾名思义就是训练的轮次；</p>
+</li>
+<li><p>batch_size 批次尺寸，即每次完整的正向和反向传播使用的数据量，必须为2的n次幂；这个参数会影响训练的效果，和显存的大小息息相关，以后要注意；</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">model = build_model()  <span class="comment">#获取已编译模型</span></span><br><span class="line">history = model.fit(train_data, train_targets, epochs=<span class="number">150</span>, batch_size=<span class="number">16</span>) <span class="comment">#训练模型</span></span><br><span class="line">test_mse_score, test_mae_score = model.evaluate(test_data, test_targets) <span class="comment">#评估训练效果</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="预测结果"><a href="#预测结果" class="headerlink" title="预测结果"></a>预测结果</h2><p>训练好模型后，接着直接用测试集进行预测一下结果，查看预测结果的第一条为 9.514468 （单位：千美元）</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>predictions = model.predict(test_data)</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>predictions[<span class="number">0</span>]</span><br><span class="line">array([<span class="number">9.514468</span>], dtype=float32)</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li><p>回归常用的损失函数是均方误差（MSE）</p>
+</li>
+<li><p>常用的回归指标是平均绝对误差（MAE）</p>
+</li>
+<li><p>数据应该先进行预处理</p>
+</li>
+<li><p>如果可用的训练数据少，那么最好使用中间层较少（通常只有一两个）的小模型，以避免严重的过拟合</p>
+</li>
+</ul>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/blog/2023/07/12/linear/" data-desc="回归是机器学习中最常见的任务之一，回归（regression）问题预测的是一个连续值，而不是离..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/blog/2023/07/12/ai/" class="next post-next"> 人工智能与机器学习和深度学习 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2023 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/blog/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/blog/lib/qrcode.min.js"></script>
+  
+    <script src="/blog/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jeff_zhong.gitee.io/blog/"/>
-  <updated>2022-05-15T05:40:59.081Z</updated>
+  <updated>2023-07-14T09:24:32.514Z</updated>
   <id>https://jeff_zhong.gitee.io/blog/</id>
   
   <author>
@@ -17,11 +17,82 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>机器学习之线性回归</title>
+    <link href="https://jeff_zhong.gitee.io/blog/2023/07/12/linear/"/>
+    <id>https://jeff_zhong.gitee.io/blog/2023/07/12/linear/</id>
+    <published>2023-07-12T08:42:07.000Z</published>
+    <updated>2023-07-14T09:24:32.514Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;回归是机器学习中最常见的任务之一，回归（regression）问题预测的是一个连续值，而不是离散标签，比如根据气象数据预测明日气温，或者根据房地产数据估算房价（标量回归问题）。&lt;/p&gt;
+&lt;p&gt;接下来就以回归问题最经典的波士顿房价为例，了解标量回归问题的基本配置。当然主要是对深度学习的训练与推理建立一个基本的认知，训练结果好坏反而不太重要。&lt;/p&gt;
+&lt;p&gt;既然是机器学习，了解python是必备的（上手也很容易），使用的也是易上手的keras框架，接着再了解一下numpy，可以上路了。&lt;/p&gt;
+&lt;p&gt;基于tensorflow.js实现的纯前端小样例请看：&lt;a href=&quot;https://jeff_zhong.gitee.io/demo/dist/linear.html&quot;&gt;线性回归&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;大纲&quot;&gt;&lt;a href=&quot;#大纲&quot; class=&quot;headerlink&quot; title=&quot;大纲&quot;&gt;&lt;/a&gt;大纲&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;准备数据&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;构建模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;训练模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;预测结果&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="机器学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>人工智能与机器学习和深度学习</title>
+    <link href="https://jeff_zhong.gitee.io/blog/2023/07/12/ai/"/>
+    <id>https://jeff_zhong.gitee.io/blog/2023/07/12/ai/</id>
+    <published>2023-07-12T05:50:07.000Z</published>
+    <updated>2023-07-13T11:34:53.181Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这一年来，AI领域层出不穷的技术和应用，真的有点让人疲于奔命。其中AIGC领域的diffusion model 和 NLP领域的 ChatGBT 引领了这一轮风潮。AI取代越来越多脑力工作者的趋势已经不可逆转，在这经济下行内卷严重的当代，竞争将越发的残酷。作为走在风口前沿的技术人，用stable diffusion绘制过逼真的画作，也用ChatGPT生产修改过样板代码，AI带给我的危机感是实实在在，在ChatGPT风头正劲的那段时间，焦虑一度让我夜不能寐。&lt;/p&gt;
+&lt;p&gt;在AI狂潮告一段落的当下，是时候冷静下来思考，我们应该怎么看待AI，&lt;a href=&quot;https://www.ruanyifeng.com/blog/2023/05/weekly-issue-255.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;对待 AI 的正确态度&lt;/a&gt;是什么，这篇文章观点我大体上赞同：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;ChatGBT像一个吸收了所有人类知识、但需要别人帮忙才能把这些知识串起来的应届毕业生。看来我今年的工作是安全的。但是，我需要好好学习 ChatGPT，精通它的使用，让我明年也是安全的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;AI 会大大增强程序员的生产力，并创造过去不可能的产品。AI 本质是生产力工具，跟高级语言、云服务、开源代码等是一个性质。写代码的门槛会降低，更多的人会进入 IT 行业，软件市场将变大。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;我们要成为这个过程的一部分，需要让自己积极主动，不断更新技能，接受新工具。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;是的，我们要成为这个AI落地各行各业过程的一部分，也是我这一年来自学机器学习、深度学习的动力和缘由，也陆陆续续在工作中落地了一些简单的ai项目，而这个机器学习和深度学习的系列就是我学习过程的一个记录和总结。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="ai" scheme="https://jeff_zhong.gitee.io/blog/tags/ai/"/>
+    
+      <category term="人工智能" scheme="https://jeff_zhong.gitee.io/blog/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="机器学习，深度学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>opencv学习之边缘检测</title>
     <link href="https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/"/>
     <id>https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/</id>
     <published>2022-05-12T03:04:04.000Z</published>
-    <updated>2022-05-15T05:40:59.081Z</updated>
+    <updated>2023-07-12T08:43:24.582Z</updated>
     
     <summary type="html">
     
@@ -489,76 +560,6 @@
       <category term="taro" scheme="https://jeff_zhong.gitee.io/blog/tags/taro/"/>
     
       <category term="小程序" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>koa+mysql+vue+socket.io全栈开发之前端篇</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/04/13/fullstack3/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/04/13/fullstack3/</id>
-    <published>2019-04-13T05:43:45.000Z</published>
-    <updated>2021-12-26T06:48:19.625Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;React&lt;/strong&gt; 与 &lt;strong&gt;Vue&lt;/strong&gt; 之间的对比，是前端的一大热门话题。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;vue&lt;/strong&gt; 简易上手的脚手架，以及官方提供必备的基础组件，比如 &lt;strong&gt;vuex&lt;/strong&gt;，&lt;strong&gt;vue-router&lt;/strong&gt;，对新手真的比较友好；&lt;strong&gt;react&lt;/strong&gt; 则把这些都交给社区去做，虽然这壮大了 &lt;strong&gt;react&lt;/strong&gt; 的生态链，但新手要弄出一套趁手的方案挺麻烦的，不过好在现在有很多类似 dva 的方案了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;vue&lt;/strong&gt; 比较讨喜的一点，就是它的数据双向流动在表单开发时特别方便，而 &lt;strong&gt;react&lt;/strong&gt; 在这方面可就麻烦多了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;但是 &lt;strong&gt;vue&lt;/strong&gt; 复杂的 api ，简直让人头大，光是文档说明都几十页了。太多的语法，太多的魔法符号，对进化速度越来越快的前端届来说，就是入手这个框架的最大阻碍。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;而相反 &lt;strong&gt;react&lt;/strong&gt; 的 api 数量简直可以忽略不计了，顶多花几小时就能看完官方文档。你只要理解 &lt;strong&gt;JavaScript&lt;/strong&gt;，就能理解 &lt;strong&gt;react&lt;/strong&gt; 的很多行为。&lt;strong&gt;react&lt;/strong&gt; 的很多用法，它的 api 都是符合直觉的，你对它用法的猜测基本都是八九不离十的，这真是大大降低了心智负担。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;除此之外，&lt;strong&gt;react&lt;/strong&gt; 的 &lt;strong&gt;jsx&lt;/strong&gt; 语法表达能力更强，还有 &lt;strong&gt;hoc&lt;/strong&gt; 和 &lt;strong&gt;hooks&lt;/strong&gt; 使代码也更容易组织和复用。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;虽然我更喜欢 &lt;strong&gt;React&lt;/strong&gt; ，但工作上的需求，还不是要你用什么你就得用什么 😂，所以这个 demo 就当是探索 &lt;strong&gt;Vue&lt;/strong&gt; 的前奏。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="vue" scheme="https://jeff_zhong.gitee.io/blog/tags/vue/"/>
-    
-      <category term="vuex" scheme="https://jeff_zhong.gitee.io/blog/tags/vuex/"/>
-    
-      <category term="socket.io" scheme="https://jeff_zhong.gitee.io/blog/tags/socket-io/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>koa+mysql+vue+socket.io全栈开发之数据访问篇</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/04/12/fullstack2/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/04/12/fullstack2/</id>
-    <published>2019-04-12T07:34:17.000Z</published>
-    <updated>2021-12-26T06:48:16.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;后端搭起大体的框架后，接着涉及到的就是如何将数据持久化的问题，也就是对数据库进行 &lt;strong&gt;CURD&lt;/strong&gt; 操作。&lt;/p&gt;
-&lt;p&gt;关于数据库方案, &lt;strong&gt;mongodb&lt;/strong&gt; 和 &lt;strong&gt;mysql&lt;/strong&gt;  都使用过，但我选用的是 &lt;strong&gt;mysql&lt;/strong&gt;，原因：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;目前为止 &lt;strong&gt;mysql&lt;/strong&gt; 与 &lt;strong&gt;mongodb&lt;/strong&gt; 性能相差不大，尤其是 &lt;strong&gt;mysql&lt;/strong&gt; 8.0 版本，速度非常快，查询数据是 mysql 更快，写数据方面 &lt;strong&gt;mongodb&lt;/strong&gt; 则更胜一筹；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;mysql&lt;/strong&gt; 建立 关联数据要更方便些，比如： 一对多，多对多的关系；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;mysql&lt;/strong&gt; 作为关系型数据库，数据一致性方面更好，尤其是事务用起来更顺手；&lt;/li&gt;
-&lt;li&gt;本人对 sql 操作比较得心应手，毕竟大部分项目用得都是 &lt;strong&gt;mysql&lt;/strong&gt;，而 &lt;strong&gt;mongodb&lt;/strong&gt; 在正式些的项目上用的就少了，而且目前关系型数据库也在进化, &lt;strong&gt;postgrep&lt;/strong&gt; 和 &lt;strong&gt;mysql&lt;/strong&gt; 都已经支持 json了。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="node" scheme="https://jeff_zhong.gitee.io/blog/tags/node/"/>
-    
-      <category term="mysql" scheme="https://jeff_zhong.gitee.io/blog/tags/mysql/"/>
     
   </entry>
   

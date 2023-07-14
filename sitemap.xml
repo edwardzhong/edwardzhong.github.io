@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jeff_zhong.gitee.io/blog/2023/07/12/linear/</loc>
+    
+    <lastmod>2023-07-14T09:24:32.514Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jeff_zhong.gitee.io/blog/2023/07/12/ai/</loc>
+    
+    <lastmod>2023-07-13T11:34:53.181Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/</loc>
     
-    <lastmod>2022-05-15T05:40:59.081Z</lastmod>
+    <lastmod>2023-07-12T08:43:24.582Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jeff_zhong.gitee.io/blog/2018/08/16/haskelld/</loc>
+    
+    <lastmod>2023-07-12T08:42:38.536Z</lastmod>
     
   </url>
   
@@ -208,13 +229,6 @@
     <loc>https://jeff_zhong.gitee.io/blog/2020/02/04/koatypescript/</loc>
     
     <lastmod>2021-12-26T06:48:37.425Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jeff_zhong.gitee.io/blog/2018/08/16/haskelld/</loc>
-    
-    <lastmod>2021-12-26T06:48:34.362Z</lastmod>
     
   </url>
   
