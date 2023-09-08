@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://jeff_zhong.gitee.io/blog/"/>
-  <updated>2023-07-14T09:24:32.514Z</updated>
+  <updated>2023-09-08T10:13:18.200Z</updated>
   <id>https://jeff_zhong.gitee.io/blog/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>机器学习之分类</title>
+    <link href="https://jeff_zhong.gitee.io/blog/2023/09/08/category/"/>
+    <id>https://jeff_zhong.gitee.io/blog/2023/09/08/category/</id>
+    <published>2023-09-08T08:56:31.000Z</published>
+    <updated>2023-09-08T10:13:18.200Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;分类任务和回归任务的不同之处在于，分类任务需要做出离散的预测。对于多分类任务的神经网络模型，其输出目标通常会用&lt;strong&gt;one-hot&lt;/strong&gt;编码来表示，在输出层中使用&lt;strong&gt;softmax&lt;/strong&gt;函数，同时使用分类交叉熵损失函数进行训练。在本博客中，我们将使用&lt;strong&gt;TensorFlow&lt;/strong&gt;的底层API实现一个基于全连接层的神经网络来进行&lt;strong&gt;MNIST&lt;/strong&gt;数字图像分类。下面是涉及到的相关概念：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;深度学习&lt;/strong&gt;是一种机器学习方法，它通过多层神经网络层次化地提取特征，以解决各种复杂的分类和回归问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;神经网络&lt;/strong&gt;是深度学习的基本组成部分，由多个层次化的神经元组成。输入层接受数据，中间的隐藏层通过权重和激活函数处理数据，最终输出层产生分类结果。在这个示例中，我们将手动实现神经网络的核心组件。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;前向传播&lt;/strong&gt;是神经网络中的信息传递过程，从输入层到输出层，每一层的神经元根据权重和激活函数计算输出。这个过程将输入数据映射到预测输出。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;反向传播&lt;/strong&gt;是训练神经网络的关键步骤，它通过计算预测与真实标签之间的误差，并将误差反向传播到网络中的每一层来更新权重，以最小化误差。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="机器学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="深度学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>机器学习之线性回归</title>
     <link href="https://jeff_zhong.gitee.io/blog/2023/07/12/linear/"/>
     <id>https://jeff_zhong.gitee.io/blog/2023/07/12/linear/</id>
     <published>2023-07-12T08:42:07.000Z</published>
-    <updated>2023-07-14T09:24:32.514Z</updated>
+    <updated>2023-09-08T08:58:32.697Z</updated>
     
     <summary type="html">
     
@@ -57,7 +86,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2023/07/12/ai/"/>
     <id>https://jeff_zhong.gitee.io/blog/2023/07/12/ai/</id>
     <published>2023-07-12T05:50:07.000Z</published>
-    <updated>2023-07-13T11:34:53.181Z</updated>
+    <updated>2023-09-08T08:58:19.968Z</updated>
     
     <summary type="html">
     
@@ -92,7 +121,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/"/>
     <id>https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/</id>
     <published>2022-05-12T03:04:04.000Z</published>
-    <updated>2023-07-12T08:43:24.582Z</updated>
+    <updated>2023-09-08T08:57:53.498Z</updated>
     
     <summary type="html">
     
@@ -116,7 +145,7 @@
     <link href="https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/"/>
     <id>https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/</id>
     <published>2022-05-05T08:05:49.000Z</published>
-    <updated>2022-05-11T13:19:05.856Z</updated>
+    <updated>2023-09-08T08:57:49.237Z</updated>
     
     <summary type="html">
     
@@ -536,30 +565,6 @@
       <category term="markdown" scheme="https://jeff_zhong.gitee.io/blog/tags/markdown/"/>
     
       <category term="正则表达式" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小试小程序云开发</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/04/26/weappcloud/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/04/26/weappcloud/</id>
-    <published>2019-04-26T02:13:20.000Z</published>
-    <updated>2021-12-26T06:49:17.138Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;微信小程序刚出没多久时，曾经上手写过demo，但开发体验比较差，所以一直没怎么关注。不过自从诸多适配方案出炉，以及云端的开通，觉得还是有必要上手体验一番的，于是为我的技术博客也写了个小程序版。&lt;/p&gt;
-&lt;p&gt;原生开发我是不想再试了，那就选一种适配方案，目前比较知名的有基于vue的 &lt;strong&gt;mpvue&lt;/strong&gt;，&lt;strong&gt;umi-app&lt;/strong&gt;，基于react 的 &lt;strong&gt;taro&lt;/strong&gt;，以及TX团队出的全新框架 &lt;strong&gt;wepy&lt;/strong&gt;。个人对 react 的好感 以及 &lt;strong&gt;taro&lt;/strong&gt; 框架的走向成熟，促使我选择了 &lt;strong&gt;taro&lt;/strong&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="taro" scheme="https://jeff_zhong.gitee.io/blog/tags/taro/"/>
-    
-      <category term="小程序" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   

@@ -2,23 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jeff_zhong.gitee.io/blog/2023/09/08/category/</loc>
+    
+    <lastmod>2023-09-08T10:13:18.200Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://jeff_zhong.gitee.io/blog/2023/07/12/linear/</loc>
     
-    <lastmod>2023-07-14T09:24:32.514Z</lastmod>
+    <lastmod>2023-09-08T08:58:32.697Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jeff_zhong.gitee.io/blog/2023/07/12/ai/</loc>
     
-    <lastmod>2023-07-13T11:34:53.181Z</lastmod>
+    <lastmod>2023-09-08T08:58:19.968Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/</loc>
     
-    <lastmod>2023-07-12T08:43:24.582Z</lastmod>
+    <lastmod>2023-09-08T08:57:53.498Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/</loc>
+    
+    <lastmod>2023-09-08T08:57:49.237Z</lastmod>
     
   </url>
   
@@ -26,13 +40,6 @@
     <loc>https://jeff_zhong.gitee.io/blog/2018/08/16/haskelld/</loc>
     
     <lastmod>2023-07-12T08:42:38.536Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/</loc>
-    
-    <lastmod>2022-05-11T13:19:05.856Z</lastmod>
     
   </url>
   

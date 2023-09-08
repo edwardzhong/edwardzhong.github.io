@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN">
+
+
+
+
+
+
+
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- 优先使用 IE 最新版本和 Chrome -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- 为移动设备添加 viewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <!-- 添加到主屏后的标题（iOS 6 新增） -->
+  <meta name="apple-mobile-web-app-title" content="机器学习之分类 - Jeff's world">
+  <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!-- 设置苹果工具栏颜色 -->
+  <meta name="apple-mobile-web-app-status-bar-style" content = "black" />
+  <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+  <!-- <meta name = "apple-itunes-app" content = "app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL"> -->
+  <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+  <meta name="format-detection" content = "telphone=no, email=no" />
+  <!--下面三个是清除缓存 微信浏览器缓存严重又无刷新；这个方法调试的时候很方便-->
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  
+  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io/blog">
+  <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
+  <meta name="author" content="Jeff Zhong">
+  <meta name="description" content="it's a blog by hexo">
+  <meta name="keywords" content="hexo theme">
+  <title >机器学习之分类 - Jeff's world</title>
+    <!-- The Open Graph protocol -->
+  <meta property="og:url" content="https://jeff_zhong.gitee.io/blog">
+  <meta property="og:type" content="blog">
+  <meta property="og:title" content="机器学习之分类 - Jeff's world">
+  <meta property="og:description" content="it's a blog by hexo">
+  
+    
+    
+      <link rel="stylesheet" href="/blog/lib/fontello/fontello.css">
+    
+      <link rel="stylesheet" href="/blog/lib/reboto/roboto.css">
+    
+      <link rel="stylesheet" href="/blog/css/index.css">
+    
+  
+  <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?5255e97b442092b8e1a219e6a48a0d42";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/blog/atom.xml" title="Jeff's world" type="application/atom+xml">
+</head>
+<body>
+<header class="header">
+  <div class="top"></div>
+  <h2>Jeff's World</h2>
+  <h3>Things that I'm interested in</h3>
+  <div class="menu">
+  
+  
+  
+      <a  href="/blog/" title="主 页">
+        <i class="icon-home"></i>
+        <span>主 页</span>
+      </a>
+  
+      <a  href="https://jeff_zhong.gitee.io/demo/" title="Demo">
+        <i class="icon-page"></i>
+        <span>Demo</span>
+      </a>
+  
+      <a  data-tag="search"  href="javascript:;" title="搜 索">
+        <i class="icon-search"></i>
+        <span>搜 索</span>
+      </a>
+  
+  </div>
+  <div class="state">
+  
+    <a href="/blog/archives">53<br>文 章</a><a href="/blog/categories">2<br>分 类</a><a href="/blog/tags">70<br>标 签</a>
+  </div>
+  <div class="social">
+  
+  
+  
+      <a href="https://github.com/edwardzhong" target="_blank" rel="noopener" title="Github"><i class="icon-github"></i></a>
+  
+      <a href="https://twitter.com/JianfengEdward" target="_blank" rel="noopener" title="Twitter"><i class="icon-twitter"></i></a>
+  
+      <a href="https://www.facebook.com/jianfeng.edward" target="_blank" rel="noopener" title="Facebook"><i class="icon-facebook"></i></a>
+  
+      <a href="http://weibo.com/1593251850" target="_blank" rel="noopener" title="Weibo"><i class="icon-weibo"></i></a>
+  
+      <a href="/blog/atom.xml" title="Rss"><i class="icon-rss"></i></a>
+  
+  </div>
+  <div id="payBtn" class="pay-icon" title="谢谢您的赞赏">赏</div>
+</header>
+  <div class="container">
+    <div class="main">
+    
+        
+<div class="post-list">
+	<article class="post" style="animation:listshow 0.6s ease-out both 0.30000000000000004s">
+    
+    
+        
+    
+	
+	<a href="javascript:;">
+        <div class="post-banner" style="background: url(/blog/images/banner5.jpg)  center top / 100% no-repeat">
+    		<h3 class="post-title">机器学习之分类</h3>
+    	</div>
+	</a>
+	<div class="post-inner">
+	
+    	<div class="post-info">
+    		<time><i class="icon-calendar"></i> 2023/09/08 16:56:00</time>
+    		<span class="category">
+    		
+    			
+    			<i class="icon-book"></i>
+    			
+                    
+                        <a href="/blog/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                    
+    			
+    		
+    		</span>
+    	</div>
+    	<!-- <p><p>分类任务和回归任务的不同之处在于，分类任务需要做出离散的预测。对于多分类任务的神经网络模型，其输出目标通常会用one-hot编码来表示，在输出层中使用softmax函数，同时使用分类交叉熵损失函…</p>
+</p> -->
+    	
+    		<div class="post-content"><p>分类任务和回归任务的不同之处在于，分类任务需要做出离散的预测。对于多分类任务的神经网络模型，其输出目标通常会用<strong>one-hot</strong>编码来表示，在输出层中使用<strong>softmax</strong>函数，同时使用分类交叉熵损失函数进行训练。在本博客中，我们将使用<strong>TensorFlow</strong>的底层API实现一个基于全连接层的神经网络来进行<strong>MNIST</strong>数字图像分类。下面是涉及到的相关概念：</p>
+<p><strong>深度学习</strong>是一种机器学习方法，它通过多层神经网络层次化地提取特征，以解决各种复杂的分类和回归问题。</p>
+<p><strong>神经网络</strong>是深度学习的基本组成部分，由多个层次化的神经元组成。输入层接受数据，中间的隐藏层通过权重和激活函数处理数据，最终输出层产生分类结果。在这个示例中，我们将手动实现神经网络的核心组件。</p>
+<p><strong>前向传播</strong>是神经网络中的信息传递过程，从输入层到输出层，每一层的神经元根据权重和激活函数计算输出。这个过程将输入数据映射到预测输出。</p>
+<p><strong>反向传播</strong>是训练神经网络的关键步骤，它通过计算预测与真实标签之间的误差，并将误差反向传播到网络中的每一层来更新权重，以最小化误差。</p>
+<a id="more"></a>
+
+<h2 id="内容大纲"><a href="#内容大纲" class="headerlink" title="内容大纲"></a>内容大纲</h2><ol>
+<li>神经网络核心组件的实现</li>
+<li>数据加载处理</li>
+<li>构建训练模型</li>
+<li>总结</li>
+</ol>
+<h2 id="神经网络核心组件的实现"><a href="#神经网络核心组件的实现" class="headerlink" title="神经网络核心组件的实现"></a>神经网络核心组件的实现</h2><p>以下代码分别实现了密集层<strong>DenseLayer</strong>，网络模型<strong>SequentialModel</strong>，批次生成器<strong>BatchGenerator</strong>，批次权重更新<strong>one_training_step</strong> 以及 训练函数<strong>fit</strong>。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> keras.datasets <span class="keyword">import</span> mnist</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DenseLayer</span>:</span>  <span class="comment"># 简单的Dense类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, input_size, output_size, activation)</span>:</span></span><br><span class="line">        self.activation = activation</span><br><span class="line"></span><br><span class="line">        w_shape = (input_size, output_size)  <span class="comment"># 创建一个形状为(input_size, output_size)的矩阵W，并将其随机初始化</span></span><br><span class="line">        w_initial_value = tf.random.uniform(w_shape, minval=<span class="number">0</span>, maxval=<span class="number">1e-1</span>)</span><br><span class="line">        self.W = tf.Variable(w_initial_value)</span><br><span class="line"></span><br><span class="line">        b_shape = (output_size,)  <span class="comment"># 创建一个形状为(output_size,)的零向量b</span></span><br><span class="line">        b_initial_value = tf.zeros(b_shape)</span><br><span class="line">        self.b = tf.Variable(b_initial_value)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self, inputs)</span>:</span>  <span class="comment"># 前向传播</span></span><br><span class="line">        <span class="keyword">return</span> self.activation(tf.matmul(inputs, self.W) + self.b)</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">weights</span><span class="params">(self)</span>:</span>  <span class="comment"># 获取该层权重</span></span><br><span class="line">        <span class="keyword">return</span> [self.W, self.b]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SequentialModel</span>:</span>  <span class="comment"># 简单的Sequential类</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, layers)</span>:</span></span><br><span class="line">        self.layers = layers</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self, inputs)</span>:</span></span><br><span class="line">        x = inputs</span><br><span class="line">        <span class="keyword">for</span> layer <span class="keyword">in</span> self.layers:</span><br><span class="line">            x = layer(x)</span><br><span class="line">        <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">weights</span><span class="params">(self)</span>:</span></span><br><span class="line">        weights = []</span><br><span class="line">        <span class="keyword">for</span> layer <span class="keyword">in</span> self.layers:</span><br><span class="line">            weights += layer.weights</span><br><span class="line">        <span class="keyword">return</span> weights</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BatchGenerator</span>:</span>  <span class="comment"># 批量生成器</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, images, labels, batch_size=<span class="number">128</span>)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> len(images) == len(labels)</span><br><span class="line">        self.index = <span class="number">0</span></span><br><span class="line">        self.images = images</span><br><span class="line">        self.labels = labels</span><br><span class="line">        self.batch_size = batch_size</span><br><span class="line">        self.num_batches = math.ceil(len(images) / batch_size)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">next</span><span class="params">(self)</span>:</span></span><br><span class="line">        images = self.images[self.index: self.index + self.batch_size]</span><br><span class="line">        labels = self.labels[self.index: self.index + self.batch_size]</span><br><span class="line">        self.index += self.batch_size</span><br><span class="line">        <span class="keyword">return</span> images, labels</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 更新参数</span></span><br><span class="line">learning_rate = <span class="number">1e-3</span> <span class="comment"># 学习率</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_weights</span><span class="params">(gradients, weights)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> g, w <span class="keyword">in</span> zip(gradients, weights):</span><br><span class="line">        w.assign_sub(g * learning_rate)  <span class="comment"># assign_sub相当于TensorFlow变量的-=</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 计算梯度，并更新权重</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">one_training_step</span><span class="params">(model, images_batch, labels_batch)</span>:</span></span><br><span class="line">    <span class="keyword">with</span> tf.GradientTape() <span class="keyword">as</span> tape:  <span class="comment"># 运行前向传播，即在GradientTape作用域内计算模型预测值</span></span><br><span class="line">        predictions = model(images_batch)</span><br><span class="line">        <span class="comment"># 标签编码为整数，使用sparse_categorical_crossentropy损失函数</span></span><br><span class="line">        per_sample_losses = tf.keras.losses.sparse_categorical_crossentropy(labels_batch, predictions)</span><br><span class="line">        average_loss = tf.reduce_mean(per_sample_losses)</span><br><span class="line">    gradients = tape.gradient(average_loss, model.weights)  <span class="comment"># 计算损失相对于权重的梯度。输出gradients是一个列表，每个元素对应model.weights列表中的权重</span></span><br><span class="line">    update_weights(gradients, model.weights)  <span class="comment"># 利用梯度来更新权重</span></span><br><span class="line">    <span class="keyword">return</span> average_loss</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 完整的训练循环</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fit</span><span class="params">(model, images, labels, epochs, batch_size=<span class="number">128</span>)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> epoch_counter <span class="keyword">in</span> range(epochs):</span><br><span class="line">        print(<span class="string">f"Epoch <span class="subst">&#123;epoch_counter&#125;</span>"</span>)</span><br><span class="line">        batch_generator = BatchGenerator(images, labels)</span><br><span class="line">        <span class="keyword">for</span> batch_counter <span class="keyword">in</span> range(batch_generator.num_batches):</span><br><span class="line">            images_batch, labels_batch = batch_generator.next()</span><br><span class="line">            loss = one_training_step(model, images_batch, labels_batch)</span><br><span class="line">            <span class="keyword">if</span> batch_counter % <span class="number">100</span> == <span class="number">0</span>:</span><br><span class="line">                print(<span class="string">f"loss at batch <span class="subst">&#123;batch_counter&#125;</span>: <span class="subst">&#123;loss:<span class="number">.2</span>f&#125;</span>"</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据加载处理"><a href="#数据加载处理" class="headerlink" title="数据加载处理"></a>数据加载处理</h2><p>首先，我们需要准备数据。<strong>MNIST</strong>数据集包含手写数字图像，每个图像是28x28像素的灰度图像，总共有10个类别（0到9）。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 加载MNIST数据集</span></span><br><span class="line">(train_images, train_labels), (test_images, test_labels) = mnist.load_data()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 归一化像素值到0到1之间</span></span><br><span class="line">train_images = train_images.reshape((<span class="number">60000</span>, <span class="number">28</span> * <span class="number">28</span>)).astype(<span class="string">"float32"</span>) / <span class="number">255</span></span><br><span class="line">test_images = test_images.reshape((<span class="number">10000</span>, <span class="number">28</span> * <span class="number">28</span>)).astype(<span class="string">"float32"</span>) / <span class="number">255</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="构建训练模型"><a href="#构建训练模型" class="headerlink" title="构建训练模型"></a>构建训练模型</h2><p>接下来，我们将使用<strong>DenseLayer</strong> 和 <strong>SequentialModel</strong> 类构建一个两层的全连接神经网络模型。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 利用这个DenseLayer类和SequentialModel类，创建一个与Keras类似的模型</span></span><br><span class="line">model = SequentialModel([</span><br><span class="line">    DenseLayer(input_size=<span class="number">28</span> * <span class="number">28</span>, output_size=<span class="number">512</span>, activation=tf.nn.relu),<span class="comment"># 全连接层，512个单元，ReLU激活函数</span></span><br><span class="line">    DenseLayer(input_size=<span class="number">512</span>, output_size=<span class="number">10</span>, activation=tf.nn.softmax) <span class="comment"># 输出层，10个输出单元对应0-9的数字，使用softmax激活函数</span></span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<p>现在，我们将使用手动实现的神经网络模型来进行训练。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 开始训练</span></span><br><span class="line">fit(model, train_images, train_labels, epochs=<span class="number">10</span>, batch_size=<span class="number">128</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 预测结果准确率</span></span><br><span class="line">predictions = model(test_images).numpy()</span><br><span class="line">predicted_labels = np.argmax(predictions, axis=<span class="number">1</span>)</span><br><span class="line">matches = predicted_labels == test_labels</span><br><span class="line">print(<span class="string">f"accuracy: <span class="subst">&#123;matches.mean():<span class="number">.2</span>f&#125;</span>"</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在本博客中，我们使用<strong>TensorFlow</strong>的底层API手动实现了一个基于全连接层的神经网络模型，并将其应用于<strong>MNIST</strong>数字图像分类。我们涵盖了深度学习分类的基本原理，包括神经网络、前向传播和反向传播。通过适当的数据处理、模型构建、训练和预测，我们成功地分类了手写数字图像，这是深度学习在计算机视觉中的一个典型应用。希望本文能帮助你了解深度学习分类的基本流程和实现细节。通过底层API的实现，你可以更深入地理解深度学习模型的内部工作原理。</p>
+</div>
+    	
+		<div class="post-footer">
+			<div class="tags">
+				<i class="icon-tags"></i> 
+				
+					
+					
+						
+							<a href="/blog/tags/%E5%89%8D%E7%AB%AF/">前端</a>
+						
+					
+						
+							<a href="/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+						
+					
+						
+							<a href="/blog/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a>
+						
+					
+				
+			</div>
+			<a class="share" href="javascript:;" data-url="/blog/2023/09/08/category/" data-desc="分类任务和回归任务的不同之处在于，分类任务需要做出离散的预测。对于多分类任务的神经网络模型，其..." data-type="share" title="share"><i class="icon-share"></i></a>
+		</div>
+	</div>
+</article>
+</div>
+<nav class="pagination clearfix">
+  
+    
+      
+
+      
+        <a href="/blog/2023/07/12/linear/" class="next post-next"> 机器学习之线性回归 <i class="icon-rightarrow"></i></a>
+      
+    
+  
+</nav>
+
+<div class="wxshare-popup">
+    <a class="close" href="javascript:;"></a>
+    <p>扫一扫，分享到微信</p>
+    <div id="qrcode" class="wx-qrcode"></div>
+</div>
+
+    
+    <footer class="footer">
+<p class="theme">
+	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
+</p>
+<p class="copy">Copyright &copy; 2023 Jeff Zhong</p>
+</footer>
+    <div class="top-bottom">
+      <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
+      <div class="to-bottom hide" title="to bottom"><i class="icon-down"></i></div>
+    </div>
+    </div>
+
+  </div>
+<input type="hidden" name="isPost" id="isPost" value="true">
+<i id="barBtn" class="icon icon-menu"></i>
+<div id="payMe" class="payme">
+    <i class="icon icon-cancel"></i>
+    <p class="pay-title">给我的早餐加个蛋吧 😊</p>
+    <div>
+      <img src="/images/weixinpay.jpg" alt="weixinpay">
+      <img src="/images/alipay.jpg" alt="alipay" style="display:none;">
+    </div>
+    <div class="pay-selects">
+        <input type="radio" name="pay" id="weixinpay" checked="checked"><label for="weixinpay"> 微信 </label>&nbsp;&nbsp;
+        <input type="radio" name="pay" id="alipay"><label for="alipay"> 支付宝 </label>
+    </div>
+</div>
+
+  
+  
+    <script src="/blog/lib/jquery-2.2.3.min.js"></script>
+  
+    <script src="/blog/lib/qrcode.min.js"></script>
+  
+    <script src="/blog/js/index.js"></script>
+  
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
