@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Jeff&#39;s world</title>
-  <icon>https://jeff_zhong.gitee.io/blog/icon.png</icon>
+  <icon>https://jeff_zhong.gitee.io/icon.png</icon>
   <subtitle>Things that I&#39;m interested in</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://jeff_zhong.gitee.io/blog/"/>
+  <link href="https://jeff_zhong.gitee.io/"/>
   <updated>2023-09-08T10:13:18.200Z</updated>
-  <id>https://jeff_zhong.gitee.io/blog/</id>
+  <id>https://jeff_zhong.gitee.io/</id>
   
   <author>
     <name>Jeff Zhong</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>机器学习之分类</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2023/09/08/category/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2023/09/08/category/</id>
+    <link href="https://jeff_zhong.gitee.io/2023/09/08/category/"/>
+    <id>https://jeff_zhong.gitee.io/2023/09/08/category/</id>
     <published>2023-09-08T08:56:31.000Z</published>
     <updated>2023-09-08T10:13:18.200Z</updated>
     
@@ -34,21 +34,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="机器学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://jeff_zhong.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="深度学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="深度学习" scheme="https://jeff_zhong.gitee.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>机器学习之线性回归</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2023/07/12/linear/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2023/07/12/linear/</id>
+    <link href="https://jeff_zhong.gitee.io/2023/07/12/linear/"/>
+    <id>https://jeff_zhong.gitee.io/2023/07/12/linear/</id>
     <published>2023-07-12T08:42:07.000Z</published>
     <updated>2023-09-08T08:58:32.697Z</updated>
     
@@ -72,19 +72,19 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="机器学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习" scheme="https://jeff_zhong.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>人工智能与机器学习和深度学习</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2023/07/12/ai/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2023/07/12/ai/</id>
+    <link href="https://jeff_zhong.gitee.io/2023/07/12/ai/"/>
+    <id>https://jeff_zhong.gitee.io/2023/07/12/ai/</id>
     <published>2023-07-12T05:50:07.000Z</published>
     <updated>2023-09-08T08:58:19.968Z</updated>
     
@@ -105,21 +105,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="ai" scheme="https://jeff_zhong.gitee.io/blog/tags/ai/"/>
+      <category term="ai" scheme="https://jeff_zhong.gitee.io/tags/ai/"/>
     
-      <category term="人工智能" scheme="https://jeff_zhong.gitee.io/blog/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+      <category term="人工智能" scheme="https://jeff_zhong.gitee.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
-      <category term="机器学习，深度学习" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+      <category term="机器学习，深度学习" scheme="https://jeff_zhong.gitee.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%EF%BC%8C%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>opencv学习之边缘检测</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2022/05/12/opencv2/</id>
+    <link href="https://jeff_zhong.gitee.io/2022/05/12/opencv2/"/>
+    <id>https://jeff_zhong.gitee.io/2022/05/12/opencv2/</id>
     <published>2022-05-12T03:04:04.000Z</published>
     <updated>2023-09-08T08:57:53.498Z</updated>
     
@@ -131,19 +131,19 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="opencv" scheme="https://jeff_zhong.gitee.io/blog/tags/opencv/"/>
+      <category term="opencv" scheme="https://jeff_zhong.gitee.io/tags/opencv/"/>
     
   </entry>
   
   <entry>
     <title>opencv学习之基础</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2022/05/05/opencv/</id>
+    <link href="https://jeff_zhong.gitee.io/2022/05/05/opencv/"/>
+    <id>https://jeff_zhong.gitee.io/2022/05/05/opencv/</id>
     <published>2022-05-05T08:05:49.000Z</published>
     <updated>2023-09-08T08:57:49.237Z</updated>
     
@@ -154,19 +154,19 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="opencv" scheme="https://jeff_zhong.gitee.io/blog/tags/opencv/"/>
+      <category term="opencv" scheme="https://jeff_zhong.gitee.io/tags/opencv/"/>
     
   </entry>
   
   <entry>
     <title>html5调用摄像头截图</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2021/08/17/camera/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2021/08/17/camera/</id>
+    <link href="https://jeff_zhong.gitee.io/2021/08/17/camera/"/>
+    <id>https://jeff_zhong.gitee.io/2021/08/17/camera/</id>
     <published>2021-08-17T02:54:23.000Z</published>
     <updated>2021-12-26T06:47:30.903Z</updated>
     
@@ -178,21 +178,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="canvas" scheme="https://jeff_zhong.gitee.io/blog/tags/canvas/"/>
+      <category term="canvas" scheme="https://jeff_zhong.gitee.io/tags/canvas/"/>
     
   </entry>
   
   <entry>
     <title>WebGL之绘制三维地球</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2021/04/25/webglsphere/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2021/04/25/webglsphere/</id>
+    <link href="https://jeff_zhong.gitee.io/2021/04/25/webglsphere/"/>
+    <id>https://jeff_zhong.gitee.io/2021/04/25/webglsphere/</id>
     <published>2021-04-25T02:46:32.000Z</published>
     <updated>2021-12-26T06:49:57.884Z</updated>
     
@@ -204,21 +204,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>WebGL之延迟着色</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2020/09/17/webgldeferred/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2020/09/17/webgldeferred/</id>
+    <link href="https://jeff_zhong.gitee.io/2020/09/17/webgldeferred/"/>
+    <id>https://jeff_zhong.gitee.io/2020/09/17/webgldeferred/</id>
     <published>2020-09-17T11:30:31.000Z</published>
     <updated>2021-12-26T06:49:24.000Z</updated>
     
@@ -231,21 +231,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>Docker搭建部署Node项目</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2020/07/13/docker/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2020/07/13/docker/</id>
+    <link href="https://jeff_zhong.gitee.io/2020/07/13/docker/"/>
+    <id>https://jeff_zhong.gitee.io/2020/07/13/docker/</id>
     <published>2020-07-13T03:39:53.000Z</published>
     <updated>2021-12-26T06:47:50.574Z</updated>
     
@@ -256,23 +256,23 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="koa" scheme="https://jeff_zhong.gitee.io/blog/tags/koa/"/>
+      <category term="koa" scheme="https://jeff_zhong.gitee.io/tags/koa/"/>
     
-      <category term="docker" scheme="https://jeff_zhong.gitee.io/blog/tags/docker/"/>
+      <category term="docker" scheme="https://jeff_zhong.gitee.io/tags/docker/"/>
     
-      <category term="nginx" scheme="https://jeff_zhong.gitee.io/blog/tags/nginx/"/>
+      <category term="nginx" scheme="https://jeff_zhong.gitee.io/tags/nginx/"/>
     
-      <category term="postgres" scheme="https://jeff_zhong.gitee.io/blog/tags/postgres/"/>
+      <category term="postgres" scheme="https://jeff_zhong.gitee.io/tags/postgres/"/>
     
   </entry>
   
   <entry>
     <title>Flutter轮播图</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2020/07/01/flutter2/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2020/07/01/flutter2/</id>
+    <link href="https://jeff_zhong.gitee.io/2020/07/01/flutter2/"/>
+    <id>https://jeff_zhong.gitee.io/2020/07/01/flutter2/</id>
     <published>2020-07-01T08:34:40.000Z</published>
     <updated>2021-12-26T06:48:07.625Z</updated>
     
@@ -287,17 +287,17 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="flutter" scheme="https://jeff_zhong.gitee.io/blog/tags/flutter/"/>
+      <category term="flutter" scheme="https://jeff_zhong.gitee.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>Flutter开发初探</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2020/06/26/flutter1/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2020/06/26/flutter1/</id>
+    <link href="https://jeff_zhong.gitee.io/2020/06/26/flutter1/"/>
+    <id>https://jeff_zhong.gitee.io/2020/06/26/flutter1/</id>
     <published>2020-06-26T03:51:06.000Z</published>
     <updated>2021-12-26T06:48:04.428Z</updated>
     
@@ -315,19 +315,19 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="flutter" scheme="https://jeff_zhong.gitee.io/blog/tags/flutter/"/>
+      <category term="flutter" scheme="https://jeff_zhong.gitee.io/tags/flutter/"/>
     
   </entry>
   
   <entry>
     <title>SVG高级应用及动画</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2020/06/04/svg1/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2020/06/04/svg1/</id>
+    <link href="https://jeff_zhong.gitee.io/2020/06/04/svg1/"/>
+    <id>https://jeff_zhong.gitee.io/2020/06/04/svg1/</id>
     <published>2020-06-04T01:42:56.000Z</published>
-    <updated>2021-12-26T06:49:03.926Z</updated>
+    <updated>2024-01-05T09:04:08.571Z</updated>
     
     <summary type="html">
     
@@ -343,19 +343,19 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="svg" scheme="https://jeff_zhong.gitee.io/blog/tags/svg/"/>
+      <category term="svg" scheme="https://jeff_zhong.gitee.io/tags/svg/"/>
     
   </entry>
   
   <entry>
     <title>使用typescript改造koa开发框架</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2020/02/04/koatypescript/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2020/02/04/koatypescript/</id>
+    <link href="https://jeff_zhong.gitee.io/2020/02/04/koatypescript/"/>
+    <id>https://jeff_zhong.gitee.io/2020/02/04/koatypescript/</id>
     <published>2020-02-04T03:37:48.000Z</published>
     <updated>2021-12-26T06:48:37.425Z</updated>
     
@@ -373,21 +373,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="node" scheme="https://jeff_zhong.gitee.io/blog/tags/node/"/>
+      <category term="node" scheme="https://jeff_zhong.gitee.io/tags/node/"/>
     
-      <category term="koa" scheme="https://jeff_zhong.gitee.io/blog/tags/koa/"/>
+      <category term="koa" scheme="https://jeff_zhong.gitee.io/tags/koa/"/>
     
-      <category term="typescript" scheme="https://jeff_zhong.gitee.io/blog/tags/typescript/"/>
+      <category term="typescript" scheme="https://jeff_zhong.gitee.io/tags/typescript/"/>
     
   </entry>
   
   <entry>
     <title>WebGL之物体选择</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/05/28/webglray/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/05/28/webglray/</id>
+    <link href="https://jeff_zhong.gitee.io/2019/05/28/webglray/"/>
+    <id>https://jeff_zhong.gitee.io/2019/05/28/webglray/</id>
     <published>2019-05-28T07:07:25.000Z</published>
     <updated>2021-12-26T06:49:36.011Z</updated>
     
@@ -399,21 +399,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>WebGL学习之HDR与Bloom</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/05/21/webglhdr/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/05/21/webglhdr/</id>
+    <link href="https://jeff_zhong.gitee.io/2019/05/21/webglhdr/"/>
+    <id>https://jeff_zhong.gitee.io/2019/05/21/webglhdr/</id>
     <published>2019-05-21T07:09:15.000Z</published>
     <updated>2021-12-26T06:49:27.000Z</updated>
     
@@ -426,21 +426,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>WebGL学习之纹理盒</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/05/05/webglskybox/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/05/05/webglskybox/</id>
+    <link href="https://jeff_zhong.gitee.io/2019/05/05/webglskybox/"/>
+    <id>https://jeff_zhong.gitee.io/2019/05/05/webglskybox/</id>
     <published>2019-05-05T13:34:20.000Z</published>
     <updated>2021-12-26T06:49:54.788Z</updated>
     
@@ -451,21 +451,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>WebGL半透明物体的绘制</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/05/02/webglalpha/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/05/02/webglalpha/</id>
+    <link href="https://jeff_zhong.gitee.io/2019/05/02/webglalpha/"/>
+    <id>https://jeff_zhong.gitee.io/2019/05/02/webglalpha/</id>
     <published>2019-05-02T05:16:29.000Z</published>
     <updated>2021-12-26T06:49:22.000Z</updated>
     
@@ -476,21 +476,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>WebGL学习之法线贴图</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/04/30/webglnormap/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/04/30/webglnormap/</id>
+    <link href="https://jeff_zhong.gitee.io/2019/04/30/webglnormap/"/>
+    <id>https://jeff_zhong.gitee.io/2019/04/30/webglnormap/</id>
     <published>2019-04-30T03:07:27.000Z</published>
     <updated>2021-12-26T06:49:30.000Z</updated>
     
@@ -504,21 +504,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>WebGL学习之纹理贴图</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/04/29/webgltexture/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/04/29/webgltexture/</id>
+    <link href="https://jeff_zhong.gitee.io/2019/04/29/webgltexture/"/>
+    <id>https://jeff_zhong.gitee.io/2019/04/29/webgltexture/</id>
     <published>2019-04-29T03:24:21.000Z</published>
     <updated>2021-12-26T06:50:04.378Z</updated>
     
@@ -529,21 +529,21 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="前端" scheme="https://jeff_zhong.gitee.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://jeff_zhong.gitee.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="webGL" scheme="https://jeff_zhong.gitee.io/blog/tags/webGL/"/>
+      <category term="webGL" scheme="https://jeff_zhong.gitee.io/tags/webGL/"/>
     
   </entry>
   
   <entry>
     <title>如何将markdown转换为wxml</title>
-    <link href="https://jeff_zhong.gitee.io/blog/2019/04/27/mdtowxml/"/>
-    <id>https://jeff_zhong.gitee.io/blog/2019/04/27/mdtowxml/</id>
+    <link href="https://jeff_zhong.gitee.io/2019/04/27/mdtowxml/"/>
+    <id>https://jeff_zhong.gitee.io/2019/04/27/mdtowxml/</id>
     <published>2019-04-27T02:36:23.000Z</published>
     <updated>2021-12-26T06:48:42.996Z</updated>
     
@@ -555,16 +555,16 @@
     </summary>
     
     
-      <category term="技术" scheme="https://jeff_zhong.gitee.io/blog/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://jeff_zhong.gitee.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="js" scheme="https://jeff_zhong.gitee.io/blog/tags/js/"/>
+      <category term="js" scheme="https://jeff_zhong.gitee.io/tags/js/"/>
     
-      <category term="wxml" scheme="https://jeff_zhong.gitee.io/blog/tags/wxml/"/>
+      <category term="wxml" scheme="https://jeff_zhong.gitee.io/tags/wxml/"/>
     
-      <category term="markdown" scheme="https://jeff_zhong.gitee.io/blog/tags/markdown/"/>
+      <category term="markdown" scheme="https://jeff_zhong.gitee.io/tags/markdown/"/>
     
-      <category term="正则表达式" scheme="https://jeff_zhong.gitee.io/blog/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+      <category term="正则表达式" scheme="https://jeff_zhong.gitee.io/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   

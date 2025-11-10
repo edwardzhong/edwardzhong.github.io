@@ -30,14 +30,14 @@
   <meta http-equiv="Cache-Control" content="no-cache">
   <meta http-equiv="Expires" content="0">
   
-  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io/blog">
+  <link rel="dns-prefetch" href="https://jeff_zhong.gitee.io">
   <link rel="icon shortcut" type="image/ico" href="/favicon.ico">
   <meta name="author" content="Jeff Zhong">
   <meta name="description" content="it's a blog by hexo">
   <meta name="keywords" content="hexo theme">
   <title >SVG高级应用及动画 - Jeff's world</title>
     <!-- The Open Graph protocol -->
-  <meta property="og:url" content="https://jeff_zhong.gitee.io/blog">
+  <meta property="og:url" content="https://jeff_zhong.gitee.io">
   <meta property="og:type" content="blog">
   <meta property="og:title" content="SVG高级应用及动画 - Jeff's world">
   <meta property="og:description" content="it's a blog by hexo">
@@ -155,7 +155,7 @@ var _hmt = _hmt || [];
 <a id="more"></a>
 
 <h2 id="SVG-sprite"><a href="#SVG-sprite" class="headerlink" title="SVG sprite"></a>SVG sprite</h2><p>SVG sprite 之于 font-face 的优势就是矢量图的抗锯齿效果，再也不需要为适配高清屏而操心。使用方式就是 svg 标签结合 symbol元素即可，其中 svg 是容器，而symbol 则是组件模板。怎么把svg组件显示出来呢？使用 use 元素指向组件的id即可，如下所示：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">symbol</span> <span class="attr">id</span>=<span class="string">"ok"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- svg元素或组合 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">symbol</span>&gt;</span></span><br><span class="line">		<span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">use</span> <span class="attr">href</span>=<span class="string">"#ok"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">symbol</span> <span class="attr">id</span>=<span class="string">"ok"</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- svg元素或组合 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">symbol</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">use</span> <span class="attr">href</span>=<span class="string">"#ok"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>当然网上有很多工具可以帮我们把图标自动sprite，比如：<a href="https://www.iconfont.cn/" target="_blank" rel="noopener">iconfot</a>，<a href="https://github.com/Hiswe/gulp-svg-symbols" target="_blank" rel="noopener">gulp-svg-symbols</a></p>
 <h2 id="在css中插入svg"><a href="#在css中插入svg" class="headerlink" title="在css中插入svg"></a>在css中插入svg</h2><p>SVG 添加到网页中有多种方法，最常见的是：</p>
@@ -166,7 +166,7 @@ var _hmt = _hmt || [];
 <li>CSS <code>background-image</code> 属性</li>
 </ol>
 <p>html 内联方式</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>line<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">"20"</span> <span class="attr">y1</span>=<span class="string">"20"</span> <span class="attr">x2</span>=<span class="string">"100"</span> <span class="attr">y2</span>=<span class="string">"100"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>line<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">line</span> <span class="attr">x1</span>=<span class="string">"20"</span> <span class="attr">y1</span>=<span class="string">"20"</span> <span class="attr">x2</span>=<span class="string">"100"</span> <span class="attr">y2</span>=<span class="string">"100"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>使用 object、iframe 或 embed 标签插入</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">object</span> <span class="attr">data</span>=<span class="string">"flag.svg"</span> <span class="attr">type</span>=<span class="string">"image/svg+xml"</span>&gt;</span><span class="tag">&lt;/<span class="name">object</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"flag.svg"</span> <span class="attr">frameborder</span>=<span class="string">"0"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">embed</span> <span class="attr">src</span>=<span class="string">"flag.svg"</span> <span class="attr">type</span>=<span class="string">""</span> /&gt;</span></span><br></pre></td></tr></table></figure>
@@ -186,6 +186,7 @@ var _hmt = _hmt || [];
 
 <p>还有一种很实用的效果就是文字路径，也就是文字按照定义好的 path 进行排列显示，这需要使用到另一个标签 textPath。实现方式：首先定义一个path元素（这里使用三次贝塞尔曲线），然后 textPath元素使用 xlink:href 属性引入path，最后再用 text标签包裹。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">g</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span> 文字路径 <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">path</span> <span class="attr">id</span>=<span class="string">"path"</span> <span class="attr">d</span>=<span class="string">"M 10 100 C 100 0 150 300 250 100"</span> <span class="attr">fill</span>=<span class="string">"none"</span> <span class="attr">stroke</span>=<span class="string">"#555"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span> <span class="attr">x</span>=<span class="string">"10"</span> <span class="attr">y</span>=<span class="string">"100"</span> <span class="attr">stroke</span>=<span class="string">"hsl(280,100%,50%)"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">textPath</span> <span class="attr">xlink:href</span>=<span class="string">"#path"</span>&gt;</span>I Love SVG I Love SVG I Love SVG<span class="tag">&lt;/<span class="name">textPath</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <img src="/blog/images/txtpath.jpg" width="300">
 
 <h2 id="svg路径动画"><a href="#svg路径动画" class="headerlink" title="svg路径动画"></a>svg路径动画</h2><p>svg动画既可以使用 css3 相关属性实现，也可以使用自己独有的SMIL实现。SMIL主要用以下标签：</p>
@@ -206,15 +207,17 @@ var _hmt = _hmt || [];
 </ul>
 <p>首先需要通过js获取路径的总长度</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取路径长度</span></span><br><span class="line"><span class="keyword">const</span> arc = <span class="built_in">document</span>.getElementById(<span class="string">'circle'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arc.getTotalLength()); <span class="comment">//250.92141723632812</span></span><br></pre></td></tr></table></figure>
+
 <p>接着编写svg相关</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  circle &#123;</span><br><span class="line">    fill: transparent;</span><br><span class="line">    stroke-width: 10px;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="selector-id">#circle</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">stroke-dasharray</span>: 250<span class="selector-class">.921</span>;</span></span><br><span class="line"><span class="css">    <span class="selector-tag">stroke-dashoffset</span>: 250<span class="selector-class">.921</span>;</span></span><br><span class="line">    animation: round 3s linear infinite;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="css">  <span class="keyword">@keyframes</span> round &#123;</span></span><br><span class="line">    to &#123;</span><br><span class="line">      stroke-dashoffset: 0;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">g</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"100"</span> <span class="attr">cy</span>=<span class="string">"60"</span> <span class="attr">r</span>=<span class="string">"40"</span> <span class="attr">stroke</span>=<span class="string">"#ccc"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">id</span>=<span class="string">"circle"</span> <span class="attr">cx</span>=<span class="string">"100"</span> <span class="attr">cy</span>=<span class="string">"60"</span> <span class="attr">r</span>=<span class="string">"40"</span> <span class="attr">stroke</span>=<span class="string">"hsl(160,80%,50%)"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
 <img src="/blog/images/pathanimate.gif" width="300">
 
 <p>当然其他stroke线条动画也类似</p>
 <p>接着我们再基于svg animateMotion标签来实现path路径动画，其中path是运动路径，dur 是持续时间，repeatCount设置是否循环</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">g</span> <span class="attr">id</span>=<span class="string">"pathAnimate"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">title</span>&gt;</span> 路径动画 <span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">path</span> <span class="attr">stroke</span>=<span class="string">"hsl(0,0%,60%)"</span> <span class="attr">d</span>=<span class="string">"M 10 300 Q 150 100 300 300 T 490 300Z"</span> <span class="attr">stroke-width</span>=<span class="string">"2"</span> <span class="attr">fill</span>=<span class="string">"none"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">circle</span> <span class="attr">cx</span>=<span class="string">"0"</span> <span class="attr">cy</span>=<span class="string">"0"</span> <span class="attr">r</span>=<span class="string">"8"</span> <span class="attr">stroke-width</span>=<span class="string">"1"</span> <span class="attr">stroke</span>=<span class="string">"hsl(300,10%,40%)"</span> <span class="attr">fill</span>=<span class="string">"hsl(300,100%,50%)"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">animateMotion</span> <span class="attr">path</span>=<span class="string">"M 10 300 Q 150 100 300 300 T 500 300Z"</span> <span class="attr">dur</span>=<span class="string">"4s"</span> <span class="attr">repeatCount</span>=<span class="string">"indefinite"</span>/&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">circle</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">g</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<img src="/blog/images/pathanimate2.gif" width="300">
 
+<img src="/blog/images/pathanimate2.gif" width="300">
 
 <p>使用svg实现路径动画真是性价比超高。</p>
 </div>
@@ -265,7 +268,7 @@ var _hmt = _hmt || [];
 <p class="theme">
 	Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/edwardzhong/simply.git" target="_blank" rel="noopener">simply</a>
 </p>
-<p class="copy">Copyright &copy; 2023 Jeff Zhong</p>
+<p class="copy">Copyright &copy; 2025 Jeff Zhong</p>
 </footer>
     <div class="top-bottom">
       <div class="to-top hide" title="to top"><i class="icon-up"></i></div>
